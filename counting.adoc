@@ -1,0 +1,471 @@
+= Counting
+
+
+There are three basic counting rules used in this section, one for each of the arithmetic operations of multiplication, addition and subtraction.
+
+== The Product Rule (_and_)
+To find the total number of outcomes for two or more successive events where both events must occur, multiply the number of outcomes for each event together.  For instance, if you want to find the number of outcomes possible when you roll a die and toss a coin, you could use the product rule. It is important to note that the events must be independent, meaning one doesn't effect the other.
+
+.The Product Rule
+****
+If there are $n$ ways event $E$ can occur and $m$ ways to event $F$ can occur, where the occurance of $E$ has no effect on $F$, then there are $nm$ ways $E$ and $F$ can occur.
+****
+
+This is called the product rule for counting because it involves multiplying to find a product. The product rule can be extended to more than two choices.
+
+[NOTE]
+Think of the product rule when you see AND.
+
+****
+.Example {counter:countexample}
+A startup with four employee rents an office suite with seven offices. How many ways are there to assign the employees?
+
+.Solution
+The first employee has 7 offices to choose from, the second has 6 offices to choose from, the third can choose from 5, and the fourth can choose from 4. By the
+product rule, there are $7 \times 6 \times 5 \times 4 = 840$ ways to assign the offices.
+****
+
+:pt_code_height: 350
+:pt_rawinput: false
+:pt_code: def%20counter%28n1,%20n2,%20n3,%20n4,%20n5%29%3A%0A%20%20%20%20k%20%3D%200%0A%20%20%20%20for%20i1%20in%20range%281,%20n1%2B1%29%3A%0A%20%20%20%20%20%20%20%20for%20i2%20in%20range%281,%20n2%2B1%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20for%20i3%20in%20range%281,%20n3%2B1%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20for%20i4%20in%20range%281,%20n4%2B1%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20for%20i5%20in%20range%281,%20n5%2B1%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20k%20%2B%3D%201%0A%20%20%20%20return%20k
+****
+.Example {counter:countexample} - Product Rule in Python
+--
+--
+What will be the value 'counter' when the following code is run?
+include::python_tutor.adoc[]
+****
+
+
+
+
+****
+.Example {counter:countexample}
+Suppose there are 27 computers in a computer center and each computer has 15 ports. How many different ways are there to choose a specific port?
+
+.Solution
+Choosing a port means you first choose a computer and then a port on that computer. Since there are 27 computers and 15 ways to choose a port on a computer, there are $27 \times 15 = 405$ ways to choose a port.
+
+.You Try
+How many functions are there from a set $A$ with $m$ elements to a set $B$ with $n$ elements?
+****
+
+
+****
+.Example {counter:countexample} - Video using the product rule
+--
+--
+++++
+<iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2022371/sp/202237100/embedIframeJs/uiconf_id/31860982/partner_id/2022371?iframeembed=true&playerId=kaltura_player&entry_id=0_nv3yif36&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_uy3482xl" width="700" height="500" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
+++++
+****
+
+// video::UI2dLlXOKcI[youtube, 700, 500]
+
+
+
+
+== The Sum Rule (_xor_)
+Consider finding the total number of ways a particular event occurs from a variety of different options.  For instance, if you want to find the number of ways to pick an ITEC major to win a prize knowing there are students from many concentrations, you could use the sum rule.  It is important to note the events must be mutually exclusive, meaning they do not have anything in common.
+
+.The Sum Rule
+****
+If there are $n$ ways event $E$ can occur and $m$ ways event $F$ can occur, and suppose that both events cannot occur at the same time, then there are $n + m$ ways for $E$ or $F$ to occur.
+****
+This is called the sum rule for counting because it involves adding to find a total. The sum rule can also be extended to more than two choices.
+
+[NOTE]
+Think of the sum rule when you see OR.
+
+****
+.Example {counter:countexample}
+A student in a Capstone course can choose a project from three different professors. The professors have 3, 7, and 4 possible projects, and no project
+is on more than one professor's list. How many possible projects can the student choose?
+
+.Solution
+The student can pick out a project by choosing from the first professor, the second professor, or the third professor. Since no project is on more than
+one list, the sum rules says that there are $3 + 7 + 4 = 14$ projects to choose from.
+
+.You Try
+If a card is drawn from a standard 52-card deck, how many ways can the card be an even number or a King?
+****
+
+*Video Example*
+
+++++
+<iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2022371/sp/202237100/embedIframeJs/uiconf_id/31860982/partner_id/2022371?iframeembed=true&playerId=kaltura_player&entry_id=0_vkqpuw8o&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_jo4vqwqx" width="700" height="500" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
+++++
+
+// video::QFIhdE2CQJk[youtube, 700, 500]
+
+== The Subtraction Rule (_or_)
+If your events are not mutually exclusive, to find the total number of possibilities use the subtraction rule.
+
+.The Subtraction Rule
+****
+Suppose event $E$ can occur $n$ ways, event $F$ can occur $m$ ways, and there are $p$ ways that $E$ and $F$ both occur. Then there are $n+m-p$ ways
+$E$ or $F$ can occur.
+****
+The subtraction rule is also called the inclusion-exclusion principle.
+****
+.Example {counter:countexample}
+A tech company recieves 200 applications for a position. 150 of the applicants were ITEC majors, 43 were business majors, and 25 were double majors in
+business and ITEC. How many application did not major in ITEC or business?
+
+.Solution
+By the subtraction rule, there are $150 + 43 - 25 = 168$ applicants that majored in ITEC or business. Thus $200 - 168 = 32$ majored in neither of these.
+****
+
+****
+.Example {counter:countexample}
+How many bit strings of length four start with 1 or end with 00?
+
+.Solution
+A bit string of length four that starts with 1 will be of the form $1~*~*~*$. For each $*$ there are two choices, 0 or 1, so by the product rule, there are $2^3$ bit strings of this form. A bit string of length four that ends with 00 will be of the form $*~*~0~0$, so there are $2^2$ bit strings of this form.
+Finally,
+a bit string of length four that starts with 1 and ends with 00 will be of the form $1~*~0~0$, so there are 2 bit strings of this form. By the subtraction rule
+there are $2^3 + 2^2 - 2 = 8+4-2=10$ possibilities.
+
+.You Try
+If a card is drawn from a standard 52-card deck, how many ways can the card be black or a face card?
+****
+
+
+*Video Example*
+
+++++
+<iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2022371/sp/202237100/embedIframeJs/uiconf_id/31860982/partner_id/2022371?iframeembed=true&playerId=kaltura_player&entry_id=0_axn9cnwt&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_ng802csp" width="700" height="500" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
+++++
+
+// video::ka6PEspyJgw[youtube, 700, 500]
+
+
+== The Pigeonhole Principle
+
+A suprising number of counting problems can be solved with the so-called pigeonhole principle.
+
+.Pigeon Hole Principle
+****
+If $n+1$ pigeons are resting in $n$ pigeonholes then at least one pigeonhold contains more than one pigeon.
+****
+
+image::images/pigeons.png[pigeons, 300, 300]
+*Ten pigeons in nine pigeonholes*
+
+****
+.Example
+In a group of 367 people at least two will have the same birthday because there are only 366 possible birthdays (counting February 29).
+
+.You Try
+How many people, with English names, must be in a room for two of them to have a first name that starts with the same letter?
+****
+
+
+== Permutations and Combinations
+
+Consider the first four letters of the alphabet, $A, B, C, D$. A *permutation* of these letters would be an arrangement of them in different orders.
+
+* $ABCD, BACD, ABDC$ are permutations of the letters taken four at a time
+* $BDA, ABC, ABD$ are permuations of the letters taken three at a time
+* $AB, AC, DB$ are permutations of the letters taken two at a time
+
+In general, given a set of $n$ objects, an _ordered arrangment_ of $r \le n$ of them is called an *$r$-permutation* or a *permutation of $n$ objects taken $r$ at a time*. We will denote this by $P(n,r)$. (Note that $_nP_r$ is a commonly used notation, especially on calculators.)
+
+.Theorem
+****
+$P(n,r) = n(n-1)(n-2) \cdots (n-r+1) = \displaystyle \frac{n!}{(n-r)!}$.
+****
+
+video::tTvaodWc6ic[youtube, 700, 500]
+
+:pt_code_height: 500
+:pt_rawinput: false
+:pt_code: %23Listing%20Permutations%20of%203%20objects%0A%0ANumbers%20%3D%20%5B1,%202,%203,%204,%205%5D%0A%0ACounter%20%3D%200%0A%0Afor%20i%20in%20Numbers%3A%0A%20%20%20%20for%20j%20in%20Numbers%3A%0A%20%20%20%20%20%20%20%20if%20j%20!%3D%20i%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20for%20k%20in%20Numbers%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20k%20!%3D%20i%20and%20k%20!%3D%20j%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20print%20%28i,%20j,%20k%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Counter%20%3D%20Counter%20%2B%201%0Aprint%28Counter%29
+****
+.Example {counter:countexample} - Permutations of 5 objects taken 3 at a time
+--
+--
+Try to predict what happens with the code and verify.
+
+include::python_tutor.adoc[]
+
+.You try
+Try using link:http://pythontutor.com/live.html#mode=edit[Pythontutor] to list permutations of 5 objects taken 4 at a time.
+****
+
+
+:pt_code_height: 500
+:pt_rawinput: false
+:pt_code: %23Counting%20Permutations%0A%0Adef%20ProdCount%28n,r%29%3A%0A%20%20%20%20product%20%3D%20n%0A%20%20%20%20k%20%3D%20n-r%0A%20%20%20%20for%20i%20in%20range%28n-r%2B1,%20n%29%3A%0A%20%20%20%20%20%20%20%20product%20%3D%20product*i%0A%20%20%20%20return%20product%0A%20%20%20%20%0Aprint%28ProdCount%285,2%29%29
+****
+.Example {counter:countexample} - Counting Permutations
+--
+--
+The code below calculates the number of permutations given $n$ and $r$.  Try to predict the variable names, values, and data types at different steps in the execution. Use the _Next_ button to check your answers.
+include::python_tutor.adoc[]
+
+.You Try
+Try using link:http://pythontutor.com/live.html#mode=edit[Pythontutor] to count permutations using a factorial formula.
+****
+
+*Video Example*
+
+++++
+<iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2022371/sp/202237100/embedIframeJs/uiconf_id/31860982/partner_id/2022371?iframeembed=true&playerId=kaltura_player&entry_id=0_julbjvm6&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_s0uli5zb" width="700" height="500" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
+++++
+
+// video::f14jQTpb2EM[youtube, 700, 500]
+
+****
+.Example {counter:countexample}
+
+If there are 10 runners in a race, how many different ways can the gold, silver, and bronze medals be awarded?
+
+.Solution
+There are 10 objects (the runners) and we are choosing 3 to win medals. So the number of ways they can be awarded is
+
+
+$P(10,3) = \displaystyle \frac{10!}{(10-3)!} = \frac{10!}{7!} = 10 \times 9 \times 8 = 720$
+
+Alternatively, we could have used the product rule and noticed that there are 10 ways to award the gold, then there are 9 ways to award the silver,
+then 8 ways to award the brozne.
+****
+
+****
+.Example {counter:countexample}
+How many permutations of the digits 0123456789 are there that contain the string 456?
+
+.Solution
+We can regard this as a permutation of 8 objects: the string 456 and the other 7 digits. Since they can occur in any order, the number of permutations is
+
+$P(8,8) = 8! = 40320.$
+
+.You Try
+From a group of 100 workers, how many ways can there be a union President, Vice President, and Treasurer?
+
+.You Try
+How many different words (including nonsense words), can be formed using the letters in 'HEROIC' where the vowels must appear together?
+****
+
+Now consider the letters $A, B, C, D$ and choose three at a time where the order does not matter. That is, the choice $ABC$ is the same choice as $BCA$.  This selection where order does not matter is called a *combination*. There are only four possible ways to choose three letters without regard to order:
+
+*$ABC, ABD, ACD,$ and $BCD$.
+
+In general, given a set of $n$ objects, and _unordered selection_ of $r\le n$ of them is an *$r$-combination* or a *combination of $n$ objects taken $r$ at a time*. We will denote this by $C(n,r)$, read as '$n$ choose $r$'. (Note that $_nC_r$ is commonly used by calculators.)
+
+.Theorem
+****
+$C(n,r) = \displaystyle \frac{P(n,r)}{r!} = \frac{n!}{r!(n-r)!}$
+****
+
+:pt_code_height: 500
+:pt_rawinput: false
+:pt_code: %235%20choose%203%0A%0ANumbers%20%3D%20%5B1,%202,%203,%204,%205%5D%0ACounter%20%3D%200%0A%0Afor%20i%20in%20Numbers%3A%0A%20%20%20%20for%20j%20in%20Numbers%3A%0A%20%20%20%20%20%20%20%20if%20j%20%3E%20i%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20for%20k%20in%20Numbers%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20k%20%3E%20j%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20print%20%28i,%20j,%20k%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Counter%20%3D%20Counter%20%2B%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Aprint%28Counter%29
+****
+.Example {counter:countexample} - Combinations of 5 objects 3 at at time
+--
+--
+The code below calculates the number of and lists combinations given $n$ and $r$.  Try to predict the variable names, values, and data types at different steps in the execution. Use the _Next_ button to check your answers.
+include::python_tutor.adoc[]
+
+.You try
+Try using link:http://pythontutor.com/live.html#mode=edit[Pythontutor] to list and count combinations of 5 choose 4.
+
+.You try
+Now try using link:http://pythontutor.com/live.html#mode=edit[Pythontutor] to calculate combinations using factorials.
+****
+
+
+*Video Example*
+
+++++
+<iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2022371/sp/202237100/embedIframeJs/uiconf_id/31860982/partner_id/2022371?iframeembed=true&playerId=kaltura_player&entry_id=0_q7vdemao&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_kbgw9kgq" width="700" height="500" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
+++++
+
+// video::Xsi2CS7S5SQ[youtube, 700, 500]
+
+
+
+*Video Example*
+
+++++
+<iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2022371/sp/202237100/embedIframeJs/uiconf_id/31860982/partner_id/2022371?iframeembed=true&playerId=kaltura_player&entry_id=0_mwu49tz8&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_azbrfaq2" width="700" height="500" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
+++++
+
+****
+.Example {counter:countexample}
+How many ways can five cards be dealt from a standard 52-card deck?
+
+.Solution
+We are choosing 5 cards from 52 cards and the order does not matter, so $C(52,5)=\displaystyle \frac{52!}{5!47!}$
+****
+
+
+****
+.Example {counter:countexample}
+How many bit strings of length $n$ contain exactly $r$ 0s?
+
+.Solution
+Choosing the positions of the $r$ 0s corresponds to the $r$-combinations of the set $\{1, 2, 3, \dots, n\}$. Thus there are exactly
+$C(n,r)$ such bit strings.
+****
+
+== Exercises
+
+.There are 67 math majors and 124 ITEC majors at a college.
+	.. In how many ways can two representatives be picked so that one is a math major and one is an ITEC major?
+	.. In how many ways can one representative be picked who is either a math major or an ITEC major?
+
+
+. A multiple-choice test contains 20 questions, and each question has four choices.
+	.. In how many ways can a student answer all of the questions on the test?
+	.. In how many ways can a student answer all of the questions if she is allowed to leave some blank?
+
+. How many different three-letter initials can a person have?
+
+. How many different three-letter initials end with "R"?
+
+. How many bit strings are there of length five?
+
+. How many bit strings are there of length five that begin and end with 1?
+
+. How many bit strings are there of length less than $n$, where $n$ is a positive integer, that start and end with 1?
+
+. How many license plates can be made using three digits followed by four uppercase English letters if:
+	.. Digits and letters can be repeated?
+	.. Digits and letters cannot be repeated?
+
+
+. If each student in Discrete Mathematics is a mathematics major, an ITEC major, or a double major, and a class has 5 math majors (including double majors), 23 ITEC
+majors (including double majors), and 7 double majors, how many students are in the class?
+
+. Suppose a computer system requires a password of length no less than 7 and no more than 10 characters, and each character must be an English lowercase
+letter, an English uppercase letter, a digit, or one of six special characters (*, >, <, !, +, =).
+	.. How many different passwords are available?
+	.. Suppose a hacker can check a potential password once every nanosecond (1 nanosecond is $1 \times 10^{-9}$ seconds). How long will it take the hacker
+	to check every potential password?
+
+.	Show that if there are 29 students in a class at least two have last names that begin with the same letter.
+
+	. How many students need to be in a class in order for at least two students to receive the same grade on an exam that is graded on a scale 0 to 100 points?
+
+	. Show that in any set of 5 integers, there are at least two of them that have the same remainder when divided by 4.
+
+	. A bag contains 8 red balls and 7 blue balls.
+		.. How many balls must be chosen to be sure of choosing 3 of the same color?
+		.. How many must be chosen to be sure of choosing 3 red balls?
+	. Someone cleaning out their attic finds a box containing 12 rock CDs and 12 country CDs. What is the minimum number of CDs they can take out to guarantee at least
+	one of each type?
+
+	. Give an argument that there are at least two people in Atlanta with the same number of hairs on their head.
+
+. There are 67 math majors and 124 ITEC majors at a college.
+	.. In how many ways can two representatives be picked so that one is a math major and one is an ITEC major?
+	.. In how many ways can one representative be picked who is either a math major or an ITEC major?
+
+
+
+. A multiple-choice test contains 20 questions, and each question has four choices.
+	.. In how many ways can a student answer all of the questions on the test?
+	.. In how many ways can a student answer all of the questions if she is allowed to leave some blank?
+
+. How many different three-letter initials can a person have?
+
+. How many different three-letter initials end with "R"?
+
+. How many bit strings are there of length five?
+
+. How many bit strings are there of length seven that begin and end with 0?
+
+. How many bit strings are there of length less than $n$, where $n$ is a positive integer, that start and end with 1?
+
+. How many license plates can be made using four digits followed by three uppercase English letters if:
+	.. Digits and letters can be repeated?
+	.. Digits and letters cannot be repeated?
+
+
+
+. If each student in Discrete Mathematics is a mathematics major, an ITEC major, or a double major, and a class has
+18 math majors (including double majors), 25 ITEC
+majors (including double majors), and 8 double majors, how many students are in the class?
+
+
+. Suppose a computer system requires a password of length no less than 8 and no
+more than 11 characters, and each character must be an English lowercase
+letter, an English uppercase letter, a digit, or one of six special characters (*, >, <, !, +, =).
+	.. How many different passwords are available?
+	.. Suppose a hacker can check a potential password once every nanosecond (1 nanosecond is $1 \times 10^{-9}$ seconds). How long will it take the hacker
+	to check every potential password?
+
+
+
+. Show that if there are 29 students in a class at least two have last names that begin with the same letter.
+
+. How many students need to be in a class in order for at least two students
+to receive the same grade on an exam that is graded on a scale 0 to 50 points?
+
+
+. Show that in any set of 8 integers, there are at least two of them that have the same
+remainder when divided by 7.
+
+. A bag contains 12 red balls and 7 blue balls.
+	.. How many balls must be chosen to be sure of choosing 4 of the same color?
+	.. How many must be chosen to be sure of choosing 4 red balls?
+
+. Someone cleaning out their attic finds a box containing 12 rock CDs, 12 hip hop CDs, and 12 country CDs. What is the minimum number of CDs they can take out to guarantee at least
+one of each type?
+
+. Give an argument that there are at least two people in Atlanta with the same number of hairs on their head.
+. List all the permutations of $\{1, 2, 3\}$.
+
+. How many permutations are there of the set $\{1, a, 2, b, 3, c, 5\}$?
+
+. Let $A=\{a, b, c, d\}$
+	.. List all the 3-permutations of $A$.
+	.. List all the 3-combinations of $A$.
+. Let $A=\{a, b, c, d, e\}$
+	.. List all the 2-permutations of $A$.
+	.. List all the 2-combinations of $A$.
+
+. Find the value of the following
+	.. $P(5,2)$
+	.. $P(10,8)$
+	.. $P(14,10)$
+	.. $P(12,8)$
+	.. $C(5,2)$
+	.. $C(10,8)$
+	.. $C(14,10)$
+	.. $C(12,8)$
+
+. How many bit strings of length 10 contain:
+	.. Exactly five 1s?
+	.. At most five 1s?
+	.. At least four 1s?
+	.. The same number of 0s and 1s?
+
+. How many permutations of the digits $12345678$ contain:
+	.. The string 284?
+	.. The string 3581?
+	.. The string 21 and 57?
+
+
+
+. How many ways are there to choose 9 cards from a standard 52 card deck?
+
+. How many ways can you be dealt a pair in a 5 card hand (2 cards of the same rank and 3 cards of a different rank)?
+
+. How many ways can you be dealt a full house in a 5 card hand (2 cards of the same rank and 3 cards of the same rank)?
+
+. How many license plates consist of 4 letters followed by 3 digits if:
+	.. Repetition is allowed?
+	.. Repetition is not allowed?
+
+. Using $C(n,r) = \displaystyle  \frac{n!}{r!(n-r)!}$, evaluate the terms of this triangular table. Will you need the formula to extend the table to more rows?
+
+\begin{array}{ccccccccccccc}
+&&&&&&&C(0,0)&&&&&&\\
+&&&&&& C(1,0) && C(1,1) &&&&&\\
+&&&&& C(2,0) && C(2,1) && C(2,2) &&&&\\
+&&&& C(3,0) && C(3,1) && C(3,2) && C(3,3) &&&\\
+&&& C(4,0) && C(4,1) && C(4,2) && C(4,3) && C(4,4) &&\\
+\end{array}

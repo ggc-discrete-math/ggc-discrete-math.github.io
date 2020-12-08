@@ -1,0 +1,2092 @@
+= Algorithms
+
+
+
+An *algorithm* is a step-by-step process, defined by a set of
+instructions to be executed sequentially to achieve a specified task producing
+a determined output.
+
+Examples of common discrete mathematics algorithms include:
+
+* Searching  Algorithms to search  for an item in a data set or data structure like a tree.
+* Sorting Algorithms to sort items in a specific  order.
+* Insertion and Deletion  Algorithms to insert or delete item in a data structure such as a tree or list.
+* Division Algorithms such as a procedure for dividing two integers or the Euclidean Algorithm to determine  the greatest common divisor between two  integers.
+* Optimization algorithms such as finding the line of best fit of set of points, or the problem of finding the nearest neighbor in a set of points to a given point  (here close could mean most similar according to some mathematically defined measure of closeness or similarity)
+
+== Structure of Algorithms in Pseudocode and Python
+
+While the algorithms we describe are implemented in the Python programming language, we also provide the pseudocode syntax for important algorithms. Pseudocode is used to provide high level description of a program or algorithm intended to be more human understandable rather than computer or program language interpretable. Its syntax preserves the structure of the program or algorithm. It is meant to be easier to read and analyze.  Often in designing an algorithm or program for language specific implementation, a pseudocode implementation or description is obtained first.  In addition to coming early in the design of a computer program, pseudocode also has two other important uses:
+
+. It can be used to help non-programmers understand what a program or algorithm does and how it works.
+
+. It can be used for debugging purposes when a programmer is trying to debug and solve a logic error in a computer program as it is closer to human language. Defects are easier to find in a program implementation by analyzing the sequence of implementation steps in the pseudocode description.
+
+
+
+[NOTE]
+====
+Many of the terms in this section were also discussed in <<Introduction to Python>>.
+====
+
+Recall that an algorithm is a process of finite sequences of instructions used to solve a problem or obtain a result of a computation.
+The key features of an algorithm include:
+
+* Input
+* Variables
+* Data and data types
+* Instructions or statements
+* Output
+
+=== Variable Assignment
+
+*Variables*, such as $x,\ y,\ z,\ t,\ m,\ a_1,\ a_2,\ldots a_n $,
+as in algebra, can be assigned different values based on the variable data type.
+We use the symbol “=” for variable assignment, for example, \[ t=5, \]
+assigns to the variable $t$, the integer value 5.  The variable $t$
+keeps this value unless reassigned, as in \[t=t+3. \]
+In this case the variable t is now assigned the value \[ t=5+3. \] The
+previous example illustrates an important point about assignments, namely that the right side is always evaluated before assignment setting of variables.
+For example the sequence of steps,
+
+\begin{array}{c}
+ x=5,\\
+ y=3,\\
+ x=y,
+\end{array}
+
+will have at the end of the sequence, $x=3$ and $y =3$.
+
+=== Statements
+
+A *statement* is a line of code or instruction step in an algorithm or program.
+
+=== Loops
+
+A *while* loop is a control flow statement that iterates a sequence of statements provided the Boolean expression is _True_.
+
+.While loop
+****
+.While Loop Example
+[%header,cols="1a,1a"]
+|===
+|Pseudo Code
+|Python Code
+
+|[source, pseudo]
+----
+while Expression do // <1>
+  statement 1 (s1)
+  statement 2 (s2)
+  .
+  .
+  .
+  statement n (sn)
+end // <2>
+----
+<1> Start block of code with _do_
+<2> End block of code with _end_
+|[source, python]
+----
+while Expression: //<1>
+  statement 1 (s1)
+  statement 2 (s2)
+  .
+  .
+  .
+  statement n (sn)
+<2>
+----
+<1> Start block of code with _:_
+<2> End block of code with unindent
+
+|===
+
+
+****
+The loop iterates as long as  the sequence of statements $(s_1\ldots s_n,)$
+maintains the True value of _Expression_ and
+exits after an iteration of  $(s_1\ldots s_n,)$ that changes _Expression_
+to False.
+
+:pt_code_height: 350
+:pt_rawinput: false
+:pt_code: count%20%3D%200%0Awhile%20%28count%20%3C%2011%29%3A%0A%20%20%20print%28%22The%20count%20is%3A%22,%20count%29%0A%20%20%20count%20%2B%3D%201%0Aprint%28%22Good%20bye!%22%29
+****
+.Example {counter:algoex} - While loop in Python
+--
+--
+
+The Python code below uses a *while* loop to display or output the non-negative integers less than 11.
+
+include::python_tutor.adoc[]
+****
+
+
+
+A *for* loop has a very similar control flow statement to a *while* loop.
+
+.For loop
+
+****
+
+++++
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Century Schoolbook";
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:106%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+pre
+	{mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-link:"HTML Preformatted";
+	font-family:"Courier New";}
+.MsoChpDefault
+	{font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:106%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=719
+ style='width:539.6pt;border-collapse:collapse'>
+ <tr style='height:22.8pt'>
+  <td width=419 valign=top style='width:314.6pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b>Pseudocode</b></p>
+  </td>
+  <td width=300 valign=top style='width:225.0pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b>Python</b></p>
+  </td>
+ </tr>
+ <tr style='height:110.2pt'>
+  <td width=419 valign=top style='width:314.6pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+  style='font-family:"Century Schoolbook",serif'>for </span></b><i><span
+  style='font-size:10.0pt;line-height:106%;font-family:"Century Schoolbook",serif'>iterating_variable</span></i><b><span
+  style='font-family:"Century Schoolbook",serif'> in</span></b><i><span
+  style='font-size:10.0pt;line-height:106%;font-family:"Century Schoolbook",serif'>
+  sequence </span></i><b><span style='font-family:"Century Schoolbook",serif'>do</span></b></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
+   1 (s<sub>1</sub>)</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
+   2 (s<sub>2</sub>)</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
+  n (s<sub>n</sub>)</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal;punctuation-wrap:simple;text-autospace:none'><b><span
+  style='font-family:"Century Schoolbook",serif'>end</span></b></p>
+  </td>
+  <td width=300 valign=top style='width:225.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:110.2pt'><pre>for iterating_var in sequence:</pre><pre
+  style='margin-left:.5in'>statements(s)</pre>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='color:white'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
+
+++++
+
+****
+
+The most common form of the for loop is with a sequential integer counter $i$.
+
+.For  loop with iterative counter $i$.
+
+****
+
+++++
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Century Schoolbook";
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:105%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:105%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=419
+ style='width:314.6pt;border-collapse:collapse'>
+ <tr style='height:22.8pt'>
+  <td width=419 valign=top style='width:314.6pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b>Pseudocode</b></p>
+  </td>
+ </tr>
+ <tr style='height:110.2pt'>
+  <td width=419 valign=top style='width:314.6pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+  style='font-family:"Century Schoolbook",serif'>for </span></b><i><span
+  style='font-size:10.0pt;line-height:105%;font-family:"Century Schoolbook",serif'>i
+  = m </span></i><span style='font-size:10.0pt;line-height:105%;font-family:
+  "Arial",sans-serif'> </span><b><span style='font-family:"Century Schoolbook",serif'>to
+  </span></b><i>n </i><b><span style='font-family:"Century Schoolbook",serif'>do</span></b></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
+   1 (s<sub>1</sub>)</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
+   2 (s<sub>2</sub>)</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
+  n (s<sub>n</sub>)</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+  style='font-family:"Century Schoolbook",serif'>end</span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='color:white'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
+
+++++
+
+****
+
+:pt_code_height: 350
+:pt_rawinput: false
+:pt_code: for%20i%20in%20range%280,%2011%29%3A%0A%20%20print%28%22The%20count%20is%3A%22,%20i%29%0Aprint%28%22Good%20bye!%22%29
+****
+.Example {counter:algoex} - For loop in Python
+--
+--
+The Python code below uses a *for* loop to display or output the non-negative integers less than 11.
+include::python_tutor.adoc[]
+****
+
+
+=== Conditional statements
+The sequence in which statements can be executed in
+an algorithm or program can be controlled using *conditional
+statements* or *logical operators*.  The while loop is an example
+of a conditional statement.
+
+Another common conditional statement is the *if … then do* statement.
+
+
+.*if … then do* statement.
+
+****
+
+++++
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Century Schoolbook";
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:106%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:106%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=521
+ style='width:391.1pt;border-collapse:collapse'>
+ <tr style='height:22.8pt'>
+  <td width=521 valign=top style='width:391.1pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b>Pseudocode</b></p>
+  </td>
+ </tr>
+ <tr style='height:110.2pt'>
+  <td width=521 valign=top style='width:391.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
+  <p class=MsoNormal style='margin-top:1.1pt;margin-right:266.6pt;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>if
+  </span></b><i><span style='font-size:10.0pt;font-family:"Century Schoolbook",serif'>Expression
+  </span></i><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span><b><span
+  style='font-family:"Century Schoolbook",serif'>do</span></b></p>
+  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
+   1 (s<sub>1</sub>)</span></p>
+  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
+   2 (s<sub>2</sub>)</span></p>
+  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
+  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
+  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
+  <p class=MsoNormal style='margin-top:1.25pt;margin-right:0in;margin-bottom:
+  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
+  n (s<sub>n</sub>)</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:1.95pt;margin-bottom:.0001pt;line-height:12.3pt;punctuation-wrap:
+  simple;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>end</span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='color:white'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
+
+++++
+
+****
+
+The while loop and  the if … then do statement are similar but have one
+important difference. The sequence of statements $s_i$ are executed at most
+once within the if … then do statement but may be iterated multiple times
+in a while loop.
+
+The if … then do statement executes a sequence of statements
+once if the Boolean _Expression_ is _True_.
+
+A more general variation of the  if … then do statement is the *if … then do … else do* statement, which allows two choices of execution statements. Its  general syntax is
+
+.*if … then do … else do*
+
+****
+++++
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Century Schoolbook";
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:105%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=647
+ style='width:485.6pt;border-collapse:collapse'>
+ <tr style='height:22.8pt'>
+  <td width=485 valign=top style='width:364.1pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b>Pseudocode</b></p>
+  </td>
+  <td width=162 valign=top style='width:121.5pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b>Python</b></p>
+  </td>
+ </tr>
+ <tr style='height:110.2pt'>
+  <td width=485 valign=top style='width:364.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
+  <p class=MsoNormal style='margin-top:1.1pt;margin-right:266.6pt;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>if
+  </span></b><i><span style='font-size:10.0pt;font-family:"Century Schoolbook",serif'>Expression
+  </span></i><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>do</span></p>
+  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-family:"Century",serif'>statements
+  (s<sub>1</sub>)</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:1.95pt;margin-bottom:.0001pt;line-height:12.3pt;punctuation-wrap:
+  simple;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>else
+  do</span></b></p>
+  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-family:"Century",serif'>statements
+  &nbsp;(S<sub>1</sub>)&nbsp;&nbsp; </span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:1.95pt;margin-bottom:.0001pt;line-height:12.3pt;punctuation-wrap:
+  simple;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>end
+  </span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>if
+  expression:</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>statement(s)</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>else:</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>statement(s)</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='color:white'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
+
+++++
+****
+
+Here if the Boolean _Expression_ is _True_,
+the sequence of statements $(s_i)$ are executed once, otherwise the sequence of
+statements $(S_i)$ are executed.
+
+:pt_code_height: 350
+:pt_rawinput: false
+:pt_code: x%20%3D%203%20*%2034%0Aif%20x%20%3C%20100%3A%0A%20%20%20%20print%28%22You%20Lose!%22%29%0Aelse%3A%0A%20%20%20%20print%28%22You%20Win!%22%29%0A
+****
+.Example {counter:algoex} - if … then do … else do in Python
+--
+--
+The Python code below uses a *if else* to check if a result is less than 100.
+include::python_tutor.adoc[]
+****
+
+
+=== Output
+
+There are a couple of ways to indicate output using pseudocode including, 1) an output statement, or 2) a print statement. For example the following both  output the value of the variable _count_.
+
+* *output* _count_
+* *print* _count_
+
+
+Here are two pseudocode implementations of an algorithm to count the  non-negative
+integers less than 11, the first using an output and the second a print statement.
+
+.Output Examples
+[%header,cols="1a,1a"]
+|===
+|Pseudo Code Using Output
+|Pseudo Code Using Print
+
+|[source, pseudo]
+----
+count = 0
+while (count < 11) do
+  output "The count is:", count
+  count = count + 1
+end
+output "Good bye! Thanks for counting."
+----
+|[source, pseudo]
+----
+count = 0
+while (count < 11) do
+  print("The count is:", count)
+  count = count + 1
+end
+print("Good bye! Thanks for counting.")
+----
+
+|===
+
+=== Procedures and Functions.
+Algorithms can be thought of as units, such as a procedure or function.
+They can be implemented as procedures or functions and then called
+repeatedly as necessary rather than replicating all of the code every
+time the algorithm is used.
+
+.Procedures and functions
+
+****
+++++
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Century Schoolbook";
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:105%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=749
+ style='width:562.1pt;border-collapse:collapse'>
+ <tr style='height:22.8pt'>
+  <td width=413 valign=top style='width:310.1pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b>Pseudocode</b></p>
+  </td>
+  <td width=336 valign=top style='width:3.5in;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b>Python</b></p>
+  </td>
+ </tr>
+ <tr style='height:110.2pt'>
+  <td width=413 valign=top style='width:310.1pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+  style='font-family:"Century Schoolbook",serif'>procedure<span
+  style='letter-spacing:-1.4pt'> </span></span></b><span style='font-family:
+  "Century",serif'>Name</span>(<span style='letter-spacing:-1.75pt'> </span><i><span
+  style='font-size:10.0pt;line-height:105%;font-family:"Century Schoolbook",serif'>input
+  variables </span></i><span style='letter-spacing:-1.75pt'>and  /  or</span><i><span
+  style='font-size:10.0pt;line-height:105%;font-family:"Century Schoolbook",serif'>
+  input parameters</span></i><span style='letter-spacing:-1.75pt'>)</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  13.0pt;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>begin</span></b></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
+  simple;text-autospace:none'><span style='font-family:"Century",serif'>statements</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-indent:
+  19.45pt;line-height:10.5pt'><span style='font-size:9.0pt;font-family:"Century",serif'>.</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-indent:
+  19.45pt;line-height:10.5pt'><span style='font-size:9.0pt;font-family:"Century",serif'>.</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-indent:
+  19.45pt;line-height:10.5pt'><span style='font-size:9.0pt;font-family:"Century",serif'>.</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-indent:
+  19.45pt;line-height:11.1pt'><b><span style='font-family:"Century Schoolbook",serif'>return
+  </span></b>value</p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  13.0pt;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>end</span></b></p>
+  </td>
+  <td width=336 valign=top style='width:3.5in;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>def  Name(
+  parameters ):</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>statements</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>return [expression]</span></p>
+  </td>
+ </tr>
+ <tr style='height:.05in'>
+  <td width=413 valign=top style='width:310.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:.05in'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+  style='font-family:"Century Schoolbook",serif'>&nbsp;</span></b></p>
+  </td>
+  <td width=336 valign=top style='width:3.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:.05in'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='color:white'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
+
+++++
+
+****
+
+
+
+:pt_code_height: 420
+:pt_rawinput: false
+:pt_code: def%20cylinder_volume%28r,%20h%29%3A%0A%20%20%20%20area%20%3D%203.14%20*%20r%20*%20r%0A%20%20%20%20vol%20%3D%20area%20*%20h%0A%20%20%20%20return%20vol%0A%0Av1%20%3D%20cylinder_volume%285,%203%29%0Av2%20%3D%20cylinder_volume%282,%204%29%0Aprint%28%22Cylinders%22%29%0Aprint%28%22R%3A%22,%205,%20%22H%3A%22,%203,%20%22Vol%3A%22,%20v1%29%0Aprint%28%22R%3A%22,%202,%20%22H%3A%22,%204,%20%22Vol%3A%22,%20v2%29%0A
+****
+.Example {counter:algoex} - Function in Python
+--
+--
+The Python syntax, for a procedure or function,  is very similar to pseudo code.
+include::python_tutor.adoc[]
+****
+
+
+== Examples of Algorithms
+We now proceed to develop some algorithms beginning with algorithms for common mathematical
+operations.  Much of mathematical notation can be considered pseudocode
+
+=== Sum Notation
+Consider the sum
+
+$Sum=a_1+a_2+\ldots+a_n=\sum_{i=1}^{n}a_i,$
+
+which is a description of adding using the index $i$, the numbers $a_i$,
+running from $i=1$ to $i=n$.
+
+A pseudocode description might be
+
+.Sum Notation in Algorithm Pseudocode
+
+****
+++++
+
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Century Schoolbook";
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h5
+	{mso-style-link:"Heading 5 Char";
+	margin-top:6.95pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.1in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:11.0pt;
+	font-family:"Century Schoolbook",serif;}
+span.Heading5Char
+	{mso-style-name:"Heading 5 Char";
+	mso-style-link:"Heading 5";
+	font-family:"Century Schoolbook",serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Procedure
+Sum Notation: </b>computes the sum of the first, <i>n</i>, terms of the
+sequence <i><span style='font-size:10.0pt;line-height:107%;font-family:"Century Schoolbook",serif'>a<sub>i</sub></span></i></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Input: </b>A
+positive integer, <i>n</i><i>, and a sequence {</i><i><span style='font-size:
+10.0pt;line-height:107%;font-family:"Century Schoolbook",serif'>a<sub>i</sub>}</span></i></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Output: </b>The
+sum of the first <i>n </i>terms of the sequence <i>{</i><i><span
+style='font-size:10.0pt;line-height:107%;font-family:"Century Schoolbook",serif'>a<sub>i</sub>}</span></i></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b> </b><b>_____________________________________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-family:"Century Schoolbook",serif'>procedure<span style='letter-spacing:
+-1.4pt'> </span></span></b><span style='font-family:"Century",serif'>Sum_Notation</span>(<span
+style='letter-spacing:-1.75pt'> </span><i><span style='font-size:10.0pt;
+line-height:107%;font-family:"Century Schoolbook",serif'>n, {a<sub>1</sub>, a<sub>2</sub>,
+…, a<sub>n</sub></span><span style='letter-spacing:-1.75pt'> }</span></i><span
+style='letter-spacing:-1.75pt'> )</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-family:"Century Schoolbook",serif'>begin</span></b>                                                                                                                                                                                         </p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>Sum = 0</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b>for </b>i = 1 <b>to </b>n  <b>do</b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;text-indent:.5in'>Sum = Sum + <i><span
+style='font-size:10.0pt;line-height:107%;font-family:"Century Schoolbook",serif'>a<sub>i</sub></span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b>end</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>
+<b><span style='font-family:"Century Schoolbook",serif'>return</span></b> Sum</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-family:"Century Schoolbook",serif'>end</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
+
+
+++++
+****
+
+A Python implementation of the algorithm is given below.
+
+:pt_code_height: 370
+:pt_rawinput: false
+:pt_code:  def%20Sum_Notation%28a,%20n%29%3A%0A%20%20%20%20sum%20%3D%200%0A%20%20%20%20for%20i%20in%20range%280,%20n%29%3A%0A%20%20%20%20%20%20%20%20sum%20%3D%20sum%20%2B%20a%5Bi%5D%0A%20%20%20%20return%20sum%0A%20%20%20%20%0AS%20%3D%20Sum_Notation%28%5B1,%204,%209,%2016,%2025%5D,%203%29%0Aprint%28%22Sum%20of%20first%203%20nums%3A%22,%20S%29%0A
+****
+.Example {counter:algoex} - Sum Notation in Python
+--
+--
+
+The Python code below uses a *for* loop to implement sum notation, adding the first $n$ terms of a sequence $a=(a_i)$.
+
+include::python_tutor.adoc[]
+****
+
+=== Exponentiation
+Suppose we want to evaluate $b^n$, with base $b>0$, and exponent,
+$n$ a positive integer.
+For example to evaluate $5^6$, we could multiply iteratively, 5,
+
+$1, 5, 5\times5, 5\times5\times5, 5\times5\times5\times5,$ etc .
+
+A pseudocode implementation of the algorithm might be as follows.
+
+[cols="1a",options=""]
+|===
+|Procedure Exponentiation
+
+|Computes the exponent $b^n$
+
+|*Input:* A positive integer, $n$ and a positive base, $b$
+
+|*Output:* $b^n$
+
+|[source, pseudo]
+----
+procedure Exponentiation(n, b)
+begin
+  Power = 1
+  for i = 1 to n do
+    Power = Power * b
+  end
+  return Power
+end
+----
+|===
+
+:pt_code_height: 370
+:pt_rawinput: false
+:pt_code: def%20Exponentiation%28n,%20b%29%3A%0A%20%20%20%20Power%20%3D%201%0A%20%20%20%20for%20i%20in%20range%280,%20n%29%3A%0A%20%20%20%20%20%20%20%20Power%20%3D%20b%20*%20Power%0A%20%20%20%20return%20Power%0Ap%20%3D%20Exponentiation%285,%203%29%0Aprint%28%223%20raised%20to%205th%20power%3A%22,%20p%29%0A
+****
+.Example {counter:algoex} - Exponentiation in Python
+--
+--
+
+The Python code below uses a *for* loop to implement exponentiation,
+multiplying a positive base $b$ with itself $n$ times.
+
+include::python_tutor.adoc[]
+****
+
+
+=== Factorial
+The *factorial* of a positive integer $n$ can be computed iteratively. For example $4!$ can be calculated as
+
+$1,  1\times2, 1\times2\times3, 1\times2\times3\times4.$
+
+
+
+:pt_code_height: 350
+:pt_rawinput: false
+:pt_code: def%20factorial%28n%29%3A%0A%20%20%20%20result%20%3D%201%0A%20%20%20%20for%20i%20in%20range%281,%20n%20%2B%201%29%3A%0A%20%20%20%20%20%20%20%20result%20%3D%20result%20*%20i%0A%20%20%20%20return%20result%0A%0Af%20%3D%20factorial%286%29%0Aprint%28%226%20factorial%3A%22,%20f%29%0A
+****
+.Example {counter:algoex} - Factorial ($n!$) in Python
+--
+--
+The Python code below uses a *for* loop to implement $n!$ by iteratively multiplying.
+
+include::python_tutor.adoc[]
+****
+
+
+=== Find Minimum in a List of Integers
+Consider an algorithm to determine the minimum element in a finite sequence or
+list of integers.
+
+The algorithm would be constructed as follows:
+
+
+* We define a variable $min$ and assign it to the first indexed element in the list.
+
+* Traverse along  the list to the next indexed element and compare that
+indexed element in the list with the currently assigned value of the variable $min$.
+If the inspected element is smaller than the currently assigned value of $min$,
+then update the value of $min$.
+* Repeat the previous step if there are more elements in the list to inspect and compare.
+* Stop when the entire list has been traversed and all elements in the list
+have been inspected and compared against the variable $min$.
+
+
+
+A Python implementation of finding the minimum in a set of $n$ integers is given below.
+
+:pt_code_height: 380
+:pt_rawinput: false
+:pt_code: def%20minimum%28a%29%3A%0A%20%20%20%20min%20%3D%20a%5B0%5D%0A%20%20%20%20for%20i%20in%20range%280,%20len%28a%29%29%3A%0A%20%20%20%20%20%20%20%20if%20a%5Bi%5D%20%3C%20min%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20min%20%3D%20a%5Bi%5D%0A%20%20%20%20return%20min%0A%0Am%20%3D%20minimum%28%5B3,%202,%201,%205,%20-4,%206%5D%29%0Aprint%28%22The%20minimum%20is%22,%20m%29
+****
+.Example {counter:algoex} - Minimum in Python
+--
+--
+The Python code below uses a *for* loop to implement an algorithm to find the minimum in a set of $n$ integers.
+
+include::python_tutor.adoc[]
+****
+
+== The Linear Search Algorithm
+A linear search algorithm involves searching for a target integer $x$ in a list of
+distinct integers $ (a_1, a_2, ..., a_n)$, and returns the location $i$ in the list that the
+target element $x$ is found or returns a value indicating that the target element $x$ is not
+in the list $ (a_1, a_2, ..., a_n)$.
+
+
+A Python implementation of the linear search algorithm is given below.
+
+:pt_code_height: 370
+:pt_rawinput: false
+:pt_code: def%20Linear_Search%28a,%20x%29%3A%20%0A%20%20%20%20for%20i%20in%20range%280,%20len%28a%29%29%3A%20%0A%20%20%20%20%20%20%20%20if%20a%5Bi%5D%20%3D%3D%20x%3A%20%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20i%20%0A%20%20%20%20return%20-1%0A%0Aindex%20%3D%20Linear_Search%28%5B6,%203,%204,%205,%207%5D,%204%29%0Aprint%28%224%20found%20at%20index%22,%20index%29%0A
+****
+.Example {counter:algoex} - Linear Search Algorithm in Python
+--
+--
+The Python code below uses a *for* loop to implement the linear search algorithm.  The algorithm returns the position $i$
+of the list where the target $x$ is found, returning $-1$ if the target is not in the list.
+
+
+include::python_tutor.adoc[]
+****
+
+== The Bubble Sort Algorithm
+The bubble sort algorithm is a simple  sorting procedure.  It is typically used to sort  an array of $n$ data elements in either increasing or decreasing order.  We describe the bubble sort algorithm for arranging a list of $n$ real numbers in increasing order.
+
+* The algorithm compares the first two elements of the array and swaps them if they are out of order.
+* It continues by traversing up the array comparing each pair of adjacent elements and swaps them if they are out of order until we reach the last entry in the array at location $n$.
+* The last entry in the array will then be the largest element of the original list.
+* After the largest element has been sorted into position $n$, the algorithm continues by again comparing the first two elements and
+swapping if they are out of order.
+* Continue traversing the array and comparing and swapping adjacent elements that are out of order until position $n-1$ of the array, after which the 2nd largest element is in position $n-1$. The elements, now at positions $n$, and $n-1$, are sorted.
+* Continue to sort at positions $n-2$, then $n-3$ until position $1$.
+
+
+A Python implementation of the bubble sort algorithm is given below.
+
+:pt_code_height: 450
+:pt_rawinput: false
+:pt_code: def%20BubbleSort%28a%29%3A%0A%20%20%20%20n%20%3D%20len%28a%29%0A%20%20%20%20for%20i%20in%20range%280,%20n%29%3A%0A%20%20%20%20%20%20%20%20%20for%20j%20in%20range%280,%20n%20-%20i%20-%201%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20if%20a%5Bj%5D%20%3E%20a%20%5Bj%2B1%5D%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20temp%20%3D%20a%5Bj%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20a%5Bj%5D%20%3D%20a%5Bj%2B1%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20a%5Bj%2B1%5D%20%3D%20temp%0A%20%20%20%20return%20a%0A%0Aarr%20%3D%20BubbleSort%28%5B6,%202,%205,%203,%204,%201%20%5D%29%0Aprint%28%22Sorted%20array%20is%3A%22,%20arr%29%0A
+****
+.Python implementation of the Bubble Sort Algorithm
+--
+--
+The Python code below uses two *for* loops to implement the Bubble Sort as found in the pseudocode description.
+
+include::python_tutor.adoc[]
+****
+
+****
+.Example {counter:algoex} - Tracing a Bubble Sort
+As an example we consider explicitly the steps of the Bubble Sort Algorithm to sort $6, 2, 5, 3, 4, 1, $ in increasing
+order.
+
+.Solution
+
+
+First Pass
+
+$\left(\mathbf{6}\ \mathbf{2}\ 5\ 3\ 4\ 1\right)\rightarrow\ \left(\mathbf{2}\ \mathbf{6}\ 5\ 3\ 4\ 1\right)\ $ compare and swap
+
+$\left(2\ \mathbf{6}\ \mathbf{5}\ 3\ 4\ 1\right)\rightarrow\ \left(2\ \mathbf{5}\ \mathbf{6}\ 3\ 4\ 1\right)\ $ compare and swap
+
+$\left(2\ 5\ \mathbf{6}\ \mathbf{3}\ 4\ 1\right)\rightarrow\ \left(2\ 5\ \mathbf{3}\ \mathbf{6}\ 4\ 1\right)\ $ compare and swap
+
+$\left(2\ 5\ 3\ \mathbf{6}\ \mathbf{4}\ 1\right)\rightarrow\ \left(2\ 5\ 3\ \mathbf{4}\ \mathbf{6}\ 1\right)\ $ compare and swap
+
+$\left(2\ 5\ 3\ 4\ \mathbf{6}\ \mathbf{1}\right)\rightarrow\ \left(2\ 5\ 3\ 4\ \mathbf{1}\ \mathbf{6}\right)\ $ compare and swap
+
+Second pass
+
+$\left(\mathbf{2}\ \mathbf{5}\ 3\ 4\ 1\ 6\right)\rightarrow\ \left(\mathbf{2}\ \mathbf{5}\ 3\ 4\ 1\ 6\right)\ $ compare and no swap
+
+$\left(2\ \mathbf{5}\ \mathbf{3}\ 4\ 1\ 6\right)\rightarrow\ \left(2\ \mathbf{3}\ \mathbf{5}\ 4\ 1\ 6\right)\ $ compare and swap
+
+$\left(2\ 3\ \mathbf{5}\ \mathbf{4}\ 1\ 6\right)\rightarrow\ \left(2\ 3\ \mathbf{4}\ \mathbf{5}\ 1\ 6\right)\ $ compare and swap
+
+$\left(2\ 3\ 4\ \mathbf{5}\ \mathbf{1}\ 6\right)\rightarrow\ \left(2\ 3\ 4\ \mathbf{1}\ \mathbf{5}\ 6\right)\ $ compare and swap
+
+Third pass
+
+$\left(\mathbf{2}\ \mathbf{3}\ 4\ 1\ 5\ 6\right)\rightarrow\ \left(\mathbf{2}\ \mathbf{3}\ 4\ 1\ 5\ 6\right)\ $ compare and no swap
+
+$\left(2\ \mathbf{3}\ \mathbf{4}\ 1\ 5\ 6\right)\rightarrow\ \left(2\ \mathbf{3}\ \mathbf{4}\ 1\ 5\ 6\right)\ $ compare and no swap
+
+$\left(2\ 3\ \mathbf{4}\ \mathbf{1}\ 5\ 6\right)\rightarrow\ \left(2\ 3\ \mathbf{1}\ \mathbf{4}\ 5\ 6\right)\ $ compare and swap
+
+
+Fourth Pass
+
+$\left(\mathbf{2}\ \mathbf{3}\ 1\ 4\ 5\ 6\right)\rightarrow\ \left(\mathbf{2}\ \mathbf{3}\ 1\ 4\ 5\ 6\right)\ $ compare and  no swap
+
+$\left(2\ \mathbf{3}\ \mathbf{1}\ 4\ 5\ 6\right)\rightarrow\ \left(2\ \mathbf{1}\ \mathbf{3}\ 4\ 5\ 6\right)\ $ compare and swap
+
+
+Fifth Pass
+
+
+$\left( \mathbf{2}\ \mathbf{1}\ 3\ 4\ 5\ 6)\rightarrow\ (\mathbf{1}\ \mathbf{2}\ 3\ 4\ 5\ 6)\right)\ $ compare and swap
+****
+
+
+== The Insertion Sort Algorithm
+
+The insertion sort works by working through a list and classifying two pieces as sorted and unsorted.
+
+* The insertion sort scans through each element of the list
+using an outer loop with a variable, say $i$.
+
+* At each stage, the list is divided into a sorted section, say the left section, and a section that is not sorted, say the right.
+
+* The location up to which the list is sorted, is denoted by a pointer or index, called a key.
+
+* At the current stage, the next element from the unsorted section, on the right,
+is inserted into its appropriate position in the sorted section on the left.
+
+* The process of inserting smaller elements in the left involves shifting,
+larger elements to the right, using a variable, say $j$.
+
+
+A Python implementation of the Insertion Sort Algorithm is given below:
+
+:pt_code_height: 350
+:pt_rawinput: false
+:pt_code:   def%20insertion_sort%28a%29%3A%0A%20%20%20%20for%20i%20in%20range%281,%20len%28a%29%29%3A%0A%20%20%20%20%20%20%20%20j%20%3D%20i-1%20%0A%20%20%20%20%20%20%20%20key%20%3D%20a%5Bi%5D%0A%20%20%20%20%20%20%20%20while%20%28a%5Bj%5D%20%3E%20key%29%20and%20%28j%20%3E%3D%200%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20a%5Bj%2B1%5D%20%3D%20a%5Bj%5D%0A%20%20%20%20%20%20%20%20%20%20%20j%20-%3D%201%0A%20%20%20%20%20%20%20%20a%5Bj%2B1%5D%20%3D%20key%0A%20%0A%23%20Driver%20code%20to%20test%20above%0Aarr%20%3D%20%5B64,%2034,%2025,%2012,%2022,%2011,%2090%5D%0A%20%0Ainsertion_sort%28arr%29%0A%20%0Aprint%20%28%22Sorted%20array%20is%3A%22%29%0Afor%20i%20in%20range%28len%28arr%29%29%3A%0A%20%20%20%20print%20%28%22%25d%22%20%25arr%5Bi%5D%29,%0A
+****
+.Example {counter:algoex} - Insertion Sort in Python
+--
+--
+The Python code below uses a *for* loop and a nested while loop to implement the Insertion Sort
+Algorithm.
+
+include::python_tutor.adoc[]
+****
+
+****
+.Example {counter:algoex} - Tracing the Insertion Sort Algorithm
+
+
+As an example we consider explicitly the steps of the Insertion Sort Algorithm to sort $6, 2, 5, 3, 4, 1, $ in increasing
+order.
+The key, or boundary, between the sorted and unsorted portions is denoted by the vertical bar or pipe character.
+
+.Solution
+First pass
+
+$(\underbrace{\mathbf{6}\ |\ \mathbf{2}}\ 5\ 3\ 4\ 1)$ compare and insert
+
+Second pass
+
+$(2\ \underbrace{\mathbf{6}\ |\ \mathbf{5}}\ 3\ 4\ 1)$ compare and  insert
+
+$(\underbrace{\mathbf{2}\ \mathbf{5}}\ |\ 6\ 3\ 4\ 1)$ compare and do not insert
+
+Third pass
+
+$(2\ 5\ \underbrace{\mathbf{6}\ |\ \mathbf{3}}\ 4\ 1)$ compare and  insert
+
+$(2\ \underbrace{\mathbf{5}\ \mathbf{3}}\ |\ 6\ 4\ 1)$ compare and  insert
+
+$(\underbrace{\mathbf{2}\ \mathbf{3}}\ 5\ |\ 6\ 4\ 1)$ compare and  do not insert
+
+Fourth pass
+
+$(2\ 3\ 5\ \underbrace{\mathbf{6}\ |\ \mathbf{4}}\ 1)$ compare and  insert
+
+$(2\ 3\ \underbrace{\mathbf{5}\ \mathbf{4}\ }|\ 6\ 1)$ compare and  insert
+
+$(2\ \underbrace{\mathbf{3}\ \mathbf{4}}\ 5\ |\ 6\ 1)$ compare and  do no insert
+
+Fifth pass
+
+$(2\ 3\ 4\ 5\ \ \underbrace{\mathbf{6}\ |\ \mathbf{1}})$    compare and  insert
+
+$(2\ 3\ 4\ \underbrace{\mathbf{5}\ \mathbf{1}}\ |\ 6)$    compare and  insert
+
+$(2\ 3\ \underbrace{\mathbf{4}\ \mathbf{1}}\ 5\ |\ 6)$    compare and  insert
+
+$(2\ \underbrace{\mathbf{3}\ \mathbf{1}}\ 4\ \ 5\ |\ 6)$    compare and  insert
+
+$(\underbrace{\mathbf{2}\ \mathbf{1}\ }3\ 4\ \ 5\ |\ 6)$    compare and  insert
+
+$( 1\ 2\ 3\ 4\ \ 5\ |\ 6)$
+****
+
+== The Binary Search Algorithm
+The binary search algorithm searches a *sorted* array of integers for a target value $t$.  The algorithms looks for $t$ in the middle of the array.  If it does not find $t$ in the middle, it considers either the first half or the second half.  It continues recursively splitting the search space in half until it either finds $t$ or fails.
+
+
+:pt_code_height: 520
+:pt_rawinput: false
+:pt_code: from%20math%20import%20floor%0Adef%20BinarySearch%28a,%20t%29%3A%0A%20%20%20%20L%20%3D%200%0A%20%20%20%20R%20%3D%20len%28a%29%20-%201%0A%20%20%20%20while%20L%20%3C%3D%20R%3A%0A%20%20%20%20%20%20%20%20m%20%3D%20floor%28%28L%20%2B%20R%29%20/%202%29%0A%20%20%20%20%20%20%20%20if%20a%5Bm%5D%20%3C%20t%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20L%20%3D%20m%20%2B%201%0A%20%20%20%20%20%20%20%20elif%20a%5Bm%5D%20%3E%20t%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20R%20%3D%20m%20-%201%0A%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20m%0A%20%20%20%20return%20-1%0A%0Ai%20%3D%20BinarySearch%28%5B200,%20205,%20315,%20498%5D,%20498%29%0Aprint%28%22498%20is%20at%20index%22,%20i%29
+****
+.Example {counter:algoex} - Binary Search Algorithm in Python
+--
+--
+
+include::python_tutor.adoc[]
+****
+
+////
+== Recursive Algorithms
+
+Algorithms or procedures may invoke other procedures.
+An algorithm that calls itself is said to be a *recursive algorithm*.
+
+One way to think of recursive algorithms, is as algorithms
+which reduce  tasks to  instances of the same task with a smaller number of inputs.
+
+We illustrate with some basic examples.
+The first few examples are intended mainly to introduce the
+concept of recursion and are not necessarily the most efficient or
+intuitive ways to implement the given tasks.  Recursive methods are to be
+contrasted with iterative methods.
+
+=== Recursive Implementation of Factorial
+
+We begin with a recursive method for
+computing $n!$ for integers $n \geq  0$.
+
+Recall that $5!=5\ \times\ 4\ \times\ 3\ \times\ 2\ \times\ 1\ =\ 5\ \times\ 4!$.
+In general, we may define $n!$ recursively or inductively as
+
+$0!=1$
+
+$n!\ =\ n\ \cdot\ (n-1)!\ $
+
+A recursive implementation of the factorial procedure in
+pseudocode would be, to be contrasted with an iterative implementation.
+
+.Recursive implementation of the factorial function, $n!$.
+
+****
+++++
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Century Schoolbook";
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Procedure
+RFactorial: </b>computes <i>n!</i>, for <i>n</i>, a positive integer,
+recursively</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Input: </b>A
+nonnegative integer, <i>n</i>.</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Output: </b><i>n!
+= 1*2*3…(n-1)*(n)</i></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-family:"Century Schoolbook",serif'>Procedure </span></b><span
+style='font-family:"Century Schoolbook",serif'>R</span><span style='font-family:
+"Century",serif'>Fa</span><span style='font-family:"Century",serif'>ctorial</span>(<span
+style='letter-spacing:-1.75pt'> <i>n</i></span> )</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-family:"Century Schoolbook",serif'>begin</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century",serif'>if</span></b><span
+style='font-family:"Century",serif'> n==0 <b>then do</b></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>return
+</span></b><span style='font-family:"Century",serif'>1</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century",serif'>else
+do</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>return
+</span></b><span style='font-family:"Century",serif'>n*Rfactorial(n-1)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>end</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-family:"Century Schoolbook",serif'>end</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>____________________________________________________________________</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
+++++
+****
+
+A recursive implementation of the factorial function in Python is given below
+
+:pt_code_height: 350
+:pt_rawinput: false
+:pt_code:    def%20rfactorial%28n%29%3A%0A%20%20%20%20z%3D1%0A%20%20%20%20if%20n%3E1%3A%0A%20%20%20%20%20%20%20%20z%3Dn*rfactorial%28n-1%29%0A%20%20%20%20return%20z%0A%23%20Driver%20code%20to%20test%20above%0AAnswer%3Drfactorial%285%29%0Aprint%28%22n! %20is%3A%22,%20Answer%29%0A
+****
+.Example {counter:algoex} - Recursive Implementation of Factorial Function, $n!$, in Python
+--
+--
+The Python code below implements the factorial function $n!$ recursively.
+
+include::python_tutor.adoc[]
+****
+
+=== Recursive Implementation of the Power Function $b^n$
+
+As another simple example, we consider a recursive implementation of exponentiation $b^n$ with $n$ a nonnegative integer, $b>0$, and $b  \neq 1$.
+
+Consider for example $5^4=5\ {\cdot\ 5}^3$
+Hence we can recursively define exponentiation as
+
+$b^0=1$
+
+$b^n=b\cdot\ b^{n-1}$.
+
+A pseudocode recursive implementation of the power function or exponential function $b^n$ is below.
+
+
+.Recursive Implementation of the Power Function, $b^n$.
+****
+
+++++
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Century Schoolbook";
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Procedure
+Rexponentiation: </b>recursively computes the </p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>exponent <i>b</i><sup>n</sup></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Input: </b>A
+nonnegative integer<i>, n and a positive base </i></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Output: </b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-family:"Century Schoolbook",serif'>procedure<span style='letter-spacing:
+-1.4pt'> </span></span></b><span style='font-family:"Century Schoolbook",serif;
+letter-spacing:-1.4pt'>R</span><span style='font-family:"Century",serif'>e</span><span
+style='font-family:"Century",serif'>xponentiation</span>(<span
+style='letter-spacing:-1.75pt'>n</span><i><span style='font-size:10.0pt;
+line-height:107%;font-family:"Century Schoolbook",serif'>, b)</span></i></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-family:"Century Schoolbook",serif'>begin</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century",serif'>if</span></b><span
+style='font-family:"Century",serif'> n==0 <b>then do</b></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>return
+</span></b><span style='font-family:"Century",serif'>1</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century",serif'>else
+do</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>return
+</span></b><span style='font-family:"Century",serif'>b*Rexponentiation(n-1)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>end</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-family:"Century Schoolbook",serif'>end</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
+++++
+
+****
+=== Recursively Defined Arithmetic Sequences
+
+Consider the arithmetic sequence, $5, 9, 13, 17,\ldots $, which is an
+arithmetic sequence with first term $a_1=5$ and common difference $d=4$,
+which may be defined recursively as
+
+$a_1=5$
+
+$a_n=4+a_{n-1}$
+
+The general arithmetic sequence with first term $a_1=a$ and common difference $d$
+can be defined recursively,
+
+$a_1=a$
+
+$a_n=d+a_{n-1}$,
+
+and the sequence can be generated recursively using the following pseudocode.
+
+.Recursive implementation of arithmetic sequences with first term $a_1=a$, and common difference $d$.
+
+****
+
+++++
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Century Schoolbook";
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Procedure
+Rarithmetic: </b>recursively computes the <i>n</i><sup>th</sup> term </p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>of the
+arithmetic sequence with first term, <i>a</i> and </p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>common difference,
+<i>d</i>. </p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Input: </b>A
+positive integer, <i>n</i> and the first term, <i>a</i>, and </p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>common
+difference, <i>d</i>, of an arithmetic sequence </p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Output: </b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-family:"Century Schoolbook",serif'>procedure<span style='letter-spacing:
+-1.4pt'> </span></span></b><span style='font-family:"Century Schoolbook",serif;
+letter-spacing:-1.4pt'>R</span><span style='font-family:"Century",serif'>arithmetic</span>(<i><span
+style='letter-spacing:-1.75pt'>n</span></i><i><span style='font-size:10.0pt;
+line-height:107%;font-family:"Century Schoolbook",serif'>, a, d)</span></i></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-family:"Century Schoolbook",serif'>begin</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century",serif'>if</span></b><span
+style='font-family:"Century",serif'> n==1 <b>then do</b></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>return
+</span></b><i><span style='font-family:"Century",serif'>a</span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century",serif'>else
+do</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>return
+</span></b><span style='font-family:"Century",serif'>d + Rarithmetic(n – 1, a,
+d)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>end</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-family:"Century Schoolbook",serif'>end</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
+++++
+****
+
+=== Recursive Generation of the Fibonacci sequence
+
+Recall the Fibonacci sequence $1, 1, 2, 3, 5, 8, 13 \ldots $ is defined recursively,
+
+$f_1=1$
+
+$f_2=1$
+
+$f_n=f_{n-1}+f_{n-2}$
+
+We provide a recursive Python implementation to compute the $n^{th}$
+Fibonacci number.
+
+:pt_code_height: 350
+:pt_rawinput: false
+:pt_code:     def%20rfib%28n%29%3A%0A%20%20%20%20if%20n%20%3C%202%3A%0A%20%20%20%20%20%20%20%20return%20n%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20rfib%28n-1%29%20%2Brfib%28n-2%29%0A%23Driver%20code%20to%20test%20above%0Aans%3D%20rfib%286%29%0Aprint%28%22The%20nth%20Fibonacci%20number%20is%3A%22,%20ans%29%0A
+****
+.Example {counter:algoex} - Recursive Implementation of Fibonacci in Python
+--
+--
+The Python code below uses the recursive relationship $f_n = f_{n-1}+f_{n-2}$, to calculate
+the $n^{th}$ Fibonacci number.
+
+include::python_tutor.adoc[]
+****
+////
+
+== Algorithmic Complexity of Common Algorithms
+
+
+In this section we give time complexity using big 0 notation of some of the important algorithms in this section.
+Recall big $O$ notation is used to quantify the worst case an algorithm performs on a data input size of n.
+
+=== The Linear Search Algorithm is $O(n)$.
+
+The linear search algorithm iterates across a list of $n$ data elements. If the first element in the list is the target
+element, the algorithm stops. Otherwise, move to the next element and continue
+repeatedly until the target element is found or not.  If the target element is not in
+the search list the algorithm exhaustively searches through every single element.
+
+This is the
+worst case scenario with linear search in which the algorithm inspects every single element,
+either because the target element is the last element of the array,
+or the target element  is not  actually  in the search list at all. The algorithm
+runs in $O(n)$ time in the worst case.
+
+
+=== The Bubble Sort and Insertion Sort Algorithms are $O(n^2)$.
+
+We analyze the bubble sort algorithm beginning with a concrete list of size $n=5$ and
+generalize the analysis.
+
+Consider the case of a list of size $n=5$. The naive bubble sort algorithm in this case will
+involve 4 passes.
+
+In the first pass, there will be 4 comparisons and up to 4 swaps, after which
+the element in position 5 is in its correct position.
+
+In the second pass, there will be 3 comparisons and up to 3 swaps, after which
+the element in position 4 is in its correct position.
+
+In the third  pass, there will be 2 comparisons and up to 2 swaps, after which
+the element in position 3 is in its correct position.
+
+In the fourth pass, there will be 1 comparison and one possible swap , after which
+both the elements in positions 1 and 2 are both in their correct positions.
+
+Adding the comparisons from each pass we obtain,
+
+$4+3+2+1=1+2+3+4$.
+
+In general, if the list is of size $n$, there will be $n-1$ passes with swaps,
+
+$n-1+n-2+...3+2+1 = 1+2+3+...+n-1$.
+
+We will show later, that
+
+$ 1+2+3+\cdots+n-1= \frac{(n-1)\cdot\ n}{2}=\frac{n^2}{2}-\frac{n}{2}$, which is $O(n^2)$.
+
+It is left as an exercise to verify that the insertion sort algorithm is $O(n^2)$.
+
+=== The Binary  Search Algorithm is $O(\log{n})$.
+
+The binary search algorithm searches for a target element $x$  in a list of $n$ elements
+by comparing the middle element in the the sorted data set with the target $x$. The algorithm
+stops if the middle element $a_m$ is  the target element. Otherwise the search continues with
+half the data set--the half to the left if the middle element is larger than the target $x$
+or the half to the right if the middle element is smaller than the target.
+
+The number of steps in the binary search then is the number of times we have to split the data set until we locate the target
+element, or determine that the target element is not in the search list after splitting down to 1 element.
+
+The number of times we need to split the data set of size $n$, in the worst case then, is $p$ which is
+found by solving the exponential equation,
+
+$2^p = n$.
+
+The algorithm then is $O(p)$.
+
+The solution of the exponential equation, $2^p = n$, is in log form,
+
+$p=\log_2{n}$.
+
+The binary search algorithm then is $O(p)=O(\log{n})$.
+
+== Exercises
+
+////
+. The selection sort algorithm is another algorithm to sort a list of $n$ elements.
+It finds the smallest element in the list and exchanges it with whatever is in
+position $1$ of the list. It then finds the next smallest integer, and exchanges it
+with whatever is in position $2$ of the list, continuing in this way until the entire
+list has been sorted.
+
+.. Apply the selection sort algorithm to the following list of integers, showing each
+of the steps, or passes, involving comparisons and swaps.
++
+${4,8,3,10,7,2,6 ,9,5,1}$
+.. Count the number of steps, used to sort the list, ${4,8,3,10,7,2,6 ,9,5,1}$, using the selection sort
+method.
+.. Devise an algorithm in pseudocode to implement the selection sort algorithm.
+.. Explain why the selection sort algorithm, in the worst case is $O(n^2)$.
+You may use the formula $1+2+3…+n=\frac{n(n+1)}{2}$, or a variation of it.
+////
+
+. Explain why the insertion sort algorithm is $O(n^2)$.
+
+. Estimate the time complexity for each of the following two algorithms
+by first counting the number of steps, and summarizing your findings using
+big O notation
+.. An algorithm to find the sum and product of $n$ integers from
+$1$ to $n$.
++
+++++
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:106%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:106%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>procedure</b>
+Sum_Product_i(n)</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>begin</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>                 sum
+=0</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;
+            product=1</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;             <b>for</b>
+i =1 &nbsp;to n <b>do</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       sum=sum + i</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              product=product*i</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;&nbsp;&nbsp;&nbsp;
+          end</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>end</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
+
+++++
+
+.. A procedure to create a matrix $A_{n,n}$, with $n$ rows and $n$ columns,
+with the entry $m$ in row $i$ and column $j$.
++
+++++
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:105%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:105%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>procedure</b>
+Create_Matrix(n)</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>begin</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>for</b> i =1 &nbsp;to n <b>do</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>for </b>j =1 &nbsp;to n <b>do</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+A[i,j]=m</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+end</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>end</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
+
+
+++++
+. Explain how the binary search algorithm can be modified or used
+to insert a new integer element $x$ into a sorted list of $n$ integers.
+
+
+. Write a recursive  procedure in pseudocode to implement the binary search algorithm.
+
+
+. A binary string of length n is a sequence of $0^\prime s$ and $1^\prime s$ of length $n$.
+For example, the binary strings of length two are $00, 01, 10,$ and $11$, and the binary strings of
+length three are $000, 001, 010, 011, 100, 101, 110,$ and $111$. Write a recursive algorithm in
+pseudocode to generate all binary strings of length $n$.
+
+
+. Write recursive procedures in pseudocode to generate the following sequences, all of which are variations of the Fibonacci sequence,
+
+.. $a_1 =1, a_2 = 1,$ and $a_n = a_{n-1}+2a_{n-2}.$
+
+.. $b_1 = 2, b_2 = 3,$ and $b_n = b_{n-1}\cdot\ b_{n-2}$
+
+
+.. $c_1 = 5$ and $c_n = {2c}_n+n$
+
+. Recall that the median of an ordered set of numbers $\left\{a_1,a_2,\ldots,\ a_n\right\}$ is the number in the middle of the set.
+If the sorted set has an odd number of elements, then
+the median is $a_M$, where $M=\left\lceil \frac{n}{2}\right\rceil$.
+For example, the set $a_1=10,\ a_2=10,\ a_3=7,\ a_4=6,\ a_5=2$ has median
+$a_3=7$.
++
+If the sorted set has an even number of elements, then
+the median  $a_M$  is the mean of $a_\frac{n}{2}$  and $a_{\frac{n}{2}+1}$.
+For example,  the set $a_1=10,\ a_2=10,\ a_3=7,\ a_4=6,\ a_5=2,\ a_6=0$ has median $\frac{\left(a_3+a_4\right)}{2}=\frac{7+6}{2}=6.5.$
++
+Write an algorithm in pseudocode to calculate the median of a data set by first sorting in decreasing order.
+
+. The range of a set of  integers ${a_1,a_2,\ldots, a_n}$ is the maximum value minus the minimum value,
+$range={a}_{max}-{a}_{min}$.
+.. Give an algorithm to find the range that uses a sorting algorithm and subtracts the first element from the last element in the sorted list.
+.. Give an algorithm to find the range that modifies the linear search algorithm to find both  $a_{max}$ and $a_{min}$, and then does the subtraction
+${a}_{max}-{a}_{min}$.
+.. Explain, using complexity analysis, which of the two algorithms is more efficient?
+
+
+. Consider the following lists of integers.
++
+A. $\{4,8,3,10,7,2,6,9,5,1\}$
+B. $\{10,5,3,12,2,9,7,1,6,11,8,5\}$
+C. $\{8,3,14,5,4,11,9,2,7,6,12,13,1,10\}$
++
+Sort the lists using:
+
+.. The insertion sort algorithm, showing all the shifts.
+.. The bubble sort algorithm, showing all the swaps in the case.
+.. Give a count of the steps used in the both algorithms.
+
+
+. For the following lists,
++
+A. $\{6,31,46,49,49,55,56,59,65,82\}$
+B. $\{9,14,16,25,26,33,44,45,52,55,57,68,72,72,84,94\}$
+C. $\{11,14,23,29,31,36,41,41,44,47,47,50,65,70,82,85,88,89,92,96\}$
++
+Apply the binary search algorithm to search for the target $x=65$. Give a count of the number of steps involved in each search.

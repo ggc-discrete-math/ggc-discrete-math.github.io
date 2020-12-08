@@ -1,0 +1,4 @@
+cd Download/MathAsciiDoc
+
+Repeat the line below every time you make a change to a chapter.
+asciidoctor-latex -b html book.adoc

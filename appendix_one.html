@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Asciidoctor 1.5.8" name="generator"/>
+  <meta content="Mohamed Jamaloodeen, Kathy Pinzon, Daniel Pragel, Joshua Roberts, Sebastien Siva" name="author"/>
+  <title>
+   Discrete Math
+  </title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700" rel="stylesheet"/>
+  <link href="./asciidoctor.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <style>
+   .click .title { color: blue; }
+  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
+  .openblock { margin-top: 1em; margin-bottom: 1em; }
+  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript">
+  </script>
+  <script>
+   var ready2;
+
+ready2 = function() {
+
+    $(document).ready(function(){
+
+        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
+        $('.openblock.click').find('.content').hide()
+
+
+        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
+        $('.listingblock.click').find('.content').hide()
+
+    });
+
+}
+
+
+
+
+$(document).ready(ready2);
+$(document).on('page:load', ready2);
+  </script>
+ </head>
+ <body class="article toc2 toc-left">
+  <div id="header">
+   <h1>
+    Discrete Math
+   </h1>
+   <div class="details">
+    <span class="author" id="author">
+     Mohamed Jamaloodeen, Kathy Pinzon, Daniel Pragel, Joshua Roberts, Sebastien Siva
+    </span>
+    <br/>
+   </div>
+   <div class="toc2" id="toc">
+    <div id="toctitle">
+     Table of Contents
+    </div>
+    <ul class="sectlevel1">
+     <li>
+      <a href="index.html#_introducing_discrete_mathematics">
+       1. Introducing Discrete Mathematics
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="index.html#_course_objectives">
+         1.1. Course Objectives
+        </a>
+       </li>
+       <li>
+        <a href="index.html#_applications_of_discrete_mathematics">
+         1.2. Applications of Discrete Mathematics
+        </a>
+       </li>
+       <li>
+        <a href="index.html#_understanding_continuous_and_discrete_sets">
+         1.3. Understanding Continuous and Discrete Sets
+        </a>
+       </li>
+       <li>
+        <a href="index.html#_exercises">
+         1.4. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="python_intro.html#_introduction_to_python">
+       2. Introduction to Python
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="python_intro.html#_programming_basics">
+         2.1. Programming Basics
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_data_types">
+         2.2. Data Types
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_variables">
+         2.3. Variables
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_operators_and_expressions">
+         2.4. Operators and Expressions
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_strings_and_printing">
+         2.5. Strings and Printing
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_if_statements">
+         2.6. If Statements
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_while_statements">
+         2.7. While Statements
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_lists_and_loops">
+         2.8. Lists and Loops
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_list_appending_and_slicing">
+         2.9. List Appending and Slicing
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_defining_custom_functions">
+         2.10. Defining Custom Functions
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_exercises_2">
+         2.11. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="logic.html#_logic">
+       3. Logic
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="logic.html#_propositional_logic">
+         3.1. Propositional Logic
+        </a>
+       </li>
+       <li>
+        <a href="logic.html#_proposition_equivalences">
+         3.2. Proposition Equivalences
+        </a>
+       </li>
+       <li>
+        <a href="logic.html#_predicates_and_quantifiers">
+         3.3. Predicates and Quantifiers
+        </a>
+       </li>
+       <li>
+        <a href="logic.html#_applications_of_logic">
+         3.4. Applications of Logic
+        </a>
+       </li>
+       <li>
+        <a href="logic.html#_exercises_3">
+         3.5. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="set_theory.html#_set_theory">
+       4. Set Theory
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="set_theory.html#_sets">
+         4.1. Sets
+        </a>
+       </li>
+       <li>
+        <a href="set_theory.html#_set_operations">
+         4.2. Set Operations
+        </a>
+       </li>
+       <li>
+        <a href="set_theory.html#_representing_sets_as_lists">
+         4.3. Representing Sets as Lists
+        </a>
+       </li>
+       <li>
+        <a href="set_theory.html#_exercises_4">
+         4.4. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="functions.html#_functions">
+       5. Functions
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="functions.html#_injective_surjective_bijective_and_inverse_functions">
+         5.1. Injective Surjective, Bijective and Inverse Functions
+        </a>
+       </li>
+       <li>
+        <a href="functions.html#_the_ceiling_floor_maximum_and_minimum_functions">
+         5.2. The Ceiling, Floor, Maximum and  Minimum Functions
+        </a>
+       </li>
+       <li>
+        <a href="functions.html#_the_algebra_of_functions">
+         5.3. The Algebra of Functions
+        </a>
+       </li>
+       <li>
+        <a href="functions.html#_composition_of_functions">
+         5.4. Composition of Functions
+        </a>
+       </li>
+       <li>
+        <a href="functions.html#_the_inverse_of_a_function">
+         5.5. The Inverse of a Function
+        </a>
+       </li>
+       <li>
+        <a href="functions.html#_exercises_5">
+         5.6. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="growth_functions.html#_growth_of_functions">
+       6. Growth of Functions
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="growth_functions.html#_introducing_big_o">
+         6.1. Introducing
+         <em>
+          Big O
+         </em>
+        </a>
+       </li>
+       <li>
+        <a href="growth_functions.html#_properties_of_big_o_notation">
+         6.2. Properties of
+         <em>
+          Big O
+         </em>
+         notation.
+        </a>
+       </li>
+       <li>
+        <a href="growth_functions.html#_exercises_6">
+         6.3. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="algorithms.html#_algorithms">
+       7. Algorithms
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="algorithms.html#_structure_of_algorithms_in_pseudocode_and_python">
+         7.1. Structure of Algorithms in Pseudocode and Python
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_examples_of_algorithms">
+         7.2. Examples of Algorithms
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_the_linear_search_algorithm">
+         7.3. The Linear Search Algorithm
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_the_bubble_sort_algorithm">
+         7.4. The Bubble Sort Algorithm
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_the_insertion_sort_algorithm">
+         7.5. The Insertion Sort Algorithm
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_the_binary_search_algorithm">
+         7.6. The Binary Search Algorithm
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_algorithmic_complexity_of_common_algorithms">
+         7.7. Algorithmic Complexity of Common Algorithms
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_exercises_7">
+         7.8. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="counting.html#_counting">
+       8. Counting
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="counting.html#_the_product_rule_and">
+         8.1. The Product Rule (
+         <em>
+          and
+         </em>
+         )
+        </a>
+       </li>
+       <li>
+        <a href="counting.html#_the_sum_rule_xor">
+         8.2. The Sum Rule (
+         <em>
+          xor
+         </em>
+         )
+        </a>
+       </li>
+       <li>
+        <a href="counting.html#_the_subtraction_rule_or">
+         8.3. The Subtraction Rule (
+         <em>
+          or
+         </em>
+         )
+        </a>
+       </li>
+       <li>
+        <a href="counting.html#_the_pigeonhole_principle">
+         8.4. The Pigeonhole Principle
+        </a>
+       </li>
+       <li>
+        <a href="counting.html#_permutations_and_combinations">
+         8.5. Permutations and Combinations
+        </a>
+       </li>
+       <li>
+        <a href="counting.html#_exercises_8">
+         8.6. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="number_theory.html#_number_theory">
+       9. Number Theory
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="number_theory.html#_divisibility">
+         9.1. Divisibility
+        </a>
+       </li>
+       <li>
+        <a href="number_theory.html#_integer_representations">
+         9.2. Integer Representations
+        </a>
+       </li>
+       <li>
+        <a href="number_theory.html#_base_conversion">
+         9.3. Base Conversion
+        </a>
+       </li>
+       <li>
+        <a href="number_theory.html#_exercises_9">
+         9.4. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="induction_recursion.html#_sequences_recursive_definitions_and_induction">
+       10. Sequences, Recursive Definitions, and Induction
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="induction_recursion.html#_sequences_series_and_sigma_notation">
+         10.1. Sequences, Series, and Sigma Notation
+        </a>
+       </li>
+       <li>
+        <a href="induction_recursion.html#_defining_sequences_recursively">
+         10.2. Defining Sequences Recursively
+        </a>
+       </li>
+       <li>
+        <a href="induction_recursion.html#_recursive_algorithms">
+         10.3. Recursive Algorithms
+        </a>
+       </li>
+       <li>
+        <a href="induction_recursion.html#_mathematical_induction">
+         10.4. Mathematical Induction
+        </a>
+       </li>
+       <li>
+        <a href="induction_recursion.html#_strong_induction">
+         10.5. Strong Induction
+        </a>
+       </li>
+       <li>
+        <a href="induction_recursion.html#_exercises_10">
+         10.6. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="graph_theory.html#_graph_theory">
+       11. Graph Theory
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="graph_theory.html#_introduction_and_basic_definitions">
+         11.1. Introduction and Basic Definitions
+        </a>
+       </li>
+       <li>
+        <a href="graph_theory.html#_representing_graphs">
+         11.2. Representing graphs.
+        </a>
+       </li>
+       <li>
+        <a href="graph_theory.html#_weighted_graphs">
+         11.3. Weighted Graphs
+        </a>
+       </li>
+       <li>
+        <a href="graph_theory.html#_subgraphs">
+         11.4. Subgraphs
+        </a>
+       </li>
+       <li>
+        <a href="graph_theory.html#_connectivity_eulerian_graphs_and_hamiltonian_graphs">
+         11.5. Connectivity, Eulerian Graphs, and Hamiltonian Graphs
+        </a>
+       </li>
+       <li>
+        <a href="graph_theory.html#_exercises_11">
+         11.6. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="appendix_one.html#_appendix_1_library_of_functions">
+       12. Appendix 1: Library of Functions
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="appendix_one.html#_quadratic_function">
+         12.1. Quadratic Function
+        </a>
+       </li>
+       <li>
+        <a href="appendix_one.html#_the_cubic_function">
+         12.2. The Cubic function
+        </a>
+       </li>
+       <li>
+        <a href="appendix_one.html#_the_square_root_and_cube_root_functions">
+         12.3. The Square Root and Cube Root Functions
+        </a>
+       </li>
+       <li>
+        <a href="appendix_one.html#_exponential_and_logarithmic_functions">
+         12.4. Exponential and Logarithmic Functions
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="appendix_two.html#_appendix_2_python_syntax_examples">
+       13. Appendix 2: Python Syntax Examples
+      </a>
+     </li>
+    </ul>
+   </div>
+  </div>
+  <div id="content">
+   <div id="preamble">
+    <div class="sectionbody">
+     <div class="openblock float-group">
+      <div class="content">
+       <div class="imageblock left text-left">
+        <div class="content">
+         <img alt="GGC" height="200" src="images/GGC_Logo.png" width="250"/>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="sect1">
+    <h2 id="_appendix_1_library_of_functions">
+     12. Appendix 1: Library of Functions
+    </h2>
+    <div class="sectionbody">
+     <div class="paragraph">
+      <p>
+       Functions can in many cases be visualized graphically,
+for example when mapping from the real line, \(\mathbb{R}\)
+to the real line, such maps are viewed on a Cartesian plan.
+      </p>
+     </div>
+     <div class="sect2">
+      <h3 id="_quadratic_function">
+       12.1. Quadratic Function
+      </h3>
+      <div class="paragraph">
+       <p>
+        The function \(f(x) =x^2\), denotes the association \((a,b) =(x, x^2)\) with
+\(f : \mathbb{R} \rightarrow \mathbb{R}\). We notice that the range is the set of
+real numbers \([0,  \infty)= \mathbb{R}^{+}\).
+The function is not invertible, since it is not injective. For example, we have both \(f(-3) =9\) and \(f(3)=9\).
+With \(f : \mathbb{Z} \rightarrow \mathbb{Z}\) notice that the range is now \(\mathbb{N}\)
+       </p>
+      </div>
+      <div class="paragraph">
+       <p>
+        \begin{array}{lccccccccccc}
+ &amp; x &amp; -5 &amp; -4 &amp; -3 &amp; -2 &amp; -1 &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+  &amp;  x^2  &amp; 25 &amp; 16 &amp; 9 &amp; 4 &amp; 1 &amp; 0 &amp; 1 &amp; 4 &amp; 9 &amp; 16 &amp; 25
+\end{array}
+       </p>
+      </div>
+      <div class="openblock float-group">
+       <div class="title">
+        The graph of \(x^2\)
+       </div>
+       <div class="content">
+        <div class="imageblock left text-left">
+         <div class="content">
+          <img alt="geometricsequence" height="1000" src="images/quadratic.png" width="1000"/>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_the_cubic_function">
+       12.2. The Cubic function
+      </h3>
+      <div class="paragraph">
+       <p>
+        The function \(f(x) =x^3\), denotes the association \((a,b) =(x, x^3)\) with
+\(f : \mathbb{R} \rightarrow \mathbb{R}\). Also, we notice that the range is the set of all real
+numbers \((- \infty ,  \infty)=\mathbb{R}\).
+The function is bijective and so invertible.
+With \(f : \mathbb{Z} \rightarrow \mathbb{Z}\), notice that the range,
+in addition to domain, is also    \(\mathbb{Z}\)
+       </p>
+      </div>
+      <div class="paragraph">
+       <p>
+        \begin{array}{llcccccccccl}
+   &amp; x &amp; -5 &amp; -4 &amp; -3 &amp; -2 &amp; -1 &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+   &amp;  x^3 &amp; -125 &amp; -64 &amp; -27 &amp; -8 &amp; -1 &amp; 0 &amp; 1 &amp; 8 &amp; 27 &amp; 64 &amp; 125
+\end{array}
+       </p>
+      </div>
+      <div class="openblock float-group">
+       <div class="title">
+        The graph of \(x^3\)
+       </div>
+       <div class="content">
+        <div class="imageblock left text-left">
+         <div class="content">
+          <img alt="geometricsequence" height="1000" src="images/cubic.png" width="1000"/>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_the_square_root_and_cube_root_functions">
+       12.3. The Square Root and Cube Root Functions
+      </h3>
+      <div class="paragraph">
+       <p>
+        For the purposes of completeness and for comparing
+how fast functions \(f(x)\) grow for large x, we present the
+inverse of the functions
+\(f(x)= x^2\) and \(f(x)= x^3\), when
+\(f(x):\mathbb{R}+→\mathbb{R}+\). Respectively, the functions\( f(x)=\sqrt{x}\)
+and \(f(x)= \) \$root(3)(x)\$.
+       </p>
+      </div>
+      <div class="paragraph">
+       <p>
+        \begin{array}{lcccccccccclll}
+  &amp; x &amp; 0 &amp; 1 &amp; 4 &amp; 9 &amp; 16 &amp; 25 &amp; 36 &amp; 49 &amp; 64 &amp; 81 &amp; 100 &amp; 121 &amp; 144 \\
+  &amp;     \sqrt{x} &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 &amp; 11 &amp; 12
+\end{array}
+       </p>
+      </div>
+      <div class="openblock float-group">
+       <div class="title">
+        The graph of \(√x\)
+       </div>
+       <div class="content">
+        <div class="imageblock left text-left">
+         <div class="content">
+          <img alt="geometricsequence" height="1000" src="images/squareroot.png" width="1000"/>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="paragraph">
+       <p>
+        \begin{array}{lcccccl}
+  &amp; x &amp; 0 &amp; 1 &amp; 8 &amp; 27 &amp; 64 &amp; 125 \\
+ &amp; \sqrt[3]{x}  &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5
+\end{array}
+       </p>
+      </div>
+      <div class="openblock float-group">
+       <div class="title">
+        The graph of \$root(3)(x)\$
+       </div>
+       <div class="content">
+        <div class="imageblock left text-left">
+         <div class="content">
+          <img alt="geometricsequence" height="1000" src="images/cuberoot.png" width="1000"/>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_exponential_and_logarithmic_functions">
+       12.4. Exponential and Logarithmic Functions
+      </h3>
+      <div class="paragraph">
+       <p>
+        We begin by summarizing important properties of exponentials.
+       </p>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="title">
+         Properties of Exponentials
+        </div>
+        <div class="olist loweralpha">
+         <ol class="loweralpha" type="a">
+          <li>
+           <p>
+            For \(a&gt;0, a  ≠ 1\),
+\(a^m.\ a^n=a^{m+n}\). For example, \(3^4\cdot 3^5=3^{4+5}=3^9\).
+           </p>
+          </li>
+          <li>
+           <p>
+            \(\frac{a^m}{a^n}=a^{m-n}\). For example,
+\(\frac{3^5}{3^2}=3^{5-2}=3^3 \).
+           </p>
+          </li>
+          <li>
+           <p>
+            \(\left(a^m\right)^n=a^{m.n\ }\). For example, \(\left(3^4\right)^3=3^{4\cdot 3}=3^{12}\).
+           </p>
+          </li>
+          <li>
+           <p>
+            \(\left(a.b\right)^m=a^mb^m\). For example, \(\left(3x\right)^4=3^4.x^4\)
+           </p>
+          </li>
+          <li>
+           <p>
+            \(a^0=1\)
+           </p>
+          </li>
+          <li>
+           <p>
+            \(a^{-1}=\frac{1}{a}\) For example, \(3^{-1}=\frac{1}{3}\).
+           </p>
+          </li>
+          <li>
+           <p>
+            \( a^\frac{1}{n}=root(n)(a)\).
+           </p>
+          </li>
+         </ol>
+        </div>
+       </div>
+      </div>
+      <div class="sect3">
+       <h4 id="_exponential_functions">
+        12.4.1. Exponential Functions
+       </h4>
+       <div class="paragraph">
+        <p>
+         Exponential functions are of the form
+\(f\left(x\right)=b^x\), where \(b\) is the base and the variable \(x\)
+is in the exponent. The base  \(b&gt;0\) and \(b  ≠ 1\). Properties of
+exponential functions come from properties of exponents.
+When the base \(b\) is greater than 1 the exponential function is increasing exponentially,
+as in the case \(f(x) = 2^x\).
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \begin{array}{llcccccccccl}
+  &amp; x &amp; -5 &amp; -4 &amp; -3 &amp; -2 &amp; -1 &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+  &amp; 2^x &amp; \frac{1}{32} &amp; \frac{1}{16} &amp; \frac{1}{8} &amp; \frac{1}{4} &amp; \frac{1}{2} &amp; 1 &amp; 2 &amp; 4 &amp; 8 &amp; 16 &amp; 32
+\end{array}
+        </p>
+       </div>
+       <div class="openblock float-group">
+        <div class="title">
+         The graph of \(2^x\)
+        </div>
+        <div class="content">
+         <div class="imageblock left text-left">
+          <div class="content">
+           <img alt="geometricsequence" height="1000" src="images/exponential_base2.png" width="1000"/>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="paragraph">
+        <p>
+         When the base \(b\) is less than 1 the exponential function is decreasing exponentially, as in the
+case \(f(x) = \left(\frac{1}{3}\right) ^x\).
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \begin{array}{llcccccccccl}
+ &amp; x &amp; -5 &amp; -4 &amp; -3 &amp; -2 &amp; -1 &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+ &amp; (\frac{1}{3})^x  &amp; 243 &amp; 81 &amp; 27 &amp; 9 &amp; 3 &amp; 1 &amp; \frac{1}{3} &amp; \frac{1}{9} &amp; \frac{1}{27} &amp; \frac{1}{81} &amp; \frac{1}{243}
+\end{array}
+        </p>
+       </div>
+       <div class="openblock float-group">
+        <div class="title">
+         The graph of \(\left(\frac{1}{3}\right)^x\)
+        </div>
+        <div class="content">
+         <div class="imageblock left text-left">
+          <div class="content">
+           <img alt="geometricsequence" height="1000" src="images/exponent_base1_3.png" width="1000"/>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="sect3">
+       <h4 id="_logarithmic_functions">
+        12.4.2. Logarithmic Functions
+       </h4>
+       <div class="paragraph">
+        <p>
+         Logarithmic functions are the inverse functions corresponding
+to exponential functions and are used to solve exponential equations.
+For example, \(y=2^x\) is solved for \(x\) by inverting \(x=\log_2{y}\).
+Properties of logarithms follow from this relationship
+between exponentials and logarithms and properties of the
+exponentials.
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         We summarize three important properties of logarithms.
+        </p>
+       </div>
+       <div class="sidebarblock">
+        <div class="content">
+         <div class="title">
+          Properties of Logarithms
+         </div>
+         <div class="olist loweralpha">
+          <ol class="loweralpha" type="a">
+           <li>
+            <p>
+             The exponential function \(f\left(x\right)=y=b^x\), written in exponential
+form is \(\log_b{f\left(x\right)=\log_b{y=x}}\).  Its inverse is the logarithmic
+function \(x=b^y\), which is denoted   \(y=\log_b{x}\).
+            </p>
+           </li>
+           <li>
+            <p>
+             The power rule for logarithms states
+that \(\log_b m^x=x\cdot \log_b m\).
+            </p>
+           </li>
+           <li>
+            <p>
+             Comparing the solutions of \(2^x\), \(x=\log_2{5}\text{,}\) and \(x=\frac{\log_{10}{5}}{\log_{10}{2}}\), gives
+\(\log_2{5}=\frac{\log_{10}{5}}{\log_{10}{2}}\), which, essentially, is the change of base formula
+\(\log_b{A}=\frac{\log_a{A}}{\log_a{b}}\).
+            </p>
+           </li>
+          </ol>
+         </div>
+        </div>
+       </div>
+       <div class="paragraph">
+        <p>
+         All  other properties of logarithmic functions come from properties relating the logarithm as
+the inverse of the exponential and the equivalence of the logarithm \(a =\log_b m\) with \(b^a=m\).
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         When the base \(b\) is greater than 1, the logarithm function is increasing, as in the case \(f(x) = \log_2 x\).
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \begin{array}{llllllcccccc}
+  &amp; x &amp; \frac{1}{32} &amp; \frac{1}{16} &amp; \frac{1}{8} &amp; \frac{1}{4} &amp; \frac{1}{2} &amp; 1 &amp; 2 &amp; 4 &amp; 8 &amp; 16 &amp; 32 \\
+  &amp; log_2 x &amp; -5 &amp; -4 &amp; -3 &amp; -2 &amp; -1 &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5
+\end{array}
+        </p>
+       </div>
+       <div class="openblock float-group">
+        <div class="title">
+         The graph of \(\log_2 x\)
+        </div>
+        <div class="content">
+         <div class="imageblock left text-left">
+          <div class="content">
+           <img alt="geometricsequence" height="1000" src="images/log_2.png" width="1000"/>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="paragraph">
+        <p>
+         When the base \(b\) is less than 1, the logarithm function is decreasing exponentially, as in the case \(f(x) = \log_{\frac{1}{3}} \ x\).
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \begin{array}{llllllcccccl}
+  &amp; x &amp; \frac{1}{243} &amp; \frac{1}{81} &amp; \frac{1}{27} &amp; \frac{1}{9} &amp; \frac{1}{3} &amp; 1 &amp; 3 &amp; 9 &amp; 27 &amp; 81 &amp; 243 \\
+  &amp; \log_{\frac{1}{3}} x &amp; 5 &amp; 4 &amp; 3 &amp; 2 &amp; 1 &amp; 0 &amp; -1 &amp; -2 &amp; -3 &amp; -4 &amp; -5
+\end{array}
+        </p>
+       </div>
+       <div class="openblock float-group">
+        <div class="title">
+         The graph of \(\log_{\frac{1}{3}} \ x\)
+        </div>
+        <div class="content">
+         <div class="imageblock left text-left">
+          <div class="content">
+           <img alt="geometricsequence" height="1000" src="images/log_1_3.png" width="1000"/>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { extensions: ["mhchem.js"] }
+});
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML">
+  </script>
+ </body>
+</html>

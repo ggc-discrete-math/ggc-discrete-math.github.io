@@ -1,0 +1,12 @@
+[subs="attributes"]
+++++
+<iframe width="100%" frameborder="5" height="{pt_code_height}" src="https://pythontutor.com/iframe-embed.html#code={pt_code}&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=450&codeDivHeight={pt_code_height}"> </iframe>
+
+<div style="text-align: right;">
+ifeval::[{pt_rawinput} == true]
+  <a
+  href="javascript:window.location.reload(true);">Modify Raw Input</a>&nbsp;&nbsp;&nbsp;&nbsp;
+endif::[]
+<a style="" target="_blank" href="http://www.pythontutor.com/visualize.html#code={pt_code}&mode=edit&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0">Edit in PythonTutor</a>
+</div>
+++++

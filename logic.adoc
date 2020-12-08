@@ -1,0 +1,972 @@
+= Logic
+
+== Propositional Logic
+
+A *proposition* is a sentence that declares a fact that is either True or False.
+
+****
+.Examples {counter:logicexample} - Propositions
+
+* Atlanta is the capital of Iowa.
+* 1 + 1 is 2.
+* 1 + 1 is 3.
+
+.Not propositions
+* How much is this cookie?
+* This sentence is false.
+
+****
+
+Propositional logic consists of a set of formal rules for combining propositions in order to derive new propositions.
+
+In Python, we can use boolean variables (typically $p$ and $q$) to represent propositions and define functions for each propositional rule.  Each rule can be implemented using the boolean operators (and, or, not) discussed in the section on <<Operators and Expressions>>.
+//how do I know where sections begin and can I reference them?
+
+A *truth table* is a method of showing truth values of compound propositions using the truth values of its components.  It is typically created with rows representing possible truth values and columns representing the propositions.
+
+=== Negation
+The *negation* is a statement that has the opposite truth value.
+The negation of a proposition $p$, denoted by $\neg p$, is the proposition "It is __not the case__, that $p$".
+
+For example, the negation of the proposition "Today is Friday." would be "It is not the case that, today is Friday." or more succinctly "Today is not Friday."
+
+[width=50%",align="center",options="header"]
+|====
+| $p$ | $\neg p$
+| True | False
+| False | True
+|====
+
+:pt_code_height: 350
+:pt_rawinput: false
+:pt_code: def%20negation%28p%29%3A%0A%20%20%20%20return%20not%20p%0A%0Aprint%28%22p%20%20%20%20a%22%29%0Afor%20p%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20a%20%3D%20negation%28p%29%0A%20%20%20%20print%28p,%20a%29
+
+****
+.Example {counter:logicexample} - Negation in Python
+--
+--
+The code below prints the truth table for negation.  Try to predict the variable names, values, and data types at different steps in the execution. Use the _Next_ button to check your answers.
+include::python_tutor.adoc[]
+****
+
+=== Conjunction
+"I am a rock *and* I am an island."
+
+Let $p$ and $q$ be propositions.  The conjunction of $p$ and $q$, denoted in mathematics by $p \land q$, is True when both $p$ and $q$ are True, False otherwise.
+
+[width=50%",align="center",options="header"]
+|====
+| $p$ | $q$ | $p \land q$
+| True | True | True
+| True | False | False
+| False | True | False
+| False | False | False
+|====
+
+:pt_code_height: 350
+:pt_rawinput: false
+:pt_code: def%20conjunction%28p,%20q%29%3A%0A%20%20%20%20return%20p%20and%20q%0A%0Aprint%28%22p%20%20%20%20q%20%20%20%20a%22%29%0Afor%20p%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20for%20q%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20%20%20%20%20a%20%3D%20conjunction%28p,%20q%29%0A%20%20%20%20%20%20%20%20print%28p,%20q,%20a%29
+
+****
+.Example {counter:logicexample} - Conjunction in Python
+--
+--
+The code below prints the truth table for conjunction.  Try to predict the variable names, values, and data types at different steps in the execution. Use the _Next_ button to check your answers.
+include::python_tutor.adoc[]
+****
+
+=== Disjunction
+"She studied hard *or* she is extremely bright."
+
+Let $p$ and $q$ be propositions.  The disjunction of $p$ and $q$, denoted in mathematics by $p \lor q$, is True when at least one of $p$ and $q$ are True, False otherwise.
+
+[width=50%",align="center",options="header"]
+|====
+| $p$ | $q$ | $p \lor q$
+| True | True | True
+| True | False | True
+| False | True | True
+| False | False | False
+|====
+
+:pt_code_height: 350
+:pt_rawinput: false
+:pt_code: def%20disjunction%28p,%20q%29%3A%0A%20%20%20%20return%20p%20or%20q%0A%0Aprint%28%22p%20%20%20%20q%20%20%20%20a%22%29%0Afor%20p%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20for%20q%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20%20%20%20%20a%20%3D%20disjunction%28p,%20q%29%0A%20%20%20%20%20%20%20%20print%28p,%20q,%20a%29%0A%20%20%20%20%20%20%20%20
+
+****
+.Example {counter:logicexample} - Disjunction in Python
+--
+--
+The code below prints the truth table for disjunction.  Try to predict the variable names, values, and data types at different steps in the execution. Use the _Next_ button to check your answers.
+include::python_tutor.adoc[]
+****
+
+=== Exclusive Disjunction
+"Take *either* 2 Advil *or* 2 Tylenol."
+
+Let $p$ and $q$ be propositions.  The exclusive disjunction of $p$ and $q$ (also known as _xor_), denoted in mathematics by $p \oplus q$, is True when exactly one of $p$ and $q$ are True, False otherwise.
+
+[width=50%",align="center",options="header"]
+|====
+| $p$ | $q$ | $p \oplus q$
+| True | True | False
+| True | False | True
+| False | True | True
+| False | False | False
+|====
+
+[NOTE]
+====
+Exclusive disjunction can be thought of as one or the other, but not both.
+====
+
+:pt_code_height: 350
+:pt_rawinput: false
+:pt_code: def%20exclusive_disjunction%28p,%20q%29%3A%0A%20%20%20%20return%20%28p%20and%20not%20q%29%20or%20%28not%20p%20and%20q%29%0A%0Aprint%28%22p%20%20%20%20q%20%20%20%20a%22%29%0Afor%20p%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20for%20q%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20%20%20%20%20a%20%3D%20exclusive_disjunction%28p,%20q%29%0A%20%20%20%20%20%20%20%20print%28p,%20q,%20a%29
+
+****
+.Example {counter:logicexample} - Exclusive Disjunction in Python
+--
+--
+The code below prints the truth table for exclusive disjunction.  Try to predict the variable names, values, and data types at different steps in the execution. Use the _Forward_ button to check your answers.
+include::python_tutor.adoc[]
+****
+
+=== Implication
+"*If* you get a 100 on the final exam, *then* you earn an A in the class."
+
+Let $p$ and $q$ be propositions.  The implication of $p$ and $q$,
+denoted in mathematics by $p \implies q$, is short hand for the statement "if p then q".  As such, implication requires $q$ to be True whenever $p$ is True.  If $p$ is not True, then $q$ can be any value. In other words, implication fails (is False) when $p$ is True and $q$ is False. Note, this is different from "p if and only if q".
+
+[width=50%",align="center",options="header"]
+|====
+| $p$ | $q$ | $p \implies q$
+| True | True | True
+| True | False | False
+| False | True | True
+| False | False | True
+|====
+
+[NOTE]
+====
+Implication can be considered a "contract" which fails _only when_ the conditions are met and the results are not fulfilled.
+====
+
+:pt_code_height: 350
+:pt_rawinput: false
+:pt_code: def%20implication%28p,%20q%29%3A%0A%20%20%20%20return%20%23FIX%20ME%23%0A%0Aprint%28%22p%20%20%20%20q%20%20%20%20a%22%29%0Afor%20p%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20for%20q%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20%20%20%20%20a%20%3D%20implication%28p,%20q%29%0A%20%20%20%20%20%20%20%20print%28p,%20q,%20a%29
+
+****
+.Implication in Python
+--
+--
+Try to complete the code below by clicking edit and replacing $#FIX ME#$. Once correctly defined, the correct truth table for implication should print.
+include::python_tutor.adoc[]
+****
+
+=== Converse, Contrapositive and Inverse of an Implication
+
+We can form new compound propositions from the implication, $p \implies q$.  They are
+
+* The *converse*:  $q \implies p$
+* The *contrapositive*: $ \neg q \implies \neg p$
+* The *inverse* $ \neg p \implies \neg q$
+
+The truth tables for these new propositions are shown in the table.
+
+[width=50%",align="center",options="header"]
+|====
+| $p$ | $q$ | $p \implies q$ (conditional)| $q \implies p $ (converse)|
+$ \neg q \implies \neg p$ (contrapositive) |$ \neg p \implies \neg q$ (inverse)
+| True | True | True | True |True | True
+| True | False | False | True| False | True
+| False | True | True | False | True | False
+| False | False | True | True |True | True
+|====
+
+In the section <<Proposition Equivalences>> we will explain why the truth table
+shows that the conditional $p \implies q$ and contrapositive
+$ \neg q \implies \neg p$ are logically equivalent, and why
+the converse $q \implies p$ and inverse $ \neg p \implies \neg q$ are
+logically equivalent.
+
+We illustrate these ideas with an example.
+
+****
+.Example {counter:logicexample} - Conditional, Converse, Contrapositive and Inverse.
+
+.. Translate the statement, "If an integer $n$, is divisible by $4$, then it is
+divisible by $2$", using a conditional.
+
+.. Form its converse, contrapositive, and inverse and translate.
+
+.Solution
+
+.. Let
++
+$p$: An integer $n$, is divisible by $4$
++
+$q$: An integer $n$, is divisible by $2$
++
+The sentence, "If an integer $n$, is divisible by $4$, then it is
+divisible by $2$", is translated $p\implies q$.
+
+.. Its converse is $q \implies p$, which may be translated,
+"If an integer $n$, is divisible by $2$, then it is
+divisible by $4$."
++
+The contrapositive is $ \neg  q \implies \neg p$, which may be translated,
+"If an integer $n$, is  not divisible by $2$, then it is not divisible by 4."
++
+The inverse  is $ \neg p \implies \neg q$, which may be translated,
+"If an integer $n$, is  not divisible by $4$, then it is not divisible by $2$."
+****
+
+
+=== Bi-Implication
+"It is raining outside *if and only if* it is a cloudy day."
+
+Let $p$ and $q$ be propositions. The *bi-implication* of $p$ and $q$,
+denoted in mathematics by $p \iff q$, is short hand for the statement "p if and only if q". As such, bi-implication requires $q$ to be True only when $p$ is True.  In other words, bi-implication fails (is False) when $p$ is True and $q$ is False or when $p$ is False and $q$ is True.
+
+[width=50%",align="center",options="header"]
+|====
+| $p$ | $q$ | $p \iff q$
+| True | True | True
+| True | False | False
+| False | True | False
+| False | False | True
+|====
+
+:pt_code_height: 350
+:pt_rawinput: false
+:pt_code: def%20bi_implication%28p,%20q%29%3A%0A%20%20%20%20return%20%23FIX%20ME%23%0A%0Aprint%28%22p%20%20%20%20q%20%20%20%20a%22%29%0Afor%20p%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20for%20q%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20%20%20%20%20a%20%3D%20bi_implication%28p,%20q%29%0A%20%20%20%20%20%20%20%20print%28p,%20q,%20a%29
+
+****
+.Example {counter:logicexample} - Bi-Implication in Python
+--
+--
+Try to complete the code below by clicking edit and replacing $#FIX ME#$. Once correctly defined, the correct truth table should print.
+include::python_tutor.adoc[]
+****
+[NOTE]
+====
+Bi-implication is True if the propositions have the same truth value and False otherwise.
+====
+
+It is important to contrast implication with bi-implication.  Consider the implication example "If you get a 100 on the final exam, then you earn an A in the class."  This means that when you get a 100 on the final you also get an A in the class.
+
+As a bi-implication it would say "You get a 100 on the final exam if and only if you earn an A in the class."  This becomes a two-way contract where you can earn an A in the class by getting a 100 on the final, but if you do not get a 100 on the final you will not earn an A.
+
+=== Compound Propositions
+To find truth values of compound propositions, it is useful to break them up into smaller parts.
+
+:pt_code_height: 400
+:pt_rawinput: false
+:pt_code: def%20conjunction%28p,%20q%29%3A%0A%20%20%20%20return%20p%20and%20q%0A%0Adef%20disjunction%28p,%20q%29%3A%0A%20%20%20%20return%20p%20or%20q%0A%0Aprint%28%22p%20%20%20%20q%20%20%20%20a%22%29%0Afor%20p%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20for%20q%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20%20%20%20%20a%20%3D%20disjunction%28conjunction%28p,%20q%29,%20not%20q%29%0A%20%20%20%20%20%20%20%20print%28p,%20q,%20a%29
+
+****
+.Example {counter:logicexample}
+--
+--
+The code below reveals the truth table of the compound proposition:
+
+$(p \land q) \lor \neg q$
+
+Recall: $\neg q$ is mathematical shorthand for __not q__.
+
+include::python_tutor.adoc[]
+
+.You Try
+
+Edit the code above to reveal the truth value of the compound proposition:
+
+$(p \lor \neg q) \land \neg p$
+
+*Hint:* You only need to change line 10.
+****
+
+When creating your own truth table it is crucial to be systematic about ensuring you have all possible truth values for each of the simple propositions.  Each simple proposition has two possible truth values, so the number of rows in the table should be $2^n$ where $n$ is the number of propositions. You should also consider breaking complex propositions into smaller pieces.
+****
+.Example {counter:logicexample}
+--
+--
+Create a truth table for the compound proposition:
+
+$(p \land q) \implies (p \land r)$ for all values of $p, q, r$.
+
+.Solution
+It should have 8 rows - since there are three simple propositions and each one has two possible truth values.
+
+[width=50%",align="center",options="header"]
+|====
+| $p$ | $q$ | $r$ | $p \land q$ | $p \land r$| $(p \land q) \implies (p \land r)$
+| T | T | T | T | T | T
+| T | T | F | T | F | F
+| T | F | T | F | T | T
+| T | F | F | F | F | T
+| F | T | T | F | F | T
+| F | T | F | F | F | T
+| F | F | T | F | F | T
+| F | F | F | F | F | T
+|====
+****
+
+*Logical Translations*
+
+A long time ago philosophers discovered we could put our thoughts into symbols and more easily follow lines of reasoning. This was an important step in the eventual development of our modern technological society and our use of digital computers. Before computers can work, we have to put our thoughts into them.
+
+BUT, the English language is difficult and we use many different phrases to represent the same logical statements.  Translating statements from English sentences to symbols and back is a skill that needs lots of practice.
+
+== Proposition Equivalences
+Two propositions are considered *logically equivalent* (or simply *equivalent*) if they have the same truth values in every instance.  It is often easiest to see this by constructing a truth table for the two propositions and comparing.
+
+****
+.Example {counter:logicexample}
+Consider the propositions $\neg p \lor q$ versus $p\implies q$.
+[width=50%",align="center",options="header"]
+|====
+| $p$ | $q$ | $\neg p \lor q$ | $p \implies q$
+| True | True | True | True
+| True | False | False | False
+| False | True | True | True
+| False | False | True | True
+|====
+
+Since the truth table in all rows is the same for the two compound propositions, they are equivalent.
+****
+
+:pt_code_height: 400
+:pt_rawinput: false
+:pt_code: def%20conjunction%28p,%20q%29%3A%0A%20%20%20%20return%20p%20and%20q%0A%0Adef%20implication%28p,%20q%29%3A%0A%20%20%20%20return%20not%20p%20or%20q%0A%0Aprint%28%22p%20%20%20%20q%20%20%20%20r%20%20%20%20a%22%29%0Afor%20p%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20for%20q%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20%20%20%20%20for%20r%20in%20%5BTrue,%20False%5D%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20a%20%3D%20implication%28conjunction%28p,%20q%29,%20r%29%0A%20%20%20%20%20%20%20%20%20%20%20%20print%28p,%20q,%20r,%20a%29
+
+****
+.Example {counter:logicexample}
+--
+--
+Consider three compound propositions:
+
+. $(p\land q) \implies r$
+. $(p \implies q) \land (p \implies r)$
+. $p \implies (q \land r)$
+
+The code below reveals the truth table for 1.  Modify it for 2 and 3 in order to determine which set of compound propositions are equivalent.
+
+*Hint:* You only need to change line 11.
+
+include::python_tutor.adoc[]
+****
+
+
+=== De Morgan's Laws
+Two important logical equivalences are De Morgan's Law.  These describe how we "distribute" the negation across the and and or operators.
+
+.De Morgan's Laws
+****
+$\neg (p \land q)\equiv \neg p \lor \neg q$
+
+$\neg (p \lor q)\equiv \neg p \land \neg q$
+****
+
+NOTE: We use the symbol $\equiv$ to denote two statements which are logically equivalent.
+
+****
+.Example {counter:logicexample}
+
+Recall the truth table for the implication proposition from above.
+
+[width=50%",align="center",options="header"]
+|====
+| $p$ | $q$ | $p \implies q$ | $\neg (p \implies q)$
+| True | True | True | False
+| True | False | False | True
+| False | True | True | False
+| False | False | True | False
+|====
+
+.You Try
+Use the truth table to find a proposition that is logically equivalent to $ \neg (p \implies q) $?
+****
+
+
+=== Tautologies, Contradictions and Contingencies
+
+A proposition is a *tautology* if its truth value is _always_ True.
+
+A proposition is a *contradiction* if its truth value is _always_ False.
+
+
+A proposition that is neither a tautology nor a contradiction is said to
+be a *contingency*.
+
+****
+.Example {counter:logicexample} - Tautology and Contradiction
+$  p \lor \neg p$ is an example of a tautology.
+
+$ p \land \neg p$ is an example of a contradiction.
+
+This can be seen in the truth table.
+
+[width=50%",align="center",options="header"]
+|====
+| $p$ | $\neg p$ | $ p \lor \neg p$ | $p \land \neg p$
+| True | False | True | False
+| False | True | True | False
+
+Notice that the truth values for $p \lor \neg p$ are all True and $p \land \neg p$ are all False.
+|====
+****
+
+== Predicates and Quantifiers
+=== Predicates
+A *predicate* is a statement involving a variable.
+
+****
+.Example {counter:logicexample} - Predicates
+
+* $x \leq 3$
+* computer $c$ is infected
+* country $x$ is on continent $y$
+****
+
+Predicates are denoted as $P(x)$ or $Q(x,y)$ where $P$ and $Q$ represent the statements and $x$ and $y$ represent the possible values.
+After a value is assigned to each variable, the predicate becomes a proposition which has a truth value.
+
+
+:pt_code_height: 300
+:pt_rawinput: false
+:pt_code: def%20P%28x%29%3A%0A%20%20%20%20return%20x%20%3C%3D%203%0A%0Aa%20%3D%20P%285%29%0Ab%20%3D%20P%282%29
+****
+.Example {counter:logicexample}
+--
+--
+Let $P(x)$ be the predicate $x \leq 3$.  What are the truth values of $P(5)$ and $P(2)$?
+
+include::python_tutor.adoc[]
+
+****
+
+
+:pt_code_height: 350
+:pt_rawinput: false
+:pt_code: def%20Q%28x,%20y%29%3A%0A%20%20%20%20return%20%23FIX%20ME%23%0A%0Aa%20%3D%20Q%286,%202%29%0Ab%20%3D%20Q%281,%205%29%0Ac%20%3D%20Q%28-2,%202%29
+****
+.Example {counter:logicexample}
+--
+--
+Let $Q(x,y)$ be the statement $x-y=4$.
+
+Edit the Python tutor below to find the truth values of $Q(6,2)$, $Q(1,5)$, and $Q(-2,2)$.
+
+include::python_tutor.adoc[]
+****
+
+=== Quantifiers
+Consider the statements
+
+*  For all integers $x$, $x^2\geq 0$.
+*  Some student in the class has a birthday in July.
+
+Each of these statements considers a proposition over an entire population or set, called the domain, and quantifies how many elements (or people) in the set satisfy the proposition.  To represent this idea, we use two main quantifiers, the *universal quantifier* and the *existential quantifier*.
+
+The *Universal Quantifier*, $\forall$, represents the statement "for all", "for every", "for each".  When it comes before a statement, it means that statement is true _for all values_ in the domain.
+
+:pt_code_height: 450
+:pt_rawinput: false
+:pt_code: stmt%20%3D%20%22For%20all%20x,%20P%28x%29.%22%0Adef%20P%28x%29%3A%0A%20%20%20%20return%20x%20%2B%201%20%3E%20x%0A%0Aforall%20%3D%20True%0Afor%20x%20in%20%5B-2,%20-1,%200,%201,%202%5D%3A%0A%20%20%20%20%23%20check%20if%20at%20least%201%20is%20false%0A%20%20%20%20if%20P%28x%29%20%3D%3D%20False%3A%0A%20%20%20%20%20%20%20%20forall%20%3D%20False%0A%20%20%20%20%20%20%20%20%0Aprint%28stmt%29%0Aprint%28forall%29
+****
+.
+.Example {counter:logicexample}
+
+Universal Quantifier $\forall x, x + 1 \gt x$
+--
+--
+Let $P(x)$ be the statement $x + 1 \gt x$.  Is this true for all integers x?
+
+include::python_tutor.adoc[]
+
+NOTE: We use the example domain [-2, -1, 0, 1, 2] because code can not check all integers.
+****
+
+:pt_code_height: 450
+:pt_rawinput: false
+:pt_code: stmt%20%3D%20%22For%20all%20x,%20P%28x%29.%22%0Adef%20P%28x%29%3A%0A%20%20%20%20return%20x%20%2B%20x%20%3E%20x%0A%0Aforall%20%3D%20True%0Afor%20x%20in%20%5B-2,%20-1,%200,%201,%202%5D%3A%0A%20%20%20%20%23%20check%20if%20at%20least%201%20is%20false%0A%20%20%20%20if%20not%20P%28x%29%3A%0A%20%20%20%20%20%20%20%20forall%20%3D%20False%0Aprint%28stmt%29%0Aprint%28forall%29
+
+****
+.Example {counter:logicexample}
+
+Universal Quantifier $\forall x, x + x \gt x$
+--
+--
+Let $P(x)$ be the statement $x + x \gt x$.  Is this true for all integers x?
+
+include::python_tutor.adoc[]
+****
+
+The *Existential Quantifier*, $\exists$, represents the statement "there exists", "for some", "at least one".  When it comes before a statement, it means the statement is true for _at least one value_ in the domain.
+
+
+:pt_code_height: 450
+:pt_rawinput: false
+:pt_code: stmt%20%3D%20%22There%20exists%20an%20x,%20such%20that%20P%28x%29.%22%0Adef%20P%28x%29%3A%0A%20%20%20%20return%20x**2%20%3D%3D%204%0A%0Aexists%20%3D%20False%0Afor%20x%20in%20%5B-2,%20-1,%200,%201,%202%5D%3A%0A%20%20%20%20%23%20check%20if%20at%20least%201%20is%20true%0A%20%20%20%20if%20P%28x%29%3A%0A%20%20%20%20%20%20%20%20exists%20%3D%20True%0Aprint%28stmt%29%0Aprint%28exists%29
+
+****
+.Example {counter:logicexample}
+
+Existential Quantifier $\exists x, x^2 = 4$
+--
+--
+Let $P(x)$ be the statement $x^2 = 4$.  Is this true for at least one integer x?
+
+include::python_tutor.adoc[]
+
+****
+
+:pt_code_height: 450
+:pt_rawinput: false
+:pt_code: stmt%20%3D%20%22There%20exists%20an%20x,%20such%20that%20P%28x%29.%22%0Adef%20P%28x%29%3A%0A%20%20%20%20return%20x**3%20%3D%3D%204%0A%0Aexists%20%3D%20False%0Afor%20x%20in%20%5B-2,%20-1,%200,%201,%202%5D%3A%0A%20%20%20%20%23%20check%20if%20at%20least%201%20is%20true%0A%20%20%20%20if%20P%28x%29%3A%0A%20%20%20%20%20%20%20%20exists%20%3D%20True%0Aprint%28stmt%29%0Aprint%28exists%29
+
+****
+.Example {counter:logicexample}
+
+Existential Quantifier $\exists x, x^3 = 4$
+--
+--
+Let $P(x)$ be the statement $x^3 = 4$.  Is this true for at least one integer x?
+
+include::python_tutor.adoc[]
+
+NOTE: Again, we use the example domain [-2, -1, 0, 1, 2] because code can not check all integers.
+
+****
+
+Recall the previous example statements:
+
+* For all integers $x$, $x^2 \geq 0$.
+
+Let $P(x)$ be the predicate "$x^2 \geq 0$".  Then we write the statement as $\forall x P(x)$, where the domain is the set of all integers.  This quantified statement will be true since anytime you square a nonzero integer it is positive and $0^2=0$.
+
+* Some student in the class has a birthday in July.
+
+Let $Q(s)$ be the predicate "student $s$ has a birthday in July".  Then we write the statement as $\exists s Q(s)$, where the domain is the set of all students in the class. This statement will be true as long as at least one student in the class has a birthday in July.  It will be false, otherwise.
+
+
+=== Negation of Quantifiers
+It is important to consider the negation of a quantified expression.
+
+* "Every student in this class has taken Programming Fundamentals."
+
+This is a universally quantified statement and can be expressed as $\forall x P(x)$ where $P(x)$ is the statement "$x$ has taken Programming Fundamentals" and the domain consists of all the students in this class.  The negation of the statement would be "It is not true that every student in this  has taken Programming Fundamentals."  Equivalently,
+
+* "There is a student in this class who has NOT taken Programming Fundamentals."
+
+This is an existentially quantified statement expressed as $\exists x \neg P(x)$.
+
+This demonstrates that the negation of a universally quantified statement is an existential statement.  In symbols, we have $\neg \forall x P(x)\equiv \exists x \neg P(x)$.
+
+Similarly, the negation of an existential statement is a universal statement.  $\neg \exists x P(x) \equiv \forall x \neg P(x)$.
+
+.De Morgan's Laws with Quantifiers
+****
+$\neg \forall x P(x)\equiv \exists x \neg P(x)$
+
+$\neg \exists x P(x) \equiv \forall x \neg P(x)$
+****
+
+****
+.Example {counter:logicexample}
+* Someone in the class can speak Latin.
+
+Using quantifiers, we write this statement as $\exists x L(x)$ where $L(x)$ is the proposition "$x$ speaks Latin." and the domain is the students in the class.
+Its negation would be $\forall x \neg L(x)$.
+
+* All the students in the class can not speak Latin.
+
+.You Try
+Find the negation of the statement "For all integers $x$, $x^2 \geq x$."
+****
+
+The predicate of a quantified statement could be a compound statement.  For instance,
+
+* Some dogs are big and fluffy.
+
+This is written as $\exists x (B(x) \land F(x))$ where $B(x)$ is the proposition "$x$ is big." and $F(x)$ is the proposition "$x$ is fluffy." and the domain is dogs.  Negating this statement would give
+
+$\neg \exists x (B(x) \land F(x)) \equiv \forall x \neg (B(x) \land F(x)) \equiv \forall x (\neg B(x) \lor \neg F(x))$
+
+In words,
+
+* All dogs are not big or not fluffy.
+
+
+
+=== Nested Quantifiers
+There are times it will take more than one quantifier to express a statement.
+
+* For all integers $x$, there exists an integer $y$, such that $x+y=0$.
+
+This statement contains both a universal and an existential quantifier.  $\forall x \exists y S(x,y)$ where $x$ and $y$ are integers and $S(x,y)$ is the proposition $x+y=0$.  This statement means, if you have any integer $x$ (for instance $x=5$) then you can find an integer $y$ (for instance $y=-5$) such that $x+y=0$.
+
+The order of the quantifiers matters.  $\exists x \forall y S(x,y)$ would be
+
+* There exists an integer $x$, such that for all integers $y$, $x+y=0$.
+
+Note that in this statement you find an integer $x$ so that when you add *any* integer $y$ to it you always get 0.
+
+The first statement, for all integers $x$, there exists an integer $y$ such that $x+y=0$, is true.  For any integer $x$ you could choose $y=-x$ and $x+y=x+(-x)=0$.
+While the second statement, there exists an integer $x$, such that for all integers $y$, $x+y=0$, is false.
+
+****
+.Example {counter:logicexample}
+Let $Q(x,y)$ be the statement $xy=0$.  If the domain for both variables consists of all integers, what are the truth values of the following statements?
+
+* $Q(0,3)$ is True since $0\cdot 3=0$
+
+* $Q(6,2)$ is False since $6\cdot 2=12$
+
+* $\exists x Q(x,4)$ is True.  Use the value of $x=0$, and since $0\cdot 4=0$ there is at least one integer $x$ so that $x\cdot 4=0$.
+
+* $\forall x \exists y Q(x,y)$ is True.  If you have any integer $x$, you can pick the value $y=0$ and get $x\cdot 0=0$.
+
+
+.You Try
+
+* $\forall y Q(1,y)$
+
+* $\exists x \forall y Q(x,y)$
+
+* $\forall x \forall y Q(x,y)$
+****
+
+To negate nested quantifiers, repeatedly apply De Morgan's Laws of negating a quantifier and a predicate.
+
+Namely, $\neg \forall x P(x) \equiv \exists x \neg P(x)$ and $\neg \exists x P(x) \equiv \forall x \neg P(x)$.
+
+****
+.Example {counter:logicexample} - Negation of quantified statements
+Find the negation of the statment "For all integers $x$, there exists an integer $y$ such that $x=-y$."
+
+.Solution
+Using quantifiers, we write this statement as $\forall x \exists y N(x,y)$ where $N(x,y)$ is the proposition "$x=-y$." and the domain of $x$ and $y$ is the integers.
+Its negation would be $\exists x \forall y \neg N(x,y)$.
+
+* There exists an integer x, such that for all integers y, $x \neq -y$.
+
+.You Try
+Find the negation of the statement "Some student in the class will solve every practice problem."
+
+Hint:  Let $x$ be a student in the class, $y$ be a practice problem, and $P(x,y)$ be the statement "student $x$ has solved practice problem $y$".
+****
+
+== Applications of Logic
+In this section we consider two applications of logic to information technology and
+computer science. The first involves bitwise operations, and the second designing and analyzing logic circuits.
+
+=== Bitwise operations
+
+A *bitwise operation* is a _Boolean operation_ that operates on the individual bits ($0s$, or $1s$) of the operand(s) and are summarized
+
+****
+.Bitwise Operations
+.. The *bitwise AND*, denoted by "&", applies the _and_ $\land$  to the corresponding bits of each operand.
+.. The *bitwise OR*, denoted by "$|$", applies the _or_ $\lor$ to the corresponding bits of each operand.
+.. The *bitwise XOR*, denoted by "${}^{\wedge}$", applies the disjunctive or $\oplus $   to the
+corresponding bits of each operand.
+.. The *bitwise NOT*, denoted by "!", applies the negation $¬$ (flips $0\longleftrightarrow 1$ ), to the
+corresponding bits of each operand.
+****
+
+We summarize the truth tables for the bitwise boolean operators.
+
+[width=50%",align="center",options="header"]
+|====
+| $p$ | $q$ | $AND$ & |  $ \ OR\   \| $ | $XOR$ ${}^{\wedge}$| $IF$ $\Rightarrow$| $IFF$ $\Leftrightarrow$
+| 1 |1 | 1 | 1 | 0 | 1 | 1
+| 1 |0 | 0 | 1 | 1 | 0 | 0
+| 0 |1 | 0 | 1 | 1 | 1 | 0
+| 0 |0 | 0 | 0 | 0 | 1 | 1
+|====
+
+
+
+****
+.Example {counter:logicexample} - Bitwise Operations
+Find  the bitwise $AND, OR, XOR$ for the following binary numbers,
+
+\[ A = 111101\]
+\[ B = 001111\]
+
+.Solution
+Using the truth tables for Boolean operators, where the results are noted in the bottom row, we have
+
+--
+--
+
+
+[width=50%",align="center",options="header"]
+|====
+|  Bitwise AND | Bitwise OR   |  Bitwise XOR
+| 111101 |111101  | 111101
+| 001111 |001111  | 001111
+| *001101* |*111111* | *110010*
+
+|====
+
+****
+=== Logic Circuits
+Logic circuits are important in designing the arithmetic and logic units of a computer processor.
+Consider the problem of adding two $8$-bit numbers in binary. In binary $0+0=0$, and $1+0=0+1=1$, but,
+as in decimal addition, in binary $1+1=2$, which in binary will be a sum of $0$ and a carry of $1$ to the next
+significant column on the left.  Thinking then of adding a specific column of two binary digits, say $A$ and
+$B$, involves as input the digits $A, B$ and the carry in from the previous column say $C_{in}$. The output
+will be the sum $S$ and the carry out to the next column, say $C_{out}$. These are the basic components of what is called
+a binary adder.
+
+.A Binary adder
+
+image::images/binary_adder.png[]
+
+The logic table for binary addition based on the digital inputs $A, B, C_{in}$, and digital outputs
+$S$ and $C_{out}$ is summarized in the table.
+
+--
+--
+
+.Truth table for Binary adder
+
+[width=50%",align="center",options="header"]
+|====
+|  $A$ | $B$   |  $C_{in}$ | $\mathbf{S}$ | $\mathbf{C_{out}}$
+| 1 |1 | 1  |$\mathbf{1}$ | $\mathbf{1}$
+| 1 |1 | 0  |$\mathbf{0}$ | $\mathbf{1}$
+| 1 |0| 1  |$\mathbf{0}$ | $\mathbf{1}$
+| 1 |0| 0  |$\mathbf{1}$ | $\mathbf{0}$
+| 0 |1 | 1  |$\mathbf{0}$ | $\mathbf{1}$
+| 0 |1 | 0  |$\mathbf{1}$ |$\mathbf{0}$
+| 0 |0| 1  |$\mathbf{1}$ | $\mathbf{0}$
+| 0 |0| 0  |$\mathbf{0}$ | $\mathbf{0}$
+|====
+
+It can be shown that the logic for the outputs $S$, and $C_{out}$ is given by the following propositions
+\[ C_{out}=(A\land B)\lor \left(B\land C_{in}\right)\lor \left(A\land C_{in}\right)\]
+\[S=\left(\sim A\land \sim B\land C_{in}\right)\lor \left(\sim A\land B\land
+\sim C_{in}\right)\lor \left(A\land \sim B\land \sim C_{in}\right)\lor \left(A\land B\land C_{in}\right) \]
+
+Implementing these logical outputs based on the inputs $(A,B, C_{in})$, is through the use of electronic
+circuits called logic gates.
+
+The basic logic gates, are the *Inverter* or _Not_ gate, the *And* gate, the *Or* gate and the *Xor* gate.
+The graphical representation for each is shown below.
+
+.Basic gates
+
+image::images/basic_gates.png[]
+
+We end this section by  first analyzing logic circuits to give their outputs in
+terms of their input variables, and then, constructing logic circuits based on logical statements.
+
+****
+.Example {counter:logicexample} - Output of a logic circuit in terms Input
+Determine the output of the following logic circuit in terms of the input variables, $p, q$, and $r$.
+
+image::images/logic_gate_3.png[]
+.Solution
+
+Proceeding left to right, determine the output of the leftmost gates first using the basic gate outputs.
+
+image::images/logic_gate_3a.png[]
+
+The output of the logic circuit is $ ( p \lor q)\land ( \neg p \lor \neg q)$
+
+****
+
+In the next two examples, we design logic circuits based on logical propositions. The idea
+is to work backward using order of operations from the right to the left.
+
+****
+.Example {counter:logicexample} - Design a Logic Circuit
+Design a logic circuit for $(p\vee\lnot\ q)\land\lnot\ p$.
+
+.Solution
+
+Working backwards from right to left we have the following sequence of gates
+
+1) An *AND* gate $(p\vee\lnot\ q)\underline{\land} \lnot\ p$.
+
+2) The inputs to the *AND* gate are $(p\vee\lnot\ q)$ and $\lnot\ p$.
+
+3) These inputs come from the output of an *INVERTER*, for $\underline{\lnot}\ p$ and an
+*OR* gate $(p \underline{\vee}\lnot\ q)$.
+
+4) There are two inputs to the *OR* gate $(p \underline{\vee}\lnot\ q)$, being $p$, and the output
+of an *INVERTER*, $\underline{\lnot} q$.
+
+Putting these now in left to right order we obtain the following logic circuit.
+
+image::images/logic_gate_4.png[]
+
+****
+
+
+****
+.Example {counter:logicexample} - Design a Logic Circuit
+Design a logic circuit for $r\land (p\lor (r\land \neg q))$.
+
+.Solution
+
+Working backwards from right to left we have the following sequence of gates
+
+1) An *AND* gate $r\underline{\land} (p\lor (r\land \neg q))$.
+
+2) The inputs to the *AND* gate are $r$ and $p\lor (r\land \neg q)$.
+
+3) The input, $p\lor (r\land \neg q)$, comes from the output of an
+*OR* gate for $p \underline{\lor} (r\land \neg q)$.
+
+4) The inputs to the *OR* gate, $p \underline{\lor} (r\land \neg q)$,
+are $p$ and $(r\land \neg q)$, which is an *AND* gate.
+
+5) The inputs to the *AND*, gate, $r \underline{\land} \neg q$, are
+$r$ and the output of an *INVERTER*, $\underline{\neg} q$.
+
+
+Putting these now in left to right order we obtain the following logic circuit.
+
+
+image::images/logic_gate_5.png[]
+
+****
+
+== Exercises
+
+. 	Which of these statements are propositions? Explain your reasoning
+.. Is Atlanta the capital of Georgia?
+.. All birds fly
+.. $2\ \times\ \ 3\ =\ 5$
+.. $5\ +\ 7\ =\ 7+5$
+.. $x\ +\ 2\ =\ 11$
+.. Answer this question.
+.. The rain in Spain
+
+. Construct truth tables for,
+
+.. $a\vee b\Rightarrow\lnot b$
+
+.. $(a\vee\lnot b)\ \Leftrightarrow\ a$
+
+.. $(a\Rightarrow b)\ \bigwedge\ (b\ \bigwedge\ \lnot c)$
+
+.. $(a\ \bigvee\ b)\ \Rightarrow\ (\ \lnot c\ \bigvee\ a)$
+
+.. $(a\ \bigvee\ b)\ \bigwedge\ (c\ \bigvee\lnot d\ )$
+
+.. $(\lnot c\ \bigwedge\ \ b)\ \bigvee\ \ (a\Rightarrow\ \lnot d\ )$
+
+
+
+. Using truth tables, determine if each of the following is a tautology, contradiction, or neither (conditional)
+.. $\neg ((a\lor b)\lor (\neg a\land \neg b))$
+.. $\left(\left(a\vee b\right)\land\lnot a\right)\Rightarrow b$
+.. $\left(\left(a\vee b\right)\land a\right)\Rightarrow b$
+.. $p\land r)\lor (\neg p\land \neg r)$
+.. $\neg ((p\lor q)\lor (\neg p\land (\neg q\lor r)))$
+.. $\neg (p\land q)\lor (q\lor r)$
+
+
+. Using truth tables determine which of the following are equivalent
+.. $\left(p\Rightarrow q\right)\Rightarrow r$,
++
+$\left(p\land\lnot q\right)\vee r,$ and
++
+$\left(p\land\lnot q\right)\land r$
+
+.. $(a\lor b)\land c,$
++
+$(c\land a)\lor (c\land b),$ and
++
+$\neg ((\neg a\land \neg b)\lor \neg c)$
+
+. Let $C(x)$ be the statement "$x$ has visited Canada." where the domain consists of the students at GGC. Express each of the quantifications in English.
+.. $\exists x C(x)$
+.. $\forall x C(x)$
+.. How would you determine whether each of these statements is true or false?
+
+. Determine the truth value of each of these statements if the domain for all
+variables, $m , n$ is the set of all integers, $\mathbb{Z}$, explaining your reasoning.
+.. $\forall n:\left(n^2\geq 1\right)$
+.. $\forall n:\left(n^2\geq 0\right)$
+.. $\ \exists\ n:(n^2=3)$
+.. $\ \exists\ m\forall\ n:(m+n=n-m)$
+.. $\forall\ n\exists\ m:\ (n\cdot\ m=m)$
+.. $\ \exists\ n\forall\ m:\ (n\cdot\ m=m)$
+.. $\ \exists\ n\forall\ m:\ (n\cdot\ m=n)$
+
+
+. Consider each of the compound propositions. (i) Translate  each using logical
+symbols and letters, stating what each letter represents, (ii) Negate each using plain
+English sentences, and (iii) Translate the negated statements using logical symbols and quantifiers.
+.. If it snows today, then I will go skiing tomorrow.
+.. Mei walks or takes the bus to class.
+.. Every person in this class understands mathematical induction.
+.. In every mathematics class there is some student who falls asleep during lectures.
+.. There is a building on the campus of some college in the United states in which every room is painted white.
+
+. Let $p$, be the proposition ”My bicycle needs a tire replaced,” $q$, be the proposition ”I will go cycling”,
+and, $r$, be the proposition ”Rain is in the forecast.”
+.. Express each of these compound propositions using plain  English sentences.
+... $\neg p\vee q$
+... $\neg p\Rightarrow \neg q$
+... $(\neg p\wedge r)\Rightarrow q$
+... $(\neg p\wedge r)\Rightarrow q$
+... $(\neg p\wedge q)\vee r$
+.. Write these compound propositions using $p$, $q$ and, $r$ and logical connectives
+(including negation).
+... If my bicycle tire does not replacement I will go cycling.
+... My bicycle tire does not replacement, there is rain in the forecast but I will  go cycling
+... Whenever there is rain in the forecast, I do not go cycling.
+... If there is rain in the forecast or my tire needs replacement I will not go cycling.
+... Rain is not forecast whenever I go cycling.
+... Rain is not forecast and my tire does not need replacement whenever I go cycling.
+
+. Design logic circuits with the following output
+.. $(p\lor (q\land \neg r))\lor \neg (p\land q)$
+.. $(p\lor (q\land r))\land \neg (p\land q)$
+
+. Consider the predicate $Q(x,y): x\ \cdot\ y=5$, where the domain of $x$ and $y$ is
+all positive real numbers $\mathbb{R}^+$, or $x,\ y\ >0$. Determine the true value of the  following,
+an explain your reasoning.
+.. $Q(1,5)$
+.. $Q\left(2,\frac{5}{2}\right)$
+.. $\exists\ y,\ Q\left(7,y\right)$
+.. $\ \forall\ y,\ Q\left(7,y\right)$
+.. $\exists\ x\ \forall\ y,\ Q\left(x,y\right)$
+.. $\ \forall\ \ x\ \exists\ \ y,\ Q\left(x,y\right)$
+
+
+. Consider the predicate $R(x,y):\ 2x+y=0$, where the domain of $x$ and $y$ is all rational numbers, $\mathbb{Q}$.
+Determine the true value of the  following, an explain your reasoning.
+.. $R(0,0)$
+.. $R(2,-1)$
+.. $R\left(\frac{1}{5},-\frac{2}{5}\right)$
+.. $\exists y,\ R\left(0.2,y\right)$
+.. $\ \forall y,\ R\left(7,y\right)$
+.. $\exists\ x\forall\ y,\ R\left(x,y\right)$
+.. $\ \forall\ x\ \exists\ y,\ R\left(x,y\right)$
+
+. Calculate the bitwise $AND$, the bitwise $OR$, and the bitwise $XOR$ of the following pairs of bytes, or sequence of bytes
+
+.. $01111111$ and $11101001$
+
+.. $1110010111111010$ and $0101110101100011$
+
+
+
+. Give the output for each of the logic circuits in terms of the input variables,
+.. The logic circuit, with input variables, $p, q$, $r$.
++
+image::images/logic_gate_1.png[]
+.. The logic circuit, with input variables, $a, b$, $c$.
++
+image::images/logic_gate_2.png[]
+
+. Design a logic circuit for $r\land (p\lor (r\land \neg q))$.

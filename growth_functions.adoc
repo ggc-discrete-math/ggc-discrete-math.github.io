@@ -1,0 +1,328 @@
+= Growth of Functions
+== Introducing _Big O_
+
+Computer programmers  are often concerned with two questions:
+
+a) How much time does an algorithm need to complete?
+
+b) How much memory does an algorithm need for its computation?
+
+__Big O__  notation is a standard way mathematicians and computer scientists use to describe how much time and how much memory is required for an algorithm to run
+
+__Big O__  is typically used to analyze the worst case complexity of an algorithm.
+If, for example, $n$ is the size of the input data, then __Big O__ really only cares about what happens when your input data size $n$ becomes arbitrarily large and not quite as interested in when the input is small.  Mathematically, we want to speak of complexity in the asymptotic sense, when $n$ is arbitrarily large. In this asymptotic sense of large $n$, we may ignore constants.
+
+The size of the input complexities ordered from smallest to largest:
+
+* Constant Complexity: $O(1)$
+* Logarithmic Complexity: $O(\log (n))$,
+* Radical complexity : $O(\sqrt{n})$
+* Linear Complexity: $O(n)$
+* Linearithmic Complexity: $O(n\log (n))$,
+* Quadratic complexity: $O(n^2)$
+* Cubic complexity: $O(n^3)$,
+* Exponential complexity: $O(b^n)$, $ b > 1$
+* Factorial complexity: $ O(n!)$
+
+Radical growth is larger than logarithmic growth:
+[.float-group]
+--
+[.left.text-left]
+image::images/radicalgrowth.png[geometricsequence,500,500]
+--
+Polynomial growth is larger than radical  growth:
+[.float-group]
+--
+[.left.text-left]
+image::images/polynomialgrowth.png[geometricsequence,500,500]
+--
+Exponential growth is larger than polynomial growth:
+[.float-group]
+--
+[.left.text-left]
+image::images/exponentialgrowth.png[geometricsequence,500,500]
+--
+
+Factorial growth is larger than exponential growth:
+[.float-group]
+--
+[.left.text-left]
+image::images/factorialgrowth.png[geometricsequence,500,500]
+--
+
+Using the graphical analysis of the growth of typical functions
+we have the following growth ordering, also presented graphically on a logarithmic scale graph.
+
+.Ordering of Basic Functions by Growth
+****
+
+[asciimath]
+++++
+1,\log \ ⁡n, root(3)(n),  sqrt n , n, n^2, n^3,2^n,3^n,n!, n^n
+++++
+
+[.float-group]
+--
+[.left.text-left]
+image::images/growthorder.png[geometricsequence,500,500]
+--
+****
+
+The asymptotic behavior for large $n$ should be determined by the most dominant term in the function for large $n$. For example, $f(x)=x^{3} + 2x^{2}-2x$ for large $x$, is dominated by the term $x^3$. In this case we want to state that $O(f(x))=x^3$. For example $f(1000) =1.001998×10^9≈ 1×10^9 =1000^3$. For large $x$, $f(x) ≈x^3$  or asymptotically, $f(x)$ behaves as $x^3$ for large $x$. We say $O(f(x))=x^3$ for $f(x)=x^3 +2x^2-2x$.
+
+Likewise we want to say that if $c$ is a constant that $c \cdot f(x)$, and $f(x)$ have the same asymptotic behavior for large $n$, or $O(c \cdot f(x))=O(f(x))$.
+
+Motivated by these we formally define the _Big O_ notation.
+
+._Big_ $O$ notation
+****
+Suppose $f$ and $g$ are real valued functions from $f(x):\mathbb{R}→\mathbb{R}$,
+we say $f(x)$ is *Big $O$* of $g(x)$, written $f(x)$ is  $O(g(x))$, if there exists
+positive integers $A$ and $n$, so that $|f(x)| \leq A|g(x)|$ whenever $x  > n$.
+****
+
+
+To determine if a function $f(x)$ is $O(g(x))$ amounts to
+identifying the positive constants $A$ and $n$, (sometimes called witnesses).
+That is, we must find the factor $ A$  and the point $ k $ for which $ f(x)  \leq A g(x)$, whenever $ x > k.$
+
+****
+.Example {counter:growex}
+Show that $f\left(x\right)=2x^2 +4x$ is $O(x^2)$
+
+.Solution
+While intuitively we may understand that
+the dominant term for large $x$ is $x^2$ so that $f(x) = O\left(x^2\right)$,
+we show this formally by producing as witnesses $A=3$ and $n =4$ with
+reference to the following graph.
+
+
+[.float-group]
+--
+[.left.text-left]
+image::images/witnessexample.png[geometricsequence,750,750]
+--
+****
+
+****
+.Example {counter:growex}
+Show that $f(x) =2x^3 +3x is $O(x^3)$, with $A=3$ and $n=2$. Support
+your answer graphically.
+
+.Solution
+Notice that $ x^3 > 3x$ when $ x  \geq 2$. This means $2x^3 +x^3 >  2x^3 +3x $ when $x >2 $.
+In other words $ 3x^3 > 2x^3 +3x$ whenever $ x>2$, confirming $A=3$ and $n=2$ as witnesses, and supported by the
+following graph.
+[.float-group]
+--
+[.left.text-left]
+image::images/cubic_big_o_example.png[geometricsequence,750,750]
+--
+
+****
+
+To show that a function $ f(x)$ is not $O(g(x))$, means that no $A$ can scale
+$g(x)$ so that $ Ag(x)  \geq  f(x)$ for $x$ large enough as in the following example.
+
+****
+.Example {counter:growex}
+Show that $ f(x) = x^2$ is not $  O( \sqrt{x})$.
+
+.Solution
+Consider the graphs of $ \sqrt{x}$, $ 2 \sqrt{x}$, $ 3\sqrt{x}$, and the graph of $x^2$.
+Notice that eventually, or for $x$ large enough, $x^2$ is larger than any $A \sqrt{x}$
+as in the figure below
+
+[.float-group]
+--
+[.left.text-left]
+image::images/not_big_o.png[geometricsequence,750,750]
+--
+Suppose $A>1$ is  given and pass:q[<u>fixed</u>],
+then if $ f(x) = x^2$ is
+$ O(g(x))=O( \sqrt{x})$ ,  there is a corresponding $n$, also
+pass:q[<u>fixed</u>],
+for which $A  \sqrt{x}  \geq x^2$ whenever $x>n$.
+
+We solve the inequality $A  \sqrt{x}  ≥ x^2$ by dividing both sides by $\sqrt{x}  =x^{1/2}$, to obtain, $A  \sqrt{x}  ≥ x^{3/2}$.
+
+But $A$ is fixed and cannot be greater than all  arbitrarily large $ x^{3/2}$. Hence no such $n$
+can
+exist for a given fixed $A$.
+
+For example, consider $g(x)=A  \sqrt{x}$ and $ f(x) =x^2 $,
+when $ x= A^2$ we obtain $ g(A^2) = A  \sqrt{(A^2)}= A^2$ and $ f(A^2) = {\left ( {A}^2 \right )}^2$ and
+$ f(A^2)= A^4 > A^2 = g(A^2) $ when $A>1$.
+
+****
+
+
+== Properties of _Big O_ notation.
+Suppose $f(x)$ is $O(F(x))$ and $g(x)$ is $O(G(x))$.
+
+.Properties of _Big O_ Notation
+****
+. $c \cdot f(x)$ is $O(F(x))$
+. $ f (x )+g(x)$ is $O(\max \left ( F(x), G(x) \right )$
+. $ f (x ) \cdot g(x))$ is $O(F(x) \cdot G(x))$
+****
+We can use these properties to show for instance $ 2x^2$ is  $O\left(x^2\right)$. Likewise
+if $f(x) =2x^2$ and $g(x) =4x$, then $ 2x^2$ is $O(x^2)$ and $ 4x$ is $O(x)$,
+and the maximum gives that $2x^2+4x$ is $ O(\max(x^2, x)) =O(x^2)$.
+
+It is true in general that if a polynomial $f(x)$ has degree $n$ then $f(x)$ is $O(x^n)$.
+
+._Big O_ for Polynomials
+****
+$p(x)=a_nx^n +a_{n-1}x^{n-1} +a_{n-2}x^{n-2}+\ldots +a_2x^2 +a_1x^1+a_0$ is $O(x^n)$
+****
+
+For example, if $f(x)= x^3+1$ being $ O(x^3)$, and $g(x)=x^2-x$ being $O(x^2)$, then
+$f(x) \cdot g(x)$ is $O(x^3 \cdot x^2) =O(x^5)$.  This is verified explicitly by multiplying
+$f(x) \cdot g(x)= (x^3+1) \cdot (x^2-x)= x^5 -x^4+x^2-x  $ which clearly is $O(x^5)$
+
+
+****
+.Example {counter:growex} - ordering by growth
+Order the following functions by growth:
+$n⋅\log_2⁡ n$  , $n^2$, $n^{4/3}$
+
+.Solution
+Recall the ordering,
+
+$\log_2⁡ n$, $n^{1/3}$, and $n$,
+
+which is ordered by logarithmic, then radical, and then
+polynomial (or linear) growth.
+
+Notice also, that multiplying each by $n$, preserves the order.
+
+$n⋅\log_{2⁡}n=n\times \log_{2⁡}n$
+
+$n^{4/3} =n \times n^{1/3}$
+
+$n^2=n \times n$
+
+
+The using the original ordering, $\log{n}$, $n^{1/3}$, $n$, we obtain
+also the following ordering
+$n⋅\log n$, $n^{4/3}$,  $n^2$.
+
+****
+
+As a final example we consider ordering three functions by
+growth using the basic properties for Big O and the basic orderings.
+****
+
+.Example {counter:growex}
+
+Find the Big O of each of the following and then rank by _Big_ $O$ growth:
+
+$f\left(x\right)=\left({3x}^3+x\right)2^x+\left(x+x!\right)x^4$
+
+$g\left(x\right)=x^x(2^x+x^2)$
+
+$h\left(x\right)=5x!+4x^3\log{x}$
+
+.Solution
+
+First consider $f\left(x\right)$ and using the polynomial
+property observe that $\left({3x}^3+x\right)$ is $O(x^3)$.
+Using the multiplicative property, conclude that
+$\left({3x}^3+x\right)2^x$ is $O(x^32^x)$.  Likewise using
+the sum property, $\left(x+x!\right)$ is
+$O\left(\max{\left(x,x!\right)}\right)= O (x!)$. Then using the
+multiplicative property, $\left(x+x!\right)x^4$  is  $O (x^4x!)$.
+Then  $f\left(x\right)=\left({3x}^3+x\right)2^x+\left(x+x!\right)x^4$ is
+$O\left(\max{\left(x^32^x,x^4x!\right)}\right)=O\left(x^4x!\right)$.
+
+For $g(x)$, notice using the maximum property for the sum, that
+$2^x+x^2$ is $O(2^x)$. Then using the multiplicative property,
+$x^x(2^x+x^2)$ is $O(2^xx^x)$.
+
+For $h\left(x\right)$, we want
+$O\left(\max{\left(x!,\ x^3\log{x}\right)}\right)=O(x!)$.
+Notice here, that $4x^3\log{x}$ is $O(x^4)$,  and $x^4$ has smaller
+asymptotic growth than $x!$. In fact, $x^4$ is $O(x!)$.
+
+So,  $f(x)$ is $O\left(x^4x!\right)$,  and $g(x)$ is
+$O\left(2^xx^x\right)$.  Also, $h(x)$ is, $O\left(x!\right)$.
+
+We conclude that from an ordering perspective,
+we have by increasing growth order, $h(x)$, $f(x)$, and $g(x)$.
+To convince yourself that $g(x)$ grows faster than $f(x)$, use the
+facts that $2^x$ grows faster than $x^4$, and $x^x$ grows faster than $x!$.
+
+
+****
+
+== Exercises
+
+. Give _Big O_ estimates for
+.. $f\left(x\right)=4$
+.. $f\left(x\right)=3x-2$
+.. $f\left(x\right)=5x^6-4x^3+1$
+.. $f\left(x\right)=2\ \ \sqrt x+5$
+.. $f\left(x\right)=x^5+4^x$
+.. $f\left(x\right)=x\log{x}+3x^2$
+.. $f\left(x\right)=5{x^2e}^x+4x!$
+.. $f\left(x\right)=\displaystyle \frac{x^6}{x^2+1}$	*(Hint: Use long division.)*
+
+
+. Give _Big O_ estimates for
+..	$f\left(x\right)=2^5$
+..	$f\left(x\right)=5x-2$
+..	$f\left(x\right)=5x^8-4x^6+x^3$
+..	$f\left(x\right)=$ asciimath:[4 root(3)(x)+3]
+..	$f\left(x\right)=3^x+4^x$
+..	$f\left(x\right)=x^2\log{x}+5x^3$
+..	$f\left(x\right)=5{x^610}^x+4x!$
+..	$f\left(x\right)=\displaystyle \frac{x^5+2x^4-x+2}{x+2}$	*(Hint: Use long division.)*
+
+. Show, using the definition, that
+$f\left(x\right)=3x^2+5x$  is $O(x^2)$ with $A=4$ and $n=5$. Support your answer graphically.
+
+. Show, using the definition, that
+$f\left(x\right)=x^2+6x+2$  is $O(x^2)$ with $A=3$ and $n=6$. Support your answer graphically.
+
+. Show, using the definition, that $f\left(x\right)=2x^3+6x^2+3$  is $O(x^2)$.
+State witnesses $A$ and $n$, and support your answer graphically.
+
+. Show, using the definition, that $f\left(x\right)=\ {3x}^3+10x^2+1000$ is $O(x^2)$.
+State the witnesses $A$ and $n$, and support your answer graphically.
+
+. Show that $f\left(x\right)=\sqrt x$ is $O\left(x^3\right)$, but $g\left(x\right)=x^3$
+is not$\ O(\ \sqrt x)$.
+
+. Show that $f\left(x\right)=  x^2$ is $O\left(x^3\right)$, but $g\left(x\right)=x^3$
+is not$\ O(  x^2)$.
+
+. Show that $f\left(x\right)=\sqrt x$ is $O\left(x\right)$, but $g\left(x\right)=x$ is not$\ O(\ \sqrt x)$.
+
+. Show that $f\left(x\right)=$  asciimath:[root(3)(x)] is $O\left(x^2\right)$, but $g\left(x\right)=x^2$
+ is not  asciimath:[O( root(3)(x))]
+
+. Show that $f\left(x\right)=$  asciimath:[root(3)(x)] is $O\left(x\right)$, but $g\left(x\right)=x$ is
+not    asciimath:[root(3)(x)].
+
+. Order the following functions by growth
+$x^\frac{7}{3},\ e^x,\ 2^x,\ x^5,\ 5x+3,\ 10x^2+5x+2,\ x^3,\log{x,\ x^3\log{x}}$
+
+. Order the following functions by growth from slowest to fastest.
+$\ 3x!,\ {10}^x,\ x\cdot\log{x},\ \log{x\cdot\log{x,\ \ }2x^2+5x+1,\ \pi^x,x^\frac{3}{2}\ },\ 4^5,\ \ \sqrt{x\ }\cdot\log{x}$
+
+. Consider the functions $f\left(x\right)=2^x+2x^3+e^x\log{x}$ and
+$g\left(x\right)=\sqrt x+x\log{x}$. Find the best big $O$ estimates of
+.. $(f+g)(x)$
+.. $(f\cdot\ g)(x)$
+
+. Consider the functions  $f\left(x\right)=2x+3x^3+5\log{x}$ and
+$g\left(x\right)=\sqrt x+x^2\log{x}$. Find the best big $O$ estimates of
+.. $(f+g)(x)$
+.. $(f\cdot\ g)(x)$
+
+
+. State the definition of "$ f(x)$ is $ O(g(x))$"" using logical quantifiers and witnesses $A$ and $n$.
+
+. Negate the definition of "$ f(x)$ is $ O(g(x))$" using logical quantifiers, and then state in
+words what it means that $ f(x)$ is [.underline]#not# $ O(g(x))$.

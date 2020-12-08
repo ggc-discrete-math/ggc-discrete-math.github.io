@@ -1,0 +1,56 @@
+= Discrete Math
+Mohamed Jamaloodeen, Kathy Pinzon, Daniel Pragel, Joshua Roberts, Sebastien Siva
+:toc: left
+:toclevels: 2
+:linkcss:
+:pygments-style: friendly
+:icons: font
+:linkattrs:
+:sectnums:
+:nofooter:
+
+//['manni', 'igor', 'lovelace', 'xcode', 'vim', 'autumn', 'vs', 'rrt', 'native', 'perldoc', 'borland', 'tango', 'emacs', 'friendly', 'monokai', 'paraiso-dark', 'colorful', 'murphy', 'bw', 'pastie', 'algol_nu', 'paraiso-light', 'trac', 'default', 'algol', 'fruity']
+//To force build.
+[.float-group]
+--
+[.left.text-left]
+image::images/GGC_Logo.png[GGC,250,200]
+--
+
+:leveloffset: +1
+
+include::introduction_discrete_math.adoc[]
+
+include::python_intro.adoc[]
+
+include::logic.adoc[]
+
+include::set_theory.adoc[]
+
+include::functions.adoc[]
+
+include::growth_functions.adoc[]
+
+include::algorithms.adoc[]
+
+
+
+include::counting.adoc[]
+
+include::number_theory.adoc[]
+
+include::induction_recursion.adoc[]
+
+include::graph_theory.adoc[]
+
+include::appendix_one.adoc[]
+
+include::appendix_two.adoc[]
+
+:leveloffset: -1
+
+[.float-group]
+--
+[.right.text-right]
+image::images/GGC_Logo.png[GGC,250,200]
+--

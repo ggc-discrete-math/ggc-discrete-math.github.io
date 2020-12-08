@@ -1,0 +1,431 @@
+= Number Theory
+== Divisibility
+
+Let $a$ be a nonzero integer and let $b$ be an integer. We say that *$a$ divides $b$* if and only if there is an integer $c$ such that $b = ac.$
+If $a$ divides $b,$ then we use the notation: \[a \mid b.\]If $a$ does not divide $b,$ then we use the notation: \[a \nmid b.\] When $a$ divides $b,$ we say $a$ is a *divisor* of $b$ and that $b$ is a *multiple* of $a.$
+
+
+****
+.Example {counter:numex}
+Does $3$ divide $12$? Does $5$ divide $27$?
+
+.Solution
+Since we have \[12 = 3 \cdot 4,\]we see that $3 \mid 12.$ However, there is no integer $c$ such that \[27 = 5c.\]This implies that $5 \nmid 27.$
+****
+
+There are several theorems that can be proven just using the definition of divisibility given above. One such theorem is as follows.
+
+
+.Theorem
+****
+Let $a$ be a nonzero integer and let $b$ and $c$ be integers such that $a \mid b$ and $a \mid c.$ Then, for any integers $x$ and $y,$ \[a \mid \left(bx + cy\right).\]
+****
+
+=== Division Algorithm
+.The Division Algorithm
+****
+Let $a$ be an integer and let $d$ be a positive integer. Then, there are unique integers $q$ and $r,$ with $0 \leq r < d,$ such that \[a = dq + r.\]
+****
+
+Let $a$ be an integer and let $d$ be a positive integer. Suppose that $q$ and $r$ are integers given by the division algorithm. We refer to $q$ as the *quotient* and $r$ as the *remainder*. We use the following notation:
+
+[env.equationalign]
+--
+a \boldsymbol{\operatorname{\,div\,}} d &= q,\\
+a \boldsymbol{\bmod} d &= r.\\
+--
+
+****
+.Example {counter:numex}
+Find $129 \boldsymbol{\operatorname{\,div\,}} 7$ and $129 \boldsymbol{\bmod} 7.$
+
+.Solution
+We have \[129 = 7 \cdot 18 + 3.\] This implies that \[129 \boldsymbol{\operatorname{\,div\,}} 7 = 18\]
+and \[129 \boldsymbol{\bmod} 7 = 3.\]
+****
+
+If $b$ is an integer and $a$ is a positive integer, the following theorem shows how we can use the division algorithm to determine whether or not $a$ divides $b.$
+
+.Theorem
+****
+Let $a$ be a positive integer and let $b$ be an integer. Then $a \mid b$ if and only if $b \boldsymbol{\bmod} a = 0.$
+****
+
+For any positive integer $m,$ we define $\mathbb{Z}\_{m}$ to be the set of nonnegative integers less than $m.$
+In other words, we have \[\mathbb{Z}_m = \{0,1,\dots,m-1\}.\]
+Let $a$ and $b$ be elements of $\mathbb{Z}_m.$ We define addition in $\mathbb{Z}_m,$
+denoted $+_m,$ as follows: \[a +_m b = (a + b) \boldsymbol{\bmod} m.\] We define
+multiplication in $\mathbb{Z}_m,$ denoted $\cdot_m,$ as
+follows: \[a \cdot_m b = (a \cdot b) \boldsymbol{\bmod} m.\]
+
+****
+.Example {counter:numex}
+Use the definition of addition and multiplication
+in $\mathbb{Z}\_{11}$ to find $7 +\_{11} 9$ and
+$7 \cdot\_{11} 9= 7 \ \ ×_{\mathbf{11}}\ 9.$
+
+.Solution
+We have
+[env.equationalign]
+--
+7 +\_{11} 9 &= (7 + 9)\boldsymbol{\bmod} 11\\
+&= 16 \boldsymbol{\bmod} 11\\
+&= 5,
+--
+and
+[env.equationalign]
+--
+7 \ \ ×_{\mathbf{11}}\ 9=7 \cdot\_{11} 9 &= (7 \cdot 9)\boldsymbol{\bmod} 11\\
+&= 63 \boldsymbol{\bmod} 11\\
+&= 8.
+--
+****
+
+****
+.Example {counter:numex}
+Find addition and muliplication tables for $\mathbb{Z}\_6.$
+.Solution
+We have \[\mathbb{Z}\_6 = \{0,1,2,3,4,5\}.\]We have the following table for addition in $\mathbb{Z}\_6$: \[\begin{array}{c|cccccc}
++\_6 & 0 & 1 & 2 & 3 & 4 & 5\\
+\hline
+0 & 0 & 1 & 2 & 3 & 4 & 5\\
+1 & 1 & 2 & 3 & 4 & 5 & 0\\
+2 & 2 & 3 & 4 & 5 & 0 & 1\\
+3 & 3 & 4 & 5 & 0 & 1 & 2\\
+4 & 4 & 5 & 0 & 1 & 2 & 3\\
+5 & 5 & 0 & 1 & 2 & 3 & 4\\
+\end{array}\] We have the following table for multiplication in $\mathbb{Z}\_6$: \[\begin{array}{c|cccccc}
+\cdot\_6 & 0 & 1 & 2 & 3 & 4 & 5\\
+\hline
+0 & 0 & 0 & 0 & 0 & 0 & 0\\
+1 & 0 & 1 & 2 & 3 & 4 & 5\\
+2 & 0 & 2 & 4 & 0 & 2 & 4\\
+3 & 0 & 3 & 0 & 3 & 0 & 3\\
+4 & 0 & 4 & 2 & 0 & 4 & 2\\
+5 & 0 & 5 & 4 & 3 & 2 & 1\\
+\end{array}\]
+****
+
+=== Greatest Common Divisor and Least Common Multiple
+
+Let $a$ and $b$ be positive integers. The largest positive integer $d$ such that $d$ divides $a$ and $d$ divides $b$ is referred to as the *greatest common divisor* of $a$ and $b.$ The greatest common divisor of $a$ and $b$ is denoted by $\gcd(a,b).$ If $\gcd(a,b) = 1,$ we say that $a$ and $b$ are *relatively prime*.
+
+****
+.Example {counter:numex}
+Find the greatest common divisor of $35$ and $21.$ Are $35$ and $21$ relatively prime?
+
+.Solution
+Since $35 = 7 \cdot 5$ and $21 = 7 \cdot 3,$ we see that $7$ is a common divisor of $35$ and $21.$ It can be checked that no positive integer larger than $7$ that divides both $35$ and $21.$ Thus, we see that \[\gcd(35,21) = 7.\]Since $\gcd(35,21) \neq 1,$ we see that $35$ and $21$ are not relatively prime.
+****
+
+Additionally, it is not hard to see that $\gcd(5,3) = 1,$ and thus $\frac{35}{7}$ and $\frac{21}{7}$ are relatively prime. In general, we have the following theorem.
+
+.Theorem
+****
+Let $a$ and $b$ be positive integers. Suppose that $d$ is a positive integer such that $d \mid a$ and $d \mid b.$ Then, $d = \gcd(a,b)$ if and only if $\frac{a}{d}$ and $\frac{b}{d}$ are relatively prime.
+****
+
+Let $a$ and $b$ be positive integers. The smallest positive integer $m$ such that $a$ divides $m$ and $b$ divides $m$ is referred to as the _least common multiple_ of $a$ and $b.$ The least common multiple of $a$ and $b$ is denoted by $\operatorname{lcm}(a,b).$
+
+****
+.Example {counter:numex}
+Find the least common multiple of $35$ and $21.$
+
+.Solution
+Since $105 = 35 \cdot 3$ and $105 = 21 \cdot 5,$ we see that $105$ is a common multiple of $35$ and $21.$ It can be checked that no positive integer smaller than $105$ is a multiple of both $35$ and $21.$ Thus, we see that \[\operatorname{lcm}(35,21) = 105.\]
+****
+
+Additionally, we observe that \[\gcd(35,21) \cdot \operatorname{lcm}(35,21) = 7 \cdot 105 = 735 = 35 \cdot 21.\]
+In general, we have the following theorem.
+
+.Theorem
+****
+Let $a$ and $b$ be positive integers. Then, \[\gcd(a,b) \cdot \operatorname{lcm}(a,b) = ab.\]
+****
+
+=== The Euclidean Algorithm
+
+A well-known method for computing the greatest common divisor and least common multiple of a pair of positive integers is called the *Euclidean algorithm*. Before describing this algorithm, we state the following theorem.
+
+.Theorem
+****
+Let $a,b,r,q$ be integers with $a=bq+r$. Then, \[\gcd(a,b) = \gcd(b,r).\]
+****
+
+Let $a$ and $b$ be positive integers. We let $r\_0 = a$ and $r\_1 = b.$ Next, we use the division algorithm to find integers $q\_1$ and $r\_2,$ with $0 \leq r\_2 < r\_1,$ such that \[r\_0 = r\_1q\_1 + r\_2.\]Then, if $r\_2 \neq 0,$ we again use the division algorithm to find integers $q\_2$ and $r\_3,$ with $0 \leq r\_3 < r\_2,$ such that \[r\_1 = r\_2q\_2 + r\_3.\] We continue this process until we obtain a remainder of $0$; that is, until, for some positive integer $k,$ we have $r\_{k+1} = 0.$ Then, we have
+
+[env.equationalign]
+--
+\gcd(a,b) = r\_k,\\
+\operatorname{lcm}(a,b) = \frac{ab}{r\_k}.\\
+--
+
+****
+.Example {counter:numex}
+Find the greatest common divisor and least common multiple of $480$ and $174.$
+
+.Solution
+We have the following:
+
+[env.equationalign]
+--
+480 &= 174 \cdot 2+ 132,\\
+174 &= 132 \cdot 1 + 42,\\
+132 &= 42 \cdot 3 + 6,\\
+42 &= 6 \cdot 7 + 0.
+--
+
+Since we have reached a remainder of 0, we are finished. The last nonzero remainder we found was $6.$ Thus, we see that \[\gcd(480,174) = 6,\]and that \[\operatorname{lcm}(480,174) = \frac{480\cdot 174}{6} = 13920.\]
+****
+
+:pt_code_height: 550
+:pt_rawinput: false
+:pt_code: a%20%3D%20int%28input%28%22a%20%3D%20%22%29%29%0Ab%20%3D%20int%28input%28%22b%20%3D%20%22%29%29%0Ar%20%3D%20%5Ba,b%5D%0Aq%20%3D%20%5B%5D%0Ak%20%3D%200%0Awhile%20r%5Bk%2B1%5D%20!%3D%200%3A%0A%20%20%20%20k%20%2B%3D%201%0A%20%20%20%20q.append%28r%5Bk-1%5D//r%5Bk%5D%29%0A%20%20%20%20r.append%28r%5Bk-1%5D%25r%5Bk%5D%29%0A%20%20%20%20print%28%22%25d%20%3D%20%25d%20*%20%25d%20%2B%20%25d%22%20%25%20%28r%5Bk-1%5D,r%5Bk%5D,q%5Bk-1%5D,r%5Bk%2B1%5D%29%29%0Aprint%28%22gcd%28%25d,%25d%29%20%3D%20%25d%22%20%25%20%28a,b,r%5Bk%5D%29%29%0Aprint%28%22lcm%28%25d,%25d%29%20%3D%20%25d%22%20%25%20%28a,b,a*b//r%5Bk%5D%29%29
+
+.Euclidean Algorithm
+****
+--
+--
+Here is an implementation in Python of the Euclidean algorithm as it computes $\gcd(a,b)$ and $\operatorname{lcm}(a,b).$
+
+include::python_tutor.adoc[]
+****
+Additionally, we can use the work from the solution to the previous example to obtain the following:
+
+[env.equationalign]
+--
+6 &= 132 - 42\cdot 3,\\
+42 &= 174 - 132\cdot 1,\\
+132 &= 480 - 174 \cdot 2.
+--
+
+We express $\gcd(480,174)$ as a sum of multiples of $480$ and $174$ as follows:
+
+[env.equationalign]
+--
+6 &= 132 - 42 \cdot 3\\
+&= 132 - (174 - 132\cdot 1)\cdot 3\\
+&= 132 - 174 \cdot 3 + 132 \cdot 3\\
+&= 132 \cdot 4 - 174 \cdot 3\\
+&= (480 - 174\cdot 2)\cdot 4 - 174 \cdot 3\\
+&= 480 \cdot 4 - 174 \cdot 8 - 174 \cdot 3\\
+&= 480 \cdot 4 -174 \cdot 11\\
+&= 480 \cdot 4 + 174 \cdot (-11).
+--
+
+In general, we have the following theorem.
+
+.Theorem
+****
+Let $a$ and $b$ be positive integers. There exist integers $x$ and $y$ such that \[\gcd(a,b) = ax + by.\]
+****
+
+Particular values of $x$ and $y$ can be found using the Extended Eulcidean algorithm.
+
+:pt_code_height: 650
+:pt_rawinput: false
+:pt_code: a%20%3D%20int%28input%28%22a%20%3D%20%22%29%29%0Ab%20%3D%20int%28input%28%22b%20%3D%20%22%29%29%0Ar%20%3D%20%5Ba,b%5D%0Aq%20%3D%20%5B%5D%0Ak%20%3D%200%0Awhile%20r%5Bk%2B1%5D%20!%3D%200%3A%0A%20%20%20%20k%20%2B%3D%201%0A%20%20%20%20q.append%28r%5Bk-1%5D//r%5Bk%5D%29%0A%20%20%20%20r.append%28r%5Bk-1%5D%25r%5Bk%5D%29%0Aprint%28%22gcd%28%25d,%25d%29%20%3D%20%25d%22%20%25%20%28a,b,r%5Bk%5D%29%29%0Ax%20%3D%20%5B1%5D%0Ay%20%3D%20%5B-q%5Bk-2%5D%5D%0Afor%20i%20in%20range%28k-2%29%3A%0A%20%20%20%20print%28%22%25d%20%3D%20%25d%20*%20%25d%20%2B%20%25d%20*%20%25d%22%20%25%20%28r%5Bk%5D,%20r%5Bk-2-i%5D,%20x%5Bi%5D,%20r%5Bk-1-i%5D,%20y%5Bi%5D%29%29%0A%20%20%20%20x.append%28y%5Bi%5D%29%0A%20%20%20%20y.append%28x%5Bi%5D%20-%20q%5Bk-3-i%5D*y%5Bi%5D%29%20%20%20%20%0Aprint%28%22%25d%20%3D%20%25d%20*%20%25d%20%2B%20%25d%20*%20%25d%22%20%25%20%28r%5Bk%5D,%20r%5B0%5D,%20x%5Bk-2%5D,%20r%5B1%5D,%20y%5Bk-2%5D%29%29
+****
+.Example {counter:numex} - Extended Euclidean Algorithm in Python
+--
+--
+Here is an implementation in Python of the Extended Euclidean algorithm as it finds integers $x$ and $y$ such that $ax + by = \gcd(a,b).$
+
+include::python_tutor.adoc[]
+****
+== Integer Representations
+
+.Theorem
+****
+Let $b$ be an integer greater than 1. Any positive integer $n$ can be expressed uniquely in the form \[n = a\_kb^k + a\_{k - 1}b^{k-1} + \cdots + a\_1b^1 + a\_0b^0,\]where $k$ is a nonnegative integer, $a\_0,a\_1,\dots,a\_k$ are nonnegative integers less than $b,$ and $a\_k \neq 0.$
+****
+
+Let $b$ be an integer greater than 1 and let $n$ be a positive integer. The representation of $n$ in the above theorem is referred to as the *base $b$ expansion of $n$*. We refer to $a\_k,a\_{k-1},\dots,a\_0,a\_1$ as *digits*. We represent the base $b$ expansion of $n$ using the following notation: \[(a\_ka\_{k-1}\dots a\_1a\_0)\_b.\]
+
+The base 10 expansion of a positive integer is referred to as the *decimal  expansion*. When expressing the decimal expansion of a positive integer, we typically omit the subscript 10.
+
+****
+.Example {counter:numex}
+What is the decimal expansion of the positive integer with base 7 expansion $(1063)\_7$?
+
+.Solution
+
+We have
+
+[env.equationalign]
+--
+(1063)\_7 &= 1 \cdot 7^3 + 0 \cdot 7^2 + 6\cdot 7^1 + 3 \cdot 7^0\\
+&=1 \cdot 343 + 0 \cdot 49 + 6 \cdot 7 + 3 \cdot 1\\
+&= 343 + 0 + 42 + 3\\
+&= 388.
+--
+****
+
+Several common bases used in computer science are base $2$, base $8$, and base $16$, which are referred to as *binary*, *octal*, and *hexadecimal*, respectively. Binary digits are often referred to as *bits*. Note that, when finding the hexadecimal expansion of a positive integer, in addition to the usual digits $0$ through $9,$ we require an additional 6 digits. We will represent these by the letters $\mathrm{A}$ through $\mathrm{F}$, where $(\mathrm{A})\_{16} = 10,$ $(\mathrm{B})\_{16} = 11,$ $(\mathrm{C})\_{16} = 12,$ $(\mathrm{D})\_{16} = 13,$ $(\mathrm{E})\_{16} = 14,$ and $(\mathrm{F})\_{16} = 15.$
+
+****
+.Example {counter:numex} - Hexadecimal expansion
+Find the decimal expansion of the positive integer whose hexadecimal expansion is $(5\mathrm{B}\mathrm{F})\_{16}.$
+
+.Solution
+We have
+[env.equationalign]
+--
+(5\mathrm{B}\mathrm{F})\_{16} &= 5\cdot 16^2 + 11 \cdot 16^1 + 15 \cdot 16^0\\
+&= 5\cdot 256 + 11 \cdot 16 + 15 \cdot 1\\
+&= 1280 + 176 + 15\\
+&= 1471.
+--
+****
+
+== Base Conversion
+
+Let $b$ be an integer greater than $1$ and let $n$ be a positive integer. In order to find the base $b$ expansion of $n,$ we can use the following algorithm. First, we use the division algorithm to find integers $q\_0$ and $a\_0,$ with $0 \leq a_0 < b,$ such that \[n = bq\_0 + a\_0.\]Then, if $q\_0 \neq 0,$ we again use the division algorithm to find integers $q\_1$ and $a\_1,$ with $0 \leq a\_1 < b,$ such that \[q\_0 = bq\_1 + a\_1.\] Then, if $q\_1 \neq 0,$ we again use the division algorithm to find integers $q\_2$ and $a\_2,$ with $0 \leq a\_2 < b,$ such that \[q\_1 = bq\_2 + a\_2.\]We continue this process until we obtain a quotient of $0$; that is, until, for some positive integer $k,$ we have $q\_k = 0.$ Then, we have \[n = (a\_ka\_{k-1}\dots a\_1a\_0)\_b.\]
+
+****
+.Example {counter:numex} - Base Conversion Algorithm
+Find the base $6$ expansion for $2235$.
+
+.Solution
+
+We have
+
+[env.equationalign]
+--
+2235 &= 6\cdot 372 + 3,\\
+372 &= 6 \cdot 62 + 0,\\
+62 &= 6 \cdot 10 + 2,\\
+10 &= 6\cdot 1 + 4,\\
+1 &= 6 \cdot 0 + 1.
+--
+
+Since we have reached a quotient of $0$, we are finished. Thus, we see that \[2235 = (14203)\_6.\]
+****
+
+
+
+
+Suppose we want to convert the positive integer $n$ from hexadecimal to binary. One method would be to first convert from
+$n$ from hexadecimal to decimal, and the convert the result from decimal to binary. However, we can also take advantage of the fact
+that $2^4 = 16.$ This implies that we can express each hexadecimal digit of $(n)\_{16}$ uniquely as a block of 4 bits as
+follows:
+[latexmath]
++++++++++++++++++++++++++++++++++++++++++
+\begin{array}{llll}
+(0)_{16} = (0000)_2 & (1)_{16} = (0001)_{2}& (2)_{16} = (0010)_2 & (3)_{16} = (0011)_2 \\
+(4)_{16} = (0100)_2& (5)_{16} = (0101)_2& (6)_{16} = (0110)_2 & (7)_{16} = (0111)_2\\
+(8)_{16} = (1000)_2& (9)_{16} = (1001)_2& (\mathrm{A})_{16} = (1010)_2& (\mathrm{B})_{16} = (1011)_2\\
+(\mathrm{C})_{16} = (1100)_2& (\mathrm{D})_{16} = (1101)_2& (\mathrm{E})_{16} = (1110)_2&  (\mathrm{F})_{16} = (1111)_2.
+\end{array}
++++++++++++++++++++++++++++++++++++++++++
+We then concatenate our blocks, removing any leading zeros if necessary.
+
+
+****
+.Example {counter:numex} - Hexadecimal to Binary Conversion
+Find the binary expansion of $(4\mathrm{C}\mathrm{A}7)\_{16}.$
+
+.Solution
+We have the following:
+[latexmath]
++++++++++++++++++++++++++++++++++++++++++
+\begin{array}{llll}
+(4)_{16} = (0100)_2 & (\mathrm{C})_{16} = (1100)_2 & (\mathrm{A})_{16} = (1010)_2 & (7)_{16} = (0111)_2.
+\end{array}
++++++++++++++++++++++++++++++++++++++++++
+Thus, we see that \[(4\mathrm{C}\mathrm{A}7)\_{16} = (100110010100111)\_{2}.\]
+
+****
+
+To convert $n$ from binary to hexadecimal, we simply break up $(n)_2$ into blocks of 4 binary digits, adding a suitable number of
+leading zeros if necessary. We convert each block of 4 bits to hexadecimal digits and concatenate our results, removing any leading
+zeros if necessary.
+
+****
+.Example {counter:numex} - Binary to Hexadecimal Conversion
+Find the hexadecimal expansion of $(110 1011 1111)_2.$
+
+.Solution
+We have the following blocks of 4 bits: \[0110,\ 1011,\ 1111.\]
+Since $(0110)\_2 = (6)\_{16},$ $(1011)\_2 = (\mathrm{B})\_{16},$ and $(1111)\_2 = (\mathrm{F})\_{16},$ we see that \[(11010111111)\_{2} = (6\mathrm{B}\mathrm{F})\_{16}.\]
+****
+
+The following table can be used to covert quickly between decimal, hexadecimal, octal binary in a similar way.
+
+*Conversion table for different bases*
+
+|===
+| *Decimal*     | 0 | 1 |  2 |  3 |  4  |  5  |  6  |  7  |   8  |   9  |  10  |  11  |  12  |  13  |  14  |  15
+| *Hexadecimal* | 0 | 1 |  2 |  3 |  4  |  5  |  6  |  7  |   8  |   9  |   A  |   B  |   C  |   D  |   E  |   F
+| *Octal*     | 0 | 1 |  2 |  3 |  4  |  5  |  6  |  7  |  10  |  11  |  12  |  13  |  14  |  15  |  16  |  17
+| *Binary*      | 0 | 1 | 10 | 11 | 100 | 101 | 110 | 111 | 1000 | 1001 | 1010 | 1011 | 1100 | 1101 | 1110 | 1111
+|===
+
+// image::images/baseconverstion.png[baseconverstion, 1000, 1000]
+
+== Exercises
+
+. Calculate
+.. $325 \ \mathbf{div}\ 7$ and $325 \ \mathbf{mod}\ 7$
+
+.. $1,135 \ \mathbf{div}\ 12$ and $1,135 \ \mathbf{mod}\ 12$
+
+.. $25,378 \ \mathbf{div}\ 3$ and $25,378 \ \mathbf{mod}\ 3$
+
+.. $-568 \ \mathbf{div}\ 5$ and $-568 \ \mathbf{mod}\ 5$
+
+.. $-2357 \ \mathbf{div}\ 6$ and $-2357 \ \mathbf{mod}\ 6$
+
+
+. Calculate
+.. $75 +_{\mathbf{11}}\ 63$ and $75 \times_{\mathbf{11}}\ 63$
+
+
+.. $194 +_\mathbf{8}\ 879$ and $194 \times_{\mathbf{8}}\ 879$
+
+
+. Find addition and  multiplication tables for
+
+.. 	 $\mathbb{Z}_8$
+.. 	 $\mathbb{Z}_{10}$
+
+. Use the Euclidean Algorithm, showing all calculations, to find the following:
+
+.. $gcd\left(136,248\right)$ and    $lcm\left(136,248\right)$
+
+.. $gcd\left(1659,245\right)$ and    $lcm\left(1659,245\right)$
+
+. Convert to decimal (base 10)
+
+..  $(10262)_7$
+..  $(30A8)_{16}$
+..  $(1000010001100)_2$
+.. $({12307)}_{60}$
+
+
+. Convert $\left(2039\right)_{10}$ from decimal (base 10) to
+
+..  base 7
+..  binary
+..  hexadecimal (base 16)
+..  octal (base 8)
+
+. Convert $\left(2599\right)_{10}$ from decimal to
+
+..  base 5
+..  binary
+..  hexadecimal
+..  base 3
+
+. Convert the following  hexadecimal numbers to binary
+
+.. $\left(6F203\right)_{16}$
+.. $\left(3FA20C45\right)_{16}$
+.. $\left(FACE\right)_{16}$
+
+
+. Convert the following binary numbers to hexadecimal
+
+.. $\left(1111100111010101101\right)_2$
+.. $\left(\ 10001111101011\right)_2$
+.. $\left(1100101011111110\right)_2$

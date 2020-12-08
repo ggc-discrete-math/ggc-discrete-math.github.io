@@ -1,0 +1,3120 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Asciidoctor 1.5.8" name="generator"/>
+  <meta content="Mohamed Jamaloodeen, Kathy Pinzon, Daniel Pragel, Joshua Roberts, Sebastien Siva" name="author"/>
+  <title>
+   Discrete Math
+  </title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700" rel="stylesheet"/>
+  <link href="./asciidoctor.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <style>
+   .click .title { color: blue; }
+  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
+  .openblock { margin-top: 1em; margin-bottom: 1em; }
+  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript">
+  </script>
+  <script>
+   var ready2;
+
+ready2 = function() {
+
+    $(document).ready(function(){
+
+        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
+        $('.openblock.click').find('.content').hide()
+
+
+        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
+        $('.listingblock.click').find('.content').hide()
+
+    });
+
+}
+
+
+
+
+$(document).ready(ready2);
+$(document).on('page:load', ready2);
+  </script>
+ </head>
+ <body class="article toc2 toc-left">
+  <div id="header">
+   <h1>
+    Discrete Math
+   </h1>
+   <div class="details">
+    <span class="author" id="author">
+     Mohamed Jamaloodeen, Kathy Pinzon, Daniel Pragel, Joshua Roberts, Sebastien Siva
+    </span>
+    <br/>
+   </div>
+   <div class="toc2" id="toc">
+    <div id="toctitle">
+     Table of Contents
+    </div>
+    <ul class="sectlevel1">
+     <li>
+      <a href="index.html#_introducing_discrete_mathematics">
+       1. Introducing Discrete Mathematics
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="index.html#_course_objectives">
+         1.1. Course Objectives
+        </a>
+       </li>
+       <li>
+        <a href="index.html#_applications_of_discrete_mathematics">
+         1.2. Applications of Discrete Mathematics
+        </a>
+       </li>
+       <li>
+        <a href="index.html#_understanding_continuous_and_discrete_sets">
+         1.3. Understanding Continuous and Discrete Sets
+        </a>
+       </li>
+       <li>
+        <a href="index.html#_exercises">
+         1.4. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="python_intro.html#_introduction_to_python">
+       2. Introduction to Python
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="python_intro.html#_programming_basics">
+         2.1. Programming Basics
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_data_types">
+         2.2. Data Types
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_variables">
+         2.3. Variables
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_operators_and_expressions">
+         2.4. Operators and Expressions
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_strings_and_printing">
+         2.5. Strings and Printing
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_if_statements">
+         2.6. If Statements
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_while_statements">
+         2.7. While Statements
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_lists_and_loops">
+         2.8. Lists and Loops
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_list_appending_and_slicing">
+         2.9. List Appending and Slicing
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_defining_custom_functions">
+         2.10. Defining Custom Functions
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_exercises_2">
+         2.11. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="logic.html#_logic">
+       3. Logic
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="logic.html#_propositional_logic">
+         3.1. Propositional Logic
+        </a>
+       </li>
+       <li>
+        <a href="logic.html#_proposition_equivalences">
+         3.2. Proposition Equivalences
+        </a>
+       </li>
+       <li>
+        <a href="logic.html#_predicates_and_quantifiers">
+         3.3. Predicates and Quantifiers
+        </a>
+       </li>
+       <li>
+        <a href="logic.html#_applications_of_logic">
+         3.4. Applications of Logic
+        </a>
+       </li>
+       <li>
+        <a href="logic.html#_exercises_3">
+         3.5. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="set_theory.html#_set_theory">
+       4. Set Theory
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="set_theory.html#_sets">
+         4.1. Sets
+        </a>
+       </li>
+       <li>
+        <a href="set_theory.html#_set_operations">
+         4.2. Set Operations
+        </a>
+       </li>
+       <li>
+        <a href="set_theory.html#_representing_sets_as_lists">
+         4.3. Representing Sets as Lists
+        </a>
+       </li>
+       <li>
+        <a href="set_theory.html#_exercises_4">
+         4.4. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="functions.html#_functions">
+       5. Functions
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="functions.html#_injective_surjective_bijective_and_inverse_functions">
+         5.1. Injective Surjective, Bijective and Inverse Functions
+        </a>
+       </li>
+       <li>
+        <a href="functions.html#_the_ceiling_floor_maximum_and_minimum_functions">
+         5.2. The Ceiling, Floor, Maximum and  Minimum Functions
+        </a>
+       </li>
+       <li>
+        <a href="functions.html#_the_algebra_of_functions">
+         5.3. The Algebra of Functions
+        </a>
+       </li>
+       <li>
+        <a href="functions.html#_composition_of_functions">
+         5.4. Composition of Functions
+        </a>
+       </li>
+       <li>
+        <a href="functions.html#_the_inverse_of_a_function">
+         5.5. The Inverse of a Function
+        </a>
+       </li>
+       <li>
+        <a href="functions.html#_exercises_5">
+         5.6. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="growth_functions.html#_growth_of_functions">
+       6. Growth of Functions
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="growth_functions.html#_introducing_big_o">
+         6.1. Introducing
+         <em>
+          Big O
+         </em>
+        </a>
+       </li>
+       <li>
+        <a href="growth_functions.html#_properties_of_big_o_notation">
+         6.2. Properties of
+         <em>
+          Big O
+         </em>
+         notation.
+        </a>
+       </li>
+       <li>
+        <a href="growth_functions.html#_exercises_6">
+         6.3. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="algorithms.html#_algorithms">
+       7. Algorithms
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="algorithms.html#_structure_of_algorithms_in_pseudocode_and_python">
+         7.1. Structure of Algorithms in Pseudocode and Python
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_examples_of_algorithms">
+         7.2. Examples of Algorithms
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_the_linear_search_algorithm">
+         7.3. The Linear Search Algorithm
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_the_bubble_sort_algorithm">
+         7.4. The Bubble Sort Algorithm
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_the_insertion_sort_algorithm">
+         7.5. The Insertion Sort Algorithm
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_the_binary_search_algorithm">
+         7.6. The Binary Search Algorithm
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_algorithmic_complexity_of_common_algorithms">
+         7.7. Algorithmic Complexity of Common Algorithms
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_exercises_7">
+         7.8. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="counting.html#_counting">
+       8. Counting
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="counting.html#_the_product_rule_and">
+         8.1. The Product Rule (
+         <em>
+          and
+         </em>
+         )
+        </a>
+       </li>
+       <li>
+        <a href="counting.html#_the_sum_rule_xor">
+         8.2. The Sum Rule (
+         <em>
+          xor
+         </em>
+         )
+        </a>
+       </li>
+       <li>
+        <a href="counting.html#_the_subtraction_rule_or">
+         8.3. The Subtraction Rule (
+         <em>
+          or
+         </em>
+         )
+        </a>
+       </li>
+       <li>
+        <a href="counting.html#_the_pigeonhole_principle">
+         8.4. The Pigeonhole Principle
+        </a>
+       </li>
+       <li>
+        <a href="counting.html#_permutations_and_combinations">
+         8.5. Permutations and Combinations
+        </a>
+       </li>
+       <li>
+        <a href="counting.html#_exercises_8">
+         8.6. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="number_theory.html#_number_theory">
+       9. Number Theory
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="number_theory.html#_divisibility">
+         9.1. Divisibility
+        </a>
+       </li>
+       <li>
+        <a href="number_theory.html#_integer_representations">
+         9.2. Integer Representations
+        </a>
+       </li>
+       <li>
+        <a href="number_theory.html#_base_conversion">
+         9.3. Base Conversion
+        </a>
+       </li>
+       <li>
+        <a href="number_theory.html#_exercises_9">
+         9.4. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="induction_recursion.html#_sequences_recursive_definitions_and_induction">
+       10. Sequences, Recursive Definitions, and Induction
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="induction_recursion.html#_sequences_series_and_sigma_notation">
+         10.1. Sequences, Series, and Sigma Notation
+        </a>
+       </li>
+       <li>
+        <a href="induction_recursion.html#_defining_sequences_recursively">
+         10.2. Defining Sequences Recursively
+        </a>
+       </li>
+       <li>
+        <a href="induction_recursion.html#_recursive_algorithms">
+         10.3. Recursive Algorithms
+        </a>
+       </li>
+       <li>
+        <a href="induction_recursion.html#_mathematical_induction">
+         10.4. Mathematical Induction
+        </a>
+       </li>
+       <li>
+        <a href="induction_recursion.html#_strong_induction">
+         10.5. Strong Induction
+        </a>
+       </li>
+       <li>
+        <a href="induction_recursion.html#_exercises_10">
+         10.6. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="graph_theory.html#_graph_theory">
+       11. Graph Theory
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="graph_theory.html#_introduction_and_basic_definitions">
+         11.1. Introduction and Basic Definitions
+        </a>
+       </li>
+       <li>
+        <a href="graph_theory.html#_representing_graphs">
+         11.2. Representing graphs.
+        </a>
+       </li>
+       <li>
+        <a href="graph_theory.html#_weighted_graphs">
+         11.3. Weighted Graphs
+        </a>
+       </li>
+       <li>
+        <a href="graph_theory.html#_subgraphs">
+         11.4. Subgraphs
+        </a>
+       </li>
+       <li>
+        <a href="graph_theory.html#_connectivity_eulerian_graphs_and_hamiltonian_graphs">
+         11.5. Connectivity, Eulerian Graphs, and Hamiltonian Graphs
+        </a>
+       </li>
+       <li>
+        <a href="graph_theory.html#_exercises_11">
+         11.6. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="appendix_one.html#_appendix_1_library_of_functions">
+       12. Appendix 1: Library of Functions
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="appendix_one.html#_quadratic_function">
+         12.1. Quadratic Function
+        </a>
+       </li>
+       <li>
+        <a href="appendix_one.html#_the_cubic_function">
+         12.2. The Cubic function
+        </a>
+       </li>
+       <li>
+        <a href="appendix_one.html#_the_square_root_and_cube_root_functions">
+         12.3. The Square Root and Cube Root Functions
+        </a>
+       </li>
+       <li>
+        <a href="appendix_one.html#_exponential_and_logarithmic_functions">
+         12.4. Exponential and Logarithmic Functions
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="appendix_two.html#_appendix_2_python_syntax_examples">
+       13. Appendix 2: Python Syntax Examples
+      </a>
+     </li>
+    </ul>
+   </div>
+  </div>
+  <div id="content">
+   <div id="preamble">
+    <div class="sectionbody">
+     <div class="openblock float-group">
+      <div class="content">
+       <div class="imageblock left text-left">
+        <div class="content">
+         <img alt="GGC" height="200" src="images/GGC_Logo.png" width="250"/>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="sect1">
+    <h2 id="_sequences_recursive_definitions_and_induction">
+     10. Sequences, Recursive Definitions, and Induction
+    </h2>
+    <div class="sectionbody">
+     <div class="sect2">
+      <h3 id="_sequences_series_and_sigma_notation">
+       10.1. Sequences, Series, and Sigma Notation
+      </h3>
+      <div class="sect3">
+       <h4 id="_sequences">
+        10.1.1. Sequences
+       </h4>
+       <div class="paragraph">
+        <p>
+         A
+         <strong>
+          sequence
+         </strong>
+         is a function from the natural numbers \(\mathbb{N}=1,2,3\ldots\), into a set \(A\). The sequence may be denoted \(a_n\) for the sequence \(a_1,\ a_2,\ldots\). Sometimes the domain of the sequence may be the set of nonnegative numbers, \(0,1,2,3\ldots\), in which case \(a_n\) would be the sequence \(a_0,\ a_1,\ a_2,\ldots\).
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         Sequences may be defined using explicit functions or may be defined recursively.
+        </p>
+       </div>
+       <div class="sidebarblock">
+        <div class="content">
+         <div class="paragraph">
+          <div class="title">
+           Example 1
+          </div>
+          <p>
+           The sequence \(a_n=f(n)=3n+1\) is the sequence generated by the linear function
+\(f(x)=3x+1\), whose first 5 terms would be
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(a_1=\ 3\left(1\right)+1=4\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(a_2=3\left(2\right)+1=7\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(a_3=3\left(3\right)+1=10\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(a_4=3\left(4\right)+1=13\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(a_5=3\left(5\right)+1=16\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           The same sequence may be defined recursively as
+\(a_1=4\) and \(a_n=a_{n-1}+3\). So
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(a_1 = 4\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(a_2=a_{2-1}+3=a_1+3=4+3=7\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(a_3=a_{3-1}+3=a_2+3=7+3=10\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(a_4=a_{4-1}+3=a_3+3=10+3=13\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(a_5=a_{5-1}+3=a_4+3=13+3=16\)
+          </p>
+         </div>
+         <div class="openblock float-group">
+          <div class="content">
+           <div class="imageblock left text-left">
+            <div class="content">
+             <img alt="GGC" height="1000" src="images/arithmeticsequence.png" width="1000"/>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="paragraph">
+        <p>
+         Sequences generated by linear functions as in Example 1 are called
+         <strong>
+          arithmetic sequences
+         </strong>
+         . Thinking recursively, they are determined by a first term and a common difference. The arithmetic sequence \(a_n=3n+1\) is the sequence whose first term is \(a_1=4\), and whose common difference is \(d=3\). As arithmetic sequences are generated by linear functions \(f\left(x\right)=dx+c\), the general arithmetic sequence is \(a_n=d\cdot n+b\), \(d\) being the common difference.
+        </p>
+       </div>
+       <div class="sidebarblock">
+        <div class="content">
+         <div class="paragraph">
+          <div class="title">
+           Example 2 - Possible to make a PYTHON TUTOR
+          </div>
+          <p>
+           The sequence \(b_n=f\left(n\right)=2\cdot\ 3^n\) is the sequence generated by the exponential function \(f\left(x\right)=2\cdot3^x\), whose first few terms would be
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(b_1=2\cdot\ 3^1=6\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(b_2=2\cdot\ 3^2=18\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(b_3=2\cdot\ 3^3=54\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(b_4=2\cdot\ 3^4=162\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           The same sequence may be defined recursively as
+\(b_1=6\),  and \(b_n=3\cdot b_{n-1}\).
+ So,
+\(b_2=3\cdot b_{2-1}=3\cdot6=18\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(b_3=3\cdot b_{3-1}=3\cdot18=54\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(b_4=3\cdot b_{3-1}=3\cdot54=162\)
+          </p>
+         </div>
+         <div class="openblock float-group">
+          <div class="content">
+           <div class="imageblock left text-left">
+            <div class="content">
+             <img alt="GGC" height="1000" src="images/geometricsequence.png" width="1000"/>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="paragraph">
+        <p>
+         Sequences generated by exponential functions as in Example 2 are called
+         <strong>
+          geometric sequences
+         </strong>
+         . Thinking recursively, they are determined by a first term and a common ratio. The geometric sequence \(b_n=2\cdot3^n\), is the sequence whose first term is \(b_1=6\) and whose common ratio is \(r=3\).  As geometric sequences are generated by exponential functions \(f\left(x\right)=a\cdot r^n\), the general geometric sequence is \( a_n=a\cdot r^n\), with \(r\) being the common ratio.
+        </p>
+       </div>
+      </div>
+      <div class="sect3">
+       <h4 id="_series_and_sigma_notation">
+        10.1.2. Series and Sigma notation
+       </h4>
+       <div class="paragraph">
+        <p>
+         Given a sequence of numbers \( \left\{a_{n\ }\right\}=\left\{a_1,a_2,a_3,\ldots\right\}\) we are often interested in adding them up.
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         Adding a sequence of numbers produces what is called a
+         <strong>
+          series
+         </strong>
+         .
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \( a_1+a_2+a_3+a_4\) is a finite series with 4 terms, and
+\( a_1+a_2+a_3+\ldots+a_n\) is a finite series up to some finite, but possibly variable number of terms \(n\).
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         By contrast \(a_1+a_2+a_3+\ldots\) is used to denote an
+         <strong>
+          infinite series
+         </strong>
+         .
+        </p>
+       </div>
+       <div class="admonitionblock note">
+        <table>
+         <tr>
+          <td class="icon">
+           <i class="fa icon-note" title="Note">
+           </i>
+          </td>
+          <td class="content">
+           There is a shorthand way of writing a series using
+           <strong>
+            sigma
+           </strong>
+           , or
+           <strong>
+            sum notation
+           </strong>
+           , denoted by the \(\sum\) symbol.
+          </td>
+         </tr>
+        </table>
+       </div>
+       <div class="paragraph">
+        <p>
+         For example, \(a_1+a_2+a_3+a_4=\sum\limits_{i=1}^{4}a_i \)
+  which means starting at \(i=1\), we add up \(a_1\) and then increase \(i\) to 2 and add \(a_2\), and so on, all the way up to the last one at \(i=4\).
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \(a_1+a_2+a_3+\ldots+a_n=\sum\limits_{i=1}^{n}a_i\)
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         The infinite sum is denoted
+\(a_1+a_2+a_3+\ldots=\sum\limits_{i=1}^{\ \infty\ }a_i\)
+        </p>
+       </div>
+       <div class="sidebarblock">
+        <div class="content">
+         <div class="paragraph">
+          <div class="title">
+           Example 3
+          </div>
+          <p>
+           Consider \({a_n}=\left\{3n+1\right\}\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(\sum\limits_{i=1}^{4}a_i=a_1+a_2+a_3+a_4\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(=\left(3\times1+1\right)+\left(3\times2+1\right)+\left(3\times3+1\right)+\left(3\times4+1\right)=\sum\limits_{i}^{4}{(3i+1)}\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \( \sum\limits_{i=1}^{n}a_i = a_1+a_2+a_3+\ldots+a_n\)
+\(=\left(3\times1+1\right)+\left(3\times2+1\right)+\left(3\times3+1\right)+\ldots +\left(3\times n+1\right)=\sum\limits_{i}^{n}{(3i+1)}\)
+          </p>
+         </div>
+         <div class="paragraph">
+          <p>
+           \(\sum\limits_{i=1}^{\ \infty\ }a_i=a_1+a_2+a_3+\ldots\)
+\(=\left(3 \times 1+1\right)+\left(3\times 2+1\right)+\left(3\times 3+1\right)+\ldots\ =\sum\limits_{i=1}^{\ \infty\ }{(3i+1)}\)
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_defining_sequences_recursively">
+       10.2. Defining Sequences Recursively
+      </h3>
+      <div class="paragraph">
+       <p>
+        A
+        <strong>
+         recurrence relation
+        </strong>
+        for a sequence \({a_n}\) is an equation that expresses \(a_n\) in terms of one or more of the previous terms of the sequence, namely
+\(a_0, a_1, \dots, a_{n-1}\) for all integers \(n\) with \(n \ge n_0\), where \(n_0\) is a nonnegative integer. The
+        <strong>
+         initial conditions
+        </strong>
+        for such a recurrence relation
+specify the terms that precede the first term where the recurrence relation takes effect.
+       </p>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          Example 4
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="paragraph">
+         <p>
+          Let \({a_n}\) be a sequence that sastifies the recurence relation \(a_n=a_{n-1}+na_{n-2}+1\) for \(n=2, 3,4, \dots\) and suppose that \(a_0=1\) and \(a_1=2\). Find \(a_2, a_3,\) and
+\(a_4.\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <div class="title">
+          Solution:
+         </div>
+         <p>
+          \begin{array}{lcl}
+a_2 &amp; = &amp; a_1 + 2a_0 + 1\\
+&amp;=&amp; 2 + 2(1) + 1\\
+a_2 &amp;=&amp; 5
+\end{array}
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \begin{array}{lcl}
+a_3 &amp;=&amp; a_2 + 3a_1 + 1\\
+&amp;=&amp; 5 + 3(2) + 1\\
+a_3&amp;=&amp; 12
+\end{array}
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \begin{array}{lcl}
+a_4 &amp;=&amp; a_3 + 4a_2 + 1\\
+&amp;=&amp; 12 + 4(5) +1\\
+a_4 &amp;=&amp; 33
+\end{array}
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="paragraph">
+       <p>
+        Some sequences, like the
+        <strong>
+         Fibonacci sequence
+        </strong>
+        , are easier to generate recursively.
+The Fibonacci sequence is defined recursively as
+       </p>
+      </div>
+      <div class="paragraph">
+       <p>
+        \(f_1=1\) and \(f_2=1\), and \(f_n=f_{n-1}+f_{n-2}\).
+       </p>
+      </div>
+      <div class="paragraph">
+       <p>
+        So, \( f_3=f_{3-1}+f_{3-2}=f_2+f_1=1+1=2\)
+       </p>
+      </div>
+      <div class="paragraph">
+       <p>
+        \(f_4=f_{4-1}+f_{4-2}=f_3+f_2=2+1=3\)
+       </p>
+      </div>
+      <div class="paragraph">
+       <p>
+        \(f_5=f_{5-1}+f_{5-2}=f_4+f_3=3+2=5\)
+       </p>
+      </div>
+      <div class="paragraph">
+       <p>
+        \(f_6=f_{6-1}+f_{6-2}=f_5+f_4=5+3=8\)
+       </p>
+      </div>
+      <div class="paragraph">
+       <p>
+        \(f_7=f_{7-1}+f_{7-2}=f_6+f_5=8+5=13\)
+       </p>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="paragraph">
+         <div class="title">
+          Example 5
+         </div>
+         <p>
+          Find the first 6 terms of the sequence \(c_k=\frac{1}{k^2}\) generated by the function \(f(x)=\frac{1}{x^2}\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <div class="title">
+          Solution
+         </div>
+         <p>
+          \(c_1=f\left(1\right)=\frac{1}{1^2}=1\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(c_2=f\left(2\right)=\frac{1}{2^2}=\frac{1}{4}\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(c_3=f\left(3\right)=\frac{1}{3^2}=\frac{1}{9}\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(c_4=f\left(4\right)=\frac{1}{4^2}=\frac{1}{16}\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(c_5=f\left(5\right)=\frac{1}{5^2}=\frac{1}{25}\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(c_6=f\left(6\right)=\frac{1}{6^2}=\frac{1}{36}\)
+         </p>
+        </div>
+        <div class="openblock float-group">
+         <div class="content">
+          <div class="imageblock left text-left">
+           <div class="content">
+            <img alt="GGC" height="1000" src="images/hyperharmonicsequence.png" width="1000"/>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="paragraph">
+       <p>
+        We say we have solved the recurrence relation together with the initial conditions when we find an explicit formula,
+called a
+        <strong>
+         closed formula
+        </strong>
+        , for the terms of the sequence.
+       </p>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          Example 6
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="paragraph">
+         <p>
+          Determine whether the sequence \({a_n}\) where \(a_n=2^n\) for every nonnegative integer \(n\) is a solution of the recurrence
+relation \(a_n=2a_{n-1}-a_{n-2}\) for \(n=2, 3, 4, \ldots\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <div class="title">
+          Solution:
+         </div>
+         <p>
+          Using the equation \(a_0=2^0=1\), \(a_1=2^1=2\), and \(a_2=2^2=4\).  Because \(a_2=a_1-a_0=2*2-1=3\) and this is not the value of \(a_2\), we say that \({a_n}\)
+where \(a_n=2^n\) is not a solution (or closed formula) for the recurrence relation.
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="paragraph">
+       <p>
+        We can solve a recurrence relation using
+        <strong>
+         iteration
+        </strong>
+        .
+       </p>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          Example 7
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="paragraph">
+         <p>
+          Solve the recurrence relation \(a_n=a_{n-1}+3\) when \(a_1=2\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <div class="title">
+          Solution:
+         </div>
+         <p>
+          We are looking for a closed formula, so we will successively apply the recurrence relation until we see a pattern.
+\begin{align*}
+a_2&amp;=a_1+3=2+3\\
+a_3&amp;=a_2+3=(2+3)+3 =2+3\cdot 2\\
+a_4&amp;=a_3+3=(2+2\cdot 3)+3=2+3\cdot 3\\
+\vdots\\
+a_n&amp;=a_{n-1}+3=(2+3(n-2))+3=2+3(n-1)\\
+\end{align*}
+So our closed formula is \(a_n=2+3(n-1)\).
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="paragraph">
+       <p>
+        A
+        <strong>
+         recursively defined function
+        </strong>
+        has two parts:
+       </p>
+      </div>
+      <div class="ulist">
+       <ul>
+        <li>
+         <p>
+          BASIS STEP: Specify the value of the function at zero
+         </p>
+        </li>
+        <li>
+         <p>
+          RECURSIVE STEP: Give a rule for finding its value at an integer from its value at smaller integers.
+         </p>
+        </li>
+       </ul>
+      </div>
+      <div class="paragraph">
+       <p>
+        This is similar to a recurrence relation, but using function notation.
+       </p>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          Example 8
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="paragraph">
+         <p>
+          Consider again the
+          <strong>
+           Fibonacci numbers
+          </strong>
+          , but this time given by a function \(f(n)\) where \(f(0)=0\), \(f(1)=1\) and for \(n \geq 2\)
+\(\)f(n)=f(n-1)+f(n-2)\(\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Applying the formula gives
+\begin{align*}
+f(2)&amp;=f(1)+f(0)=1+0=1\\
+f(3)&amp;=f(2)+f(1)=1+1=2\\
+f(4)&amp;=f(3)+f(2)=2+1=3\\
+f(5)&amp;=f(4)+f(3)=3+2=5\\
+f(6)&amp;=f(5)+f(4)=5+3=8\\
+\end{align*}
+Thinking of this as a recurrence relation we would write \(f_0=0, f_1=1\) and \(f_n=f_{n-1}+f_{n-2}\).  Generating the sequence \({0,1,1,2,3,5,8,\ldots}\).
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_recursive_algorithms">
+       10.3. Recursive Algorithms
+      </h3>
+      <div class="paragraph">
+       <p>
+        Algorithms or procedures may invoke other procedures.
+An algorithm that calls itself is said to be a
+        <strong>
+         recursive algorithm
+        </strong>
+        .
+       </p>
+      </div>
+      <div class="paragraph">
+       <p>
+        One way to think of recursive algorithms, is as algorithms
+which reduce  tasks to  instances of the same task with a smaller number of inputs.
+       </p>
+      </div>
+      <div class="paragraph">
+       <p>
+        We illustrate with some basic examples.
+The first few examples are intended mainly to introduce the
+concept of recursion and are not necessarily the most efficient or
+intuitive ways to implement the given tasks.  Recursive methods are to be
+contrasted with iterative methods.
+       </p>
+      </div>
+      <div class="sect3">
+       <h4 id="_recursive_implementation_of_factorial">
+        10.3.1. Recursive Implementation of Factorial
+       </h4>
+       <div class="paragraph">
+        <p>
+         We begin with a recursive method for
+computing \(n!\) for integers \(n \geq  0\).
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         Recall that \(5!=5\ \times\ 4\ \times\ 3\ \times\ 2\ \times\ 1\ =\ 5\ \times\ 4!\).
+In general, we may define \(n!\) recursively or inductively as
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \(0!=1\)
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \(n!\ =\ n\ \cdot\ (n-1)!\ \)
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         A recursive implementation of the factorial procedure in
+pseudocode would be, to be contrasted with an iterative implementation.
+        </p>
+       </div>
+       <div class="sidebarblock">
+        <div class="content">
+         <div class="title">
+          Recursive implementation of the factorial function, \(n!\).
+         </div>
+         <html>
+          <head>
+           <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+           <meta content="Microsoft Word 15 (filtered)" name="Generator"/>
+           <style>
+            <!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Century Schoolbook";
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+           </style>
+           <style>
+            .click .title { color: blue; }
+  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
+  .openblock { margin-top: 1em; margin-bottom: 1em; }
+  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
+           </style>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript">
+           </script>
+           <script>
+            var ready2;
+
+ready2 = function() {
+
+    $(document).ready(function(){
+
+        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
+        $('.openblock.click').find('.content').hide()
+
+
+        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
+        $('.listingblock.click').find('.content').hide()
+
+    });
+
+}
+
+
+
+
+$(document).ready(ready2);
+$(document).on('page:load', ready2);
+           </script>
+          </head>
+          <body lang="EN-US">
+           <div class="WordSection1">
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              _____________________________________________________________________
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              Procedure
+RFactorial:
+             </b>
+             computes
+             <i>
+              n!
+             </i>
+             , for
+             <i>
+              n
+             </i>
+             , a positive integer,
+recursively
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              _____________________________________________________________________
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              Input:
+             </b>
+             A
+nonnegative integer,
+             <i>
+              n
+             </i>
+             .
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              _____________________________________________________________________
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              Output:
+             </b>
+             <i>
+              n!
+= 1*2*3…(n-1)*(n)
+             </i>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              _____________________________________________________________________
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               Procedure
+              </span>
+             </b>
+             <span style='font-family:"Century Schoolbook",serif'>
+              R
+             </span>
+             <span style='font-family:
+"Century",serif'>
+              Fa
+             </span>
+             <span style='font-family:"Century",serif'>
+              ctorial
+             </span>
+             (
+             <span style="letter-spacing:-1.75pt">
+              <i>
+               n
+              </i>
+             </span>
+             )
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               begin
+              </span>
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century",serif'>
+               if
+              </span>
+             </b>
+             <span style='font-family:"Century",serif'>
+              n==0
+              <b>
+               then do
+              </b>
+             </span>
+            </p>
+            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               return
+              </span>
+             </b>
+             <span style='font-family:"Century",serif'>
+              1
+             </span>
+            </p>
+            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century",serif'>
+               else
+do
+              </span>
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               return
+              </span>
+             </b>
+             <span style='font-family:"Century",serif'>
+              n*Rfactorial(n-1)
+             </span>
+            </p>
+            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               end
+              </span>
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               end
+              </span>
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              ____________________________________________________________________
+             </b>
+            </p>
+            <p class="MsoNormal">
+            </p>
+           </div>
+          </body>
+         </html>
+        </div>
+       </div>
+       <div class="paragraph">
+        <p>
+         A recursive implementation of the factorial function in Python is given below
+        </p>
+       </div>
+       <div class="sidebarblock">
+        <div class="content">
+         <div class="openblock">
+          <div class="title">
+           Example 14 - Recursive Implementation of Factorial Function, \(n!\), in Python
+          </div>
+          <div class="content">
+          </div>
+         </div>
+         <div class="paragraph">
+          <p>
+           The Python code below implements the factorial function \(n!\) recursively.
+          </p>
+         </div>
+         <iframe frameborder="5" height="350" src="https://pythontutor.com/iframe-embed.html#code=def%20rfactorial%28n%29%3A%0A%20%20%20%20z%3D1%0A%20%20%20%20if%20n%3E1%3A%0A%20%20%20%20%20%20%20%20z%3Dn*rfactorial%28n-1%29%0A%20%20%20%20return%20z%0A%23%20Driver%20code%20to%20test%20above%0AAnswer%3Drfactorial%285%29%0Aprint%28%22n! %20is%3A%22,%20Answer%29%0A&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=350" width="100%">
+         </iframe>
+         <div style="text-align: right;">
+          <a href="http://www.pythontutor.com/visualize.html#code=def%20rfactorial%28n%29%3A%0A%20%20%20%20z%3D1%0A%20%20%20%20if%20n%3E1%3A%0A%20%20%20%20%20%20%20%20z%3Dn*rfactorial%28n-1%29%0A%20%20%20%20return%20z%0A%23%20Driver%20code%20to%20test%20above%0AAnswer%3Drfactorial%285%29%0Aprint%28%22n! %20is%3A%22,%20Answer%29%0A&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+           Edit in PythonTutor
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="sect3">
+       <h4 id="_recursive_implementation_of_the_power_function_bn">
+        10.3.2. Recursive Implementation of the Power Function \(b^n\)
+       </h4>
+       <div class="paragraph">
+        <p>
+         As another simple example, we consider a recursive implementation of exponentiation \(b^n\) with \(n\) a nonnegative integer, \(b&gt;0\), and \(b  \neq 1\).
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         Consider for example \(5^4=5\ {\cdot\ 5}^3\)
+Hence we can recursively define exponentiation as
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \(b^0=1\)
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \(b^n=b\cdot\ b^{n-1}\).
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         A pseudocode recursive implementation of the power function or exponential function \(b^n\) is below.
+        </p>
+       </div>
+       <div class="sidebarblock">
+        <div class="content">
+         <div class="title">
+          Recursive Implementation of the Power Function, \(b^n\).
+         </div>
+         <html>
+          <head>
+           <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+           <meta content="Microsoft Word 15 (filtered)" name="Generator"/>
+           <style>
+            <!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Century Schoolbook";
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+           </style>
+           <style>
+            .click .title { color: blue; }
+  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
+  .openblock { margin-top: 1em; margin-bottom: 1em; }
+  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
+           </style>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript">
+           </script>
+           <script>
+            var ready2;
+
+ready2 = function() {
+
+    $(document).ready(function(){
+
+        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
+        $('.openblock.click').find('.content').hide()
+
+
+        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
+        $('.listingblock.click').find('.content').hide()
+
+    });
+
+}
+
+
+
+
+$(document).ready(ready2);
+$(document).on('page:load', ready2);
+           </script>
+          </head>
+          <body lang="EN-US">
+           <div class="WordSection1">
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              ______________________________________________
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              Procedure
+Rexponentiation:
+             </b>
+             recursively computes the
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             exponent
+             <i>
+              b
+             </i>
+             <sup>
+              n
+             </sup>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              ______________________________________________
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              Input:
+             </b>
+             A
+nonnegative integer
+             <i>
+              , n and a positive base
+             </i>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              ______________________________________________
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              Output:
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              ______________________________________________
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               procedure
+               <span style="letter-spacing:
+-1.4pt">
+               </span>
+              </span>
+             </b>
+             <span style='font-family:"Century Schoolbook",serif;
+letter-spacing:-1.4pt'>
+              R
+             </span>
+             <span style='font-family:"Century",serif'>
+              e
+             </span>
+             <span style='font-family:"Century",serif'>
+              xponentiation
+             </span>
+             (
+             <span style="letter-spacing:-1.75pt">
+              n
+             </span>
+             <i>
+              <span style='font-size:10.0pt;
+line-height:107%;font-family:"Century Schoolbook",serif'>
+               , b)
+              </span>
+             </i>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               begin
+              </span>
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century",serif'>
+               if
+              </span>
+             </b>
+             <span style='font-family:"Century",serif'>
+              n==0
+              <b>
+               then do
+              </b>
+             </span>
+            </p>
+            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               return
+              </span>
+             </b>
+             <span style='font-family:"Century",serif'>
+              1
+             </span>
+            </p>
+            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century",serif'>
+               else
+do
+              </span>
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               return
+              </span>
+             </b>
+             <span style='font-family:"Century",serif'>
+              b*Rexponentiation(n-1)
+             </span>
+            </p>
+            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               end
+              </span>
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               end
+              </span>
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              ______________________________________________
+             </b>
+            </p>
+            <p class="MsoNormal">
+            </p>
+           </div>
+          </body>
+         </html>
+        </div>
+       </div>
+      </div>
+      <div class="sect3">
+       <h4 id="_recursively_defined_arithmetic_sequences">
+        10.3.3. Recursively Defined Arithmetic Sequences
+       </h4>
+       <div class="paragraph">
+        <p>
+         Consider the arithmetic sequence, \(5, 9, 13, 17,\ldots \), which is an
+arithmetic sequence with first term \(a_1=5\) and common difference \(d=4\),
+which may be defined recursively as
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \(a_1=5\)
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \(a_n=4+a_{n-1}\)
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         The general arithmetic sequence with first term \(a_1=a\) and common difference \(d\)
+can be defined recursively,
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \(a_1=a\)
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \(a_n=d+a_{n-1}\),
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         and the sequence can be generated recursively using the following pseudocode.
+        </p>
+       </div>
+       <div class="sidebarblock">
+        <div class="content">
+         <div class="title">
+          Recursive implementation of arithmetic sequences with first term \(a_1=a\), and common difference \(d\).
+         </div>
+         <html>
+          <head>
+           <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+           <meta content="Microsoft Word 15 (filtered)" name="Generator"/>
+           <style>
+            <!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Century Schoolbook";
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+           </style>
+           <style>
+            .click .title { color: blue; }
+  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
+  .openblock { margin-top: 1em; margin-bottom: 1em; }
+  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
+           </style>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript">
+           </script>
+           <script>
+            var ready2;
+
+ready2 = function() {
+
+    $(document).ready(function(){
+
+        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
+        $('.openblock.click').find('.content').hide()
+
+
+        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
+        $('.listingblock.click').find('.content').hide()
+
+    });
+
+}
+
+
+
+
+$(document).ready(ready2);
+$(document).on('page:load', ready2);
+           </script>
+          </head>
+          <body lang="EN-US">
+           <div class="WordSection1">
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              ______________________________________________
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              Procedure
+Rarithmetic:
+             </b>
+             recursively computes the
+             <i>
+              n
+             </i>
+             <sup>
+              th
+             </sup>
+             term
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             of the
+arithmetic sequence with first term,
+             <i>
+              a
+             </i>
+             and
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             common difference,
+             <i>
+              d
+             </i>
+             .
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              ______________________________________________
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              Input:
+             </b>
+             A
+positive integer,
+             <i>
+              n
+             </i>
+             and the first term,
+             <i>
+              a
+             </i>
+             , and
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             common
+difference,
+             <i>
+              d
+             </i>
+             , of an arithmetic sequence
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              ______________________________________________
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              Output:
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              ______________________________________________
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               procedure
+               <span style="letter-spacing:
+-1.4pt">
+               </span>
+              </span>
+             </b>
+             <span style='font-family:"Century Schoolbook",serif;
+letter-spacing:-1.4pt'>
+              R
+             </span>
+             <span style='font-family:"Century",serif'>
+              arithmetic
+             </span>
+             (
+             <i>
+              <span style="letter-spacing:-1.75pt">
+               n
+              </span>
+             </i>
+             <i>
+              <span style='font-size:10.0pt;
+line-height:107%;font-family:"Century Schoolbook",serif'>
+               , a, d)
+              </span>
+             </i>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               begin
+              </span>
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century",serif'>
+               if
+              </span>
+             </b>
+             <span style='font-family:"Century",serif'>
+              n==1
+              <b>
+               then do
+              </b>
+             </span>
+            </p>
+            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               return
+              </span>
+             </b>
+             <i>
+              <span style='font-family:"Century",serif'>
+               a
+              </span>
+             </i>
+            </p>
+            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century",serif'>
+               else
+do
+              </span>
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               return
+              </span>
+             </b>
+             <span style='font-family:"Century",serif'>
+              d + Rarithmetic(n – 1, a,
+d)
+             </span>
+            </p>
+            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               end
+              </span>
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              <span style='font-family:"Century Schoolbook",serif'>
+               end
+              </span>
+             </b>
+            </p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
+             <b>
+              ______________________________________________
+             </b>
+            </p>
+            <p class="MsoNormal">
+            </p>
+           </div>
+          </body>
+         </html>
+        </div>
+       </div>
+      </div>
+      <div class="sect3">
+       <h4 id="_recursive_generation_of_the_fibonacci_sequence">
+        10.3.4. Recursive Generation of the Fibonacci sequence
+       </h4>
+       <div class="paragraph">
+        <p>
+         Recall the Fibonacci sequence \(1, 1, 2, 3, 5, 8, 13 \ldots \) is defined recursively,
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \(f_1=1\)
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \(f_2=1\)
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         \(f_n=f_{n-1}+f_{n-2}\)
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         We provide a recursive Python implementation to compute the \(n^{th}\)
+Fibonacci number.
+        </p>
+       </div>
+       <div class="sidebarblock">
+        <div class="content">
+         <div class="openblock">
+          <div class="title">
+           Example 15 - Recursive Implementation of Fibonacci in Python
+          </div>
+          <div class="content">
+          </div>
+         </div>
+         <div class="paragraph">
+          <p>
+           The Python code below uses the recursive relationship \(f_n = f_{n-1}+f_{n-2}\), to calculate
+the \(n^{th}\) Fibonacci number.
+          </p>
+         </div>
+         <iframe frameborder="5" height="350" src="https://pythontutor.com/iframe-embed.html#code=def%20rfib%28n%29%3A%0A%20%20%20%20if%20n%20%3C%202%3A%0A%20%20%20%20%20%20%20%20return%20n%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20rfib%28n-1%29%20%2Brfib%28n-2%29%0A%23Driver%20code%20to%20test%20above%0Aans%3D%20rfib%286%29%0Aprint%28%22The%20nth%20Fibonacci%20number%20is%3A%22,%20ans%29%0A&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=350" width="100%">
+         </iframe>
+         <div style="text-align: right;">
+          <a href="http://www.pythontutor.com/visualize.html#code=def%20rfib%28n%29%3A%0A%20%20%20%20if%20n%20%3C%202%3A%0A%20%20%20%20%20%20%20%20return%20n%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20rfib%28n-1%29%20%2Brfib%28n-2%29%0A%23Driver%20code%20to%20test%20above%0Aans%3D%20rfib%286%29%0Aprint%28%22The%20nth%20Fibonacci%20number%20is%3A%22,%20ans%29%0A&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+           Edit in PythonTutor
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_mathematical_induction">
+       10.4. Mathematical Induction
+      </h3>
+      <div class="paragraph">
+       <p>
+        <strong>
+         Mathematical induction
+        </strong>
+        is a method of proof used to prove a
+series of different propositions, say \(P_1,\ P_2,P_3,\ldots P_n\). A useful analogy to help think about mathematical induction is that of climbing a ladder. It is useful to think of climbing a ladder as made up of two parts. The first part involves being able to actually step onto the ladder, or make it to the first rung (or at least some rung) of the ladder. The second part involves knowing that if we are on on some rung of the ladder we can get to the next rung of the ladder. This tells me I can climb the ladder.
+       </p>
+      </div>
+      <div class="openblock float-group">
+       <div class="content">
+        <div class="imageblock left text-left">
+         <div class="content">
+          <img alt="GGC" height="250" src="images/Induction_ladder.png" width="250"/>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="paragraph">
+       <p>
+        Remember to climb the ladder we require two different components.
+       </p>
+      </div>
+      <div class="ulist">
+       <ul>
+        <li>
+         <p>
+          I can get to the first step of the ladder or be able to prove that \(P(1)\) is true. This is called the
+          <strong>
+           basis step
+          </strong>
+          .
+         </p>
+        </li>
+        <li>
+         <p>
+          In the second component,  I want to know that if I’m on any given step I can climb to the next one.  Proving \(P(m+1)\) assuming \(P(m)\) for general \(m\), is called the
+          <strong>
+           induction step
+          </strong>
+          .
+         </p>
+        </li>
+       </ul>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="paragraph">
+         <div class="title">
+          Example 9 - Proof by Induction
+         </div>
+         <p>
+          \(\)\sum\limits_{i=1}^{n}i=1+2+…​+n=\frac{n\left(n+1\right)}{2}\(\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          This is a sequence of statements in terms of \(n\) telling me that the sum of the first \(n\) integers is going be equal to some formula that depends on the final number \(n\) that you want to add.
+         </p>
+        </div>
+        <div class="paragraph">
+         <div class="title">
+          Solution
+         </div>
+         <p>
+          Basis Step:
+When \(n=1\), there is only 1 term to add.
+          <em>
+           Does \(1 \overset{?}{=}\frac{1\ \left(1+1\right)}{2}\)?
+          </em>
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Since \(1=\frac{2}{2}\), this formula is valid when \(n=1\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          It also checks out when \(n=2\). \(1+2=\frac{2\ \left(2+1\right)}{2}\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          We may continue with \(n=3, n=4, ….\), etc., and notice that we want to prove an infinite collection of propositions. Specifically, we want to establish this claim for every positive integer.
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Inductive Step:
+Assume the statement is true for \(P(m)\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          That is \(\sum\limits_{i=1}^{m}i=1+2+...+m=\frac{m\left(m+1\right)}{2}\) (called the inductive hypothesis).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          <em>
+           Prove that this implies \(P(m+1)\) is true.
+          </em>
+          That is show \(\sum\limits_{i=1}^{m+1}i=1+2+...+m+(m+1)=\frac{(m+1)\left(m+1+1\right)}{2}=\frac{(m+1)\left(m+2\right)}{2}\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Begin with the left side \(1+2+...+m+(m+1)\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          We can rewrite this as \(\frac{m\left(m+1\right)}{2}+(m+1)\) using the induction hypothesis.
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Now we simplify this using algebra and show that it is the same as the right hand side.
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Factoring out \((m+1)\) gives,
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(\left(m+1\right)\left(\frac{m}{2}+1\right)=\left(m+1\right)\left(\frac{m}{2}+\frac{2}{2}\right)=\left(m+1\right)\left(\frac{m+2}{2}\right)=\frac{\left(m+1\right)\left(m+2\right)}{2}\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Which is the same as the right-hand side!
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          So \(1+2+...+m+(m+1)=\frac{\left(m+1\right)\left(m+2\right)}{2}\), which means we have shown \(P(m+1)\) follows from \(P(m)\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          So, by induction, \(\sum\limits_{i=1}^{n}i=1+2+...+n=\frac{n\left(n+1\right)}{2}\) for all positive integers \(n\).
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="paragraph">
+       <p>
+        Types of statements that can be proven by induction:
+       </p>
+      </div>
+      <div class="ulist">
+       <ul>
+        <li>
+         <p>
+          Summation formulas:
+Prove that   1(1!) + 2(2!) + · · · + n(n!) = (n + 1)! – 1, for all positive integers.
+         </p>
+        </li>
+        <li>
+         <p>
+          Inequalities:
+Prove that \(2^n &lt; n!\) for every positive integer \(n\) with \(n ≥ 4\).
+         </p>
+        </li>
+        <li>
+         <p>
+          Divisibility:
+Prove that \(n^3+2n\) is divisible by 3 for every positive integer \(n\).
+         </p>
+        </li>
+        <li>
+         <p>
+          Sets:
+Prove that if \(S\) is a set with \(n\) elements where \(n\) is a nonnegative integer, then \(S\) has \(2^n\) subsets.
+         </p>
+        </li>
+        <li>
+         <p>
+          Algorithms: Prove that the recursively defined algorithm fac(n) returns \(n!\) for all nonnegative integers.
+         </p>
+        </li>
+       </ul>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="paragraph">
+         <p>
+          def fac(n)
+         </p>
+        </div>
+        <div class="literalblock">
+         <div class="content">
+          <pre>begin</pre>
+         </div>
+        </div>
+        <div class="literalblock">
+         <div class="content">
+          <pre>if n = 0 then</pre>
+         </div>
+        </div>
+        <div class="literalblock">
+         <div class="content">
+          <pre>return 1</pre>
+         </div>
+        </div>
+        <div class="literalblock">
+         <div class="content">
+          <pre>else</pre>
+         </div>
+        </div>
+        <div class="literalblock">
+         <div class="content">
+          <pre>return n · fac(n − 1)</pre>
+         </div>
+        </div>
+        <div class="paragraph">
+         <p>
+          end
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="paragraph">
+         <div class="title">
+          Example 10 - A Summation Formula
+         </div>
+         <p>
+          Prove by mathematical induction \(1·1!+2·2!+3·3!+···+n· n!=\underset{k=1}{\overset{n}{\sum }}k\left( k!\right) =\left(n+1\right)!-1\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <div class="title">
+          Solution:
+         </div>
+         <p>
+          For each integer \(n\), let \(P(n)\) be the statement \(P(n):\sum\limits_{k=1}^{n} k\left( k!\right) =\left(n+1\right)!-1\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          To prove using induction we need
+         </p>
+        </div>
+        <div class="ulist">
+         <ul>
+          <li>
+           <p>
+            Base case: \(P(1)\) is true
+           </p>
+          </li>
+          <li>
+           <p>
+            Inductive step: For all integers \(m&gt;0\), if \(P(m)\) is true, then \(P(m+1)\) is true.
+           </p>
+          </li>
+         </ul>
+        </div>
+        <div class="paragraph">
+         <p>
+          Base Case: Substitute \(n=1\) into \( \sum\limits_{k=1}^{n}k(k!)=\left(n+1\right)!-1\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \( \sum\limits_{k=1}^{1} (k)k!\overset{?}{=}\left(1+1\right)!-1\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Simplify both sides to check for validity: 1==1, therefore the base case is true.
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Begin the inductive step by assuming P(m) for some integer m&gt;0.
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Assume \(P(m):\sum\limits_{k=1}^{m}k(k!)=\left(m+1\right)!-1\) for some integer m&gt;0.
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Write down the left hand side of P(m+1):
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(P(m+1):\sum\limits_{k=1}^{m+1}k(k!)\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Extract (m+1) (m+1)! from the summation,
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(\sum\limits_{k=1}^{m+1} k(k!)=\sum\limits_{k=1}^{m}kk!+(m+1)!(m+1)\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Apply the induction hypothesis by replacing \(\sum\limits_{k=1}^{m}k(k!)\) with (m+1)!-1,
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(\sum\limits_{k=1}^{m+1}k(k!)=((m+1)!-1)+(m+1)!(m+1)\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Simplify the result:
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(\sum\limits_{k=1}^{m+1}k(k!)=-1+2\left(m+1\right)!+\left(m+1\right)!m\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(=-1\ +(m+1)(2+m)=(m+2)!\ -1\ =((m+1)+1)!-1\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Express the result in terms of m+1,
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(\sum\limits_{k=1}^{m+1}k(k!)=((m+1)+1)!-1\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Therefore, the inductive step has been verified \(\sum\limits_{k=1}^{m+1}k(k!)=((m+1)+1)!-1\)
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="paragraph">
+         <div class="title">
+          Example 11 -  Another Summation Formula
+         </div>
+         <p>
+          Prove  the proposition that the sum of the ﬁrst n odd numbers is \(n^2\); that is,
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(1+3+5+···+2n-1=\sum_{k=1}^{n} (2k-1) =n^2\) for n a positive integer \(n\in\mathbb{Z}\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <div class="title">
+          Solution:
+         </div>
+         <p>
+          For each integer n, let P(n) be the statement \(\sum_{k=1}^{n} \left(2k-1 \right)=n^2\)
+\(P\left(n\right):\sum_{k=1}^{n} \left(2k-1 \right)=n^2\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Base case: P(1) is true.
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Inductive step: For all integers m&gt;0, if P(m) is true, then P(m+1) is true.
+If the above properties hold, then for each n\(\in\mathbb{Z}\) where n&gt;0, the statement P(n) is true.
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Substitute n=1 into
+\(\sum_{k=1}^{n} (2k-1)=n^2\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(\ \sum_{k=1}^{1} (2k-1)\overset{?}{=}1^2 \)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Simplify both sides to check for validity:
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          1=1, therefore the base case is true and the inductive step can be taken.
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Begin the inductive step by assuming \(P(m)\) for some integer \(m&gt;0\).
+Assume for some integer m&gt;0
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(P(m):\ \sum_{k=1}^{m} (2k-1)=m^2\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Write down the left-hand side of \(P(m+1)\):
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(\text{LHS }  P(m+1):\ \sum_{k=1}^{m+1}{(2k-1)}\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Extract \( (m+1)-1\) from the summation,
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(\sum_{k=1}^{m+1} (2k-1)=\sum_{k=1}^{m}{(2k-1)}+(2(m+1)-1)\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Apply the induction hypothesis by replacing \(\sum_{k=1}^{m}{(2k-1)}\), with \(m^2\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(\sum_{k=1}^{m+1} \left(2k-1\right)=m^2 +(2(m+1)-1)=m^2+2m+2-1\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(=m^2+2m+2\ =m^2 +2m+2(m+1)^2\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Simplify the result expressing in terms of \(m+1\):
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(\sum_{k=1}^{m+1} {(2k-1)}={(m+1)}^2\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          In other words, \(\sum_{k=1}^{m} {(2k-1)}=m^2\), implies \(\sum_{k=1}^{m+1} {(2k-1)}=(m+1)^2\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Therefore, the inductive step has been verified.
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="paragraph">
+         <div class="title">
+          Example 12 - Inequality
+         </div>
+         <p>
+          Prove that \(n! &gt; 3^n\) for every positive integer \(n\) with \(n &gt; 6\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <div class="title">
+          Solution:
+         </div>
+         <p>
+          Since the base case value must be greater than 6, the base case value will be set to the next integer after 6, \(n=7\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Does \(7!\overset{?}{=}3^7\)?
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Simplify both sides to check for validity:
+\(5040&gt;2187\), therefore the base case is true and the inductive step can be taken.
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Begin the inductive step by assuming P(m) for some integer m&gt;6.
+Assume,
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(P(m):\ m!&gt;3^m,\) for some integer m&gt;6.
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          We want to show this implies P(m+1) or,
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(P(m+1):\ (m+1)!&gt;3^{m+1}\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Write down the left hand side of
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(\text{LHS } \ P(m+1) : (m+1)!\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Factor out \(m+1\) from \((m+1)!\):
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \((m+1)!=m! (m+1)\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Using the induction hypothesis \( m!&gt;3^m\), then
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \( m!(m+1)&gt;3^m(m+1)\),
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(\left(m+1\right)!&gt;3^m\left(m+1\right)\),
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Using \(m+1&gt;3\), then
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(3^m (m+1)&gt;3^m3\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Combining exponents, \(3^m 3=3^{m+1}\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \((m+1)!&gt;3^{m+1}\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(m!&gt;3^m\) implies  \((m+1 )!&gt;3^{m+1}\).
+         </p>
+        </div>
+        <div class="imageblock">
+         <div class="content">
+          <img alt="induction3" src="images/induction3.png"/>
+         </div>
+         <div class="title">
+          Figure 12. Graphs of \(n!\), and \(3^n\), showing \(n! &gt; 3^n\), for \(n&gt;6\).
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="paragraph">
+         <div class="title">
+          Example 13 - Divisibility
+         </div>
+         <p>
+          Prove the following using the principle of mathematical induction:
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(n^2 + n\) is even (or divisible by 2), for \(n &gt; 0\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <div class="title">
+          Solution:
+         </div>
+         <p>
+          Since the base case value must be greater than 0, the base case value will be set to the next integer after 0: \(n=1\).
+For each integer \(n\), let \(P(n)\) be the statement \(n^2 + n\) is divisible by 2.
+         </p>
+        </div>
+        <div class="admonitionblock note">
+         <table>
+          <tr>
+           <td class="icon">
+            <i class="fa icon-note" title="Note">
+            </i>
+           </td>
+           <td class="content">
+            <div class="paragraph">
+             <p>
+              \(n^2+n\) is divisible by 2 if and only if \(\left(n^2+n\right)\mod 2=0\).
+             </p>
+            </div>
+           </td>
+          </tr>
+         </table>
+        </div>
+        <div class="paragraph">
+         <p>
+          Prove \(\left(n^2+n\right)\mod 2=0\), for \(n&gt;0\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Substitute \(n = 1\) into \(\left(n^2+n\right)\mod 2=0\):
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \((1^2 + 1) \mod 2 \overset{?}{=}0\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Simplify both sides to check for validity:
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(2  \mod 2 = 0\), therefore the base case is true and the inductive step can be taken.
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Begin the inductive step by assuming \(P(m)\) for some integer \(m &gt; 0\):
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Assume \(P(m):\ \left(m^2+km\right)\mod 2=0\) for some integer \(m&gt;0\).
+Write down the left hand side of P(m+1):
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(\text{LHS }\ P(m+1):\ \left(m+1\right)^2+\left(m+1\right)\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Expand \(\left(m+1\right)^2+\left(m+1\right)=m^2+2m+m+2\) and isolate \(m^2+m\) as its own term:
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \((m+1)^2+(m+1)=\left(m^2+m\right)+\left(2m+2\right)\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Factor 2 from \(2m+2\):  \( \left(m^2+m\right)+2\ \left(m+1\right)\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          The induction hypothesis states that \(m^2+m\) is divisible by 2: \(\left(m^2+m\right)\mod 2=0\), and \(2 (m+1)\) has 2 as a factor explicitly, so
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(\left(2\left(m+1\right)\right)\mod 2=0\) and
+\(\left(m^2+m\right)\mod 2=0\) implies
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(\left((m+1)^2+(m+1)\right)\mod 2=0\)
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Therefore, the inductive step has been verified.
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_strong_induction">
+       10.5. Strong Induction
+      </h3>
+      <div class="paragraph">
+       <p>
+        Recall the idea behind mathematical induction, prove that a proposition \(P\left(m\right)\)  is true for a base step, say \(P_1\). Then prove the inductive step. This involves proving that \(P_m\) implies \(P_{m+1}\).
+        <strong>
+         Strong induction
+        </strong>
+        is a generalized version of induction where in the inductive step we assume \(P_1, P_2,\ldots, P_m\) is true and show all these together imply \(P_{m+1}\) is true.
+       </p>
+      </div>
+      <div class="paragraph">
+       <p>
+        Strong version of Mathematical Induction:
+       </p>
+      </div>
+      <div class="ulist">
+       <ul>
+        <li>
+         <p>
+          Base Case: Prove the first statement \(P_1\). (Or the first several \(P_r\), if needed.)
+         </p>
+        </li>
+        <li>
+         <p>
+          Inductive Step: Given any integer \(m \geq 1\), prove  \(P_1\land {P_2\land {\ P_3\land {\ldots\land {P_m,\ }}}}\) implies  \(P_{m+1}\)
+         </p>
+        </li>
+       </ul>
+      </div>
+      <div class="paragraph">
+       <p>
+        Algorithmically:
+       </p>
+      </div>
+      <div class="ulist">
+       <ul>
+        <li>
+         <p>
+          Base Case: Prove that \(P_{1,\ }P_2\ ,\ldots,\ P_r\), are all true.
+         </p>
+        </li>
+        <li>
+         <p>
+          Inductive Hypotheses: Assume, \(P_{1,\ }P_2\ ,\ldots,\ P_m\)are all true for some \(m  ≥ 1\),
+         </p>
+        </li>
+        <li>
+         <p>
+          Inductive step: Assuming, \(P_{1,\ }P_2\ ,\ldots,\ P_m\) are all true for some  \( m  ≥ 1\),  prove that \(P_{m+1}\) is true.
+         </p>
+        </li>
+       </ul>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="paragraph">
+         <div class="title">
+          Example 14 - Recurrence Relations
+         </div>
+         <p>
+          Consider the sequence \(\left\{a_n\right\}\) defined as a a recurrence relation,
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \(a_1=5\), \(a_2=13\), and \(a_{n+2}=5a_{n+1}-6a_n\), for all \(n \geq 1\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Prove that \(a_n=2^{n} +3^{n}\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <div class="title">
+          Solution
+         </div>
+         <p>
+          Base case: Consider the case \(n=1\), \(a_1=5=2^{1} +3^{1}\), and \(a_2=13=2^2 +3^2=4+9\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Induction hypothesis: Assume \(a_1,\ a_2,..a_m\) are all given by \(a_m=2^m + 3^m\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          We want to show that \(a_{m+1}=2^{m+1} +3^{m+1}\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Well, \( a_{m+1}=5a_m-6a_{m-1}\), using the definition of the recurrence relation.
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          By the inductive hypothesis, \(a_m=2^m+3^m\) and \(a_{m-1}=2^{m-1} +3^{m-1}\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          \( a_{m+1}=5\left(2^m +3^m \right)-6\left(2^{m-1} +3^{m-1}\right)\).
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          Consider then,
+         </p>
+        </div>
+        <div class="openblock equationalign">
+         <div class="content">
+          <table class="equation_table_style">
+           <tr class="equation_row_style">
+            <td ;="" class="equation_content_style">
+             \[\begin{split}
+5\left(2^m+ 3^m \right)-6\left(2^{m-1} +3^{m-1}\right) &amp;=5\times 2^m +5\times 3^m -6\times 2^{m-1} -6\times 3^{m-1}\\
+&amp;=5\times 2^m+5\times 3^m-3\times 2\times 2^{m-1}-2\times 3\times 3^{m-1}\\
+&amp;=5\times\ 2^m+5\times 3^m-3{\times 2}^m-2\times 3^m\\
+&amp;=\left( 5\times 2^m-3\times 2^m \right) + \left( 5 \times 3^m -2\times 3^m \right)\\
+&amp;=\left(5-3\right) \times 2^m + \left(5-2\right) \times 3^m\\
+&amp;=2\times\ 2^m+3\times 3^m\\
+&amp;=2^{m+1} + 3^{m+1}
+\end{split}\]
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="paragraph">
+         <p>
+          So \(a_{m+1}=2^{m+1} + 3^{m+1}\) and therefore, \(a_n=2^n +3^n\) for all \(n \geq 1\).
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_exercises_10">
+       10.6. Exercises
+      </h3>
+      <div class="paragraph">
+       <p>
+        Prove using induction.
+       </p>
+      </div>
+      <div class="olist arabic">
+       <ol class="arabic">
+        <li>
+         <p>
+          For  all \(n ≥ 1\) prove that \(1+2+3+\ldots+n=\displaystyle\sum_{i=1}^{n}i=\displaystyle \frac{n\left(n+1\right)}{2}\)
+         </p>
+        </li>
+        <li>
+         <p>
+          For  all \(n ≥ 1\) prove that \(1^2+2^2+3^2+\ldots+n^2=\displaystyle\sum_{i=1}^{n}i^2=\frac{1}{6} n (n+1) (2 n+1)\)
+         </p>
+        </li>
+        <li>
+         <p>
+          For  all \(n ≥ 1\) prove that \(1^3+2^3+3^3+\ldots+n^3=\displaystyle\sum_{k=1}^{n}k^3=\frac{1}{4} n^2 (n+1)^2\)
+         </p>
+        </li>
+        <li>
+         <p>
+          For all \(n ≥ 1\), prove that \({23}^n-1\)  is  divisible  by 11.
+         </p>
+        </li>
+        <li>
+         <p>
+          Prove by induction that \(n^2+n = n(n+1)\) is even for all integers \(n  ≥ 1\).
+         </p>
+        </li>
+        <li>
+         <p>
+          Find an appropriate \(N \in \mathbb{Z}\), and prove by induction that \(n^3 +3n^2\) is even for all \(n  ≥ N\).
+         </p>
+        </li>
+        <li>
+         <p>
+          Find an appropriate \(N \in \mathbb{Z}\), and prove by induction that \(n^3 +2n\) is divisible by 3 for all \(n  ≥ N\).
+          <strong>
+           (Hint: You may use the result \(n(n+1)\), is even for \(n\), an integer.)
+          </strong>
+         </p>
+        </li>
+        <li>
+         <p>
+          Prove by induction that \(7\) divides \(2^{4n+2} + 3^{2n+1}\) for all nonnegative integers \(n\).
+         </p>
+        </li>
+        <li>
+         <p>
+          Prove that for any \(n  ≥ 1\) and \(x  ≥ 0\) that \(\left(1+x\right)^n\geq1+nx\).
+         </p>
+        </li>
+        <li>
+         <p>
+          For all \(n  ≥ 5\), prove that \( 2^n&gt;n^2\).
+         </p>
+        </li>
+        <li>
+         <p>
+          For all \(n  ≥ 5\), prove that \( 2^n&gt;n^2\).
+         </p>
+        </li>
+        <li>
+         <p>
+          Graph \(n!\) and \(2^n\), and then prove by induction that \( n! &gt; 2^n\), for \(n&gt;3\).
+         </p>
+        </li>
+        <li>
+         <p>
+          Graph \(n^3\) and \(5n+12\), and then use your graph to find an appropriate \(N \in \mathbb{Z}\) to prove by induction that
+\( n^3 &gt; 5n+12\) whenever \(n&gt;N\).
+         </p>
+        </li>
+        <li>
+         <p>
+          Prove by induction that a set  \(A\) with cardinality \(|A|=n\) has \(2^n\) subsets.
+         </p>
+        </li>
+        <li>
+         <p>
+          Prove by induction that there are \(3^n\) numbers in base 3 (using the digits 0 ,1, 2) made up of \(n\) digits.
+         </p>
+        </li>
+        <li>
+         <p>
+          Prove by induction that there are \(4^n\) numbers in base 4 (using the digits 0 ,1, 2, 3,) made up of \(n\) digits.
+         </p>
+        </li>
+        <li>
+         <p>
+          State the principle of mathematical induction using a conditional logical statement.
+         </p>
+        </li>
+        <li>
+         <p>
+          Consider the sequence defined recursively as \(a_1=1,a_2=5,\) and \(a_n=5a_{n-1}-6a_{n-2}.\)
+         </p>
+         <div class="olist loweralpha">
+          <ol class="loweralpha" type="a">
+           <li>
+            <p>
+             Calculate the first eight terms of the recursive sequence.
+            </p>
+           </li>
+           <li>
+            <p>
+             Prove by induction that the recursive sequence is given by the formula \(a_n=3^n-2^n.\)
+            </p>
+           </li>
+          </ol>
+         </div>
+        </li>
+        <li>
+         <p>
+          Consider the sequence defined recursively as \(a_1=1\) and \(a_n=2a_{n-1}+n\).
+         </p>
+         <div class="olist loweralpha">
+          <ol class="loweralpha" type="a">
+           <li>
+            <p>
+             Calculate the first eight terms of the recursive sequence
+            </p>
+           </li>
+           <li>
+            <p>
+             Prove by induction that the recursive sequence is given by the formula \(a_n={4\cdot2}^{n-1}-n-1\).
+            </p>
+           </li>
+          </ol>
+         </div>
+        </li>
+        <li>
+         <p>
+          Prove by induction that the sum of the first \(n\) Fibonacci numbers is
+
+\[
+f_1+f_2+\ldots+f_n=\sum_{i=1}^{n}{f_i=f_{n+2}-1}.
+\]
+         </p>
+        </li>
+        <li>
+         <p>
+          Prove by induction that the sum of the squares of the first \(n\), Fibonacci numbers is
+
+\[
+f_1^2+f_2^2+ \cdots + f_n^2 = \sum_{i=1}^{n} f_i^2=f_n \cdot\ f_{n+1}.
+\]
+         </p>
+        </li>
+       </ol>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { extensions: ["mhchem.js"] }
+});
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML">
+  </script>
+ </body>
+</html>

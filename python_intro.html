@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Asciidoctor 1.5.8" name="generator"/>
+  <meta content="Mohamed Jamaloodeen, Kathy Pinzon, Daniel Pragel, Joshua Roberts, Sebastien Siva" name="author"/>
+  <title>
+   Discrete Math
+  </title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700" rel="stylesheet"/>
+  <link href="./asciidoctor.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <style>
+   .click .title { color: blue; }
+  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
+  .openblock { margin-top: 1em; margin-bottom: 1em; }
+  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript">
+  </script>
+  <script>
+   var ready2;
+
+ready2 = function() {
+
+    $(document).ready(function(){
+
+        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
+        $('.openblock.click').find('.content').hide()
+
+
+        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
+        $('.listingblock.click').find('.content').hide()
+
+    });
+
+}
+
+
+
+
+$(document).ready(ready2);
+$(document).on('page:load', ready2);
+  </script>
+ </head>
+ <body class="article toc2 toc-left">
+  <div id="header">
+   <h1>
+    Discrete Math
+   </h1>
+   <div class="details">
+    <span class="author" id="author">
+     Mohamed Jamaloodeen, Kathy Pinzon, Daniel Pragel, Joshua Roberts, Sebastien Siva
+    </span>
+    <br/>
+   </div>
+   <div class="toc2" id="toc">
+    <div id="toctitle">
+     Table of Contents
+    </div>
+    <ul class="sectlevel1">
+     <li>
+      <a href="index.html#_introducing_discrete_mathematics">
+       1. Introducing Discrete Mathematics
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="index.html#_course_objectives">
+         1.1. Course Objectives
+        </a>
+       </li>
+       <li>
+        <a href="index.html#_applications_of_discrete_mathematics">
+         1.2. Applications of Discrete Mathematics
+        </a>
+       </li>
+       <li>
+        <a href="index.html#_understanding_continuous_and_discrete_sets">
+         1.3. Understanding Continuous and Discrete Sets
+        </a>
+       </li>
+       <li>
+        <a href="index.html#_exercises">
+         1.4. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="python_intro.html#_introduction_to_python">
+       2. Introduction to Python
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="python_intro.html#_programming_basics">
+         2.1. Programming Basics
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_data_types">
+         2.2. Data Types
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_variables">
+         2.3. Variables
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_operators_and_expressions">
+         2.4. Operators and Expressions
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_strings_and_printing">
+         2.5. Strings and Printing
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_if_statements">
+         2.6. If Statements
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_while_statements">
+         2.7. While Statements
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_lists_and_loops">
+         2.8. Lists and Loops
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_list_appending_and_slicing">
+         2.9. List Appending and Slicing
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_defining_custom_functions">
+         2.10. Defining Custom Functions
+        </a>
+       </li>
+       <li>
+        <a href="python_intro.html#_exercises_2">
+         2.11. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="logic.html#_logic">
+       3. Logic
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="logic.html#_propositional_logic">
+         3.1. Propositional Logic
+        </a>
+       </li>
+       <li>
+        <a href="logic.html#_proposition_equivalences">
+         3.2. Proposition Equivalences
+        </a>
+       </li>
+       <li>
+        <a href="logic.html#_predicates_and_quantifiers">
+         3.3. Predicates and Quantifiers
+        </a>
+       </li>
+       <li>
+        <a href="logic.html#_applications_of_logic">
+         3.4. Applications of Logic
+        </a>
+       </li>
+       <li>
+        <a href="logic.html#_exercises_3">
+         3.5. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="set_theory.html#_set_theory">
+       4. Set Theory
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="set_theory.html#_sets">
+         4.1. Sets
+        </a>
+       </li>
+       <li>
+        <a href="set_theory.html#_set_operations">
+         4.2. Set Operations
+        </a>
+       </li>
+       <li>
+        <a href="set_theory.html#_representing_sets_as_lists">
+         4.3. Representing Sets as Lists
+        </a>
+       </li>
+       <li>
+        <a href="set_theory.html#_exercises_4">
+         4.4. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="functions.html#_functions">
+       5. Functions
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="functions.html#_injective_surjective_bijective_and_inverse_functions">
+         5.1. Injective Surjective, Bijective and Inverse Functions
+        </a>
+       </li>
+       <li>
+        <a href="functions.html#_the_ceiling_floor_maximum_and_minimum_functions">
+         5.2. The Ceiling, Floor, Maximum and  Minimum Functions
+        </a>
+       </li>
+       <li>
+        <a href="functions.html#_the_algebra_of_functions">
+         5.3. The Algebra of Functions
+        </a>
+       </li>
+       <li>
+        <a href="functions.html#_composition_of_functions">
+         5.4. Composition of Functions
+        </a>
+       </li>
+       <li>
+        <a href="functions.html#_the_inverse_of_a_function">
+         5.5. The Inverse of a Function
+        </a>
+       </li>
+       <li>
+        <a href="functions.html#_exercises_5">
+         5.6. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="growth_functions.html#_growth_of_functions">
+       6. Growth of Functions
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="growth_functions.html#_introducing_big_o">
+         6.1. Introducing
+         <em>
+          Big O
+         </em>
+        </a>
+       </li>
+       <li>
+        <a href="growth_functions.html#_properties_of_big_o_notation">
+         6.2. Properties of
+         <em>
+          Big O
+         </em>
+         notation.
+        </a>
+       </li>
+       <li>
+        <a href="growth_functions.html#_exercises_6">
+         6.3. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="algorithms.html#_algorithms">
+       7. Algorithms
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="algorithms.html#_structure_of_algorithms_in_pseudocode_and_python">
+         7.1. Structure of Algorithms in Pseudocode and Python
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_examples_of_algorithms">
+         7.2. Examples of Algorithms
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_the_linear_search_algorithm">
+         7.3. The Linear Search Algorithm
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_the_bubble_sort_algorithm">
+         7.4. The Bubble Sort Algorithm
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_the_insertion_sort_algorithm">
+         7.5. The Insertion Sort Algorithm
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_the_binary_search_algorithm">
+         7.6. The Binary Search Algorithm
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_algorithmic_complexity_of_common_algorithms">
+         7.7. Algorithmic Complexity of Common Algorithms
+        </a>
+       </li>
+       <li>
+        <a href="algorithms.html#_exercises_7">
+         7.8. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="counting.html#_counting">
+       8. Counting
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="counting.html#_the_product_rule_and">
+         8.1. The Product Rule (
+         <em>
+          and
+         </em>
+         )
+        </a>
+       </li>
+       <li>
+        <a href="counting.html#_the_sum_rule_xor">
+         8.2. The Sum Rule (
+         <em>
+          xor
+         </em>
+         )
+        </a>
+       </li>
+       <li>
+        <a href="counting.html#_the_subtraction_rule_or">
+         8.3. The Subtraction Rule (
+         <em>
+          or
+         </em>
+         )
+        </a>
+       </li>
+       <li>
+        <a href="counting.html#_the_pigeonhole_principle">
+         8.4. The Pigeonhole Principle
+        </a>
+       </li>
+       <li>
+        <a href="counting.html#_permutations_and_combinations">
+         8.5. Permutations and Combinations
+        </a>
+       </li>
+       <li>
+        <a href="counting.html#_exercises_8">
+         8.6. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="number_theory.html#_number_theory">
+       9. Number Theory
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="number_theory.html#_divisibility">
+         9.1. Divisibility
+        </a>
+       </li>
+       <li>
+        <a href="number_theory.html#_integer_representations">
+         9.2. Integer Representations
+        </a>
+       </li>
+       <li>
+        <a href="number_theory.html#_base_conversion">
+         9.3. Base Conversion
+        </a>
+       </li>
+       <li>
+        <a href="number_theory.html#_exercises_9">
+         9.4. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="induction_recursion.html#_sequences_recursive_definitions_and_induction">
+       10. Sequences, Recursive Definitions, and Induction
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="induction_recursion.html#_sequences_series_and_sigma_notation">
+         10.1. Sequences, Series, and Sigma Notation
+        </a>
+       </li>
+       <li>
+        <a href="induction_recursion.html#_defining_sequences_recursively">
+         10.2. Defining Sequences Recursively
+        </a>
+       </li>
+       <li>
+        <a href="induction_recursion.html#_recursive_algorithms">
+         10.3. Recursive Algorithms
+        </a>
+       </li>
+       <li>
+        <a href="induction_recursion.html#_mathematical_induction">
+         10.4. Mathematical Induction
+        </a>
+       </li>
+       <li>
+        <a href="induction_recursion.html#_strong_induction">
+         10.5. Strong Induction
+        </a>
+       </li>
+       <li>
+        <a href="induction_recursion.html#_exercises_10">
+         10.6. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="graph_theory.html#_graph_theory">
+       11. Graph Theory
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="graph_theory.html#_introduction_and_basic_definitions">
+         11.1. Introduction and Basic Definitions
+        </a>
+       </li>
+       <li>
+        <a href="graph_theory.html#_representing_graphs">
+         11.2. Representing graphs.
+        </a>
+       </li>
+       <li>
+        <a href="graph_theory.html#_weighted_graphs">
+         11.3. Weighted Graphs
+        </a>
+       </li>
+       <li>
+        <a href="graph_theory.html#_subgraphs">
+         11.4. Subgraphs
+        </a>
+       </li>
+       <li>
+        <a href="graph_theory.html#_connectivity_eulerian_graphs_and_hamiltonian_graphs">
+         11.5. Connectivity, Eulerian Graphs, and Hamiltonian Graphs
+        </a>
+       </li>
+       <li>
+        <a href="graph_theory.html#_exercises_11">
+         11.6. Exercises
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="appendix_one.html#_appendix_1_library_of_functions">
+       12. Appendix 1: Library of Functions
+      </a>
+      <ul class="sectlevel2">
+       <li>
+        <a href="appendix_one.html#_quadratic_function">
+         12.1. Quadratic Function
+        </a>
+       </li>
+       <li>
+        <a href="appendix_one.html#_the_cubic_function">
+         12.2. The Cubic function
+        </a>
+       </li>
+       <li>
+        <a href="appendix_one.html#_the_square_root_and_cube_root_functions">
+         12.3. The Square Root and Cube Root Functions
+        </a>
+       </li>
+       <li>
+        <a href="appendix_one.html#_exponential_and_logarithmic_functions">
+         12.4. Exponential and Logarithmic Functions
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="appendix_two.html#_appendix_2_python_syntax_examples">
+       13. Appendix 2: Python Syntax Examples
+      </a>
+     </li>
+    </ul>
+   </div>
+  </div>
+  <div id="content">
+   <div id="preamble">
+    <div class="sectionbody">
+     <div class="openblock float-group">
+      <div class="content">
+       <div class="imageblock left text-left">
+        <div class="content">
+         <img alt="GGC" height="200" src="images/GGC_Logo.png" width="250"/>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="sect1">
+    <h2 id="_introduction_to_python">
+     2. Introduction to Python
+    </h2>
+    <div class="sectionbody">
+     <div class="sect2">
+      <h3 id="_programming_basics">
+       2.1. Programming Basics
+      </h3>
+      <div class="paragraph">
+       <p>
+        <em>
+         Computers
+        </em>
+        are programmable machines that
+        <em>
+         process information
+        </em>
+        by manipulating data. As the data can represent any real world information, and programs can be readily changed, computers are capable of solving many kinds of problems.
+       </p>
+      </div>
+      <div class="sect3">
+       <h4 id="_programming_languages_and_environments">
+        2.1.1. Programming Languages and Environments
+       </h4>
+       <div class="paragraph">
+        <p>
+         There are many different programming languages for programmers to choose from. Each language has its own advantages and disadvantages, and new languages gain popularity while older ones slowly lose ground. In this book, we use the
+         <em>
+          Python 3
+         </em>
+         programming language. It is popular in both academia and industry and was designed with education in mind.
+        </p>
+       </div>
+      </div>
+      <div class="sect3">
+       <h4 id="_pythontutor">
+        2.1.2. PythonTutor
+       </h4>
+       <div class="paragraph">
+        <p>
+         PythonTutor is an environment for creating very short and simple Python programs and visualizing their execution. This enables beginners to visually see the data as it gets manipulated by the instructions.
+        </p>
+       </div>
+       <div class="sidebarblock">
+        <div class="content">
+         <div class="openblock">
+          <div class="title">
+           Simple Program
+          </div>
+          <div class="content">
+          </div>
+         </div>
+         <div class="paragraph">
+          <p>
+           Use the
+           <em>
+            Forward
+           </em>
+           button to step through the program below and watch the data get created and modified.  Notice how the arrows move to indicate what instruction the program execution is on.
+          </p>
+         </div>
+         <iframe frameborder="5" height="350" src="https://pythontutor.com/iframe-embed.html#code=age%20%3D%2021%0Adays%20%3D%20365%20*%20age%0Amsg%20%3D%20%22You%20have%20lived%20this%20many%20days%3A%22%0Aprint%28msg,%20days%29%0Aage%20%3D%2041%0Adays%20%3D%20365%20*%20age%0Aprint%28msg,%20days%29%0A&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=350" width="100%">
+         </iframe>
+         <div style="text-align: right;">
+          <a href="http://www.pythontutor.com/visualize.html#code=age%20%3D%2021%0Adays%20%3D%20365%20*%20age%0Amsg%20%3D%20%22You%20have%20lived%20this%20many%20days%3A%22%0Aprint%28msg,%20days%29%0Aage%20%3D%2041%0Adays%20%3D%20365%20*%20age%0Aprint%28msg,%20days%29%0A&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+           Edit in PythonTutor
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="sect3">
+       <h4 id="_comments">
+        2.1.3. Comments
+       </h4>
+       <div class="paragraph">
+        <p>
+         Program files can contain source code and comments.  Comments are not instructions for the computer to follow, but instead notes for programmers to read. Comments in Python start with a pound sign (#). Anything following the pound sign, on the same line, will not be executed. Often, at the very beginning of a program, comments are used to indicate the author and other information. Comments are also used to explain tricky sections of code or disable code from executing.
+        </p>
+       </div>
+       <div class="listingblock">
+        <div class="content">
+         <pre class="highlight"><code class="language-python" data-lang="python"># This line is not Python code, it is a comment.
+
+score = 9001 # over 9000!!!
+
+# The next line of code is disabled because is starts with a #.
+# score = 8000</code></pre>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_data_types">
+       2.2. Data Types
+      </h3>
+      <div class="paragraph">
+       <p>
+        Programming is all about information processing. Information is categorized by data types. Three basic data types are
+        <em>
+         int
+        </em>
+        (integer),
+        <em>
+         float
+        </em>
+        , and
+        <em>
+         string
+        </em>
+        . Integers are whole numbers (without a decimal point). Floats are numbers that include decimal places.  Strings are text (sequences of characters) including punctuation, symbols, and whitespace. Every value in Python has a corresponding data type. The table below shows examples of ints, floats, and strings.
+       </p>
+      </div>
+      <table class="tableblock frame-all grid-all" style="width: 50%;">
+       <caption class="title">
+        Table 1. Basic Data Types
+       </caption>
+       <colgroup>
+        <col style="width: 33.3333%;"/>
+        <col style="width: 66.6667%;"/>
+       </colgroup>
+       <thead>
+        <tr>
+         <th class="tableblock halign-left valign-top">
+          Data Type
+         </th>
+         <th class="tableblock halign-left valign-top">
+          Example Values
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td class="tableblock halign-left valign-top">
+          <p class="tableblock">
+           int
+          </p>
+         </td>
+         <td class="tableblock halign-left valign-top">
+          <p class="tableblock">
+           2,  -2,  0,  834529
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td class="tableblock halign-left valign-top">
+          <p class="tableblock">
+           boolean
+          </p>
+         </td>
+         <td class="tableblock halign-left valign-top">
+          <p class="tableblock">
+           True, False
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td class="tableblock halign-left valign-top">
+          <p class="tableblock">
+           string
+          </p>
+         </td>
+         <td class="tableblock halign-left valign-top">
+          <p class="tableblock">
+           "Hello World!",  'Coconut',  "0",  '4 + 6'
+          </p>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <div class="admonitionblock note">
+       <table>
+        <tr>
+         <td class="icon">
+          <i class="fa icon-note" title="Note">
+          </i>
+         </td>
+         <td class="content">
+          <div class="title">
+           Strings and Quotes
+          </div>
+          <div class="paragraph">
+           <p>
+            Strings are always surrounded by quotes. Python allows either single (') or double(") quotes. Some strings may look like numbers, but as long as they are surrounded by quotes, they are treated like text.  Booleans are not strings.
+           </p>
+          </div>
+         </td>
+        </tr>
+       </table>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_variables">
+       2.3. Variables
+      </h3>
+      <div class="paragraph">
+       <p>
+        <em>
+         Variables
+        </em>
+        are (virtual) boxes that
+        <em>
+         store
+        </em>
+        values for reuse later. A variable has a name and a current value. Each variable can only hold one value at a time. Variables are assigned a value using the single equal sign (=). As Python executes one line at a time, variables come into existence on the line where they are first assigned.
+       </p>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          Basic Variables and Data Types
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="paragraph">
+         <p>
+          Use the
+          <em>
+           Forward
+          </em>
+          button to step through the program below and watch the variables get created.
+         </p>
+        </div>
+        <iframe frameborder="5" height="290" src="https://pythontutor.com/iframe-embed.html#code=a%20%3D%204%20%23%20a%20stores%204%0Ab%20%3D%20%22Hello%20World!%22%0Ac%20%3D%20False%0Ap1_points%20%3D%201337%0A&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=290" width="100%">
+        </iframe>
+        <div style="text-align: right;">
+         <a href="http://www.pythontutor.com/visualize.html#code=a%20%3D%204%20%23%20a%20stores%204%0Ab%20%3D%20%22Hello%20World!%22%0Ac%20%3D%20False%0Ap1_points%20%3D%201337%0A&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+          Edit in PythonTutor
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="admonitionblock note">
+       <table>
+        <tr>
+         <td class="icon">
+          <i class="fa icon-note" title="Note">
+          </i>
+         </td>
+         <td class="content">
+          <div class="paragraph">
+           <div class="title">
+            Variable Names
+           </div>
+           <p>
+            Variables can have complex names like
+            <em>
+             player1_score
+            </em>
+            . In general, never start a variable name with numbers, and never use spaces.
+           </p>
+          </div>
+         </td>
+        </tr>
+       </table>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_operators_and_expressions">
+       2.4. Operators and Expressions
+      </h3>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          Int Operators and Expressions
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="paragraph">
+         <p>
+          Try to predict the variable names, values, and data types in the the code example below.
+         </p>
+        </div>
+        <iframe frameborder="5" height="380" src="https://pythontutor.com/iframe-embed.html#code=a%20%3D%204%20%2B%202%0Ab%20%3D%20a%20*%202%0Aa%20%3D%20100%0Ac%20%3D%2010%20-%20b%0Ad%20%3D%2010%20//%205%20%23%20int%20division%0Ae%20%3D%2011%20//%204%20%23%20the%20quotient%0Af%20%3D%2011%20%25%204%20%23%20the%20remainder%0Ag%20%3D%2011%20/%204%20%23%20Ugh!%20Decimal%20Numbers!&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=380" width="100%">
+        </iframe>
+        <div style="text-align: right;">
+         <a href="http://www.pythontutor.com/visualize.html#code=a%20%3D%204%20%2B%202%0Ab%20%3D%20a%20*%202%0Aa%20%3D%20100%0Ac%20%3D%2010%20-%20b%0Ad%20%3D%2010%20//%205%20%23%20int%20division%0Ae%20%3D%2011%20//%204%20%23%20the%20quotient%0Af%20%3D%2011%20%25%204%20%23%20the%20remainder%0Ag%20%3D%2011%20/%204%20%23%20Ugh!%20Decimal%20Numbers!&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+          Edit in PythonTutor
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="admonitionblock note">
+       <table>
+        <tr>
+         <td class="icon">
+          <i class="fa icon-note" title="Note">
+          </i>
+         </td>
+         <td class="content">
+          <div class="title">
+           Expression Evaluation
+          </div>
+          <div class="paragraph">
+           <p>
+            When Python encounters a line with an expression, it always evaluates the expression first.
+           </p>
+          </div>
+          <div class="listingblock">
+           <div class="content">
+            <pre class="highlight"><code class="language-python" data-lang="python">x = (3 + 4) * 2</code></pre>
+           </div>
+          </div>
+          <div class="paragraph">
+           <p>
+            Python first calculates the return value of the expression by using the standard order of operations and starting inside the parentheses. Then, Python creates the variable and stores the return value (14). The variable only stores the returned value, not the entire expression.
+           </p>
+          </div>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          Boolean Operators and Expressions
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="paragraph">
+         <p>
+          Note how each expression returns a boolean value.  These are called
+          <strong>
+           boolean expressions
+          </strong>
+          .
+         </p>
+        </div>
+        <iframe frameborder="5" height="450" src="https://pythontutor.com/iframe-embed.html#code=a%20%3D%20True%0Ab%20%3D%20False%0A%23%20or%20is%20True%20if%201%20side%20is%20True%0Ac%20%3D%20True%20or%20False%0A%23%20and%20is%20True%20if%20both%20sides%20are%20True%0Ad%20%3D%20False%20and%20True%0A%23%20not%20negates%20the%20boolean%0Ae%20%3D%20not%20%28%28c%20and%20d%29%20or%20True%29%0Ax%20%3D%2010%0Af%20%3D%20%28x%20%3E%205%29%0Ag%20%3D%20%28x%20%3C%3D%2012%29%0Ah%20%3D%20%28x%20%3D%3D%209%29%0Ai%20%3D%20%28x%20!%3D%2010%29&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=450" width="100%">
+        </iframe>
+        <div style="text-align: right;">
+         <a href="http://www.pythontutor.com/visualize.html#code=a%20%3D%20True%0Ab%20%3D%20False%0A%23%20or%20is%20True%20if%201%20side%20is%20True%0Ac%20%3D%20True%20or%20False%0A%23%20and%20is%20True%20if%20both%20sides%20are%20True%0Ad%20%3D%20False%20and%20True%0A%23%20not%20negates%20the%20boolean%0Ae%20%3D%20not%20%28%28c%20and%20d%29%20or%20True%29%0Ax%20%3D%2010%0Af%20%3D%20%28x%20%3E%205%29%0Ag%20%3D%20%28x%20%3C%3D%2012%29%0Ah%20%3D%20%28x%20%3D%3D%209%29%0Ai%20%3D%20%28x%20!%3D%2010%29&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+          Edit in PythonTutor
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_strings_and_printing">
+       2.5. Strings and Printing
+      </h3>
+      <div class="paragraph">
+       <p>
+        Besides creating and storing values in variables, we can also output text on a screen by calling the print() function.
+       </p>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          Strings and print()
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="paragraph">
+         <p>
+          Try to predict the printed output.  Look at the small window in the top-right as you use the
+          <em>
+           Forward
+          </em>
+          button.
+         </p>
+        </div>
+        <iframe frameborder="5" height="320" src="https://pythontutor.com/iframe-embed.html#code=print%28%22Hello%20World!%22%29%0Aa%20%3D%20%22The%20answer%20is%22%0Ab%20%3D%206%20*%207%0Aprint%28a,%20b%29%0Aprint%28False,%20%22Hobbit%22,%201,%20%22Ring%22%29&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=320" width="100%">
+        </iframe>
+        <div style="text-align: right;">
+         <a href="http://www.pythontutor.com/visualize.html#code=print%28%22Hello%20World!%22%29%0Aa%20%3D%20%22The%20answer%20is%22%0Ab%20%3D%206%20*%207%0Aprint%28a,%20b%29%0Aprint%28False,%20%22Hobbit%22,%201,%20%22Ring%22%29&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+          Edit in PythonTutor
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_if_statements">
+       2.6. If Statements
+      </h3>
+      <div class="paragraph">
+       <p>
+        Python can execute or skip over a
+        <strong>
+         block
+        </strong>
+        of lines using an if statement and a boolean expression.
+        <strong>
+         Blocks
+        </strong>
+        always start with a
+        <strong>
+         colon
+        </strong>
+        (:) on the previous line and require every line to be indented with tabs or spaces.
+       </p>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          If Statements
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="paragraph">
+         <p>
+          Notice that all un-indented lines execute, but only 1 of the blocks.
+         </p>
+        </div>
+        <iframe frameborder="5" height="420" src="https://pythontutor.com/iframe-embed.html#code=print%28%22Hi.%20What%20would%20you%20like%20to%20drink%3F%22%29%0Aage%20%3D%205%0Aif%20age%20%3E%3D%2021%3A%20%23%20Block%20starts%20on%20next%20line%0A%20%20%20%20print%28%22Beer%22%29%20%23%20Block%20line%201%0A%20%20%20%20print%28%22Wine%22%29%20%23%20Block%20line%202%0Aprint%28%22Coke%22%29%0Aprint%28%22Water%22%29%0Aif%20age%20%3C%3D%208%3A%0A%20%20%20%20print%28%22Milk%22%29%0A%20%20%20%20print%28%22Juice%22%29&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=420" width="100%">
+        </iframe>
+        <div style="text-align: right;">
+         <a href="http://www.pythontutor.com/visualize.html#code=print%28%22Hi.%20What%20would%20you%20like%20to%20drink%3F%22%29%0Aage%20%3D%205%0Aif%20age%20%3E%3D%2021%3A%20%23%20Block%20starts%20on%20next%20line%0A%20%20%20%20print%28%22Beer%22%29%20%23%20Block%20line%201%0A%20%20%20%20print%28%22Wine%22%29%20%23%20Block%20line%202%0Aprint%28%22Coke%22%29%0Aprint%28%22Water%22%29%0Aif%20age%20%3C%3D%208%3A%0A%20%20%20%20print%28%22Milk%22%29%0A%20%20%20%20print%28%22Juice%22%29&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+          Edit in PythonTutor
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="paragraph">
+       <p>
+        When you want to force exactly 1 of 2 blocks (as opposed to just skipping a block) you can use
+        <strong>
+         if else
+        </strong>
+        .
+       </p>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          If Else Statements
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="ulist">
+         <ul>
+          <li>
+           <p>
+            No matter how you change the scores, only 1 print() executes.
+           </p>
+          </li>
+          <li>
+           <p>
+            Try making the scores the same.
+           </p>
+          </li>
+         </ul>
+        </div>
+        <iframe frameborder="5" height="350" src="https://pythontutor.com/iframe-embed.html#code=p1%20%3D%20354%0Ap2%20%3D%20387%0Aif%20p1%20%3E%20p2%3A%0A%20%20%20%20print%28%22Player%201%20Wins!%22%29%0Aelse%3A%0A%20%20%20%20print%28%22Player%202%20Wins!%22%29%0A&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=350" width="100%">
+        </iframe>
+        <div style="text-align: right;">
+         <a href="http://www.pythontutor.com/visualize.html#code=p1%20%3D%20354%0Ap2%20%3D%20387%0Aif%20p1%20%3E%20p2%3A%0A%20%20%20%20print%28%22Player%201%20Wins!%22%29%0Aelse%3A%0A%20%20%20%20print%28%22Player%202%20Wins!%22%29%0A&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+          Edit in PythonTutor
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_while_statements">
+       2.7. While Statements
+      </h3>
+      <div class="paragraph">
+       <p>
+        Python can execute a
+        <strong>
+         block
+        </strong>
+        of lines repeatedly using a while statement and a boolean expression.  The block repeats until the boolean expression is false.
+       </p>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          While Statements
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="paragraph">
+         <p>
+          What numbers do you think will print? Notice that without line 3, the loop would run forever.
+         </p>
+        </div>
+        <iframe frameborder="5" height="270" src="https://pythontutor.com/iframe-embed.html#code=num%20%3D%205%0Awhile%20num%20%3E%200%3A%0A%20%20%20%20num%20%2B%3D%20-2%0A%20%20%20%20print%28num%29%0A&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=270" width="100%">
+        </iframe>
+        <div style="text-align: right;">
+         <a href="http://www.pythontutor.com/visualize.html#code=num%20%3D%205%0Awhile%20num%20%3E%200%3A%0A%20%20%20%20num%20%2B%3D%20-2%0A%20%20%20%20print%28num%29%0A&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+          Edit in PythonTutor
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="admonitionblock note">
+       <table>
+        <tr>
+         <td class="icon">
+          <i class="fa icon-note" title="Note">
+          </i>
+         </td>
+         <td class="content">
+          The += operator increases a variable by a value.
+         </td>
+        </tr>
+       </table>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_lists_and_loops">
+       2.8. Lists and Loops
+      </h3>
+      <div class="paragraph">
+       <p>
+        When you need to consider many values at once, use a list.
+       </p>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          List Indexing
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="paragraph">
+         <p>
+          Try index -2.
+         </p>
+        </div>
+        <iframe frameborder="5" height="300" src="https://pythontutor.com/iframe-embed.html#code=a%20%3D%20%5B15,%202,%2034,%2087%5D%0Ab%20%3D%20a%5B0%5D%20%23%20get%20the%20first%20value%20with%20index%200%0Ac%20%3D%20a%5B2%5D%20%23%20get%20the%20third%20valeu%20with%20index%202%0Ad%20%3D%20a%5B-1%5D%20%23%20get%20the%20last%20value%20with%20index%20-1%0Ae%20%3D%20len%28a%29%20%23%20the%20number%20of%20values&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=300" width="100%">
+        </iframe>
+        <div style="text-align: right;">
+         <a href="http://www.pythontutor.com/visualize.html#code=a%20%3D%20%5B15,%202,%2034,%2087%5D%0Ab%20%3D%20a%5B0%5D%20%23%20get%20the%20first%20value%20with%20index%200%0Ac%20%3D%20a%5B2%5D%20%23%20get%20the%20third%20valeu%20with%20index%202%0Ad%20%3D%20a%5B-1%5D%20%23%20get%20the%20last%20value%20with%20index%20-1%0Ae%20%3D%20len%28a%29%20%23%20the%20number%20of%20values&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+          Edit in PythonTutor
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="paragraph">
+       <p>
+        When you want to consider every value in a list, use a
+        <strong>
+         for
+        </strong>
+        loop.
+       </p>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          For Loops With Indexes
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="ulist">
+         <ul>
+          <li>
+           <p>
+            What does the variable i represent?
+           </p>
+          </li>
+          <li>
+           <p>
+            What line creates variable i?
+           </p>
+          </li>
+          <li>
+           <p>
+            What line modifies it?
+           </p>
+          </li>
+         </ul>
+        </div>
+        <iframe frameborder="5" height="250" src="https://pythontutor.com/iframe-embed.html#code=nums%20%3D%20%5B10,%2030,%2020,%2050%5D%0Afor%20i%20in%20range%280,%20len%28nums%29%29%3A%0A%20%20%20%20print%28%22Index%22,%20i,%20%22Value%22,%20nums%5Bi%5D%29&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=250" width="100%">
+        </iframe>
+        <div style="text-align: right;">
+         <a href="http://www.pythontutor.com/visualize.html#code=nums%20%3D%20%5B10,%2030,%2020,%2050%5D%0Afor%20i%20in%20range%280,%20len%28nums%29%29%3A%0A%20%20%20%20print%28%22Index%22,%20i,%20%22Value%22,%20nums%5Bi%5D%29&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+          Edit in PythonTutor
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="admonitionblock note">
+       <table>
+        <tr>
+         <td class="icon">
+          <i class="fa icon-note" title="Note">
+          </i>
+         </td>
+         <td class="content">
+          The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends at one less than the entered number. For example, range(6) lists the numbers 0 to 5, inclusive.
+         </td>
+        </tr>
+       </table>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          For Loops Without Indexes
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="ulist">
+         <ul>
+          <li>
+           <p>
+            What line creates variable x?
+           </p>
+          </li>
+          <li>
+           <p>
+            What line modifies it?
+           </p>
+          </li>
+         </ul>
+        </div>
+        <iframe frameborder="5" height="250" src="https://pythontutor.com/iframe-embed.html#code=nums%20%3D%20%5B10,%2030,%2020,%2050%5D%0Afor%20x%20in%20nums%3A%0A%20%20%20%20print%28%22Value%22,%20x%29&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=250" width="100%">
+        </iframe>
+        <div style="text-align: right;">
+         <a href="http://www.pythontutor.com/visualize.html#code=nums%20%3D%20%5B10,%2030,%2020,%2050%5D%0Afor%20x%20in%20nums%3A%0A%20%20%20%20print%28%22Value%22,%20x%29&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+          Edit in PythonTutor
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          Summing with Loops
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="ulist">
+         <ul>
+          <li>
+           <p>
+            What line creates variable g?
+           </p>
+          </li>
+          <li>
+           <p>
+            What line modifies it?
+           </p>
+          </li>
+         </ul>
+        </div>
+        <iframe frameborder="5" height="320" src="https://pythontutor.com/iframe-embed.html#code=grades%20%3D%20%5B99,%2088,%2095,%20101,%2065%5D%0Atotal%20%3D%200%0Afor%20g%20in%20grades%3A%0A%20%20%20%20total%20%2B%3D%20g%0Aavg%20%3D%20total%20//%20len%28grades%29%0Aprint%28%22Average%20is%22,%20avg%29%0A&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=320" width="100%">
+        </iframe>
+        <div style="text-align: right;">
+         <a href="http://www.pythontutor.com/visualize.html#code=grades%20%3D%20%5B99,%2088,%2095,%20101,%2065%5D%0Atotal%20%3D%200%0Afor%20g%20in%20grades%3A%0A%20%20%20%20total%20%2B%3D%20g%0Aavg%20%3D%20total%20//%20len%28grades%29%0Aprint%28%22Average%20is%22,%20avg%29%0A&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+          Edit in PythonTutor
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_list_appending_and_slicing">
+       2.9. List Appending and Slicing
+      </h3>
+      <div class="paragraph">
+       <p>
+        We can append to lists with the concatenation operator (+). We can also slice a list using the bracket notation and two indexes separated by a colon (:).
+The first index specifies the starting point of the slice while the second index specifies the stopping point of the slice + 1.
+       </p>
+      </div>
+      <div class="videoblock">
+       <div class="content">
+        <iframe allowfullscreen="" frameborder="0" height="500" src="https://www.youtube.com/embed/TE6gg1p1eV4?rel=0" width="700">
+        </iframe>
+       </div>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          List Appending and Slicing
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="paragraph">
+         <p>
+          Try to predict the variable names, values, and data types in the code example below. Use the Forward button to check your answers.
+         </p>
+        </div>
+        <iframe frameborder="5" height="340" src="https://pythontutor.com/iframe-embed.html#code=a+%3D+%5B%22Bob%22,+%22Lisa%22,+%22Tom%22%5D%0Ab+%3D+%5B%22Sally%22,+%22Sam%22%5D%0Ac+%3D+a+%2B+b%0Ac+%2B%3D+%5B%22John%22%5D%0Ad+%3D+c%5B0%3A2%5D%0Ae+%3D+c%5B-3%3A-1%5D&amp;&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=340" width="100%">
+        </iframe>
+        <div style="text-align: right;">
+         <a href="http://www.pythontutor.com/visualize.html#code=a+%3D+%5B%22Bob%22,+%22Lisa%22,+%22Tom%22%5D%0Ab+%3D+%5B%22Sally%22,+%22Sam%22%5D%0Ac+%3D+a+%2B+b%0Ac+%2B%3D+%5B%22John%22%5D%0Ad+%3D+c%5B0%3A2%5D%0Ae+%3D+c%5B-3%3A-1%5D&amp;&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+          Edit in PythonTutor
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_defining_custom_functions">
+       2.10. Defining Custom Functions
+      </h3>
+      <div class="paragraph">
+       <p>
+        In the examples above we have called several functions like print() and len().  You can define your own functions using
+        <strong>
+         def
+        </strong>
+        .  A function definition includes zero or more
+        <strong>
+         parameter variables
+        </strong>
+        .
+       </p>
+      </div>
+      <div class="sidebarblock">
+       <div class="content">
+        <div class="openblock">
+         <div class="title">
+          Defining Functions
+         </div>
+         <div class="content">
+         </div>
+        </div>
+        <div class="ulist">
+         <ul>
+          <li>
+           <p>
+            What line creates variables a, b?
+           </p>
+          </li>
+          <li>
+           <p>
+            When does that line execute?
+           </p>
+          </li>
+          <li>
+           <p>
+            How many times?
+           </p>
+          </li>
+          <li>
+           <p>
+            Where do variables a, b get their values from?
+           </p>
+          </li>
+         </ul>
+        </div>
+        <iframe frameborder="5" height="330" src="https://pythontutor.com/iframe-embed.html#code=def%20bob%28a,%20b%29%3A%0A%20%20%20%20c%20%3D%202%20*%20a%20%2B%20b%0A%20%20%20%20return%20c%0A%0Ax%20%3D%20bob%281,%202%29%0Ay%20%3D%20x%20%2B%20bob%28x,%203%29&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=330" width="100%">
+        </iframe>
+        <div style="text-align: right;">
+         <a href="http://www.pythontutor.com/visualize.html#code=def%20bob%28a,%20b%29%3A%0A%20%20%20%20c%20%3D%202%20*%20a%20%2B%20b%0A%20%20%20%20return%20c%0A%0Ax%20%3D%20bob%281,%202%29%0Ay%20%3D%20x%20%2B%20bob%28x,%203%29&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+          Edit in PythonTutor
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="sect2">
+      <h3 id="_exercises_2">
+       2.11. Exercises
+      </h3>
+      <div class="olist arabic">
+       <ol class="arabic">
+        <li>
+         <p>
+          Given the following Python code, what is the value and data type of each variable?
+         </p>
+         <div class="listingblock">
+          <div class="content">
+           <pre class="highlight"><code class="language-Python" data-lang="Python">a = 6 + 8
+large = a // 4
+b = 22 // 3
+c = 22 % 3
+d = False or True
+e = True and False
+sheep = (True or (b &gt; 10))</code></pre>
+          </div>
+         </div>
+        </li>
+        <li>
+         <p>
+          Given the following Python code, determine the printed output.
+         </p>
+         <div class="listingblock">
+          <div class="content">
+           <pre class="highlight"><code class="language-Python" data-lang="Python">print("Hello World!")
+a = "The answer is"
+b = 6 * 7
+print(a, b)
+print(False, "Hobbit", 1, "Ring")</code></pre>
+          </div>
+         </div>
+        </li>
+        <li>
+         <p>
+          For the following code, determine the value of the variable letter when the score is 92, 84 and 59.
+         </p>
+         <div class="listingblock">
+          <div class="content">
+           <pre class="highlight"><code class="language-Python" data-lang="Python">score = #an interger between 0 and 100
+if score &gt;= 90:
+	letter = 'A'
+else: #grade must be B, C, D or F
+	if score &gt;= 80:
+		letter = 'B'
+	else: # grade must be C, D or F
+		if score &gt;= 70:
+			letter = 'C'
+		else: #score must be D or F
+			if score &gt;=60:
+				letter = 'D'
+			else:
+				letter = 'F'
+return 'F"</code></pre>
+          </div>
+         </div>
+        </li>
+        <li>
+         <p>
+          Given the following code:
+         </p>
+         <div class="listingblock">
+          <div class="content">
+           <pre class="highlight"><code class="language-Python" data-lang="Python">if outside == False:
+	if (n &gt;= 2 and n &lt;= 20):
+		return ans = True
+	else:
+		return ans = False
+else:
+	if (n &lt;= 2 or n &gt;= 20):
+		return ans = True
+	else:
+		return ans = False</code></pre>
+          </div>
+         </div>
+         <div class="paragraph">
+          <p>
+           Determine the value of the variable ans in the following cases:
+	.. n = 3, outside = False
+	.. n = 15, outside = False
+	.. n = 15, outside = True
+	.. n = 12, outside = True
+          </p>
+         </div>
+        </li>
+        <li>
+         <p>
+          What will this code print out?
+         </p>
+         <div class="listingblock">
+          <div class="content">
+           <pre class="highlight"><code class="language-Python" data-lang="Python">while count &gt; 0:
+	print("Welcome")
+	count -= 1</code></pre>
+          </div>
+         </div>
+        </li>
+        <li>
+         <p>
+          Write Python code to satisfy the following conditions. Then test your code on the values of the variables given.
+         </p>
+         <div class="olist loweralpha">
+          <ol class="loweralpha" type="a">
+           <li>
+            <p>
+             Given an int n, return the absolute diffrence between n and 10, except return triple the absolute dfference if n is over 10. It should return 1 when n=9. It should return 33 when n=21.
+What will the code return when n=7 or n=35?
+            </p>
+           </li>
+           <li>
+            <p>
+             We have a loud talking robot. The "hour" parameter is the current hour time in the range 0 to 23. We are in trouble if the robot is talking and the hour is before 6 or after 21. Return True if we are in trouble. It should return True when the robot is talking and the hour is 8. It should return False when the robot is not talking and the hour is 8. What does it return if the robot is talking and the hour is 9?
+            </p>
+           </li>
+          </ol>
+         </div>
+        </li>
+        <li>
+         <p>
+          What will the following code print out?
+         </p>
+         <div class="listingblock">
+          <div class="content">
+           <pre class="highlight"><code class="language-Python" data-lang="Python">numbers = [1, 3, 5, 7, 10]
+sq = 0
+for val in numbers:
+	sq = val * val
+	print(sq)</code></pre>
+          </div>
+         </div>
+        </li>
+        <li>
+         <p>
+          What will the following code print out?
+         </p>
+         <div class="listingblock">
+          <div class="content">
+           <pre class="highlight"><code class="language-Python" data-lang="Python">for i in range(1, 20, 2):
+	print(i)</code></pre>
+          </div>
+         </div>
+        </li>
+        <li>
+         <p>
+          Use the following definition of the function front3 to find the output of the program for the list [1, 3, 5, 7].
+         </p>
+         <div class="listingblock">
+          <div class="content">
+           <pre class="highlight"><code class="language-Python" data-lang="Python">def front3(nums):
+	i = 0
+	while (i &lt; len(nums) and i &lt; 5):
+		if nums[i] == 3:
+			return True
+		i += 1
+	return False</code></pre>
+          </div>
+         </div>
+        </li>
+        <li>
+         <p>
+          Write a function that takes a input two lists of integers, a and b, both of length 3, and returns a new list of length 2 containing the last elements of a and b. For example, if a = [1, 2, 3]
+and b = [10, 20, 30], then the function should return a list [3, 30].
+         </p>
+        </li>
+       </ol>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { extensions: ["mhchem.js"] }
+});
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML">
+  </script>
+ </body>
+</html>
