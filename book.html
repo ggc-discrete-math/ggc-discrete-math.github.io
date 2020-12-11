@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="generator" content="Asciidoctor 1.5.6">
 <meta name="author" content="Mohamed Jamaloodeen, Kathy Pinzon, Daniel Pragel, Joshua Roberts, Sebastien Siva">
 <title>Discrete Math</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <link rel="stylesheet" href="./asciidoctor.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
 <style>
   .click .title { color: blue; }
@@ -115,8 +115,8 @@ $(document).on('page:load', ready2);
 </li>
 <li><a href="#_growth_of_functions">6. Growth of Functions</a>
 <ul class="sectlevel2">
-<li><a href="#_introducing_big_o">6.1. Introducing <em>Big O</em></a></li>
-<li><a href="#_properties_of_big_o_notation">6.2. Properties of <em>Big O</em> notation.</a></li>
+<li><a href="#_introducing_em_big_o_em">6.1. Introducing <em>Big O</em></a></li>
+<li><a href="#_properties_of_em_big_o_em_notation">6.2. Properties of <em>Big O</em> notation.</a></li>
 <li><a href="#_exercises_6">6.3. Exercises</a></li>
 </ul>
 </li>
@@ -134,9 +134,9 @@ $(document).on('page:load', ready2);
 </li>
 <li><a href="#_counting">8. Counting</a>
 <ul class="sectlevel2">
-<li><a href="#_the_product_rule_and">8.1. The Product Rule (<em>and</em>)</a></li>
-<li><a href="#_the_sum_rule_xor">8.2. The Sum Rule (<em>xor</em>)</a></li>
-<li><a href="#_the_subtraction_rule_or">8.3. The Subtraction Rule (<em>or</em>)</a></li>
+<li><a href="#_the_product_rule_em_and_em">8.1. The Product Rule (<em>and</em>)</a></li>
+<li><a href="#_the_sum_rule_em_xor_em">8.2. The Sum Rule (<em>xor</em>)</a></li>
+<li><a href="#_the_subtraction_rule_em_or_em">8.3. The Subtraction Rule (<em>or</em>)</a></li>
 <li><a href="#_the_pigeonhole_principle">8.4. The Pigeonhole Principle</a></li>
 <li><a href="#_permutations_and_combinations">8.5. Permutations and Combinations</a></li>
 <li><a href="#_exercises_8">8.6. Exercises</a></li>
@@ -478,6 +478,9 @@ the fundamental ideas related to gerrymandering.</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example&#8212;&#8203;Mathematics and Voting</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Consider a fictitious state made up of \(10\) congressional districts
 with \(7\) thousand voters in each district. To win a district a party
 (Green or Blue) needs to win \(4\) thousand or more votes.
@@ -486,11 +489,14 @@ In each scenario, the blue party earns \(28\) thousand votes, and
 the green party earns \(42\) thousand votes. In scenario \(A\), the blue party
 wins \(2\) out of \(10\) districts, but in scenario \(B\) it wins \(7\)  out of \(10\) districts.</p>
 </div>
+<div class="paragraph">
+<div class="title">Gerrymandering example with two equivalent votes</div>
+<p></p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="images/gerrymandering.png" alt="gerrymandering">
 </div>
-<div class="title">Figure 7. Gerrymandering example with two equivalent votes</div>
 </div>
 </div>
 </div>
@@ -528,17 +534,23 @@ counted.</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example&#8212;&#8203;The discrete set of all real integers</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>The set of all real numbers is a continuous set, and cannot be counted (said to be uncountable).</p>
 </div>
 <div class="paragraph">
 <p>By contrast the set of integers, both negative and positive,
 \(..., -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6,...\), is countable and discrete.</p>
 </div>
+<div class="paragraph">
+<div class="title">The set of real integers</div>
+<p></p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="images/set_integers.png" alt="set integers">
 </div>
-<div class="title">Figure 8. The set of real integers</div>
 </div>
 </div>
 </div>
@@ -546,16 +558,22 @@ counted.</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example&#8212;&#8203;The discrete set of rational numbers</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>The set of all fractions or rational numbers in
 the interval \([0,1\)] is countable, by contrast, with the set of
 all real numbers in the continuous interval, \([0,1\)], which is uncountable and also not
 discrete.</p>
 </div>
+<div class="paragraph">
+<div class="title">The set of rational numbers in the interval, \([0,1\)].</div>
+<p></p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="images/set_rationals.png" alt="set rationals">
 </div>
-<div class="title">Figure 9. The set of rational numbers in the interval, \([0,1\)].</div>
 </div>
 </div>
 </div>
@@ -563,6 +581,9 @@ discrete.</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example&#8212;&#8203;All finite sets are discrete</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>As noted, any finite set is discrete. Examples include</p>
 </div>
 <div class="olist loweralpha">
@@ -584,6 +605,9 @@ discrete.</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example&#8212;&#8203;Relations from one finite set to another</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>The set of all relations from one finite set to another finite set, is also finite and
 discrete.</p>
 </div>
@@ -1126,6 +1150,9 @@ The first index specifies the starting point of the slice while the second index
 </div>
 <div class="sidebarblock">
 <div class="content">
+<div class="paragraph">
+<p></p>
+</div>
 <div class="openblock">
 <div class="title">Defining Functions</div>
 <div class="content">
@@ -1310,8 +1337,11 @@ and b = [10, 20, 30], then the function should return a list [3, 30].</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
-<div class="ulist">
+<div class="paragraph">
 <div class="title">Examples 1 - Propositions</div>
+<p></p>
+</div>
+<div class="ulist">
 <ul>
 <li>
 <p>Atlanta is the capital of Iowa.</p>
@@ -1764,8 +1794,11 @@ logically equivalent.</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
-<div class="olist loweralpha">
+<div class="paragraph">
 <div class="title">Example 6 - Conditional, Converse, Contrapositive and Inverse.</div>
+<p></p>
+</div>
+<div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
 <p>Translate the statement, "If an integer \(n\), is divisible by \(4\), then it is
@@ -1776,8 +1809,11 @@ divisible by \(2\)", using a conditional.</p>
 </li>
 </ol>
 </div>
-<div class="olist loweralpha">
+<div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
 <p>Let</p>
@@ -1923,6 +1959,9 @@ denoted in mathematics by \(p \iff q\), is short hand for the statement "p if an
 </div>
 <div class="paragraph">
 <div class="title">You Try</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Edit the code above to reveal the truth value of the compound proposition:</p>
 </div>
 <div class="paragraph">
@@ -2149,7 +2188,7 @@ denoted in mathematics by \(p \iff q\), is short hand for the statement "p if an
 </div>
 </div>
 <div class="sect3">
-<h4 id="_de_morgans_laws">3.2.1. De Morgan&#8217;s Laws</h4>
+<h4 id="_de_morgan_s_laws">3.2.1. De Morgan&#8217;s Laws</h4>
 <div class="paragraph">
 <p>Two important logical equivalences are De Morgan&#8217;s Law.  These describe how we "distribute" the negation across the and and or operators.</p>
 </div>
@@ -2180,6 +2219,9 @@ We use the symbol \(\equiv\) to denote two statements which are logically equiva
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 12</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Recall the truth table for the implication proposition from above.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 50%;">
@@ -2299,8 +2341,11 @@ be a <strong>contingency</strong>.</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
-<div class="ulist">
+<div class="paragraph">
 <div class="title">Example 14 - Predicates</div>
+<p></p>
+</div>
+<div class="ulist">
 <ul>
 <li>
 <p>\(x \leq 3\)</p>
@@ -2420,6 +2465,9 @@ We use the example domain [-2, -1, 0, 1, 2] because code can not check all integ
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 18</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Universal Quantifier \(\forall x, x + x \gt x\)</p>
 </div>
 <div class="openblock">
@@ -2444,6 +2492,9 @@ We use the example domain [-2, -1, 0, 1, 2] because code can not check all integ
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 19</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Existential Quantifier \(\exists x, x^2 = 4\)</p>
 </div>
 <div class="openblock">
@@ -2465,6 +2516,9 @@ We use the example domain [-2, -1, 0, 1, 2] because code can not check all integ
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 20</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Existential Quantifier \(\exists x, x^3 = 4\)</p>
 </div>
 <div class="openblock">
@@ -2668,8 +2722,11 @@ While the second statement, there exists an integer \(x\), such that for all int
 </li>
 </ul>
 </div>
-<div class="ulist">
+<div class="paragraph">
 <div class="title">You Try</div>
+<p></p>
+</div>
+<div class="ulist">
 <ul>
 <li>
 <p>\(\forall y Q(1,y)\)</p>
@@ -2886,7 +2943,7 @@ a binary adder.</p>
 <div class="content">
 <img src="images/binary_adder.png" alt="binary adder">
 </div>
-<div class="title">Figure 10. A Binary adder</div>
+<div class="title">Figure 7. A Binary adder</div>
 </div>
 <div class="paragraph">
 <p>The logic table for binary addition based on the digital inputs \(A, B, C_{in}\), and digital outputs
@@ -2994,7 +3051,7 @@ The graphical representation for each is shown below.</p>
 <div class="content">
 <img src="images/basic_gates.png" alt="basic gates">
 </div>
-<div class="title">Figure 11. Basic gates</div>
+<div class="title">Figure 8. Basic gates</div>
 </div>
 <div class="paragraph">
 <p>We end this section by  first analyzing logic circuits to give their outputs in
@@ -3013,6 +3070,9 @@ terms of their input variables, and then, constructing logic circuits based on l
 </div>
 <div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Proceeding left to right, determine the output of the leftmost gates first using the basic gate outputs.</p>
 </div>
 <div class="imageblock">
@@ -3037,6 +3097,9 @@ is to work backward using order of operations from the right to the left.</p>
 </div>
 <div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Working backwards from right to left we have the following sequence of gates</p>
 </div>
 <div class="paragraph">
@@ -3071,6 +3134,9 @@ of an <strong>INVERTER</strong>, \(\underline{\lnot} q\).</p>
 </div>
 <div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Working backwards from right to left we have the following sequence of gates</p>
 </div>
 <div class="paragraph">
@@ -3509,14 +3575,20 @@ ignore duplicate elements.</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 3 - Switching between representations</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Consider the following set: \[\{x \in \mathbb{Z} : -2 \leq x &lt; 4\}.\] This is the set of all integers \(x\) such that \(-2\) is less than or equal \(x\) and \(x\) is less than 4. Using the roster method, this set can be written as \[\{-2,-1,0,1,2,3\}.\]</p>
 </div>
 <div class="paragraph">
 <div class="title">You Try</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Match each set described using set builder notation in parts (a) through (f) with the same set described using the roster method in parts (A) through (F).</p>
 </div>
 <div class="olist loweralpha">
-<ol class="loweralpha">
+<ol class="loweralpha" type="a">
 <li>
 <p>\(\{x \in \mathbb{Z} : x^2 = 1\}\)</p>
 </li>
@@ -3537,8 +3609,11 @@ ignore duplicate elements.</p>
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p></p>
+</div>
 <div class="olist upperalpha">
-<ol class="upperalpha">
+<ol class="upperalpha" type="A">
 <li>
 <p>\(\{-1,0,1\}\)</p>
 </li>
@@ -4009,6 +4084,9 @@ A - B</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">You Try</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Draw Venn Diagrams for each of these combinations of the sets \(A\), \(B\), and \(C\).</p>
 </div>
 <div class="olist arabic">
@@ -4043,6 +4121,9 @@ defined by,</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 17</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Consider the sets, \(B=\{0,1\}\), \(T=\{0,1,2\}\), and, \(C=\{a,\ b,\ c, d\}\).
 Determine the Cartesian products, and their cardinalities.</p>
 </div>
@@ -4067,6 +4148,9 @@ Determine the Cartesian products, and their cardinalities.</p>
 </div>
 <div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>For the set, \( B\ \times C \), notice that
 this will be all ordered pairs of the form,
 \((a,b)\), with \(a \in B\), and \(b \in C\), giving,</p>
@@ -4732,11 +4816,17 @@ A function is not surjective if
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 1 - injective but not surjective.</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Explain why the real-valued exponential function \(f(x)=2^x\) is injective, but not surjective,
 from \(f: \mathbb{R} \rightarrow \mathbb{R}\).</p>
 </div>
 <div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>For injectivity, notice that the exponential function \(f(x)=2^x\) is strictly
 increasing, as can be seen from its graph.
 Every horizontal line intersects the graph at most once, meaning that if \(2^m =2^n\), then
@@ -4755,6 +4845,9 @@ surjective, from \(\mathbb{R} \rightarrow \mathbb{R}\).</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 2- neither injective nor surjective</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Explain why the real-valued exponential function \(f(x)=x^2\) is neither injective
 nor surjective, from \(f: \mathbb{R} \rightarrow \mathbb{R}\).</p>
 </div>
@@ -4778,10 +4871,16 @@ injective. A horizontal line at \(y=4\), meets the graph at both \(x=2\), and \(
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 3 - A bijective function</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Explain why the function \(f(x)=x^3\), from \(f:R\rightarrow R\), is bijective.</p>
 </div>
 <div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>We need to show that the function is both injective and surjective.
 Notice from the graph of \(f(x)=x^3\) that the domain and codomain are
 both all real numbers, \(\mathbb{R}\). Every real number \(b\) can be reached because
@@ -4802,10 +4901,16 @@ This means that if \(a^3=b^3\), then necessarily \(a=b\). In fact if \(a^3=b^3=c
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 4 - Verifying a function is bijective</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Verify that the function \(f\left(x\right)=3x+5\), from \(f:R\rightarrow R\), is bijective.</p>
 </div>
 <div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>For injectivity, suppose \(f\left(m\right)=f(n)\). We want to show \(m=n\).</p>
 </div>
 <div class="paragraph">
@@ -4956,11 +5061,17 @@ functions are shown below.</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 5</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Explain why the floor function, \( f(x)=\lfloor x \rfloor \), from the real line to the set of all integers,
 is surjective but not injective.</p>
 </div>
 <div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>For surjectivity, notice that the range, and co-domain is, \(\mathbb{Z}\), the set of
 all real numbers. Also for
 any integer, \(m\), \( f(m)=\lfloor m \rfloor =m\), meaning that every integer, \(m\), is reached, or
@@ -5053,8 +5164,11 @@ and   \(h(4) =\min\) \(\left(\sqrt4,\ 4^2\right)=\min(2,16)=2\).</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
-<div class="openblock float-group">
+<div class="paragraph">
 <div class="title">Graph of \(h(x) =min(\sqrt x,\ x^2)\) over the interval \([0,2 \)]</div>
+<p></p>
+</div>
+<div class="openblock float-group">
 <div class="content">
 <div class="imageblock left text-left">
 <div class="content">
@@ -5099,12 +5213,18 @@ algebraic operations of addition, subtraction, multiplication, and division.</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 6</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Consider \(f\left(x\right)=x^2+1\) and \(g\left(x\right)=\sqrt x\) defined on \(f,\ g:R\rightarrow R\).Form
 \(\left(f+g\right)\), \(\left(f-g\right)\), \(\left(f\cdot\ g\right)\),  and \(\left(\frac{f}{g}\right)\), and determine their
 respective domains.</p>
 </div>
 <div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>The common domain is \(\ x\ \geq0\), since the square root is real valued only for \(\ x\ \geq0\).</p>
 </div>
 <div class="paragraph">
@@ -5143,6 +5263,9 @@ provided \(x\ \in\ A\) and \(g\left(x\right)\in B\).</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 7</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Consider \(f\left(x\right)=\frac{1}{x}\) and \(g\left(x\right)=2x-3\),
 defined on \(f,g:R\rightarrow R\). Notice that \(g\left(x\right)\)
 is defined for all real \(x\) and \(f\left(x\right)\) is defined for all real \(x\ \neq0\). Form the compositions,
@@ -5151,6 +5274,9 @@ is defined for all real \(x\) and \(f\left(x\right)\) is defined for all real \(
 </div>
 <div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>\(h\left(x\right)=\left(f \circ g\right)\left(x\right)=f\left(g\left(x\right)\right)=f\left(2x-3\right)=\frac{1}{2x-3}\).
 Here \(x\) needs to be in the domain of \(g\left(x\right)\),  or all real \(x\),
 and \(g\left(x\right)\) needs to be in the domain of \(f\left(x\right)\).
@@ -5167,6 +5293,9 @@ needs to be in the domain of \(g\left(x\right)\), or \(f\left(x\right)\) can be 
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 8 - composing inverse functions</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Consider \(f\left(x\right)=x^3+1\) and  \$g(x) =root(3)(x-1)\$
 defined on on \(f,g:R\rightarrow R\).
 Show that \(\left(g \circ f\right)\left(1\right)=1, \left(g \circ f\right)\left(2\right)=2, \left(g\circ f\right)\left(3\right)=3\),
@@ -5260,6 +5389,9 @@ is a relation that is not a function because of the mappings
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 9 - finding an inverse</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Find the inverse \(g\left(x\right)\) of  the bijective function
 \(f\left(x\right)=3x+5\) for \(f,\ g:R\rightarrow R\) .  Verify the inverse and show \(\left(f \circ g\right)\left(x\right)=x=\left(g \circ f\right)\left(x\right)\).</p>
 </div>
@@ -5268,6 +5400,9 @@ is a relation that is not a function because of the mappings
 </div>
 <div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>If \(f:x\rightarrow y\) corresponds to \((x,y)\), then the inverse  \(g:y\rightarrow x\)
 corresponds to \((y,x)\). This means that the inverse of the relation
 \(y=f\left(x\right)=3x+5\), is the relation \(x=f\left(y\right)=3y+5\).</p>
@@ -5540,7 +5675,7 @@ increasing</strong> if whenever \$x&lt;y\$, then \$f(x)&lt;f(y)\$.</p>
 <h2 id="_growth_of_functions">6. Growth of Functions</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_introducing_big_o">6.1. Introducing <em>Big O</em></h3>
+<h3 id="_introducing_em_big_o_em">6.1. Introducing <em>Big O</em></h3>
 <div class="paragraph">
 <p>Computer programmers  are often concerned with two questions:</p>
 </div>
@@ -5783,7 +5918,7 @@ when \( x= A^2\) we obtain \( g(A^2) = A  \sqrt{(A^2)}= A^2\) and \( f(A^2) = {\
 </div>
 </div>
 <div class="sect2">
-<h3 id="_properties_of_big_o_notation">6.2. Properties of <em>Big O</em> notation.</h3>
+<h3 id="_properties_of_em_big_o_em_notation">6.2. Properties of <em>Big O</em> notation.</h3>
 <div class="paragraph">
 <p>Suppose \(f(x)\) is \(O(F(x))\) and \(g(x)\) is \(O(G(x))\).</p>
 </div>
@@ -5871,6 +6006,9 @@ growth using the basic properties for Big O and the basic orderings.</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 5</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Find the Big O of each of the following and then rank by <em>Big</em> \(O\) growth:</p>
 </div>
 <div class="paragraph">
@@ -5884,6 +6022,9 @@ growth using the basic properties for Big O and the basic orderings.</p>
 </div>
 <div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>First consider \(f\left(x\right)\) and using the polynomial
 property observe that \(\left({3x}^3+x\right)\) is \(O(x^3)\).
 Using the multiplicative property, conclude that
@@ -6186,7 +6327,7 @@ For example the sequence of steps,</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="title">While loop</div>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 3. While Loop Example</caption>
 <colgroup>
 <col style="width: 50%;">
@@ -6200,7 +6341,7 @@ For example the sequence of steps,</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-pseudo" data-lang="pseudo">while Expression do <i class="conum" data-value="1"></i><b>(1)</b>
   statement 1 (s1)
@@ -6224,7 +6365,7 @@ end <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </tr>
 </table>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-python" data-lang="python">while Expression: <i class="conum" data-value="1"></i><b>(1)</b>
   statement 1 (s1)
@@ -6998,7 +7139,7 @@ statements \((S_i)\) are executed.</p>
 <p>Here are two pseudocode implementations of an algorithm to count the  non-negative
 integers less than 11, the first using an output and the second a print statement.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 4. Output Examples</caption>
 <colgroup>
 <col style="width: 50%;">
@@ -7012,7 +7153,7 @@ integers less than 11, the first using an output and the second a print statemen
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-pseudo" data-lang="pseudo">count = 0
 while (count &lt; 11) do
@@ -7022,7 +7163,7 @@ end
 output "Good bye! Thanks for counting."</code></pre>
 </div>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-pseudo" data-lang="pseudo">count = 0
 while (count &lt; 11) do
@@ -7465,7 +7606,7 @@ For example to evaluate \(5^6\), we could multiply iteratively, 5,</p>
 <div class="paragraph">
 <p>A pseudocode implementation of the algorithm might be as follows.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -7476,22 +7617,22 @@ For example to evaluate \(5^6\), we could multiply iteratively, 5,</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
 <p>Computes the exponent \(b^n\)</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
 <p><strong>Input:</strong> A positive integer, \(n\) and a positive base, \(b\)</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
 <p><strong>Output:</strong> \(b^n\)</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-pseudo" data-lang="pseudo">procedure Exponentiation(n, b)
 begin
@@ -7694,6 +7835,9 @@ order.</p>
 </div>
 <div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>First Pass</p>
 </div>
 <div class="paragraph">
@@ -7809,6 +7953,9 @@ Algorithm.</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 12 - Tracing the Insertion Sort Algorithm</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>As an example we consider explicitly the steps of the Insertion Sort Algorithm to sort \(6, 2, 5, 3, 4, 1, \) in increasing
 order.
 The key, or boundary, between the sorted and unsorted portions is denoted by the vertical bar or pipe character.</p>
@@ -7905,7 +8052,7 @@ The key, or boundary, between the sorted and unsorted portions is denoted by the
 Recall big \(O\) notation is used to quantify the worst case an algorithm performs on a data input size of n.</p>
 </div>
 <div class="sect3">
-<h4 id="_the_linear_search_algorithm_is_on">7.7.1. The Linear Search Algorithm is \(O(n)\).</h4>
+<h4 id="_the_linear_search_algorithm_is_o_n">7.7.1. The Linear Search Algorithm is \(O(n)\).</h4>
 <div class="paragraph">
 <p>The linear search algorithm iterates across a list of \(n\) data elements. If the first element in the list is the target
 element, the algorithm stops. Otherwise, move to the next element and continue
@@ -7921,7 +8068,7 @@ runs in \(O(n)\) time in the worst case.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_the_bubble_sort_and_insertion_sort_algorithms_are_on2">7.7.2. The Bubble Sort and Insertion Sort Algorithms are \(O(n^2)\).</h4>
+<h4 id="_the_bubble_sort_and_insertion_sort_algorithms_are_o_n_2">7.7.2. The Bubble Sort and Insertion Sort Algorithms are \(O(n^2)\).</h4>
 <div class="paragraph">
 <p>We analyze the bubble sort algorithm beginning with a concrete list of size \(n=5\) and
 generalize the analysis.</p>
@@ -7969,7 +8116,7 @@ both the elements in positions 1 and 2 are both in their correct positions.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_the_binary_search_algorithm_is_ologn">7.7.3. The Binary  Search Algorithm is \(O(\log{n})\).</h4>
+<h4 id="_the_binary_search_algorithm_is_o_log_n">7.7.3. The Binary  Search Algorithm is \(O(\log{n})\).</h4>
 <div class="paragraph">
 <p>The binary search algorithm searches for a target element \(x\)  in a list of \(n\) elements
 by comparing the middle element in the the sorted data set with the target \(x\). The algorithm
@@ -8328,7 +8475,7 @@ For example,  the set \(a_1=10,\ a_2=10,\ a_3=7,\ a_4=6,\ a_5=2,\ a_6=0\) has me
 <li>
 <p>Consider the following lists of integers.</p>
 <div class="olist upperalpha">
-<ol class="upperalpha">
+<ol class="upperalpha" type="A">
 <li>
 <p>\(\{4,8,3,10,7,2,6,9,5,1\}\)</p>
 </li>
@@ -8360,7 +8507,7 @@ For example,  the set \(a_1=10,\ a_2=10,\ a_3=7,\ a_4=6,\ a_5=2,\ a_6=0\) has me
 <li>
 <p>For the following lists,</p>
 <div class="olist upperalpha">
-<ol class="upperalpha">
+<ol class="upperalpha" type="A">
 <li>
 <p>\(\{6,31,46,49,49,55,56,59,65,82\}\)</p>
 </li>
@@ -8388,7 +8535,7 @@ For example,  the set \(a_1=10,\ a_2=10,\ a_3=7,\ a_4=6,\ a_5=2,\ a_6=0\) has me
 <p>There are three basic counting rules used in this section, one for each of the arithmetic operations of multiplication, addition and subtraction.</p>
 </div>
 <div class="sect2">
-<h3 id="_the_product_rule_and">8.1. The Product Rule (<em>and</em>)</h3>
+<h3 id="_the_product_rule_em_and_em">8.1. The Product Rule (<em>and</em>)</h3>
 <div class="paragraph">
 <p>To find the total number of outcomes for two or more successive events where both events must occur, multiply the number of outcomes for each event together.  For instance, if you want to find the number of outcomes possible when you roll a die and toss a coin, you could use the product rule. It is important to note that the events must be independent, meaning one doesn&#8217;t effect the other.</p>
 </div>
@@ -8475,7 +8622,7 @@ product rule, there are \(7 \times 6 \times 5 \times 4 = 840\) ways to assign th
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_sum_rule_xor">8.2. The Sum Rule (<em>xor</em>)</h3>
+<h3 id="_the_sum_rule_em_xor_em">8.2. The Sum Rule (<em>xor</em>)</h3>
 <div class="paragraph">
 <p>Consider finding the total number of ways a particular event occurs from a variety of different options.  For instance, if you want to find the number of ways to pick an ITEC major to win a prize knowing there are students from many concentrations, you could use the sum rule.  It is important to note the events must be mutually exclusive, meaning they do not have anything in common.</p>
 </div>
@@ -8526,7 +8673,7 @@ one list, the sum rules says that there are \(3 + 7 + 4 = 14\) projects to choos
 <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2022371/sp/202237100/embedIframeJs/uiconf_id/31860982/partner_id/2022371?iframeembed=true&playerId=kaltura_player&entry_id=0_vkqpuw8o&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_jo4vqwqx" width="700" height="500" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
 </div>
 <div class="sect2">
-<h3 id="_the_subtraction_rule_or">8.3. The Subtraction Rule (<em>or</em>)</h3>
+<h3 id="_the_subtraction_rule_em_or_em">8.3. The Subtraction Rule (<em>or</em>)</h3>
 <div class="paragraph">
 <p>If your events are not mutually exclusive, to find the total number of possibilities use the subtraction rule.</p>
 </div>
@@ -8699,6 +8846,9 @@ there are \(2^3 + 2^2 - 2 = 8+4-2=10\) possibilities.</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 10</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>If there are 10 runners in a race, how many different ways can the gold, silver, and bronze medals be awarded?</p>
 </div>
 <div class="paragraph">
@@ -9548,6 +9698,9 @@ In general, we have the following theorem.</p>
 </div>
 <div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>We have</p>
 </div>
 <div class="openblock equationalign">
@@ -9609,6 +9762,9 @@ In general, we have the following theorem.</p>
 </div>
 <div class="paragraph">
 <div class="title">Solution</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>We have</p>
 </div>
 <div class="openblock equationalign">
@@ -9696,7 +9852,7 @@ Since \((0110)_2 = (6)_{16},\) \((1011)_2 = (\mathrm{B})_{16},\) and \((1111)_2 
 <div class="paragraph">
 <p><strong>Conversion table for different bases</strong></p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 5.8823%;">
 <col style="width: 5.8823%;">
@@ -10538,7 +10694,7 @@ style='font-family:"Century Schoolbook",serif'>end</span></b></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_recursive_implementation_of_the_power_function_bn">10.3.2. Recursive Implementation of the Power Function \(b^n\)</h4>
+<h4 id="_recursive_implementation_of_the_power_function_b_n">10.3.2. Recursive Implementation of the Power Function \(b^n\)</h4>
 <div class="paragraph">
 <p>As another simple example, we consider a recursive implementation of exponentiation \(b^n\) with \(n\) a nonnegative integer, \(b>0\), and \(b  \neq 1\).</p>
 </div>
@@ -11308,11 +11464,14 @@ Assume,</p>
 <div class="paragraph">
 <p>\(m!>3^m\) implies  \((m+1 )!>3^{m+1}\).</p>
 </div>
+<div class="paragraph">
+<div class="title">Graphs of \(n!\), and \(3^n\), showing \(n! > 3^n\), for \(n>6\).</div>
+<p></p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="images/induction3.png" alt="induction3">
 </div>
-<div class="title">Figure 12. Graphs of \(n!\), and \(3^n\), showing \(n! > 3^n\), for \(n>6\).</div>
 </div>
 </div>
 </div>
@@ -11320,6 +11479,9 @@ Assume,</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 13 - Divisibility</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>Prove the following using the principle of mathematical induction:</p>
 </div>
 <div class="paragraph">
@@ -11618,6 +11780,9 @@ joining the same pair of vertices. The graphs we consider are assumed to be simp
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 1 - an undirected graph.</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>The graph shown has vertex set \(V=\left\{A,\ B,\ C,\ D,\ E,\ F\right\}\) and edge set
 \(E=\{\{A,C\},\{A,D\},\{B,D\}\{B,F\},\{C,F\},\{D,F\},\{F,E\}\}\)</p>
 </div>
@@ -11636,6 +11801,9 @@ recognized to be ordered.</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 2 - a directed graph.</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>The graph  \(G=(V,E)\) with vertex set  \(V=\{A,B,C,D,E,F\}\)  and edge set
 \(E=\{\{A,C\},\{D,A\},\{B,D\}\{F,B\},\{C,F\},\{D,F\},\{G,E\}\}\) with edge set considered as
 ordered is a directed graph and shown below.</p>
@@ -11655,6 +11823,9 @@ containing the vertex \(v\).</p>
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 3</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>The degrees of each of the vertices in the undirected graph \(G\)  with vertex set
 \(V=\{A,B,C,D,E,F,G\}\) and edge set \(E=\{\{A,C\},\{A,D\},\{B,D\}\{B,F\},\{C,F\},\{D,F\},\{F,G\}\)
 are,</p>
@@ -11742,6 +11913,9 @@ m_{i,j}=\left\{
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 4 - adjacency matrix of a graph</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>The graph with  vertex set \(V=\left\{A,\ B,\ C,\ D,\ E,\ F\right\}\) and edge
 set
 \(E=\{\{A,C\},\{A,D\},\{B,D\}\{B,F\},\{C,F\},\{D,F\},\{F,E\}\}\) has adjacency matrix</p>
@@ -11755,6 +11929,9 @@ set
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 5 - obtaining the graph from the adjacency matrix</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>The graph with adjacency matrix</p>
 </div>
 <div class="paragraph">
@@ -11780,6 +11957,9 @@ set
 <div class="content">
 <div class="paragraph">
 <div class="title">Example 6 - adjacency matrices for an undirected graph and for a directed graph</div>
+<p></p>
+</div>
+<div class="paragraph">
 <p>In the figure below the first graph is undirected while the second is a digraph.</p>
 </div>
 <div class="imageblock">
@@ -12557,7 +12737,7 @@ the inverse of the exponential and the equivalence of the logarithm \(a =\log_b 
 <div class="sect1">
 <h2 id="_appendix_2_python_syntax_examples">13. Appendix 2: Python Syntax Examples</h2>
 <div class="sectionbody">
-<div class="listingblock small">
+<div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="python"><table class="pyhltable"><tr><td class="linenos"><div class="linenodiv"> 1
  2
@@ -12728,6 +12908,6 @@ MathJax.Hub.Config({
   TeX: { extensions: ["mhchem.js"] }
 });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 </body>
 </html>
