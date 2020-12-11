@@ -2,7 +2,7 @@
 
 
 
-An *algorithm* is a STEP-BY-STEP process, defined by a set of
+An *algorithm* is a step-by-step process, defined by a set of
 instructions to be executed sequentially to achieve a specified task producing
 a determined output.
 
