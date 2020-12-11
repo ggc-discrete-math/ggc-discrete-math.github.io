@@ -6,7 +6,7 @@ An *algorithm* is a step-by-step process, defined by a set of
 instructions to be executed sequentially to achieve a specified task producing
 a determined output.
 
-Examples of common discrete mathematics algorithms include:
+EXAMPLES OF COMMON discrete mathematics algorithms include:
 
 * Searching  Algorithms to search  for an item in a data set or data structure like a tree.
 * Sorting Algorithms to sort items in a specific  order.
