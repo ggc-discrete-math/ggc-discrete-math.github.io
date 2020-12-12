@@ -26,7 +26,7 @@ While the algorithms we describe are implemented in the Python programming langu
 
 [NOTE]
 ====
-Many of the terms in this section were also discussed in <<Introduction to Python>>.
+Many of the terms in this section were also discussed in link:python_intro.html#_introduction_to_python[Introduction to Python].
 ====
 
 Recall that an algorithm is a process of finite sequences of instructions used to solve a problem or obtain a result of a computation.
@@ -65,8 +65,6 @@ A *statement* is a line of code or instruction step in an algorithm or program.
 
 A *while* loop is a control flow statement that iterates a sequence of statements provided the Boolean expression is _True_.
 
-.While loop
-****
 .While Loop Example
 [%header,cols="1a,1a"]
 |===
@@ -102,8 +100,6 @@ while Expression: //<1>
 
 |===
 
-
-****
 The loop iterates as long as  the sequence of statements $(s_1\ldots s_n,)$
 maintains the True value of _Expression_ and
 exits after an iteration of  $(s_1\ldots s_n,)$ that changes _Expression_
@@ -126,252 +122,73 @@ include::python_tutor.adoc[]
 
 A *for* loop has a very similar control flow statement to a *while* loop.
 
-.For loop
+.For Loop Example
+[%header,cols="1a,1a"]
+|===
+|Pseudo Code
+|Python Code
 
-****
+|[source, pseudo]
+----
+for iterating_variable in sequence do
+	statement 1 (s1)
+	statement 2 (s2)
+	.
+	.
+	.
+	statement n (sn)
+end
+----
 
-++++
-<html>
+|[source, python]
+----
+for iterating_variable in sequence:
+  statement 1 (s1)
+  statement 2 (s2)
+  .
+  .
+  .
+  statement n (sn)
 
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:106%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-pre
-	{mso-style-link:"HTML Preformatted Char";
-	margin:0in;
-	margin-bottom:.0001pt;
-	font-size:10.0pt;
-	font-family:"Courier New";}
-span.HTMLPreformattedChar
-	{mso-style-name:"HTML Preformatted Char";
-	mso-style-link:"HTML Preformatted";
-	font-family:"Courier New";}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:106%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-</head>
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=719
- style='width:539.6pt;border-collapse:collapse'>
- <tr style='height:22.8pt'>
-  <td width=419 valign=top style='width:314.6pt;border:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Pseudocode</b></p>
-  </td>
-  <td width=300 valign=top style='width:225.0pt;border:solid windowtext 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Python</b></p>
-  </td>
- </tr>
- <tr style='height:110.2pt'>
-  <td width=419 valign=top style='width:314.6pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-  style='font-family:"Century Schoolbook",serif'>for </span></b><i><span
-  style='font-size:10.0pt;line-height:106%;font-family:"Century Schoolbook",serif'>iterating_variable</span></i><b><span
-  style='font-family:"Century Schoolbook",serif'> in</span></b><i><span
-  style='font-size:10.0pt;line-height:106%;font-family:"Century Schoolbook",serif'>
-  sequence </span></i><b><span style='font-family:"Century Schoolbook",serif'>do</span></b></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-   1 (s<sub>1</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-   2 (s<sub>2</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-  n (s<sub>n</sub>)</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal;punctuation-wrap:simple;text-autospace:none'><b><span
-  style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-  </td>
-  <td width=300 valign=top style='width:225.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:110.2pt'><pre>for iterating_var in sequence:</pre><pre
-  style='margin-left:.5in'>statements(s)</pre>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>&nbsp;</p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal><span style='color:white'>&nbsp;</span></p>
-
-</div>
-
-</body>
-
-</html>
-
-++++
+----
+|===
 
 ****
 
 The most common form of the for loop is with a sequential integer counter $i$.
 
-.For  loop with iterative counter $i$.
-
+.For loop with iterative counter $i$.
 ****
+.For Loop with counter
+[%header,cols="1a,1a"]
+|===
+|Pseudo Code
+|Python Code
 
-++++
-<html>
+|[source, pseudo]
+----
+for i = m to n do
+	statement 1 (s1)
+	statement 2 (s2)
+	.
+	.
+	.
+	statement n (sn)
+end
+----
 
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:105%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:105%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
+|[source, python]
+----
+for i in range(1, n+1):
+  statement 1 (s1)
+  statement 2 (s2)
+  .
+  .
+  .
+  statement n (sn)
 
-</head>
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=419
- style='width:314.6pt;border-collapse:collapse'>
- <tr style='height:22.8pt'>
-  <td width=419 valign=top style='width:314.6pt;border:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Pseudocode</b></p>
-  </td>
- </tr>
- <tr style='height:110.2pt'>
-  <td width=419 valign=top style='width:314.6pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-  style='font-family:"Century Schoolbook",serif'>for </span></b><i><span
-  style='font-size:10.0pt;line-height:105%;font-family:"Century Schoolbook",serif'>i
-  = m </span></i><span style='font-size:10.0pt;line-height:105%;font-family:
-  "Arial",sans-serif'> </span><b><span style='font-family:"Century Schoolbook",serif'>to
-  </span></b><i>n </i><b><span style='font-family:"Century Schoolbook",serif'>do</span></b></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-   1 (s<sub>1</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-   2 (s<sub>2</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-  n (s<sub>n</sub>)</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-  style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal><span style='color:white'>&nbsp;</span></p>
-
-</div>
-
-</body>
-
-</html>
-
-++++
-
-****
+----
+|===
 
 :pt_code_height: 350
 :pt_rawinput: false
@@ -394,117 +211,37 @@ of a conditional statement.
 Another common conditional statement is the *if … then do* statement.
 
 
-.*if … then do* statement.
+.if statement
+[%header,cols="1a,1a"]
+|===
+|Pseudo Code
+|Python Code
 
-****
+|[source, pseudo]
+----
+if expression do
+	statement 1 (s1)
+	statement 2 (s2)
+	.
+	.
+	.
+	statement n (sn)
+end
+----
 
-++++
-<html>
+|[source, python]
+----
+if expression:
+  statement 1 (s1)
+  statement 2 (s2)
+  .
+  .
+  .
+  statement n (sn)
 
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:106%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:106%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
+----
+|===
 
-</head>
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=521
- style='width:391.1pt;border-collapse:collapse'>
- <tr style='height:22.8pt'>
-  <td width=521 valign=top style='width:391.1pt;border:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Pseudocode</b></p>
-  </td>
- </tr>
- <tr style='height:110.2pt'>
-  <td width=521 valign=top style='width:391.1pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
-  <p class=MsoNormal style='margin-top:1.1pt;margin-right:266.6pt;margin-bottom:
-  0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>if
-  </span></b><i><span style='font-size:10.0pt;font-family:"Century Schoolbook",serif'>Expression
-  </span></i><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span><b><span
-  style='font-family:"Century Schoolbook",serif'>do</span></b></p>
-  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-   1 (s<sub>1</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-   2 (s<sub>2</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:1.25pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-  n (s<sub>n</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:1.95pt;margin-bottom:.0001pt;line-height:12.3pt;punctuation-wrap:
-  simple;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal><span style='color:white'>&nbsp;</span></p>
-
-</div>
-
-</body>
-
-</html>
-
-++++
-
-****
 
 The while loop and  the if … then do statement are similar but have one
 important difference. The sequence of statements $s_i$ are executed at most
@@ -516,123 +253,41 @@ once if the Boolean _Expression_ is _True_.
 
 A more general variation of the  if … then do statement is the *if … then do … else do* statement, which allows two choices of execution statements. Its  general syntax is
 
-.*if … then do … else do*
+.if else statement
+[%header,cols="1a,1a"]
+|===
+|Pseudo Code
+|Python Code
 
-****
-++++
-<html>
+|[source, pseudo]
+----
+if expression do
+  statement 1 (s1)
+  statement 2 (s2)
+  .
+  .
+else do
+  .
+  .
+  statement n (sn)
+end
+----
 
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:105%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
+|[source, python]
+----
+if expression:
+  statement 1 (s1)
+  statement 2 (s2)
+  .
+  .
+else:
+  .
+  .
+  statement n (sn)
 
-</head>
+----
+|===
 
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=647
- style='width:485.6pt;border-collapse:collapse'>
- <tr style='height:22.8pt'>
-  <td width=485 valign=top style='width:364.1pt;border:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Pseudocode</b></p>
-  </td>
-  <td width=162 valign=top style='width:121.5pt;border:solid windowtext 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Python</b></p>
-  </td>
- </tr>
- <tr style='height:110.2pt'>
-  <td width=485 valign=top style='width:364.1pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
-  <p class=MsoNormal style='margin-top:1.1pt;margin-right:266.6pt;margin-bottom:
-  0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>if
-  </span></b><i><span style='font-size:10.0pt;font-family:"Century Schoolbook",serif'>Expression
-  </span></i><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>do</span></p>
-  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statements
-  (s<sub>1</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:1.95pt;margin-bottom:.0001pt;line-height:12.3pt;punctuation-wrap:
-  simple;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>else
-  do</span></b></p>
-  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statements
-  &nbsp;(S<sub>1</sub>)&nbsp;&nbsp; </span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:1.95pt;margin-bottom:.0001pt;line-height:12.3pt;punctuation-wrap:
-  simple;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>end
-  </span></b></p>
-  </td>
-  <td width=162 valign=top style='width:121.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>if
-  expression:</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>statement(s)</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>else:</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>statement(s)</span></p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal><span style='color:white'>&nbsp;</span></p>
-
-</div>
-
-</body>
-
-</html>
-
-++++
-****
 
 Here if the Boolean _Expression_ is _True_,
 the sequence of statements $(s_i)$ are executed once, otherwise the sequence of
@@ -695,142 +350,36 @@ repeatedly as necessary rather than replicating all of the code every
 time the algorithm is used.
 
 .Procedures and functions
+[%header,cols="1a,1a"]
+|===
+|Pseudo Code
+|Python Code
 
-****
-++++
-<html>
+|[source, pseudo]
+----
+procedure Name ( input variables and / or input parameters )
+	begin
+		statement 1 (s1)
+		statement 2 (s2)
+		.
+		.
+		.
+		statement n (sn)
+	return value
+end
+----
 
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:105%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-</head>
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=749
- style='width:562.1pt;border-collapse:collapse'>
- <tr style='height:22.8pt'>
-  <td width=413 valign=top style='width:310.1pt;border:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Pseudocode</b></p>
-  </td>
-  <td width=336 valign=top style='width:3.5in;border:solid windowtext 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Python</b></p>
-  </td>
- </tr>
- <tr style='height:110.2pt'>
-  <td width=413 valign=top style='width:310.1pt;border-top:none;border-left:
-  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-  style='font-family:"Century Schoolbook",serif'>procedure<span
-  style='letter-spacing:-1.4pt'> </span></span></b><span style='font-family:
-  "Century",serif'>Name</span>(<span style='letter-spacing:-1.75pt'> </span><i><span
-  style='font-size:10.0pt;line-height:105%;font-family:"Century Schoolbook",serif'>input
-  variables </span></i><span style='letter-spacing:-1.75pt'>and  /  or</span><i><span
-  style='font-size:10.0pt;line-height:105%;font-family:"Century Schoolbook",serif'>
-  input parameters</span></i><span style='letter-spacing:-1.75pt'>)</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  13.0pt;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>begin</span></b></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statements</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-indent:
-  19.45pt;line-height:10.5pt'><span style='font-size:9.0pt;font-family:"Century",serif'>.</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-indent:
-  19.45pt;line-height:10.5pt'><span style='font-size:9.0pt;font-family:"Century",serif'>.</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-indent:
-  19.45pt;line-height:10.5pt'><span style='font-size:9.0pt;font-family:"Century",serif'>.</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-indent:
-  19.45pt;line-height:11.1pt'><b><span style='font-family:"Century Schoolbook",serif'>return
-  </span></b>value</p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  13.0pt;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-  </td>
-  <td width=336 valign=top style='width:3.5in;border:none;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>def  Name(
-  parameters ):</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>statements</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>return [expression]</span></p>
-  </td>
- </tr>
- <tr style='height:.05in'>
-  <td width=413 valign=top style='width:310.1pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:.05in'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-  style='font-family:"Century Schoolbook",serif'>&nbsp;</span></b></p>
-  </td>
-  <td width=336 valign=top style='width:3.5in;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:.05in'>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal><span style='color:white'>&nbsp;</span></p>
-
-</div>
-
-</body>
-
-</html>
-
-++++
-
-****
-
-
+|[source, python]
+----
+def Name( parameters ):
+	statement 1 (s1)
+	statement 2 (s2)
+	.
+	.
+	.
+	statement n (sn)
+	return value
+|===
 
 :pt_code_height: 420
 :pt_rawinput: false

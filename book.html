@@ -6261,7 +6261,7 @@ a determined output.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Many of the terms in this section were also discussed in <a href=#_introduction_to_python> introduction to python</a>.</p>
+<p>Many of the terms in this section were also discussed in <a href=python_intro.html#_introduction_to_python>Introduction to Python</a>.</p>
 </div>
 </td>
 </tr>
@@ -6324,9 +6324,6 @@ For example the sequence of steps,</p>
 <div class="paragraph">
 <p>A <strong>while</strong> loop is a control flow statement that iterates a sequence of statements provided the Boolean expression is <em>True</em>.</p>
 </div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">While loop</div>
 <table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 3. While Loop Example</caption>
 <colgroup>
@@ -6392,8 +6389,6 @@ end <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
 <div class="paragraph">
 <p>The loop iterates as long as  the sequence of statements \((s_1\ldots s_n,)\)
 maintains the True value of <em>Expression</em> and
@@ -6421,330 +6416,93 @@ to False.</p>
 <div class="paragraph">
 <p>A <strong>for</strong> loop has a very similar control flow statement to a <strong>while</strong> loop.</p>
 </div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 4. For Loop Example</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Pseudo Code</th>
+<th class="tableblock halign-left valign-top">Python Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">for iterating_variable in sequence do
+	statement 1 (s1)
+	statement 2 (s2)
+	.
+	.
+	.
+	statement n (sn)
+end</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-python" data-lang="python">for iterating_variable in sequence:
+  statement 1 (s1)
+  statement 2 (s2)
+  .
+  .
+  .
+  statement n (sn)</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="sidebarblock">
 <div class="content">
-<div class="title">For loop</div>
-<html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:106%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-pre
-	{mso-style-link:"HTML Preformatted Char";
-	margin:0in;
-	margin-bottom:.0001pt;
-	font-size:10.0pt;
-	font-family:"Courier New";}
-span.HTMLPreformattedChar
-	{mso-style-name:"HTML Preformatted Char";
-	mso-style-link:"HTML Preformatted";
-	font-family:"Courier New";}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:106%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-
-<style>
-  .click .title { color: blue; }
-  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
-  .openblock { margin-top: 1em; margin-bottom: 1em; }
-  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
-</style>
-
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-<script>
-
-
-
-var ready2;
-
-ready2 = function() {
-
-    $(document).ready(function(){
-
-        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
-        $('.openblock.click').find('.content').hide()
-
-
-        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
-        $('.listingblock.click').find('.content').hide()
-
-    });
-
-}
-
-
-
-
-$(document).ready(ready2);
-$(document).on('page:load', ready2);
-
-
-</script>
-
-</head>
-
-
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=719
- style='width:539.6pt;border-collapse:collapse'>
- <tr style='height:22.8pt'>
-  <td width=419 valign=top style='width:314.6pt;border:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Pseudocode</b></p>
-  </td>
-  <td width=300 valign=top style='width:225.0pt;border:solid windowtext 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Python</b></p>
-  </td>
- </tr>
- <tr style='height:110.2pt'>
-  <td width=419 valign=top style='width:314.6pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-  style='font-family:"Century Schoolbook",serif'>for </span></b><i><span
-  style='font-size:10.0pt;line-height:106%;font-family:"Century Schoolbook",serif'>iterating_variable</span></i><b><span
-  style='font-family:"Century Schoolbook",serif'> in</span></b><i><span
-  style='font-size:10.0pt;line-height:106%;font-family:"Century Schoolbook",serif'>
-  sequence </span></i><b><span style='font-family:"Century Schoolbook",serif'>do</span></b></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-   1 (s<sub>1</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-   2 (s<sub>2</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-  n (s<sub>n</sub>)</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal;punctuation-wrap:simple;text-autospace:none'><b><span
-  style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-  </td>
-  <td width=300 valign=top style='width:225.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:110.2pt'><pre>for iterating_var in sequence:</pre><pre
-  style='margin-left:.5in'>statements(s)</pre>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'>&nbsp;</p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal><span style='color:white'>&nbsp;</span></p>
-
-</div>
-
-</body>
-
-</html>
-</div>
-</div>
 <div class="paragraph">
 <p>The most common form of the for loop is with a sequential integer counter \(i\).</p>
 </div>
-<div class="sidebarblock">
+</div>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 5. For Loop with counter</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Pseudo Code</th>
+<th class="tableblock halign-left valign-top">Python Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
-<div class="title">For  loop with iterative counter \(i\).</div>
-<html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:105%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:105%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-
-<style>
-  .click .title { color: blue; }
-  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
-  .openblock { margin-top: 1em; margin-bottom: 1em; }
-  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
-</style>
-
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-<script>
-
-
-
-var ready2;
-
-ready2 = function() {
-
-    $(document).ready(function(){
-
-        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
-        $('.openblock.click').find('.content').hide()
-
-
-        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
-        $('.listingblock.click').find('.content').hide()
-
-    });
-
-}
-
-
-
-
-$(document).ready(ready2);
-$(document).on('page:load', ready2);
-
-
-</script>
-
-</head>
-
-
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=419
- style='width:314.6pt;border-collapse:collapse'>
- <tr style='height:22.8pt'>
-  <td width=419 valign=top style='width:314.6pt;border:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Pseudocode</b></p>
-  </td>
- </tr>
- <tr style='height:110.2pt'>
-  <td width=419 valign=top style='width:314.6pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-  style='font-family:"Century Schoolbook",serif'>for </span></b><i><span
-  style='font-size:10.0pt;line-height:105%;font-family:"Century Schoolbook",serif'>i
-  = m </span></i><span style='font-size:10.0pt;line-height:105%;font-family:
-  "Arial",sans-serif'> </span><b><span style='font-family:"Century Schoolbook",serif'>to
-  </span></b><i>n </i><b><span style='font-family:"Century Schoolbook",serif'>do</span></b></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-   1 (s<sub>1</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-   2 (s<sub>2</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-  n (s<sub>n</sub>)</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-  style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-  </td>
- </tr>
+<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">for i = m to n do
+	statement 1 (s1)
+	statement 2 (s2)
+	.
+	.
+	.
+	statement n (sn)
+end</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-python" data-lang="python">for i in range(1, n+1):
+  statement 1 (s1)
+  statement 2 (s2)
+  .
+  .
+  .
+  statement n (sn)</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
 </table>
-
-<p class=MsoNormal><span style='color:white'>&nbsp;</span></p>
-
-</div>
-
-</body>
-
-</html>
-</div>
-</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
@@ -6775,156 +6533,46 @@ of a conditional statement.</p>
 <div class="paragraph">
 <p>Another common conditional statement is the <strong>if … then do</strong> statement.</p>
 </div>
-<div class="sidebarblock">
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 6. if statement</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Pseudo Code</th>
+<th class="tableblock halign-left valign-top">Python Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
-<div class="title"><strong>if … then do</strong> statement.</div>
-<html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:106%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:106%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-
-<style>
-  .click .title { color: blue; }
-  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
-  .openblock { margin-top: 1em; margin-bottom: 1em; }
-  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
-</style>
-
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-<script>
-
-
-
-var ready2;
-
-ready2 = function() {
-
-    $(document).ready(function(){
-
-        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
-        $('.openblock.click').find('.content').hide()
-
-
-        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
-        $('.listingblock.click').find('.content').hide()
-
-    });
-
-}
-
-
-
-
-$(document).ready(ready2);
-$(document).on('page:load', ready2);
-
-
-</script>
-
-</head>
-
-
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=521
- style='width:391.1pt;border-collapse:collapse'>
- <tr style='height:22.8pt'>
-  <td width=521 valign=top style='width:391.1pt;border:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Pseudocode</b></p>
-  </td>
- </tr>
- <tr style='height:110.2pt'>
-  <td width=521 valign=top style='width:391.1pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
-  <p class=MsoNormal style='margin-top:1.1pt;margin-right:266.6pt;margin-bottom:
-  0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>if
-  </span></b><i><span style='font-size:10.0pt;font-family:"Century Schoolbook",serif'>Expression
-  </span></i><span style='font-size:10.0pt;font-family:"Arial",sans-serif'> </span><b><span
-  style='font-family:"Century Schoolbook",serif'>do</span></b></p>
-  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-   1 (s<sub>1</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-   2 (s<sub>2</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>.</span></p>
-  <p class=MsoNormal style='margin-top:1.25pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statement
-  n (s<sub>n</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:1.95pt;margin-bottom:.0001pt;line-height:12.3pt;punctuation-wrap:
-  simple;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-  </td>
- </tr>
+<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">if expression do
+	statement 1 (s1)
+	statement 2 (s2)
+	.
+	.
+	.
+	statement n (sn)
+end</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-python" data-lang="python">if expression:
+  statement 1 (s1)
+  statement 2 (s2)
+  .
+  .
+  .
+  statement n (sn)</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
 </table>
-
-<p class=MsoNormal><span style='color:white'>&nbsp;</span></p>
-
-</div>
-
-</body>
-
-</html>
-</div>
-</div>
 <div class="paragraph">
 <p>The while loop and  the if … then do statement are similar but have one
 important difference. The sequence of statements \(s_i\) are executed at most
@@ -6938,164 +6586,50 @@ once if the Boolean <em>Expression</em> is <em>True</em>.</p>
 <div class="paragraph">
 <p>A more general variation of the  if … then do statement is the <strong>if … then do … else do</strong> statement, which allows two choices of execution statements. Its  general syntax is</p>
 </div>
-<div class="sidebarblock">
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 7. if else statement</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Pseudo Code</th>
+<th class="tableblock halign-left valign-top">Python Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
-<div class="title"><strong>if … then do … else do</strong></div>
-<html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:105%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-
-<style>
-  .click .title { color: blue; }
-  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
-  .openblock { margin-top: 1em; margin-bottom: 1em; }
-  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
-</style>
-
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-<script>
-
-
-
-var ready2;
-
-ready2 = function() {
-
-    $(document).ready(function(){
-
-        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
-        $('.openblock.click').find('.content').hide()
-
-
-        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
-        $('.listingblock.click').find('.content').hide()
-
-    });
-
-}
-
-
-
-
-$(document).ready(ready2);
-$(document).on('page:load', ready2);
-
-
-</script>
-
-</head>
-
-
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=647
- style='width:485.6pt;border-collapse:collapse'>
- <tr style='height:22.8pt'>
-  <td width=485 valign=top style='width:364.1pt;border:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Pseudocode</b></p>
-  </td>
-  <td width=162 valign=top style='width:121.5pt;border:solid windowtext 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Python</b></p>
-  </td>
- </tr>
- <tr style='height:110.2pt'>
-  <td width=485 valign=top style='width:364.1pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
-  <p class=MsoNormal style='margin-top:1.1pt;margin-right:266.6pt;margin-bottom:
-  0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>if
-  </span></b><i><span style='font-size:10.0pt;font-family:"Century Schoolbook",serif'>Expression
-  </span></i><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>do</span></p>
-  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statements
-  (s<sub>1</sub>)</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:1.95pt;margin-bottom:.0001pt;line-height:12.3pt;punctuation-wrap:
-  simple;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>else
-  do</span></b></p>
-  <p class=MsoNormal style='margin-top:1.0pt;margin-right:0in;margin-bottom:
-  0in;margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statements
-  &nbsp;(S<sub>1</sub>)&nbsp;&nbsp; </span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:1.95pt;margin-bottom:.0001pt;line-height:12.3pt;punctuation-wrap:
-  simple;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>end
-  </span></b></p>
-  </td>
-  <td width=162 valign=top style='width:121.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>if
-  expression:</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>statement(s)</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>else:</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>statement(s)</span></p>
-  </td>
- </tr>
+<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">if expression do
+  statement 1 (s1)
+  statement 2 (s2)
+  .
+  .
+else do
+  .
+  .
+  statement n (sn)
+end</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-python" data-lang="python">if expression:
+  statement 1 (s1)
+  statement 2 (s2)
+  .
+  .
+else:
+  .
+  .
+  statement n (sn)</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
 </table>
-
-<p class=MsoNormal><span style='color:white'>&nbsp;</span></p>
-
-</div>
-
-</body>
-
-</html>
-</div>
-</div>
 <div class="paragraph">
 <p>Here if the Boolean <em>Expression</em> is <em>True</em>,
 the sequence of statements \((s_i)\) are executed once, otherwise the sequence of
@@ -7140,7 +6674,7 @@ statements \((S_i)\) are executed.</p>
 integers less than 11, the first using an output and the second a print statement.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 4. Output Examples</caption>
+<caption class="title">Table 8. Output Examples</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7185,181 +6719,49 @@ They can be implemented as procedures or functions and then called
 repeatedly as necessary rather than replicating all of the code every
 time the algorithm is used.</p>
 </div>
-<div class="sidebarblock">
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 9. Procedures and functions</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Pseudo Code</th>
+<th class="tableblock halign-left valign-top">Python Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
-<div class="title">Procedures and functions</div>
-<html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:105%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-
-<style>
-  .click .title { color: blue; }
-  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
-  .openblock { margin-top: 1em; margin-bottom: 1em; }
-  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
-</style>
-
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-<script>
-
-
-
-var ready2;
-
-ready2 = function() {
-
-    $(document).ready(function(){
-
-        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
-        $('.openblock.click').find('.content').hide()
-
-
-        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
-        $('.listingblock.click').find('.content').hide()
-
-    });
-
-}
-
-
-
-
-$(document).ready(ready2);
-$(document).on('page:load', ready2);
-
-
-</script>
-
-</head>
-
-
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=749
- style='width:562.1pt;border-collapse:collapse'>
- <tr style='height:22.8pt'>
-  <td width=413 valign=top style='width:310.1pt;border:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Pseudocode</b></p>
-  </td>
-  <td width=336 valign=top style='width:3.5in;border:solid windowtext 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:22.8pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><b>Python</b></p>
-  </td>
- </tr>
- <tr style='height:110.2pt'>
-  <td width=413 valign=top style='width:310.1pt;border-top:none;border-left:
-  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-  style='font-family:"Century Schoolbook",serif'>procedure<span
-  style='letter-spacing:-1.4pt'> </span></span></b><span style='font-family:
-  "Century",serif'>Name</span>(<span style='letter-spacing:-1.75pt'> </span><i><span
-  style='font-size:10.0pt;line-height:105%;font-family:"Century Schoolbook",serif'>input
-  variables </span></i><span style='letter-spacing:-1.75pt'>and  /  or</span><i><span
-  style='font-size:10.0pt;line-height:105%;font-family:"Century Schoolbook",serif'>
-  input parameters</span></i><span style='letter-spacing:-1.75pt'>)</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  13.0pt;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>begin</span></b></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:19.2pt;margin-bottom:.0001pt;line-height:normal;punctuation-wrap:
-  simple;text-autospace:none'><span style='font-family:"Century",serif'>statements</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-indent:
-  19.45pt;line-height:10.5pt'><span style='font-size:9.0pt;font-family:"Century",serif'>.</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-indent:
-  19.45pt;line-height:10.5pt'><span style='font-size:9.0pt;font-family:"Century",serif'>.</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-indent:
-  19.45pt;line-height:10.5pt'><span style='font-size:9.0pt;font-family:"Century",serif'>.</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-indent:
-  19.45pt;line-height:11.1pt'><b><span style='font-family:"Century Schoolbook",serif'>return
-  </span></b>value</p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  13.0pt;text-autospace:none'><b><span style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-  </td>
-  <td width=336 valign=top style='width:3.5in;border:none;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:110.2pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>def  Name(
-  parameters ):</span></p>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>statements</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>return [expression]</span></p>
-  </td>
- </tr>
- <tr style='height:.05in'>
-  <td width=413 valign=top style='width:310.1pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:.05in'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-  style='font-family:"Century Schoolbook",serif'>&nbsp;</span></b></p>
-  </td>
-  <td width=336 valign=top style='width:3.5in;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:.05in'>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
-  style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
-  </td>
- </tr>
+<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">procedure Name ( input variables and / or input parameters )
+	begin
+		statement 1 (s1)
+		statement 2 (s2)
+		.
+		.
+		.
+		statement n (sn)
+	return value
+end</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-python" data-lang="python">def Name( parameters ):
+	statement 1 (s1)
+	statement 2 (s2)
+	.
+	.
+	.
+	statement n (sn)
+	return value</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
 </table>
-
-<p class=MsoNormal><span style='color:white'>&nbsp;</span></p>
-
-</div>
-
-</body>
-
-</html>
-</div>
-</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
