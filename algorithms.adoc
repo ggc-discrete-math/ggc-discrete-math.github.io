@@ -475,176 +475,41 @@ You may use the formula $1+2+3…+n=\frac{n(n+1)}{2}$, or a variation of it.
 
 . Explain why the insertion sort algorithm is $O(n^2)$.
 
-. Estimate the time complexity for each of the following two algorithms
-by first counting the number of steps, and summarizing your findings using
-big O notation
-.. An algorithm to find the sum and product of $n$ integers from
-$1$ to $n$.
+. Estimate the time complexity for each of the following two algorithms by first counting the number of steps, and then summarizing your findings using big O notation.
 
-
+.. A procedure to find the sum divided by the product of $n$ integers from $1$ to $n$.
 +
-++++
-<html>
+[source, pseudocode, subs="normal, verbatim"]
+----
+*procedure* Sum_By_Product(_n_)
+*begin*
+	_sum_ = 0
+	_product_ = 1
+	*for* _i_ = 1 *to* _n_ *do*
+		_sum_ = _sum_ + _i_
+		_product_ = _product_ * _i_
+	*end for*
+	*return* _sum_ / _product_
+*end*
+----
 
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:106%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:106%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-</head>
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>procedure</b>
-Sum_Product_i(n)</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>begin</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>                 sum
-=0</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;
-            product=1</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;             <b>for</b>
-i =1 &nbsp;to n <b>do</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       sum=sum + i</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              product=product*i</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;&nbsp;&nbsp;&nbsp;
-          end</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>end</b></p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-</div>
-
-</body>
-
-</html>
-
-++++
-
-.. A procedure to create a matrix $A_{n,n}$, with $n$ rows and $n$ columns,
-with the entry $m$ in row $i$ and column $j$.
+.. A procedure to create an $n$ by $n$ matrix $A_{n,n}$ with every value set to $m$.
 +
-++++
-<html>
+[source, pseudocode, subs="normal, verbatim"]
+----
+*procedure* Create_Matrix(_n, m_)
+*begin*
+	_sum_ = 0
+	_product_ = 1
+	*for* _i_ = 1 *to* _n_ *do*
+		*for* _j_ = 1 *to* _n_ *do*
+			_A~i,j~_ = _m_
+		*end for*
+	*end for*
+	*return* _A_
+*end*
+----
 
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:105%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-size:10.0pt;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:105%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-</head>
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>procedure</b>
-Create_Matrix(n)</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>begin</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<b>for</b> i =1 &nbsp;to n <b>do</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<b>for </b>j =1 &nbsp;to n <b>do</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-A[i,j]=m</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-end</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>end</b></p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-</div>
-
-</body>
-
-</html>
-
-
-++++
 . Explain how the binary search algorithm can be modified or used
 to insert a new integer element $x$ into a sorted list of $n$ integers.
 

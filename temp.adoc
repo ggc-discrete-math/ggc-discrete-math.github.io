@@ -9,7 +9,9 @@
 :sectnums:
 :nofooter:
 
-The formula $a^2 + b^2 = c^2$ relates the sides and hypotenuse of a right triangle. 
+. Explain why the insertion sort algorithm is $O(n^2)$.
 
-wThe formula $a^2 + b^2 = c^2$ relates the sides and hypotenuse of a right triangle.
+. Estimate the time complexity for each of the following two algorithms by first counting the number of steps, and then summarizing your findings using big O notation.
+
+.. An algorithm to find the sum divided by the product of $n$ integers from $1$ to $n$.
 
