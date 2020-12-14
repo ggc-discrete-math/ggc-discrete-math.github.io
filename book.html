@@ -122,7 +122,7 @@ $(document).on('page:load', ready2);
 </li>
 <li><a href="#_algorithms">7. Algorithms</a>
 <ul class="sectlevel2">
-<li><a href="#_structure_of_algorithms_in_pseudocode_and_python">7.1. Structure of Algorithms in Pseudocode and Python</a></li>
+<li><a href="#_structure_of_algorithms_in_pseudocode">7.1. Structure of Algorithms in Pseudocode</a></li>
 <li><a href="#_examples_of_algorithms">7.2. Examples of Algorithms</a></li>
 <li><a href="#_the_linear_search_algorithm">7.3. The Linear Search Algorithm</a></li>
 <li><a href="#_the_bubble_sort_algorithm">7.4. The Bubble Sort Algorithm</a></li>
@@ -6239,9 +6239,9 @@ a determined output.</p>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_structure_of_algorithms_in_pseudocode_and_python">7.1. Structure of Algorithms in Pseudocode and Python</h3>
+<h3 id="_structure_of_algorithms_in_pseudocode">7.1. Structure of Algorithms in Pseudocode</h3>
 <div class="paragraph">
-<p>While the algorithms we describe are implemented in the Python programming language, we also provide the pseudocode syntax for important algorithms. Pseudocode is used to provide high level description of a program or algorithm intended to be more human understandable rather than computer or program language interpretable. Its syntax preserves the structure of the program or algorithm. It is meant to be easier to read and analyze.  Often in designing an algorithm or program for language specific implementation, a pseudocode implementation or description is obtained first.  In addition to coming early in the design of a computer program, pseudocode also has two other important uses:</p>
+<p>While the algorithms we describe are implemented in the Python programming language, we also provide an overview of pseudocode syntax here. Pseudocode is used to provide high level description of a program or algorithm intended to be more human understandable than computer or program language. Its syntax preserves the structure of the program or algorithm while ignoring programming language specific details. It is meant to be easier to read and analyze.  Often, in designing an algorithm for language specific implementation, a pseudocode implementation is obtained first.  In addition to coming early in the design of a computer program, pseudocode also has two other important uses:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -6249,7 +6249,7 @@ a determined output.</p>
 <p>It can be used to help non-programmers understand what a program or algorithm does and how it works.</p>
 </li>
 <li>
-<p>It can be used for debugging purposes when a programmer is trying to debug and solve a logic error in a computer program as it is closer to human language. Defects are easier to find in a program implementation by analyzing the sequence of implementation steps in the pseudocode description.</p>
+<p>It can be used for debugging purposes when a programmer is trying to debug and solve a logic error in a computer program as it is closer to human language. Defects can be easier to find in a program implementation by analyzing the sequence of implementation steps in the pseudocode description.</p>
 </li>
 </ol>
 </div>
@@ -6290,42 +6290,8 @@ The key features of an algorithm include:</p>
 </li>
 </ul>
 </div>
-<div class="sect3">
-<h4 id="_variable_assignment">7.1.1. Variable Assignment</h4>
-<div class="paragraph">
-<p><strong>Variables</strong>, such as \(x,\ y,\ z,\ t,\ m,\ a_1,\ a_2,\ldots a_n \),
-as in algebra, can be assigned different values based on the variable data type.
-We use the symbol “=” for variable assignment, for example, \[ t=5, \]
-assigns to the variable \(t\), the integer value 5.  The variable \(t\)
-keeps this value unless reassigned, as in \[t=t+3. \]
-In this case the variable t is now assigned the value \[ t=5+3. \] The
-previous example illustrates an important point about assignments, namely that the right side is always evaluated before assignment setting of variables.
-For example the sequence of steps,</p>
-</div>
-<div class="paragraph">
-<p>\begin{array}{c}
- x=5,\\
- y=3,\\
- x=y,
-\end{array}</p>
-</div>
-<div class="paragraph">
-<p>will have at the end of the sequence, \(x=3\) and \(y =3\).</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_statements">7.1.2. Statements</h4>
-<div class="paragraph">
-<p>A <strong>statement</strong> is a line of code or instruction step in an algorithm or program.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_loops">7.1.3. Loops</h4>
-<div class="paragraph">
-<p>A <strong>while</strong> loop is a control flow statement that iterates a sequence of statements provided the Boolean expression is <em>True</em>.</p>
-</div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 3. While Loop Example</caption>
+<caption class="title">Table 3. Pseudocode Example</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6340,453 +6306,88 @@ For example the sequence of steps,</p>
 <tr>
 <td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">while Expression do <i class="conum" data-value="1"></i><b>(1)</b>
-  statement 1 (s1)
-  statement 2 (s2)
-  .
-  .
-  .
-  statement n (sn)
-end <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+<pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode"><strong>procedure</strong> search(<em>{a<sub>1</sub>, a<sub>2</sub>, &#8230;&#8203;, a<sub>n</sub>}, x</em>) <i class="conum" data-value="1"></i><b>(1)</b>
+<strong>begin</strong> <i class="conum" data-value="2"></i><b>(2)</b>
+	<strong>for</strong> <em>i</em> = 1 <strong>to</strong> <em>n</em> <strong>do</strong> <i class="conum" data-value="3"></i><b>(3)</b>
+		<strong>if</strong> <em>a<sub>i</sub></em> equals <em>x</em> <strong>then</strong> <i class="conum" data-value="4"></i><b>(4)</b>
+			<strong>return</strong> <em>i</em> <i class="conum" data-value="5"></i><b>(5)</b>
+		<strong>end if</strong>
+	<strong>end for</strong>
+	<strong>return</strong> -1
+<strong>end</strong> <i class="conum" data-value="6"></i><b>(6)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Start block of code with <em>do</em></td>
+<td>Define a new <em>procedure</em> with inputs</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>End block of code with <em>end</em></td>
+<td>Explicitely start each <em>block</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Loop <em>block</em> using a sequence of integers</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Conditionally execute <em>block</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Return (exit) from <em>procedure</em> with specific value</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Explicitely end each <em>block</em></td>
 </tr>
 </table>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div><div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">while Expression: <i class="conum" data-value="1"></i><b>(1)</b>
-  statement 1 (s1)
-  statement 2 (s2)
-  .
-  .
-  .
-  statement n (sn)
-<i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+<pre class="highlight"><code class="language-python" data-lang="python">def search(a, x): <i class="conum" data-value="1"></i><b>(1)</b>
+	for i in range(0, len(a)): <i class="conum" data-value="2"></i><b>(2)</b>
+		if a[i] == x: <i class="conum" data-value="3"></i><b>(3)</b>
+			return i <i class="conum" data-value="4"></i><b>(4)</b>
+	return -1
+<i class="conum" data-value="5"></i><b>(5)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Start block of code with <em>:</em></td>
+<td>Define a new <em>function</em> and start its <em>block</em> with a <strong>:</strong></td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>End block of code with unindent</td>
+<td>Loop <em>block</em> using a sequence of integers</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Conditionally execute <em>block</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Return (exit) from <em>function</em> with specific value</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Each <em>block</em> of code ends with unindent</td>
 </tr>
 </table>
 </div></div></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>The loop iterates as long as  the sequence of statements \((s_1\ldots s_n,)\)
-maintains the True value of <em>Expression</em> and
-exits after an iteration of  \((s_1\ldots s_n,)\) that changes <em>Expression</em>
-to False.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="openblock">
-<div class="title">Example 1 - While loop in Python</div>
-<div class="content">
-
-</div>
-</div>
-<div class="paragraph">
-<p>The Python code below uses a <strong>while</strong> loop to display or output the non-negative integers less than 11.</p>
-</div>
-<iframe width="100%" frameborder="5" height="350" src="https://pythontutor.com/iframe-embed.html#code=count%20%3D%200%0Awhile%20%28count%20%3C%2011%29%3A%0A%20%20%20print%28%22The%20count%20is%3A%22,%20count%29%0A%20%20%20count%20%2B%3D%201%0Aprint%28%22Good%20bye!%22%29&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=450&codeDivHeight=350"> </iframe>
-
-<div style="text-align: right;">
-<a style="" target="_blank" href="http://www.pythontutor.com/visualize.html#code=count%20%3D%200%0Awhile%20%28count%20%3C%2011%29%3A%0A%20%20%20print%28%22The%20count%20is%3A%22,%20count%29%0A%20%20%20count%20%2B%3D%201%0Aprint%28%22Good%20bye!%22%29&mode=edit&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0">Edit in PythonTutor</a>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>A <strong>for</strong> loop has a very similar control flow statement to a <strong>while</strong> loop.</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 4. For Loop Example</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Pseudo Code</th>
-<th class="tableblock halign-left valign-top">Python Code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">for iterating_variable in sequence do
-	statement 1 (s1)
-	statement 2 (s2)
-	.
-	.
-	.
-	statement n (sn)
-end</code></pre>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">for iterating_variable in sequence:
-  statement 1 (s1)
-  statement 2 (s2)
-  .
-  .
-  .
-  statement n (sn)</code></pre>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>The most common form of the for loop is with a sequential integer counter \(i\).</p>
-</div>
-</div>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 5. For Loop with counter</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Pseudo Code</th>
-<th class="tableblock halign-left valign-top">Python Code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">for i = m to n do
-	statement 1 (s1)
-	statement 2 (s2)
-	.
-	.
-	.
-	statement n (sn)
-end</code></pre>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">for i in range(1, n+1):
-  statement 1 (s1)
-  statement 2 (s2)
-  .
-  .
-  .
-  statement n (sn)</code></pre>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="sidebarblock">
-<div class="content">
-<div class="openblock">
-<div class="title">Example 2 - For loop in Python</div>
-<div class="content">
-
-</div>
-</div>
-<div class="paragraph">
-<p>The Python code below uses a <strong>for</strong> loop to display or output the non-negative integers less than 11.</p>
-</div>
-<iframe width="100%" frameborder="5" height="350" src="https://pythontutor.com/iframe-embed.html#code=for%20i%20in%20range%280,%2011%29%3A%0A%20%20print%28%22The%20count%20is%3A%22,%20i%29%0Aprint%28%22Good%20bye!%22%29&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=450&codeDivHeight=350"> </iframe>
-
-<div style="text-align: right;">
-<a style="" target="_blank" href="http://www.pythontutor.com/visualize.html#code=for%20i%20in%20range%280,%2011%29%3A%0A%20%20print%28%22The%20count%20is%3A%22,%20i%29%0Aprint%28%22Good%20bye!%22%29&mode=edit&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0">Edit in PythonTutor</a>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_conditional_statements">7.1.4. Conditional statements</h4>
-<div class="paragraph">
-<p>The sequence in which statements can be executed in
-an algorithm or program can be controlled using <strong>conditional
-statements</strong> or <strong>logical operators</strong>.  The while loop is an example
-of a conditional statement.</p>
-</div>
-<div class="paragraph">
-<p>Another common conditional statement is the <strong>if … then do</strong> statement.</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 6. if statement</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Pseudo Code</th>
-<th class="tableblock halign-left valign-top">Python Code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">if expression do
-	statement 1 (s1)
-	statement 2 (s2)
-	.
-	.
-	.
-	statement n (sn)
-end</code></pre>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">if expression:
-  statement 1 (s1)
-  statement 2 (s2)
-  .
-  .
-  .
-  statement n (sn)</code></pre>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>The while loop and  the if … then do statement are similar but have one
-important difference. The sequence of statements \(s_i\) are executed at most
-once within the if … then do statement but may be iterated multiple times
-in a while loop.</p>
-</div>
-<div class="paragraph">
-<p>The if … then do statement executes a sequence of statements
-once if the Boolean <em>Expression</em> is <em>True</em>.</p>
-</div>
-<div class="paragraph">
-<p>A more general variation of the  if … then do statement is the <strong>if … then do … else do</strong> statement, which allows two choices of execution statements. Its  general syntax is</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 7. if else statement</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Pseudo Code</th>
-<th class="tableblock halign-left valign-top">Python Code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">if expression do
-  statement 1 (s1)
-  statement 2 (s2)
-  .
-  .
-else do
-  .
-  .
-  statement n (sn)
-end</code></pre>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">if expression:
-  statement 1 (s1)
-  statement 2 (s2)
-  .
-  .
-else:
-  .
-  .
-  statement n (sn)</code></pre>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Here if the Boolean <em>Expression</em> is <em>True</em>,
-the sequence of statements \((s_i)\) are executed once, otherwise the sequence of
-statements \((S_i)\) are executed.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="openblock">
-<div class="title">Example 3 - if … then do … else do in Python</div>
-<div class="content">
-
-</div>
-</div>
-<div class="paragraph">
-<p>The Python code below uses a <strong>if else</strong> to check if a result is less than 100.</p>
-</div>
-<iframe width="100%" frameborder="5" height="350" src="https://pythontutor.com/iframe-embed.html#code=x%20%3D%203%20*%2034%0Aif%20x%20%3C%20100%3A%0A%20%20%20%20print%28%22You%20Lose!%22%29%0Aelse%3A%0A%20%20%20%20print%28%22You%20Win!%22%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=450&codeDivHeight=350"> </iframe>
-
-<div style="text-align: right;">
-<a style="" target="_blank" href="http://www.pythontutor.com/visualize.html#code=x%20%3D%203%20*%2034%0Aif%20x%20%3C%20100%3A%0A%20%20%20%20print%28%22You%20Lose!%22%29%0Aelse%3A%0A%20%20%20%20print%28%22You%20Win!%22%29%0A&mode=edit&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0">Edit in PythonTutor</a>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_output">7.1.5. Output</h4>
-<div class="paragraph">
-<p>There are a couple of ways to indicate output using pseudocode including, 1) an output statement, or 2) a print statement. For example the following both  output the value of the variable <em>count</em>.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>output</strong> <em>count</em></p>
-</li>
-<li>
-<p><strong>print</strong> <em>count</em></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Here are two pseudocode implementations of an algorithm to count the  non-negative
-integers less than 11, the first using an output and the second a print statement.</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 8. Output Examples</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Pseudo Code Using Output</th>
-<th class="tableblock halign-left valign-top">Pseudo Code Using Print</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">count = 0
-while (count &lt; 11) do
-  output "The count is:", count
-  count = count + 1
-end
-output "Good bye! Thanks for counting."</code></pre>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">count = 0
-while (count &lt; 11) do
-  print("The count is:", count)
-  count = count + 1
-end
-print("Good bye! Thanks for counting.")</code></pre>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_procedures_and_functions">7.1.6. Procedures and Functions.</h4>
-<div class="paragraph">
-<p>Algorithms can be thought of as units, such as a procedure or function.
-They can be implemented as procedures or functions and then called
-repeatedly as necessary rather than replicating all of the code every
-time the algorithm is used.</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 9. Procedures and functions</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Pseudo Code</th>
-<th class="tableblock halign-left valign-top">Python Code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">procedure Name ( input variables and / or input parameters )
-	begin
-		statement 1 (s1)
-		statement 2 (s2)
-		.
-		.
-		.
-		statement n (sn)
-	return value
-end</code></pre>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">def Name( parameters ):
-	statement 1 (s1)
-	statement 2 (s2)
-	.
-	.
-	.
-	statement n (sn)
-	return value</code></pre>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="sidebarblock">
-<div class="content">
-<div class="openblock">
-<div class="title">Example 4 - Function in Python</div>
-<div class="content">
-
-</div>
-</div>
-<div class="paragraph">
-<p>The Python syntax, for a procedure or function,  is very similar to pseudo code.</p>
-</div>
-<iframe width="100%" frameborder="5" height="420" src="https://pythontutor.com/iframe-embed.html#code=def%20cylinder_volume%28r,%20h%29%3A%0A%20%20%20%20area%20%3D%203.14%20*%20r%20*%20r%0A%20%20%20%20vol%20%3D%20area%20*%20h%0A%20%20%20%20return%20vol%0A%0Av1%20%3D%20cylinder_volume%285,%203%29%0Av2%20%3D%20cylinder_volume%282,%204%29%0Aprint%28%22Cylinders%22%29%0Aprint%28%22R%3A%22,%205,%20%22H%3A%22,%203,%20%22Vol%3A%22,%20v1%29%0Aprint%28%22R%3A%22,%202,%20%22H%3A%22,%204,%20%22Vol%3A%22,%20v2%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=450&codeDivHeight=420"> </iframe>
-
-<div style="text-align: right;">
-<a style="" target="_blank" href="http://www.pythontutor.com/visualize.html#code=def%20cylinder_volume%28r,%20h%29%3A%0A%20%20%20%20area%20%3D%203.14%20*%20r%20*%20r%0A%20%20%20%20vol%20%3D%20area%20*%20h%0A%20%20%20%20return%20vol%0A%0Av1%20%3D%20cylinder_volume%285,%203%29%0Av2%20%3D%20cylinder_volume%282,%204%29%0Aprint%28%22Cylinders%22%29%0Aprint%28%22R%3A%22,%205,%20%22H%3A%22,%203,%20%22Vol%3A%22,%20v1%29%0Aprint%28%22R%3A%22,%202,%20%22H%3A%22,%204,%20%22Vol%3A%22,%20v2%29%0A&mode=edit&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0">Edit in PythonTutor</a>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_examples_of_algorithms">7.2. Examples of Algorithms</h3>
 <div class="paragraph">
 <p>We now proceed to develop some algorithms beginning with algorithms for common mathematical
-operations.  Much of mathematical notation can be considered pseudocode</p>
+operations.  Much of mathematical notation can be considered pseudocode.</p>
 </div>
 <div class="sect3">
 <h4 id="_sum_notation">7.2.1. Sum Notation</h4>
@@ -6800,186 +6401,10 @@ operations.  Much of mathematical notation can be considered pseudocode</p>
 <p>which is a description of adding using the index \(i\), the numbers \(a_i\),
 running from \(i=1\) to \(i=n\).</p>
 </div>
-<div class="paragraph">
-<p>A pseudocode description might be</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Sum Notation in Algorithm Pseudocode</div>
-<html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-h5
-	{mso-style-link:"Heading 5 Char";
-	margin-top:6.95pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:1.1in;
-	margin-bottom:.0001pt;
-	text-autospace:none;
-	font-size:11.0pt;
-	font-family:"Century Schoolbook",serif;}
-span.Heading5Char
-	{mso-style-name:"Heading 5 Char";
-	mso-style-link:"Heading 5";
-	font-family:"Century Schoolbook",serif;
-	font-weight:bold;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-
-<style>
-  .click .title { color: blue; }
-  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
-  .openblock { margin-top: 1em; margin-bottom: 1em; }
-  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
-</style>
-
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-<script>
-
-
-
-var ready2;
-
-ready2 = function() {
-
-    $(document).ready(function(){
-
-        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
-        $('.openblock.click').find('.content').hide()
-
-
-        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
-        $('.listingblock.click').find('.content').hide()
-
-    });
-
-}
-
-
-
-
-$(document).ready(ready2);
-$(document).on('page:load', ready2);
-
-
-</script>
-
-</head>
-
-
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Procedure
-Sum Notation: </b>computes the sum of the first, <i>n</i>, terms of the
-sequence <i><span style='font-size:10.0pt;line-height:107%;font-family:"Century Schoolbook",serif'>a<sub>i</sub></span></i></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Input: </b>A
-positive integer, <i>n</i><i>, and a sequence {</i><i><span style='font-size:
-10.0pt;line-height:107%;font-family:"Century Schoolbook",serif'>a<sub>i</sub>}</span></i></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Output: </b>The
-sum of the first <i>n </i>terms of the sequence <i>{</i><i><span
-style='font-size:10.0pt;line-height:107%;font-family:"Century Schoolbook",serif'>a<sub>i</sub>}</span></i></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b> </b><b>_____________________________________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-style='font-family:"Century Schoolbook",serif'>procedure<span style='letter-spacing:
--1.4pt'> </span></span></b><span style='font-family:"Century",serif'>Sum_Notation</span>(<span
-style='letter-spacing:-1.75pt'> </span><i><span style='font-size:10.0pt;
-line-height:107%;font-family:"Century Schoolbook",serif'>n, {a<sub>1</sub>, a<sub>2</sub>,
-…, a<sub>n</sub></span><span style='letter-spacing:-1.75pt'> }</span></i><span
-style='letter-spacing:-1.75pt'> )</span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-style='font-family:"Century Schoolbook",serif'>begin</span></b>                                                                                                                                                                                         </p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt'>Sum = 0</p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt'><b>for </b>i = 1 <b>to </b>n  <b>do</b></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt;text-indent:.5in'>Sum = Sum + <i><span
-style='font-size:10.0pt;line-height:107%;font-family:"Century Schoolbook",serif'>a<sub>i</sub></span></i></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt'><b>end</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>
-<b><span style='font-family:"Century Schoolbook",serif'>return</span></b> Sum</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-</div>
-
-</body>
-
-</html>
-</div>
-</div>
-<div class="paragraph">
-<p>A Python implementation of the algorithm is given below.</p>
-</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 5 - Sum Notation in Python</div>
+<div class="title">Example 1 - Sum Notation in Python</div>
 <div class="content">
 
 </div>
@@ -7005,54 +6430,10 @@ For example to evaluate \(5^6\), we could multiply iteratively, 5,</p>
 <div class="paragraph">
 <p>\(1, 5, 5\times5, 5\times5\times5, 5\times5\times5\times5,\) etc .</p>
 </div>
-<div class="paragraph">
-<p>A pseudocode implementation of the algorithm might be as follows.</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Procedure Exponentiation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p>Computes the exponent \(b^n\)</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p><strong>Input:</strong> A positive integer, \(n\) and a positive base, \(b\)</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p><strong>Output:</strong> \(b^n\)</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">procedure Exponentiation(n, b)
-begin
-  Power = 1
-  for i = 1 to n do
-    Power = Power * b
-  end
-  return Power
-end</code></pre>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 6 - Exponentiation in Python</div>
+<div class="title">Example 2 - Exponentiation in Python</div>
 <div class="content">
 
 </div>
@@ -7080,7 +6461,7 @@ multiplying a positive base \(b\) with itself \(n\) times.</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 7 - Factorial (\(n!\)) in Python</div>
+<div class="title">Example 3 - Factorial (\(n!\)) in Python</div>
 <div class="content">
 
 </div>
@@ -7131,7 +6512,7 @@ have been inspected and compared against the variable \(min\).</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 8 - Minimum in Python</div>
+<div class="title">Example 4 - Minimum in Python</div>
 <div class="content">
 
 </div>
@@ -7162,7 +6543,7 @@ in the list \( (a_1, a_2, ..., a_n)\).</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 9 - Linear Search Algorithm in Python</div>
+<div class="title">Example 5 - Linear Search Algorithm in Python</div>
 <div class="content">
 
 </div>
@@ -7231,7 +6612,7 @@ swapping if they are out of order.</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<div class="title">Example 10 - Tracing a Bubble Sort</div>
+<div class="title">Example 6 - Tracing a Bubble Sort</div>
 <p>As an example we consider explicitly the steps of the Bubble Sort Algorithm to sort \(6, 2, 5, 3, 4, 1, \) in increasing
 order.</p>
 </div>
@@ -7335,7 +6716,7 @@ larger elements to the right, using a variable, say \(j\).</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 11 - Insertion Sort in Python</div>
+<div class="title">Example 7 - Insertion Sort in Python</div>
 <div class="content">
 
 </div>
@@ -7354,7 +6735,7 @@ Algorithm.</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<div class="title">Example 12 - Tracing the Insertion Sort Algorithm</div>
+<div class="title">Example 8 - Tracing the Insertion Sort Algorithm</div>
 <p></p>
 </div>
 <div class="paragraph">
@@ -7434,7 +6815,7 @@ The key, or boundary, between the sorted and unsorted portions is denoted by the
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 13 - Binary Search Algorithm in Python</div>
+<div class="title">Example 9 - Binary Search Algorithm in Python</div>
 <div class="content">
 
 </div>
@@ -10079,7 +9460,7 @@ style='font-family:"Century Schoolbook",serif'>end</span></b></p>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 14 - Recursive Implementation of Factorial Function, \(n!\), in Python</div>
+<div class="title">Example 10 - Recursive Implementation of Factorial Function, \(n!\), in Python</div>
 <div class="content">
 
 </div>
@@ -10481,7 +9862,7 @@ Fibonacci number.</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 15 - Recursive Implementation of Fibonacci in Python</div>
+<div class="title">Example 11 - Recursive Implementation of Fibonacci in Python</div>
 <div class="content">
 
 </div>

@@ -1,0 +1,15 @@
+= Test Page
+
+:toc: left
+:toclevels: 2
+:linkcss:
+:pygments-style: friendly
+:icons: font
+:linkattrs:
+:sectnums:
+:nofooter:
+
+The formula $a^2 + b^2 = c^2$ relates the sides and hypotenuse of a right triangle. 
+
+wThe formula $a^2 + b^2 = c^2$ relates the sides and hypotenuse of a right triangle.
+
