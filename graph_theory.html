@@ -4,14 +4,14 @@
   <meta charset="utf-8"/>
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="Asciidoctor 1.5.6" name="generator"/>
+  <meta content="Asciidoctor 1.5.8" name="generator"/>
   <meta content="Mohamed Jamaloodeen, Kathy Pinzon, Daniel Pragel, Joshua Roberts, Sebastien Siva" name="author"/>
   <title>
    Discrete Math
   </title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700" rel="stylesheet"/>
   <link href="./asciidoctor.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   <style>
    .click .title { color: blue; }
   .click {margin-top: 0.5em; margin-bottom: 0.5em;}
@@ -252,7 +252,7 @@ $(document).on('page:load', ready2);
       </a>
       <ul class="sectlevel2">
        <li>
-        <a href="growth_functions.html#_introducing_em_big_o_em">
+        <a href="growth_functions.html#_introducing_big_o">
          6.1. Introducing
          <em>
           Big O
@@ -260,7 +260,7 @@ $(document).on('page:load', ready2);
         </a>
        </li>
        <li>
-        <a href="growth_functions.html#_properties_of_em_big_o_em_notation">
+        <a href="growth_functions.html#_properties_of_big_o_notation">
          6.2. Properties of
          <em>
           Big O
@@ -328,7 +328,7 @@ $(document).on('page:load', ready2);
       </a>
       <ul class="sectlevel2">
        <li>
-        <a href="counting.html#_the_product_rule_em_and_em">
+        <a href="counting.html#_the_product_rule_and">
          8.1. The Product Rule (
          <em>
           and
@@ -337,7 +337,7 @@ $(document).on('page:load', ready2);
         </a>
        </li>
        <li>
-        <a href="counting.html#_the_sum_rule_em_xor_em">
+        <a href="counting.html#_the_sum_rule_xor">
          8.2. The Sum Rule (
          <em>
           xor
@@ -346,7 +346,7 @@ $(document).on('page:load', ready2);
         </a>
        </li>
        <li>
-        <a href="counting.html#_the_subtraction_rule_em_or_em">
+        <a href="counting.html#_the_subtraction_rule_or">
          8.3. The Subtraction Rule (
          <em>
           or
@@ -573,10 +573,6 @@ joining the same pair of vertices. The graphs we consider are assumed to be simp
           Example 1 - an undirected graph.
          </div>
          <p>
-         </p>
-        </div>
-        <div class="paragraph">
-         <p>
           The graph shown has vertex set \(V=\left\{A,\ B,\ C,\ D,\ E,\ F\right\}\) and edge set
 \(E=\{\{A,C\},\{A,D\},\{B,D\}\{B,F\},\{C,F\},\{D,F\},\{F,E\}\}\)
          </p>
@@ -609,10 +605,6 @@ recognized to be ordered.
           Example 2 - a directed graph.
          </div>
          <p>
-         </p>
-        </div>
-        <div class="paragraph">
-         <p>
           The graph  \(G=(V,E)\) with vertex set  \(V=\{A,B,C,D,E,F\}\)  and edge set
 \(E=\{\{A,C\},\{D,A\},\{B,D\}\{F,B\},\{C,F\},\{D,F\},\{G,E\}\}\) with edge set considered as
 ordered is a directed graph and shown below.
@@ -641,10 +633,6 @@ containing the vertex \(v\).
          <div class="title">
           Example 3
          </div>
-         <p>
-         </p>
-        </div>
-        <div class="paragraph">
          <p>
           The degrees of each of the vertices in the undirected graph \(G\)  with vertex set
 \(V=\{A,B,C,D,E,F,G\}\) and edge set \(E=\{\{A,C\},\{A,D\},\{B,D\}\{B,F\},\{C,F\},\{D,F\},\{F,G\}\)
@@ -770,10 +758,6 @@ m_{i,j}=\left\{
            Example 4 - adjacency matrix of a graph
           </div>
           <p>
-          </p>
-         </div>
-         <div class="paragraph">
-          <p>
            The graph with  vertex set \(V=\left\{A,\ B,\ C,\ D,\ E,\ F\right\}\) and edge
 set
 \(E=\{\{A,C\},\{A,D\},\{B,D\}\{B,F\},\{C,F\},\{D,F\},\{F,E\}\}\) has adjacency matrix
@@ -792,10 +776,6 @@ set
           <div class="title">
            Example 5 - obtaining the graph from the adjacency matrix
           </div>
-          <p>
-          </p>
-         </div>
-         <div class="paragraph">
           <p>
            The graph with adjacency matrix
           </p>
@@ -833,10 +813,6 @@ set
           <div class="title">
            Example 6 - adjacency matrices for an undirected graph and for a directed graph
           </div>
-          <p>
-          </p>
-         </div>
-         <div class="paragraph">
           <p>
            In the figure below the first graph is undirected while the second is a digraph.
           </p>
@@ -1628,7 +1604,7 @@ algorithm is,
   TeX: { extensions: ["mhchem.js"] }
 });
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-MML-AM_HTMLorMML">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML">
   </script>
  </body>
 </html>

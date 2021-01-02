@@ -4,14 +4,14 @@
   <meta charset="utf-8"/>
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="Asciidoctor 1.5.6" name="generator"/>
+  <meta content="Asciidoctor 1.5.8" name="generator"/>
   <meta content="Mohamed Jamaloodeen, Kathy Pinzon, Daniel Pragel, Joshua Roberts, Sebastien Siva" name="author"/>
   <title>
    Discrete Math
   </title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700" rel="stylesheet"/>
   <link href="./asciidoctor.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   <style>
    .click .title { color: blue; }
   .click {margin-top: 0.5em; margin-bottom: 0.5em;}
@@ -252,7 +252,7 @@ $(document).on('page:load', ready2);
       </a>
       <ul class="sectlevel2">
        <li>
-        <a href="growth_functions.html#_introducing_em_big_o_em">
+        <a href="growth_functions.html#_introducing_big_o">
          6.1. Introducing
          <em>
           Big O
@@ -260,7 +260,7 @@ $(document).on('page:load', ready2);
         </a>
        </li>
        <li>
-        <a href="growth_functions.html#_properties_of_em_big_o_em_notation">
+        <a href="growth_functions.html#_properties_of_big_o_notation">
          6.2. Properties of
          <em>
           Big O
@@ -328,7 +328,7 @@ $(document).on('page:load', ready2);
       </a>
       <ul class="sectlevel2">
        <li>
-        <a href="counting.html#_the_product_rule_em_and_em">
+        <a href="counting.html#_the_product_rule_and">
          8.1. The Product Rule (
          <em>
           and
@@ -337,7 +337,7 @@ $(document).on('page:load', ready2);
         </a>
        </li>
        <li>
-        <a href="counting.html#_the_sum_rule_em_xor_em">
+        <a href="counting.html#_the_sum_rule_xor">
          8.2. The Sum Rule (
          <em>
           xor
@@ -346,7 +346,7 @@ $(document).on('page:load', ready2);
         </a>
        </li>
        <li>
-        <a href="counting.html#_the_subtraction_rule_em_or_em">
+        <a href="counting.html#_the_subtraction_rule_or">
          8.3. The Subtraction Rule (
          <em>
           or
@@ -526,148 +526,78 @@ $(document).on('page:load', ready2);
      13. Appendix 2: Python Syntax Examples
     </h2>
     <div class="sectionbody">
-     <div class="listingblock">
+     <div class="listingblock small">
       <div class="content">
-       <pre class="pygments highlight"><code data-lang="python"><table class="pyhltable"><tr><td class="linenos"><div class="linenodiv"> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70</div></td><td class="code"><span></span><span class="tok-c1"># the '#' character makes a COMMENT separating Python from English</span>
-<span class="tok-n">x</span> <span class="tok-o">=</span> <span class="tok-mi">3</span> <span class="tok-c1"># create the VARIABLE with NAME x and STORE INT VALUE 3</span>
-<span class="tok-n">Sebastien_Score</span> <span class="tok-o">=</span> <span class="tok-mi">9001</span> <span class="tok-c1"># variable names can be long, but no spaces!</span>
-<span class="tok-n">y</span> <span class="tok-o">=</span> <span class="tok-mf">1.0</span> <span class="tok-o">*</span> <span class="tok-mi">3</span> <span class="tok-c1"># y stores EXPRESSION's RETURN FLOAT value 3.0</span>
-<span class="tok-n">z</span> <span class="tok-o">=</span> <span class="tok-s2">"Hi There!"</span> <span class="tok-c1"># z stores a STRING value</span>
-<span class="tok-n">w</span> <span class="tok-o">=</span> <span class="tok-bp">False</span> <span class="tok-c1"># w stores a BOOLEAN value</span>
-<span class="tok-n">v</span> <span class="tok-o">=</span> <span class="tok-p">[</span><span class="tok-mi">3</span><span class="tok-p">,</span> <span class="tok-mi">30</span><span class="tok-p">,</span> <span class="tok-s2">"Hello World"</span><span class="tok-p">]</span> <span class="tok-c1"># v stores a LIST of values</span>
-<span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-n">z</span><span class="tok-p">)</span> <span class="tok-c1"># print function displays output ("Hi There!")</span>
+       <pre class="pygments highlight"><code data-lang="python"># the '#' character makes a COMMENT separating Python from English
+x = 3 # create the VARIABLE with NAME x and STORE INT VALUE 3
+Sebastien_Score = 9001 # variable names can be long, but no spaces!
+y = 1.0 * 3 # y stores EXPRESSION's RETURN FLOAT value 3.0
+z = "Hi There!" # z stores a STRING value
+w = False # w stores a BOOLEAN value
+v = [3, 30, "Hello World"] # v stores a LIST of values
+print(z) # print function displays output ("Hi There!")
 
-<span class="tok-c1"># Maths</span>
-<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-mi">3</span>
-<span class="tok-n">b</span> <span class="tok-o">=</span> <span class="tok-mf">3.0</span> <span class="tok-c1"># b stores 3.0 (float values are decimal approximations)</span>
-<span class="tok-n">c</span> <span class="tok-o">=</span> <span class="tok-mi">7</span> <span class="tok-o">//</span> <span class="tok-mi">2</span> <span class="tok-c1"># c stores 3 (int division always gives ints)</span>
-<span class="tok-n">d</span> <span class="tok-o">=</span> <span class="tok-mi">7</span> <span class="tok-o">%</span> <span class="tok-mi">2</span> <span class="tok-c1"># d stores 1 (Mod or Remainder of the division)</span>
-<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-mi">5</span> <span class="tok-c1"># change the value of a to 5</span>
-<span class="tok-n">a</span> <span class="tok-o">+=</span> <span class="tok-mi">1</span> <span class="tok-c1"># INCREMENT the value of a by 1 (to 6)</span>
+# Maths
+a = 3
+b = 3.0 # b stores 3.0 (float values are decimal approximations)
+c = 7 // 2 # c stores 3 (int division always gives ints)
+d = 7 % 2 # d stores 1 (Mod or Remainder of the division)
+a = 5 # change the value of a to 5
+a += 1 # INCREMENT the value of a by 1 (to 6)
 
-<span class="tok-c1"># Boolean Operators</span>
-<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-mi">3</span> <span class="tok-o">&gt;</span> <span class="tok-mi">2</span><span class="tok-p">)</span> <span class="tok-c1"># a stores True because 3 is greater than 2</span>
-<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-mi">2</span> <span class="tok-o">&gt;=</span> <span class="tok-mi">2</span><span class="tok-p">)</span> <span class="tok-c1"># a stores True because 2 is greater than or equal to 2</span>
-<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-mi">3</span> <span class="tok-o">&lt;</span> <span class="tok-mi">2</span><span class="tok-p">)</span> <span class="tok-c1"># a stores False because 3 is not less than 2</span>
-<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-mi">2</span> <span class="tok-o">&lt;=</span> <span class="tok-mi">2</span><span class="tok-p">)</span> <span class="tok-c1"># a stores True because 2 is less than or equal to 2</span>
-<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-mi">3</span> <span class="tok-o">!=</span> <span class="tok-mi">2</span><span class="tok-p">)</span> <span class="tok-c1"># a stores True because 3 is not equal to 2</span>
-<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-mi">3</span> <span class="tok-o">==</span> <span class="tok-mi">3</span><span class="tok-p">)</span> <span class="tok-c1"># a stores True because 3 is equal to 3</span>
-<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-bp">True</span> <span class="tok-ow">and</span> <span class="tok-bp">False</span><span class="tok-p">)</span> <span class="tok-c1"># a stores False, AND returns True only when both sides are True</span>
-<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-bp">True</span> <span class="tok-ow">or</span> <span class="tok-bp">False</span><span class="tok-p">)</span> <span class="tok-c1"># a stores True, OR returns True if at least 1 side is True</span>
-<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-ow">not</span> <span class="tok-bp">False</span><span class="tok-p">)</span> <span class="tok-c1"># a stores True, NOT returns opposite</span>
+# Boolean Operators
+a = (3 &gt; 2) # a stores True because 3 is greater than 2
+a = (2 &gt;= 2) # a stores True because 2 is greater than or equal to 2
+a = (3 &lt; 2) # a stores False because 3 is not less than 2
+a = (2 &lt;= 2) # a stores True because 2 is less than or equal to 2
+a = (3 != 2) # a stores True because 3 is not equal to 2
+a = (3 == 3) # a stores True because 3 is equal to 3
+a = (True and False) # a stores False, AND returns True only when both sides are True
+a = (True or False) # a stores True, OR returns True if at least 1 side is True
+a = (not False) # a stores True, NOT returns opposite
 
-<span class="tok-c1"># BLOCKS are sections of any code chunked together with INDENTATION</span>
-<span class="tok-c1"># BLOCKS start with a ':' and continue with each INDENTED line</span>
-<span class="tok-n">x</span> <span class="tok-o">=</span> <span class="tok-mi">7</span>
-<span class="tok-k">if</span> <span class="tok-n">x</span> <span class="tok-o">&gt;</span> <span class="tok-mi">8</span><span class="tok-p">:</span> <span class="tok-c1"># if CONDITION is True, then execute block, otherwise skip block.</span>
-    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-s2">"Hello"</span><span class="tok-p">)</span> <span class="tok-c1"># since x stores 7, this will skip</span>
-    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-s2">"I Am Sam."</span><span class="tok-p">)</span> <span class="tok-c1"># since x stores 7, this will skip</span>
-<span class="tok-k">elif</span> <span class="tok-n">x</span> <span class="tok-o">&gt;</span> <span class="tok-mi">2</span><span class="tok-p">:</span> <span class="tok-c1"># elif condition is True AND previous if was False, execute block</span>
-    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-s2">"Hi"</span><span class="tok-p">)</span> <span class="tok-c1"># since x stores 7, this will execute</span>
-    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-s2">"I am Sally."</span><span class="tok-p">)</span> <span class="tok-c1"># since x stores 7, this will execute</span>
-<span class="tok-k">else</span><span class="tok-p">:</span> <span class="tok-c1"># if all previous conditions are False, executer block.</span>
-    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-s2">"Yo"</span><span class="tok-p">)</span> <span class="tok-c1"># since x stores 7, this will skip</span>
-    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-s2">"I'm Bob."</span><span class="tok-p">)</span> <span class="tok-c1"># since x stores 7, this will skip</span>
+# BLOCKS are sections of any code chunked together with INDENTATION
+# BLOCKS start with a ':' and continue with each INDENTED line
+x = 7
+if x &gt; 8: # if CONDITION is True, then execute block, otherwise skip block.
+    print("Hello") # since x stores 7, this will skip
+    print("I Am Sam.") # since x stores 7, this will skip
+elif x &gt; 2: # elif condition is True AND previous if was False, execute block
+    print("Hi") # since x stores 7, this will execute
+    print("I am Sally.") # since x stores 7, this will execute
+else: # if all previous conditions are False, executer block.
+    print("Yo") # since x stores 7, this will skip
+    print("I'm Bob.") # since x stores 7, this will skip
 
-<span class="tok-k">while</span> <span class="tok-n">x</span> <span class="tok-o">&gt;</span> <span class="tok-mi">3</span><span class="tok-p">:</span> <span class="tok-c1"># repeat a block until condition becomes False</span>
-    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-s2">"Apples"</span><span class="tok-p">)</span>
-    <span class="tok-n">x</span> <span class="tok-o">+=</span> <span class="tok-o">-</span><span class="tok-mi">1</span>
+while x &gt; 3: # repeat a block until condition becomes False
+    print("Apples")
+    x += -1
 
-<span class="tok-c1"># Lists store multiple values</span>
-<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">[</span><span class="tok-mi">10</span><span class="tok-p">,</span> <span class="tok-mi">30</span><span class="tok-p">,</span> <span class="tok-mi">20</span><span class="tok-p">,</span> <span class="tok-mi">90</span><span class="tok-p">]</span> <span class="tok-c1"># create a new list</span>
-<span class="tok-n">x</span> <span class="tok-o">=</span> <span class="tok-nb">len</span><span class="tok-p">(</span><span class="tok-n">a</span><span class="tok-p">)</span> <span class="tok-c1"># x stores 4 (the length)</span>
-<span class="tok-n">b</span> <span class="tok-o">=</span> <span class="tok-n">a</span><span class="tok-p">[</span><span class="tok-mi">0</span><span class="tok-p">]</span> <span class="tok-c1"># INDEX into the list, 0 is first value, b stores 10</span>
-<span class="tok-n">c</span> <span class="tok-o">=</span> <span class="tok-n">a</span><span class="tok-p">[</span><span class="tok-mi">3</span><span class="tok-p">]</span> <span class="tok-c1"># c stores 90</span>
-<span class="tok-n">d</span> <span class="tok-o">=</span> <span class="tok-n">a</span><span class="tok-p">[</span><span class="tok-o">-</span><span class="tok-mi">1</span><span class="tok-p">]</span> <span class="tok-c1"># -1 is last value, d stores 90</span>
-<span class="tok-n">e</span> <span class="tok-o">=</span> <span class="tok-n">a</span><span class="tok-p">[</span><span class="tok-mi">1</span><span class="tok-p">:</span><span class="tok-mi">3</span><span class="tok-p">]</span> <span class="tok-c1"># slice a from index 1 up to index 3, e stores [30, 20]</span>
-<span class="tok-n">a</span><span class="tok-p">[</span><span class="tok-mi">1</span><span class="tok-p">]</span> <span class="tok-o">=</span> <span class="tok-mi">50</span> <span class="tok-c1"># modify the second element in the list, a is now [10, 50, 20, 90]</span>
-<span class="tok-n">f</span> <span class="tok-o">=</span> <span class="tok-n">a</span> <span class="tok-o">+</span> <span class="tok-p">[</span><span class="tok-mi">5</span><span class="tok-p">,</span> <span class="tok-mi">15</span><span class="tok-p">]</span> <span class="tok-c1"># f stores [10, 50, 20, 90, 5, 15], CONCATENATION not addition</span>
-<span class="tok-n">g</span> <span class="tok-o">=</span> <span class="tok-nb">range</span><span class="tok-p">(</span><span class="tok-mi">0</span><span class="tok-p">,</span> <span class="tok-mi">4</span><span class="tok-p">)</span> <span class="tok-c1"># range function returns list 0 up to 4, g stores [0, 1, 2, 3]</span>
+# Lists store multiple values
+a = [10, 30, 20, 90] # create a new list
+x = len(a) # x stores 4 (the length)
+b = a[0] # INDEX into the list, 0 is first value, b stores 10
+c = a[3] # c stores 90
+d = a[-1] # -1 is last value, d stores 90
+e = a[1:3] # slice a from index 1 up to index 3, e stores [30, 20]
+a[1] = 50 # modify the second element in the list, a is now [10, 50, 20, 90]
+f = a + [5, 15] # f stores [10, 50, 20, 90, 5, 15], CONCATENATION not addition
+g = range(0, 4) # range function returns list 0 up to 4, g stores [0, 1, 2, 3]
 
-<span class="tok-c1"># For Loops</span>
-<span class="tok-k">for</span> <span class="tok-n">c</span> <span class="tok-ow">in</span> <span class="tok-s2">"Elephant!"</span><span class="tok-p">:</span> <span class="tok-c1"># repeat block with c storing each character 1 at a time</span>
-    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-n">c</span><span class="tok-p">)</span> <span class="tok-c1"># prints one letter per line</span>
+# For Loops
+for c in "Elephant!": # repeat block with c storing each character 1 at a time
+    print(c) # prints one letter per line
 
-<span class="tok-k">for</span> <span class="tok-n">x</span> <span class="tok-ow">in</span> <span class="tok-p">[</span><span class="tok-mi">10</span><span class="tok-p">,</span> <span class="tok-mi">30</span><span class="tok-p">,</span> <span class="tok-mi">20</span><span class="tok-p">]:</span>
-    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-n">x</span><span class="tok-p">)</span> <span class="tok-c1"># prints one number per line</span>
+for x in [10, 30, 20]:
+    print(x) # prints one number per line
 
-<span class="tok-c1"># Custom Functions</span>
-<span class="tok-k">def</span> <span class="tok-nf">myfunc</span><span class="tok-p">(</span><span class="tok-n">a</span><span class="tok-p">,</span> <span class="tok-n">b</span><span class="tok-p">):</span> <span class="tok-c1"># DEFINES a new function that takes 2 INPUT PARAMETER values</span>
-    <span class="tok-n">c</span> <span class="tok-o">=</span> <span class="tok-mi">2</span> <span class="tok-o">*</span> <span class="tok-n">a</span> <span class="tok-o">+</span> <span class="tok-n">b</span> <span class="tok-c1"># executes only when function is called</span>
-    <span class="tok-k">return</span> <span class="tok-n">c</span> <span class="tok-c1"># RETURNS a value back to the calling code</span>
+# Custom Functions
+def myfunc(a, b): # DEFINES a new function that takes 2 INPUT PARAMETER values
+    c = 2 * a + b # executes only when function is called
+    return c # RETURNS a value back to the calling code
 
-<span class="tok-n">x</span> <span class="tok-o">=</span> <span class="tok-n">myfunc</span><span class="tok-p">(</span><span class="tok-mi">10</span><span class="tok-p">,</span> <span class="tok-mi">5</span><span class="tok-p">)</span> <span class="tok-c1"># Calls the myfunc() function, x stores return value 25</span>
-<span class="tok-n">y</span> <span class="tok-o">=</span> <span class="tok-n">myfunc</span><span class="tok-p">(</span><span class="tok-mi">1</span><span class="tok-p">,</span> <span class="tok-mi">3</span><span class="tok-p">)</span>  <span class="tok-c1"># Calls the myfunc() function, x stores return value 5</span>
-</td></tr></table></code></pre>
+x = myfunc(10, 5) # Calls the myfunc() function, x stores return value 25
+y = myfunc(1, 3)  # Calls the myfunc() function, x stores return value 5</code></pre>
       </div>
      </div>
      <div class="openblock float-group">
@@ -697,7 +627,7 @@ $(document).on('page:load', ready2);
   TeX: { extensions: ["mhchem.js"] }
 });
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-MML-AM_HTMLorMML">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML">
   </script>
  </body>
 </html>
