@@ -54,7 +54,7 @@ Programming is all about information processing. Information is categorized by d
 .Strings and Quotation Marks
 [NOTE]
 ====
-Strings are always surrounded by quotation marks. Python allows either single (') or double(") quotation marks. Some strings may look like numbers, but as long as they are surrounded by quotation marks, they are treated like text.
+Strings are always surrounded by quotation marks. Python allows either single (') or double (") quotation marks. Some strings may look like numbers, but as long as they are surrounded by quotation marks, they are treated like text.
 ====
 
 == Variables
