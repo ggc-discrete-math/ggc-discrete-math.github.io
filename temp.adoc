@@ -1,0 +1,17 @@
+= Test Page
+
+:toc: left
+:toclevels: 2
+:linkcss:
+:pygments-style: friendly
+:icons: font
+:linkattrs:
+:sectnums:
+:nofooter:
+
+. Explain why the insertion sort algorithm is $O(n^2)$.
+
+. Estimate the time complexity for each of the following two algorithms by first counting the number of steps, and then summarizing your findings using big O notation.
+
+.. An algorithm to find the sum divided by the product of $n$ integers from $1$ to $n$.
+

@@ -12,6 +12,7 @@ os.system("asciidoctor-latex -b html " + 'book.adoc')
 # get list of chapter files for asciidoctor
 # chap_adocs = sorted([f for f in os.listdir() if f.startswith("chapter") and f.endswith(".adoc")])
 chap_adocs = ['index.adoc', 'python_intro.adoc', 'logic.adoc', 'set_theory.adoc', 'functions.adoc', 'growth_functions.adoc', 'algorithms.adoc', 'counting.adoc', 'number_theory.adoc', 'induction_recursion.adoc', 'graph_theory.adoc', 'appendix_one.adoc', 'appendix_two.adoc']
+
 chap_htmls = [f.replace('.adoc', '.html') for f in chap_adocs]
 
 # go through master toc and update links to point to separate html files.
@@ -21,7 +22,6 @@ anchors = toc_html.find_all('a')
 chap_index = 0
 for a in anchors:
 	label = str(a.text)
-	#print(label)
 	if not (label.startswith(str(chap_index+1) + ".")):
 		chap_index += 1
 	a['href'] = chap_htmls[chap_index] + a['href']

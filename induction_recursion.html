@@ -281,8 +281,8 @@ $(document).on('page:load', ready2);
       </a>
       <ul class="sectlevel2">
        <li>
-        <a href="algorithms.html#_structure_of_algorithms_in_pseudocode_and_python">
-         7.1. Structure of Algorithms in Pseudocode and Python
+        <a href="algorithms.html#_structure_of_algorithms_in_pseudocode">
+         7.1. Structure of Algorithms in Pseudocode
         </a>
        </li>
        <li>
@@ -1153,7 +1153,11 @@ computing \(n!\) for integers \(n \geq  0\).
        <div class="paragraph">
         <p>
          Recall that \(5!=5\ \times\ 4\ \times\ 3\ \times\ 2\ \times\ 1\ =\ 5\ \times\ 4!\).
-In general, we may define \(n!\) recursively or inductively as
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         In general, we may define \(n!\) recursively or inductively as
         </p>
        </div>
        <div class="paragraph">
@@ -1168,259 +1172,76 @@ In general, we may define \(n!\) recursively or inductively as
        </div>
        <div class="paragraph">
         <p>
-         A recursive implementation of the factorial procedure in
-pseudocode would be, to be contrasted with an iterative implementation.
+         An implementation of the factorial procedure is given below.
         </p>
        </div>
        <div class="sidebarblock">
         <div class="content">
-         <div class="title">
-          Recursive implementation of the factorial function, \(n!\).
+         <div class="paragraph">
+          <div class="title">
+           Factorial \(n!\) in Pseudocode
+          </div>
+          <p>
+          </p>
          </div>
-         <html>
-          <head>
-           <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-           <meta content="Microsoft Word 15 (filtered)" name="Generator"/>
-           <style>
-            <!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-           </style>
-           <style>
-            .click .title { color: blue; }
-  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
-  .openblock { margin-top: 1em; margin-bottom: 1em; }
-  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
-           </style>
-           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript">
-           </script>
-           <script>
-            var ready2;
-
-ready2 = function() {
-
-    $(document).ready(function(){
-
-        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
-        $('.openblock.click').find('.content').hide()
-
-
-        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
-        $('.listingblock.click').find('.content').hide()
-
-    });
-
-}
-
-
-
-
-$(document).ready(ready2);
-$(document).on('page:load', ready2);
-           </script>
-          </head>
-          <body lang="EN-US">
-           <div class="WordSection1">
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              _____________________________________________________________________
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              Procedure
-RFactorial:
-             </b>
-             computes
-             <i>
-              n!
-             </i>
-             , for
-             <i>
-              n
-             </i>
-             , a positive integer,
-recursively
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              _____________________________________________________________________
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              Input:
-             </b>
-             A
-nonnegative integer,
-             <i>
-              n
-             </i>
-             .
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              _____________________________________________________________________
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              Output:
-             </b>
-             <i>
-              n!
-= 1*2*3…(n-1)*(n)
-             </i>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              _____________________________________________________________________
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               Procedure
-              </span>
-             </b>
-             <span style='font-family:"Century Schoolbook",serif'>
-              R
-             </span>
-             <span style='font-family:
-"Century",serif'>
-              Fa
-             </span>
-             <span style='font-family:"Century",serif'>
-              ctorial
-             </span>
-             (
-             <span style="letter-spacing:-1.75pt">
-              <i>
-               n
-              </i>
-             </span>
-             )
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               begin
-              </span>
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century",serif'>
-               if
-              </span>
-             </b>
-             <span style='font-family:"Century",serif'>
-              n==0
-              <b>
-               then do
-              </b>
-             </span>
-            </p>
-            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:1.0in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               return
-              </span>
-             </b>
-             <span style='font-family:"Century",serif'>
-              1
-             </span>
-            </p>
-            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century",serif'>
-               else
-do
-              </span>
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:1.0in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               return
-              </span>
-             </b>
-             <span style='font-family:"Century",serif'>
-              n*Rfactorial(n-1)
-             </span>
-            </p>
-            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               end
-              </span>
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               end
-              </span>
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              ____________________________________________________________________
-             </b>
-            </p>
-            <p class="MsoNormal">
-            </p>
-           </div>
-          </body>
-         </html>
+         <table class="tableblock frame-all grid-all spread">
+          <colgroup>
+           <col style="width: 50%;"/>
+           <col style="width: 50%;"/>
+          </colgroup>
+          <thead>
+           <tr>
+            <th class="tableblock halign-left valign-top">
+             Recursive
+            </th>
+            <th class="tableblock halign-left valign-top">
+             Iterative
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td class="tableblock halign-left valign-top">
+             <div>
+              <div class="listingblock">
+               <div class="content">
+                <pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode"><strong>procedure</strong> factorial(<em>n</em>)
+<strong>begin</strong>
+	<strong>if</strong> <em>n</em> <strong>equals</strong> 0 <strong>then</strong>
+		<strong>return</strong> 1
+	<strong>else</strong>
+		<strong>return</strong>  n * factorial(n-1)
+	<strong>end if</strong>
+<strong>end</strong></code></pre>
+               </div>
+              </div>
+             </div>
+            </td>
+            <td class="tableblock halign-left valign-top">
+             <div>
+              <div class="listingblock">
+               <div class="content">
+                <pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode"><strong>procedure</strong> factorial(<em>n</em>)
+<strong>begin</strong>
+	<em>z</em> = 1
+	<strong>for</strong> <em>i</em> = 1 <strong>to</strong> <em>n</em> <strong>do</strong>
+		<em>z</em> = <em>z</em> * <em>i</em>
+	<strong>return</strong> <em>z</em>
+<strong>end</strong></code></pre>
+               </div>
+              </div>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
         </div>
-       </div>
-       <div class="paragraph">
-        <p>
-         A recursive implementation of the factorial function in Python is given below
-        </p>
        </div>
        <div class="sidebarblock">
         <div class="content">
          <div class="openblock">
           <div class="title">
-           Example 14 - Recursive Implementation of Factorial Function, \(n!\), in Python
+           Example 10 - Recursive Implementation of Factorial Function, \(n!\), in Python
           </div>
           <div class="content">
           </div>
@@ -1430,7 +1251,7 @@ margin-left:.5in;margin-bottom:.0001pt">
            The Python code below implements the factorial function \(n!\) recursively.
           </p>
          </div>
-         <iframe frameborder="5" height="350" src="https://pythontutor.com/iframe-embed.html#code=def%20rfactorial%28n%29%3A%0A%20%20%20%20z%3D1%0A%20%20%20%20if%20n%3E1%3A%0A%20%20%20%20%20%20%20%20z%3Dn*rfactorial%28n-1%29%0A%20%20%20%20return%20z%0A%23%20Driver%20code%20to%20test%20above%0AAnswer%3Drfactorial%285%29%0Aprint%28%22n! %20is%3A%22,%20Answer%29%0A&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=350" width="100%">
+         <iframe frameborder="5" height="375" src="https://pythontutor.com/iframe-embed.html#code=def%20rfactorial%28n%29%3A%0A%20%20%20%20z%3D1%0A%20%20%20%20if%20n%3E1%3A%0A%20%20%20%20%20%20%20%20z%3Dn*rfactorial%28n-1%29%0A%20%20%20%20return%20z%0A%23%20Driver%20code%20to%20test%20above%0AAnswer%3Drfactorial%285%29%0Aprint%28%22n! %20is%3A%22,%20Answer%29%0A&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=375" width="100%">
          </iframe>
          <div style="text-align: right;">
           <a href="http://www.pythontutor.com/visualize.html#code=def%20rfactorial%28n%29%3A%0A%20%20%20%20z%3D1%0A%20%20%20%20if%20n%3E1%3A%0A%20%20%20%20%20%20%20%20z%3Dn*rfactorial%28n-1%29%0A%20%20%20%20return%20z%0A%23%20Driver%20code%20to%20test%20above%0AAnswer%3Drfactorial%285%29%0Aprint%28%22n! %20is%3A%22,%20Answer%29%0A&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
@@ -1472,242 +1293,64 @@ Hence we can recursively define exponentiation as
        </div>
        <div class="sidebarblock">
         <div class="content">
-         <div class="title">
-          Recursive Implementation of the Power Function, \(b^n\).
+         <div class="paragraph">
+          <div class="title">
+           Power Function \(b^n\) in Pseudocode
+          </div>
+          <p>
+          </p>
          </div>
-         <html>
-          <head>
-           <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-           <meta content="Microsoft Word 15 (filtered)" name="Generator"/>
-           <style>
-            <!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-           </style>
-           <style>
-            .click .title { color: blue; }
-  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
-  .openblock { margin-top: 1em; margin-bottom: 1em; }
-  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
-           </style>
-           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript">
-           </script>
-           <script>
-            var ready2;
-
-ready2 = function() {
-
-    $(document).ready(function(){
-
-        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
-        $('.openblock.click').find('.content').hide()
-
-
-        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
-        $('.listingblock.click').find('.content').hide()
-
-    });
-
-}
-
-
-
-
-$(document).ready(ready2);
-$(document).on('page:load', ready2);
-           </script>
-          </head>
-          <body lang="EN-US">
-           <div class="WordSection1">
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              ______________________________________________
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              Procedure
-Rexponentiation:
-             </b>
-             recursively computes the
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             exponent
-             <i>
-              b
-             </i>
-             <sup>
-              n
-             </sup>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              ______________________________________________
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              Input:
-             </b>
-             A
-nonnegative integer
-             <i>
-              , n and a positive base
-             </i>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              ______________________________________________
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              Output:
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              ______________________________________________
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               procedure
-               <span style="letter-spacing:
--1.4pt">
-               </span>
-              </span>
-             </b>
-             <span style='font-family:"Century Schoolbook",serif;
-letter-spacing:-1.4pt'>
-              R
-             </span>
-             <span style='font-family:"Century",serif'>
-              e
-             </span>
-             <span style='font-family:"Century",serif'>
-              xponentiation
-             </span>
-             (
-             <span style="letter-spacing:-1.75pt">
-              n
-             </span>
-             <i>
-              <span style='font-size:10.0pt;
-line-height:107%;font-family:"Century Schoolbook",serif'>
-               , b)
-              </span>
-             </i>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               begin
-              </span>
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century",serif'>
-               if
-              </span>
-             </b>
-             <span style='font-family:"Century",serif'>
-              n==0
-              <b>
-               then do
-              </b>
-             </span>
-            </p>
-            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:1.0in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               return
-              </span>
-             </b>
-             <span style='font-family:"Century",serif'>
-              1
-             </span>
-            </p>
-            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century",serif'>
-               else
-do
-              </span>
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:1.0in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               return
-              </span>
-             </b>
-             <span style='font-family:"Century",serif'>
-              b*Rexponentiation(n-1)
-             </span>
-            </p>
-            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               end
-              </span>
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               end
-              </span>
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              ______________________________________________
-             </b>
-            </p>
-            <p class="MsoNormal">
-            </p>
-           </div>
-          </body>
-         </html>
+         <table class="tableblock frame-all grid-all spread">
+          <colgroup>
+           <col style="width: 50%;"/>
+           <col style="width: 50%;"/>
+          </colgroup>
+          <thead>
+           <tr>
+            <th class="tableblock halign-left valign-top">
+             Recursive
+            </th>
+            <th class="tableblock halign-left valign-top">
+             Iterative
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td class="tableblock halign-left valign-top">
+             <div>
+              <div class="listingblock">
+               <div class="content">
+                <pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode"><strong>procedure</strong> exponentiation(<em>b</em>, <em>n</em>)
+<strong>begin</strong>
+	<strong>if</strong> <em>n</em> <strong>equals</strong> 0 <strong>then</strong>
+		<strong>return</strong> 1
+	<strong>else</strong>
+		<strong>return</strong>  b * exponentiation(n-1)
+	<strong>end if</strong>
+<strong>end</strong></code></pre>
+               </div>
+              </div>
+             </div>
+            </td>
+            <td class="tableblock halign-left valign-top">
+             <div>
+              <div class="listingblock">
+               <div class="content">
+                <pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode"><strong>procedure</strong> exponentiation(<em>b</em>, <em>n</em>)
+<strong>begin</strong>
+	<em>z</em> = 1
+	<strong>for</strong> <em>i</em> = 1 <strong>to</strong> <em>n</em> <strong>do</strong>
+		<em>z</em> = <em>z</em> * <em>b</em>
+	<strong>return</strong> <em>z</em>
+<strong>end</strong></code></pre>
+               </div>
+              </div>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
         </div>
        </div>
       </div>
@@ -1755,270 +1398,20 @@ can be defined recursively,
        </div>
        <div class="sidebarblock">
         <div class="content">
-         <div class="title">
-          Recursive implementation of arithmetic sequences with first term \(a_1=a\), and common difference \(d\).
+         <div class="listingblock">
+          <div class="title">
+           Recursive implementation of arithmetic sequences with first term \(a_1=a\), and common difference \(d\).
+          </div>
+          <div class="content">
+           <pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode"><strong>procedure</strong> arithmetic(<em>n</em>, <em>a</em>, <em>d</em>)
+<strong>begin</strong>
+	<strong>if</strong> <em>n</em> equals 1 <strong>then</strong>
+		<strong>return</strong> <em>a</em>
+	<strong>else</strong>
+		<strong>return</strong> <em>d</em> + arithmetic(<em>n</em> – 1, <em>a</em>, <em>d</em>)
+<strong>end</strong></code></pre>
+          </div>
          </div>
-         <html>
-          <head>
-           <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-           <meta content="Microsoft Word 15 (filtered)" name="Generator"/>
-           <style>
-            <!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-           </style>
-           <style>
-            .click .title { color: blue; }
-  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
-  .openblock { margin-top: 1em; margin-bottom: 1em; }
-  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
-           </style>
-           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript">
-           </script>
-           <script>
-            var ready2;
-
-ready2 = function() {
-
-    $(document).ready(function(){
-
-        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
-        $('.openblock.click').find('.content').hide()
-
-
-        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
-        $('.listingblock.click').find('.content').hide()
-
-    });
-
-}
-
-
-
-
-$(document).ready(ready2);
-$(document).on('page:load', ready2);
-           </script>
-          </head>
-          <body lang="EN-US">
-           <div class="WordSection1">
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              ______________________________________________
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              Procedure
-Rarithmetic:
-             </b>
-             recursively computes the
-             <i>
-              n
-             </i>
-             <sup>
-              th
-             </sup>
-             term
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             of the
-arithmetic sequence with first term,
-             <i>
-              a
-             </i>
-             and
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             common difference,
-             <i>
-              d
-             </i>
-             .
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              ______________________________________________
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              Input:
-             </b>
-             A
-positive integer,
-             <i>
-              n
-             </i>
-             and the first term,
-             <i>
-              a
-             </i>
-             , and
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             common
-difference,
-             <i>
-              d
-             </i>
-             , of an arithmetic sequence
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              ______________________________________________
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              Output:
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              ______________________________________________
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               procedure
-               <span style="letter-spacing:
--1.4pt">
-               </span>
-              </span>
-             </b>
-             <span style='font-family:"Century Schoolbook",serif;
-letter-spacing:-1.4pt'>
-              R
-             </span>
-             <span style='font-family:"Century",serif'>
-              arithmetic
-             </span>
-             (
-             <i>
-              <span style="letter-spacing:-1.75pt">
-               n
-              </span>
-             </i>
-             <i>
-              <span style='font-size:10.0pt;
-line-height:107%;font-family:"Century Schoolbook",serif'>
-               , a, d)
-              </span>
-             </i>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               begin
-              </span>
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century",serif'>
-               if
-              </span>
-             </b>
-             <span style='font-family:"Century",serif'>
-              n==1
-              <b>
-               then do
-              </b>
-             </span>
-            </p>
-            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:1.0in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               return
-              </span>
-             </b>
-             <i>
-              <span style='font-family:"Century",serif'>
-               a
-              </span>
-             </i>
-            </p>
-            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century",serif'>
-               else
-do
-              </span>
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:1.0in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               return
-              </span>
-             </b>
-             <span style='font-family:"Century",serif'>
-              d + Rarithmetic(n – 1, a,
-d)
-             </span>
-            </p>
-            <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               end
-              </span>
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              <span style='font-family:"Century Schoolbook",serif'>
-               end
-              </span>
-             </b>
-            </p>
-            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">
-             <b>
-              ______________________________________________
-             </b>
-            </p>
-            <p class="MsoNormal">
-            </p>
-           </div>
-          </body>
-         </html>
         </div>
        </div>
       </div>
@@ -2056,7 +1449,7 @@ Fibonacci number.
         <div class="content">
          <div class="openblock">
           <div class="title">
-           Example 15 - Recursive Implementation of Fibonacci in Python
+           Example 11 - Recursive Implementation of Fibonacci in Python
           </div>
           <div class="content">
           </div>

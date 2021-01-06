@@ -1,0 +1,209 @@
+%% Preamble %%
+%% A minimal LaTeX preamble
+%% Some packates are needed to implement
+%% Asciidoc features
+
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}               % ... or a4paper or a5paper or ...
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}       % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage{tcolorbox}
+\usepackage{lipsum}
+
+\usepackage{epstopdf}
+\usepackage{color}
+% \usepackage[usenames, dvipsnames]{color}
+% \usepackage{alltt}
+
+
+\usepackage{amssymb}
+% \usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[version=3]{mhchem}
+
+
+% Needed to properly typeset
+% standard unicode characters:
+%
+\RequirePackage{fix-cm}
+\usepackage{fontspec}
+\usepackage[Latin,Greek]{ucharclasses}
+%
+% NOTE: you must also use xelatex
+% as the typesetting engine
+
+
+% \usepackage{fontspec}
+% \usepackage{polyglossia}
+% \setmainlanguage{en}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\graphicspath{ {images/} }
+\DeclareGraphicsExtensions{.png, .jpg, jpeg, .pdf}
+
+%% \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+%% Asciidoc TeX Macros %%
+
+
+% \pagecolor{black}
+%%%%%%%%%%%%
+
+
+% Needed for Asciidoc
+
+\newcommand{\admonition}[2]{\textbf{#1}: {#2}}
+\newcommand{\rolered}[1]{ \textcolor{red}{#1} }
+\newcommand{\roleblue}[1]{ \textcolor{blue}{#1} }
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{problem}{Problem}
+\newtheorem{exercise}{Exercise}
+\newtheorem{example}{Example}
+\newtheorem{note}{Note}
+\newtheorem{joke}{Joke}
+\newtheorem{objection}{Objection}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  Extended quote environment with author
+
+\renewenvironment{quotation}
+{   \leftskip 4em \begin{em} }
+{\end{em}\par }
+
+\def\signed#1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+  \hbox{}\nobreak\hfil\raise-3pt\hbox{(#1)}%
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+
+
+\newsavebox\mybox
+
+\newenvironment{aquote}[1]
+  {\savebox\mybox{#1}\begin{quotation}}
+  {\signed{\usebox\mybox}\end{quotation}}
+
+\newenvironment{tquote}[1]
+  {  {\bf #1} \begin{quotation} \\ }
+  { \end{quotation} }
+
+%% BOXES: http://tex.stackexchange.com/questions/83930/what-are-the-different-kinds-of-boxes-in-latex
+%% ENVIRONMENTS: https://www.sharelatex.com/learn/Environments
+
+\newenvironment{asciidocbox}
+  {\leftskip6em\rightskip6em\par}
+  {\par}
+
+\newenvironment{titledasciidocbox}[1]
+  {\leftskip6em\rightskip6em\par{\bf #1}\vskip-0.6em\par}
+  {\par}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% http://texblog.org/tag/rightskip/
+
+
+\newenvironment{preamble}
+  {}
+  {}
+
+%% http://tex.stackexchange.com/questions/99809/box-or-sidebar-for-additional-text
+%%
+\newenvironment{sidebar}[1][r]
+  {\wrapfigure{#1}{0.5\textwidth}\tcolorbox}
+  {\endtcolorbox\endwrapfigure}
+
+
+%%%%%%%%%%
+
+\newenvironment{comment*}
+  {\leftskip6em\rightskip6em\par}
+  {\par}
+
+  \newenvironment{remark*}
+  {\leftskip6em\rightskip6em\par}
+  {\par}
+
+
+%% Dummy environment for testing:
+
+\newenvironment{foo}
+  {\bf Foo.\ }
+  {}
+
+
+\newenvironment{foo*}
+  {\bf Foo.\ }
+  {}
+
+
+\newenvironment{click}
+  {\bf Click.\ }
+  {}
+
+\newenvironment{click*}
+  {\bf Click.\ }
+  {}
+
+
+\newenvironment{remark}
+  {\bf Remark.\ }
+  {}
+
+\newenvironment{capsule}
+  {\leftskip10em\par}
+  {\par}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Style
+
+\parindent0pt
+\parskip8pt
+%% User Macros %%
+%% Front Matter %%
+
+\title{Test Page}
+\author{}
+\date{}
+
+
+%% Begin Document %%
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+
+\item{Explain why the insertion sort algorithm is $O(n^2)$.}
+
+\item{Estimate the time complexity for each of the following two algorithms by first counting the number of steps, and then summarizing your findings using big O notation.}
+
+\end{enumerate}
+
+
+..An algorithm to find the sum divided by the product of $n$ integers from $1$ to $n$.
+
+
+\end{document}
+
