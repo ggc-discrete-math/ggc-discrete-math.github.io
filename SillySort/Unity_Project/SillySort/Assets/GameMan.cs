@@ -7,6 +7,8 @@ public class GameMan : MonoBehaviour
     public static List<int> numList;
     public static int numRevealed;
     public const int maxRevealed = 2;
+
+    public static Transform swapA;
     void Awake()
     {
         numList = new List<int>();

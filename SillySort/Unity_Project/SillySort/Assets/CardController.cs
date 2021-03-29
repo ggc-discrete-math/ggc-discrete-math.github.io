@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CardController : MonoBehaviour
 {
-    public Text num, reveal, left, right;
+    public Text num, reveal;
     bool isHidden;
     int value;
     // Start is called before the first frame update
@@ -27,12 +27,8 @@ public class CardController : MonoBehaviour
         reveal.GetComponentInParent<Button>().interactable = (
             GameMan.numRevealed < GameMan.maxRevealed || !isHidden);
 
-        left.GetComponentInParent<Button>().interactable = (
-            transform.GetSiblingIndex() > 0);
-
-        right.GetComponentInParent<Button>().interactable = (
-            transform.GetSiblingIndex() < (transform.parent.childCount -1));
-
+        transform.Find("Swap").GetComponent<Button>().interactable =
+            (GameMan.swapA != transform);
     }
 
     public void revealToggle()
@@ -43,21 +39,31 @@ public class CardController : MonoBehaviour
             {
                 GameMan.numRevealed++;
                 isHidden = false;
-                reveal.text = "Hide";
+                reveal.text = "HIDE";
             }
         }
         else
         {
             GameMan.numRevealed--;
             isHidden = true;
-            reveal.text = "Reveal";
+            reveal.text = "SHOW";
         }
     }
 
-    public void move(int dir)
+    public void swap()
     {
-        int i = transform.GetSiblingIndex();
-        transform.SetSiblingIndex(i + dir);
+        if (GameMan.swapA == null)
+        {
+            GameMan.swapA = transform;
+        }
+        else
+        {
+            int a = GameMan.swapA.GetSiblingIndex();
+            int b = transform.GetSiblingIndex();
+            GameMan.swapA.SetSiblingIndex(b);
+            transform.SetSiblingIndex(a);
+            GameMan.swapA = null;
+        }
     }
 
 
