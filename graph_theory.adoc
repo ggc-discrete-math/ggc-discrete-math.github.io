@@ -68,7 +68,7 @@ is twice the number of edges $\left|E\right|=7$ in the graph.
 This is true in general and we state this result as  theorem, often called the handshaking lemma.
 
 
-.Handshaking lemma
+.Handshaking Lemma
 ****
 The sum of the degrees of the vertices of a graph $G=\left(V,\ E\right)$ is equal to twice the number of edges
 in $G$. That is, $\displaystyle \sum_{v\in V}{d\left(v\right)=2\ \left|E\right|}$.
