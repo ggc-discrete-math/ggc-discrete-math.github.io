@@ -122,7 +122,7 @@ $(document).on('page:load', ready2);
 </li>
 <li><a href="#_algorithms">7. Algorithms</a>
 <ul class="sectlevel2">
-<li><a href="#_structure_of_algorithms_in_pseudocode_and_python">7.1. Structure of Algorithms in Pseudocode and Python</a></li>
+<li><a href="#_structure_of_algorithms_in_pseudocode">7.1. Structure of Algorithms in Pseudocode</a></li>
 <li><a href="#_examples_of_algorithms">7.2. Examples of Algorithms</a></li>
 <li><a href="#_the_linear_search_algorithm">7.3. The Linear Search Algorithm</a></li>
 <li><a href="#_the_bubble_sort_algorithm">7.4. The Bubble Sort Algorithm</a></li>
@@ -6141,9 +6141,9 @@ a determined output.</p>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_structure_of_algorithms_in_pseudocode_and_python">7.1. Structure of Algorithms in Pseudocode and Python</h3>
+<h3 id="_structure_of_algorithms_in_pseudocode">7.1. Structure of Algorithms in Pseudocode</h3>
 <div class="paragraph">
-<p>While the algorithms we describe are implemented in the Python programming language, we also provide the pseudocode syntax for important algorithms. Pseudocode is used to provide high level description of a program or algorithm intended to be more human understandable rather than computer or program language interpretable. Its syntax preserves the structure of the program or algorithm. It is meant to be easier to read and analyze.  Often in designing an algorithm or program for language specific implementation, a pseudocode implementation or description is obtained first.  In addition to coming early in the design of a computer program, pseudocode also has two other important uses:</p>
+<p>While the algorithms we describe are implemented in the Python programming language, we also provide an overview of pseudocode syntax here. Pseudocode is used to provide high level description of a program or algorithm intended to be more human understandable than computer or program language. Its syntax preserves the structure of the program or algorithm while ignoring programming language specific details. It is meant to be easier to read and analyze.  Often, in designing an algorithm for language specific implementation, a pseudocode implementation is obtained first.  In addition to coming early in the design of a computer program, pseudocode also has two other important uses:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -6151,7 +6151,7 @@ a determined output.</p>
 <p>It can be used to help non-programmers understand what a program or algorithm does and how it works.</p>
 </li>
 <li>
-<p>It can be used for debugging purposes when a programmer is trying to debug and solve a logic error in a computer program as it is closer to human language. Defects are easier to find in a program implementation by analyzing the sequence of implementation steps in the pseudocode description.</p>
+<p>It can be used for debugging purposes when a programmer is trying to debug and solve a logic error in a computer program as it is closer to human language. Defects can be easier to find in a program implementation by analyzing the sequence of implementation steps in the pseudocode description.</p>
 </li>
 </ol>
 </div>
@@ -6192,42 +6192,8 @@ The key features of an algorithm include:</p>
 </li>
 </ul>
 </div>
-<div class="sect3">
-<h4 id="_variable_assignment">7.1.1. Variable Assignment</h4>
-<div class="paragraph">
-<p><strong>Variables</strong>, such as \(x,\ y,\ z,\ t,\ m,\ a_1,\ a_2,\ldots a_n \),
-as in algebra, can be assigned different values based on the variable data type.
-We use the symbol “=” for variable assignment, for example, \[ t=5, \]
-assigns to the variable \(t\), the integer value 5.  The variable \(t\)
-keeps this value unless reassigned, as in \[t=t+3. \]
-In this case the variable t is now assigned the value \[ t=5+3. \] The
-previous example illustrates an important point about assignments, namely that the right side is always evaluated before assignment setting of variables.
-For example the sequence of steps,</p>
-</div>
-<div class="paragraph">
-<p>\begin{array}{c}
- x=5,\\
- y=3,\\
- x=y,
-\end{array}</p>
-</div>
-<div class="paragraph">
-<p>will have at the end of the sequence, \(x=3\) and \(y =3\).</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_statements">7.1.2. Statements</h4>
-<div class="paragraph">
-<p>A <strong>statement</strong> is a line of code or instruction step in an algorithm or program.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_loops">7.1.3. Loops</h4>
-<div class="paragraph">
-<p>A <strong>while</strong> loop is a control flow statement that iterates a sequence of statements provided the Boolean expression is <em>True</em>.</p>
-</div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. While Loop Example</caption>
+<caption class="title">Table 3. Pseudocode Example</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6242,453 +6208,88 @@ For example the sequence of steps,</p>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">while Expression do <i class="conum" data-value="1"></i><b>(1)</b>
-  statement 1 (s1)
-  statement 2 (s2)
-  .
-  .
-  .
-  statement n (sn)
-end <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+<pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode"><strong>procedure</strong> search(<em>{a<sub>1</sub>, a<sub>2</sub>, &#8230;&#8203;, a<sub>n</sub>}, x</em>) <i class="conum" data-value="1"></i><b>(1)</b>
+<strong>begin</strong> <i class="conum" data-value="2"></i><b>(2)</b>
+	<strong>for</strong> <em>i</em> = 1 <strong>to</strong> <em>n</em> <strong>do</strong> <i class="conum" data-value="3"></i><b>(3)</b>
+		<strong>if</strong> <em>a<sub>i</sub></em> equals <em>x</em> <strong>then</strong> <i class="conum" data-value="4"></i><b>(4)</b>
+			<strong>return</strong> <em>i</em> <i class="conum" data-value="5"></i><b>(5)</b>
+		<strong>end if</strong>
+	<strong>end for</strong>
+	<strong>return</strong> -1
+<strong>end</strong> <i class="conum" data-value="6"></i><b>(6)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Start block of code with <em>do</em></td>
+<td>Define a new <em>procedure</em> with inputs</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>End block of code with <em>end</em></td>
+<td>Explicitely start each <em>block</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Loop <em>block</em> using a sequence of integers</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Conditionally execute <em>block</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Return (exit) from <em>procedure</em> with specific value</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Explicitely end each <em>block</em></td>
 </tr>
 </table>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">while Expression: <i class="conum" data-value="1"></i><b>(1)</b>
-  statement 1 (s1)
-  statement 2 (s2)
-  .
-  .
-  .
-  statement n (sn)
-<i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+<pre class="highlight"><code class="language-python" data-lang="python">def search(a, x): <i class="conum" data-value="1"></i><b>(1)</b>
+	for i in range(0, len(a)): <i class="conum" data-value="2"></i><b>(2)</b>
+		if a[i] == x: <i class="conum" data-value="3"></i><b>(3)</b>
+			return i <i class="conum" data-value="4"></i><b>(4)</b>
+	return -1
+<i class="conum" data-value="5"></i><b>(5)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Start block of code with <em>:</em></td>
+<td>Define a new <em>function</em> and start its <em>block</em> with a <strong>:</strong></td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>End block of code with unindent</td>
+<td>Loop <em>block</em> using a sequence of integers</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Conditionally execute <em>block</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Return (exit) from <em>function</em> with specific value</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Each <em>block</em> of code ends with unindent</td>
 </tr>
 </table>
 </div></div></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>The loop iterates as long as  the sequence of statements \((s_1\ldots s_n,)\)
-maintains the True value of <em>Expression</em> and
-exits after an iteration of  \((s_1\ldots s_n,)\) that changes <em>Expression</em>
-to False.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="openblock">
-<div class="title">Example 1 - While loop in Python</div>
-<div class="content">
-
-</div>
-</div>
-<div class="paragraph">
-<p>The Python code below uses a <strong>while</strong> loop to display or output the non-negative integers less than 11.</p>
-</div>
-<iframe width="100%" frameborder="5" height="350" src="https://pythontutor.com/iframe-embed.html#code=count%20%3D%200%0Awhile%20%28count%20%3C%2011%29%3A%0A%20%20%20print%28%22The%20count%20is%3A%22,%20count%29%0A%20%20%20count%20%2B%3D%201%0Aprint%28%22Good%20bye!%22%29&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=450&codeDivHeight=350"> </iframe>
-
-<div style="text-align: right;">
-<a style="" target="_blank" href="http://www.pythontutor.com/visualize.html#code=count%20%3D%200%0Awhile%20%28count%20%3C%2011%29%3A%0A%20%20%20print%28%22The%20count%20is%3A%22,%20count%29%0A%20%20%20count%20%2B%3D%201%0Aprint%28%22Good%20bye!%22%29&mode=edit&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0">Edit in PythonTutor</a>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>A <strong>for</strong> loop has a very similar control flow statement to a <strong>while</strong> loop.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 4. For Loop Example</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Pseudo Code</th>
-<th class="tableblock halign-left valign-top">Python Code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">for iterating_variable in sequence do
-	statement 1 (s1)
-	statement 2 (s2)
-	.
-	.
-	.
-	statement n (sn)
-end</code></pre>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">for iterating_variable in sequence:
-  statement 1 (s1)
-  statement 2 (s2)
-  .
-  .
-  .
-  statement n (sn)</code></pre>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>The most common form of the for loop is with a sequential integer counter \(i\).</p>
-</div>
-</div>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 5. For Loop with counter</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Pseudo Code</th>
-<th class="tableblock halign-left valign-top">Python Code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">for i = m to n do
-	statement 1 (s1)
-	statement 2 (s2)
-	.
-	.
-	.
-	statement n (sn)
-end</code></pre>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">for i in range(1, n+1):
-  statement 1 (s1)
-  statement 2 (s2)
-  .
-  .
-  .
-  statement n (sn)</code></pre>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="sidebarblock">
-<div class="content">
-<div class="openblock">
-<div class="title">Example 2 - For loop in Python</div>
-<div class="content">
-
-</div>
-</div>
-<div class="paragraph">
-<p>The Python code below uses a <strong>for</strong> loop to display or output the non-negative integers less than 11.</p>
-</div>
-<iframe width="100%" frameborder="5" height="350" src="https://pythontutor.com/iframe-embed.html#code=for%20i%20in%20range%280,%2011%29%3A%0A%20%20print%28%22The%20count%20is%3A%22,%20i%29%0Aprint%28%22Good%20bye!%22%29&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=450&codeDivHeight=350"> </iframe>
-
-<div style="text-align: right;">
-<a style="" target="_blank" href="http://www.pythontutor.com/visualize.html#code=for%20i%20in%20range%280,%2011%29%3A%0A%20%20print%28%22The%20count%20is%3A%22,%20i%29%0Aprint%28%22Good%20bye!%22%29&mode=edit&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0">Edit in PythonTutor</a>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_conditional_statements">7.1.4. Conditional statements</h4>
-<div class="paragraph">
-<p>The sequence in which statements can be executed in
-an algorithm or program can be controlled using <strong>conditional
-statements</strong> or <strong>logical operators</strong>.  The while loop is an example
-of a conditional statement.</p>
-</div>
-<div class="paragraph">
-<p>Another common conditional statement is the <strong>if … then do</strong> statement.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 6. if statement</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Pseudo Code</th>
-<th class="tableblock halign-left valign-top">Python Code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">if expression do
-	statement 1 (s1)
-	statement 2 (s2)
-	.
-	.
-	.
-	statement n (sn)
-end</code></pre>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">if expression:
-  statement 1 (s1)
-  statement 2 (s2)
-  .
-  .
-  .
-  statement n (sn)</code></pre>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>The while loop and  the if … then do statement are similar but have one
-important difference. The sequence of statements \(s_i\) are executed at most
-once within the if … then do statement but may be iterated multiple times
-in a while loop.</p>
-</div>
-<div class="paragraph">
-<p>The if … then do statement executes a sequence of statements
-once if the Boolean <em>Expression</em> is <em>True</em>.</p>
-</div>
-<div class="paragraph">
-<p>A more general variation of the  if … then do statement is the <strong>if … then do … else do</strong> statement, which allows two choices of execution statements. Its  general syntax is</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 7. if else statement</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Pseudo Code</th>
-<th class="tableblock halign-left valign-top">Python Code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">if expression do
-  statement 1 (s1)
-  statement 2 (s2)
-  .
-  .
-else do
-  .
-  .
-  statement n (sn)
-end</code></pre>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">if expression:
-  statement 1 (s1)
-  statement 2 (s2)
-  .
-  .
-else:
-  .
-  .
-  statement n (sn)</code></pre>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Here if the Boolean <em>Expression</em> is <em>True</em>,
-the sequence of statements \((s_i)\) are executed once, otherwise the sequence of
-statements \((S_i)\) are executed.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="openblock">
-<div class="title">Example 3 - if … then do … else do in Python</div>
-<div class="content">
-
-</div>
-</div>
-<div class="paragraph">
-<p>The Python code below uses a <strong>if else</strong> to check if a result is less than 100.</p>
-</div>
-<iframe width="100%" frameborder="5" height="350" src="https://pythontutor.com/iframe-embed.html#code=x%20%3D%203%20*%2034%0Aif%20x%20%3C%20100%3A%0A%20%20%20%20print%28%22You%20Lose!%22%29%0Aelse%3A%0A%20%20%20%20print%28%22You%20Win!%22%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=450&codeDivHeight=350"> </iframe>
-
-<div style="text-align: right;">
-<a style="" target="_blank" href="http://www.pythontutor.com/visualize.html#code=x%20%3D%203%20*%2034%0Aif%20x%20%3C%20100%3A%0A%20%20%20%20print%28%22You%20Lose!%22%29%0Aelse%3A%0A%20%20%20%20print%28%22You%20Win!%22%29%0A&mode=edit&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0">Edit in PythonTutor</a>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_output">7.1.5. Output</h4>
-<div class="paragraph">
-<p>There are a couple of ways to indicate output using pseudocode including, 1) an output statement, or 2) a print statement. For example the following both  output the value of the variable <em>count</em>.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>output</strong> <em>count</em></p>
-</li>
-<li>
-<p><strong>print</strong> <em>count</em></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Here are two pseudocode implementations of an algorithm to count the  non-negative
-integers less than 11, the first using an output and the second a print statement.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 8. Output Examples</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Pseudo Code Using Output</th>
-<th class="tableblock halign-left valign-top">Pseudo Code Using Print</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">count = 0
-while (count &lt; 11) do
-  output "The count is:", count
-  count = count + 1
-end
-output "Good bye! Thanks for counting."</code></pre>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">count = 0
-while (count &lt; 11) do
-  print("The count is:", count)
-  count = count + 1
-end
-print("Good bye! Thanks for counting.")</code></pre>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_procedures_and_functions">7.1.6. Procedures and Functions.</h4>
-<div class="paragraph">
-<p>Algorithms can be thought of as units, such as a procedure or function.
-They can be implemented as procedures or functions and then called
-repeatedly as necessary rather than replicating all of the code every
-time the algorithm is used.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 9. Procedures and functions</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Pseudo Code</th>
-<th class="tableblock halign-left valign-top">Python Code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">procedure Name ( input variables and / or input parameters )
-	begin
-		statement 1 (s1)
-		statement 2 (s2)
-		.
-		.
-		.
-		statement n (sn)
-	return value
-end</code></pre>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">def Name( parameters ):
-	statement 1 (s1)
-	statement 2 (s2)
-	.
-	.
-	.
-	statement n (sn)
-	return value</code></pre>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="sidebarblock">
-<div class="content">
-<div class="openblock">
-<div class="title">Example 4 - Function in Python</div>
-<div class="content">
-
-</div>
-</div>
-<div class="paragraph">
-<p>The Python syntax, for a procedure or function,  is very similar to pseudo code.</p>
-</div>
-<iframe width="100%" frameborder="5" height="420" src="https://pythontutor.com/iframe-embed.html#code=def%20cylinder_volume%28r,%20h%29%3A%0A%20%20%20%20area%20%3D%203.14%20*%20r%20*%20r%0A%20%20%20%20vol%20%3D%20area%20*%20h%0A%20%20%20%20return%20vol%0A%0Av1%20%3D%20cylinder_volume%285,%203%29%0Av2%20%3D%20cylinder_volume%282,%204%29%0Aprint%28%22Cylinders%22%29%0Aprint%28%22R%3A%22,%205,%20%22H%3A%22,%203,%20%22Vol%3A%22,%20v1%29%0Aprint%28%22R%3A%22,%202,%20%22H%3A%22,%204,%20%22Vol%3A%22,%20v2%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=450&codeDivHeight=420"> </iframe>
-
-<div style="text-align: right;">
-<a style="" target="_blank" href="http://www.pythontutor.com/visualize.html#code=def%20cylinder_volume%28r,%20h%29%3A%0A%20%20%20%20area%20%3D%203.14%20*%20r%20*%20r%0A%20%20%20%20vol%20%3D%20area%20*%20h%0A%20%20%20%20return%20vol%0A%0Av1%20%3D%20cylinder_volume%285,%203%29%0Av2%20%3D%20cylinder_volume%282,%204%29%0Aprint%28%22Cylinders%22%29%0Aprint%28%22R%3A%22,%205,%20%22H%3A%22,%203,%20%22Vol%3A%22,%20v1%29%0Aprint%28%22R%3A%22,%202,%20%22H%3A%22,%204,%20%22Vol%3A%22,%20v2%29%0A&mode=edit&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0">Edit in PythonTutor</a>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_examples_of_algorithms">7.2. Examples of Algorithms</h3>
 <div class="paragraph">
 <p>We now proceed to develop some algorithms beginning with algorithms for common mathematical
-operations.  Much of mathematical notation can be considered pseudocode</p>
+operations.  Much of mathematical notation can be considered pseudocode.</p>
 </div>
 <div class="sect3">
 <h4 id="_sum_notation">7.2.1. Sum Notation</h4>
@@ -6702,186 +6303,10 @@ operations.  Much of mathematical notation can be considered pseudocode</p>
 <p>which is a description of adding using the index \(i\), the numbers \(a_i\),
 running from \(i=1\) to \(i=n\).</p>
 </div>
-<div class="paragraph">
-<p>A pseudocode description might be</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Sum Notation in Algorithm Pseudocode</div>
-<html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-h5
-	{mso-style-link:"Heading 5 Char";
-	margin-top:6.95pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:1.1in;
-	margin-bottom:.0001pt;
-	text-autospace:none;
-	font-size:11.0pt;
-	font-family:"Century Schoolbook",serif;}
-span.Heading5Char
-	{mso-style-name:"Heading 5 Char";
-	mso-style-link:"Heading 5";
-	font-family:"Century Schoolbook",serif;
-	font-weight:bold;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-
-<style>
-  .click .title { color: blue; }
-  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
-  .openblock { margin-top: 1em; margin-bottom: 1em; }
-  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
-</style>
-
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-<script>
-
-
-
-var ready2;
-
-ready2 = function() {
-
-    $(document).ready(function(){
-
-        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
-        $('.openblock.click').find('.content').hide()
-
-
-        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
-        $('.listingblock.click').find('.content').hide()
-
-    });
-
-}
-
-
-
-
-$(document).ready(ready2);
-$(document).on('page:load', ready2);
-
-
-</script>
-
-</head>
-
-
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Procedure
-Sum Notation: </b>computes the sum of the first, <i>n</i>, terms of the
-sequence <i><span style='font-size:10.0pt;line-height:107%;font-family:"Century Schoolbook",serif'>a<sub>i</sub></span></i></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Input: </b>A
-positive integer, <i>n</i><i>, and a sequence {</i><i><span style='font-size:
-10.0pt;line-height:107%;font-family:"Century Schoolbook",serif'>a<sub>i</sub>}</span></i></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Output: </b>The
-sum of the first <i>n </i>terms of the sequence <i>{</i><i><span
-style='font-size:10.0pt;line-height:107%;font-family:"Century Schoolbook",serif'>a<sub>i</sub>}</span></i></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b> </b><b>_____________________________________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-style='font-family:"Century Schoolbook",serif'>procedure<span style='letter-spacing:
--1.4pt'> </span></span></b><span style='font-family:"Century",serif'>Sum_Notation</span>(<span
-style='letter-spacing:-1.75pt'> </span><i><span style='font-size:10.0pt;
-line-height:107%;font-family:"Century Schoolbook",serif'>n, {a<sub>1</sub>, a<sub>2</sub>,
-…, a<sub>n</sub></span><span style='letter-spacing:-1.75pt'> }</span></i><span
-style='letter-spacing:-1.75pt'> )</span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-style='font-family:"Century Schoolbook",serif'>begin</span></b>                                                                                                                                                                                         </p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt'>Sum = 0</p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt'><b>for </b>i = 1 <b>to </b>n  <b>do</b></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt;text-indent:.5in'>Sum = Sum + <i><span
-style='font-size:10.0pt;line-height:107%;font-family:"Century Schoolbook",serif'>a<sub>i</sub></span></i></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt'><b>end</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>
-<b><span style='font-family:"Century Schoolbook",serif'>return</span></b> Sum</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-</div>
-
-</body>
-
-</html>
-</div>
-</div>
-<div class="paragraph">
-<p>A Python implementation of the algorithm is given below.</p>
-</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 5 - Sum Notation in Python</div>
+<div class="title">Example 1 - Sum Notation in Python</div>
 <div class="content">
 
 </div>
@@ -6907,54 +6332,10 @@ For example to evaluate \(5^6\), we could multiply iteratively, 5,</p>
 <div class="paragraph">
 <p>\(1, 5, 5\times5, 5\times5\times5, 5\times5\times5\times5,\) etc .</p>
 </div>
-<div class="paragraph">
-<p>A pseudocode implementation of the algorithm might be as follows.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Procedure Exponentiation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Computes the exponent \(b^n\)</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Input:</strong> A positive integer, \(n\) and a positive base, \(b\)</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Output:</strong> \(b^n\)</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-pseudo" data-lang="pseudo">procedure Exponentiation(n, b)
-begin
-  Power = 1
-  for i = 1 to n do
-    Power = Power * b
-  end
-  return Power
-end</code></pre>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 6 - Exponentiation in Python</div>
+<div class="title">Example 2 - Exponentiation in Python</div>
 <div class="content">
 
 </div>
@@ -6982,7 +6363,7 @@ multiplying a positive base \(b\) with itself \(n\) times.</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 7 - Factorial (\(n!\)) in Python</div>
+<div class="title">Example 3 - Factorial (\(n!\)) in Python</div>
 <div class="content">
 
 </div>
@@ -7033,7 +6414,7 @@ have been inspected and compared against the variable \(min\).</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 8 - Minimum in Python</div>
+<div class="title">Example 4 - Minimum in Python</div>
 <div class="content">
 
 </div>
@@ -7064,7 +6445,7 @@ in the list \( (a_1, a_2, ..., a_n)\).</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 9 - Linear Search Algorithm in Python</div>
+<div class="title">Example 5 - Linear Search Algorithm in Python</div>
 <div class="content">
 
 </div>
@@ -7133,7 +6514,7 @@ swapping if they are out of order.</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<div class="title">Example 10 - Tracing a Bubble Sort</div>
+<div class="title">Example 6 - Tracing a Bubble Sort</div>
 <p>As an example we consider explicitly the steps of the Bubble Sort Algorithm to sort \(6, 2, 5, 3, 4, 1, \) in increasing
 order.</p>
 </div>
@@ -7234,7 +6615,7 @@ larger elements to the right, using a variable, say \(j\).</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 11 - Insertion Sort in Python</div>
+<div class="title">Example 7 - Insertion Sort in Python</div>
 <div class="content">
 
 </div>
@@ -7253,7 +6634,7 @@ Algorithm.</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<div class="title">Example 12 - Tracing the Insertion Sort Algorithm</div>
+<div class="title">Example 8 - Tracing the Insertion Sort Algorithm</div>
 <p>As an example we consider explicitly the steps of the Insertion Sort Algorithm to sort \(6, 2, 5, 3, 4, 1, \) in increasing
 order.
 The key, or boundary, between the sorted and unsorted portions is denoted by the vertical bar or pipe character.</p>
@@ -7330,7 +6711,7 @@ The key, or boundary, between the sorted and unsorted portions is denoted by the
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 13 - Binary Search Algorithm in Python</div>
+<div class="title">Example 9 - Binary Search Algorithm in Python</div>
 <div class="content">
 
 </div>
@@ -7455,255 +6836,43 @@ found by solving the exponential equation,</p>
 <p>Explain why the insertion sort algorithm is \(O(n^2)\).</p>
 </li>
 <li>
-<p>Estimate the time complexity for each of the following two algorithms
-by first counting the number of steps, and summarizing your findings using
-big O notation</p>
+<p>Estimate the time complexity for each of the following two algorithms by first counting the number of steps, and then summarizing your findings using big O notation.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>An algorithm to find the sum and product of \(n\) integers from
-\(1\) to \(n\).</p>
-<html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:106%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:106%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-
-<style>
-  .click .title { color: blue; }
-  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
-  .openblock { margin-top: 1em; margin-bottom: 1em; }
-  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
-</style>
-
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-<script>
-
-
-
-var ready2;
-
-ready2 = function() {
-
-    $(document).ready(function(){
-
-        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
-        $('.openblock.click').find('.content').hide()
-
-
-        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
-        $('.listingblock.click').find('.content').hide()
-
-    });
-
-}
-
-
-
-
-$(document).ready(ready2);
-$(document).on('page:load', ready2);
-
-
-</script>
-
-</head>
-
-
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>procedure</b>
-Sum_Product_i(n)</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>begin</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>                 sum
-=0</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;
-            product=1</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;             <b>for</b>
-i =1 &nbsp;to n <b>do</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       sum=sum + i</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              product=product*i</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;&nbsp;&nbsp;&nbsp;
-          end</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>end</b></p>
-
-<p class=MsoNormal>&nbsp;</p>
-
+<p>A procedure to find the sum divided by the product of \(n\) integers from \(1\) to \(n\).</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode"><strong>procedure</strong> Sum_By_Product(<em>n</em>)
+<strong>begin</strong>
+	<em>sum</em> = 0
+	<em>product</em> = 1
+	<strong>for</strong> <em>i</em> = 1 <strong>to</strong> <em>n</em> <strong>do</strong>
+		<em>sum</em> = <em>sum</em> + <em>i</em>
+		<em>product</em> = <em>product</em> * <em>i</em>
+	<strong>end for</strong>
+	<strong>return</strong> <em>sum</em> / <em>product</em>
+<strong>end</strong></code></pre>
 </div>
-
-</body>
-
-</html>
+</div>
 </li>
 <li>
-<p>A procedure to create a matrix \(A_{n,n}\), with \(n\) rows and \(n\) columns,
-with the entry \(m\) in row \(i\) and column \(j\).</p>
-<html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:105%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-size:10.0pt;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:105%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-
-<style>
-  .click .title { color: blue; }
-  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
-  .openblock { margin-top: 1em; margin-bottom: 1em; }
-  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
-</style>
-
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-<script>
-
-
-
-var ready2;
-
-ready2 = function() {
-
-    $(document).ready(function(){
-
-        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
-        $('.openblock.click').find('.content').hide()
-
-
-        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
-        $('.listingblock.click').find('.content').hide()
-
-    });
-
-}
-
-
-
-
-$(document).ready(ready2);
-$(document).on('page:load', ready2);
-
-
-</script>
-
-</head>
-
-
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>procedure</b>
-Create_Matrix(n)</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>begin</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<b>for</b> i =1 &nbsp;to n <b>do</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<b>for </b>j =1 &nbsp;to n <b>do</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-A[i,j]=m</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-end</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>end</b></p>
-
-<p class=MsoNormal>&nbsp;</p>
-
+<p>A procedure to create an \(n\) by \(n\) matrix \(A_{n,n}\) with every value set to \(m\).</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode"><strong>procedure</strong> Create_Matrix(<em>n, m</em>)
+<strong>begin</strong>
+	<em>sum</em> = 0
+	<em>product</em> = 1
+	<strong>for</strong> <em>i</em> = 1 <strong>to</strong> <em>n</em> <strong>do</strong>
+		<strong>for</strong> <em>j</em> = 1 <strong>to</strong> <em>n</em> <strong>do</strong>
+			<em>A<sub>i,j</sub></em> = <em>m</em>
+		<strong>end for</strong>
+	<strong>end for</strong>
+	<strong>return</strong> <em>A</em>
+<strong>end</strong></code></pre>
 </div>
-
-</body>
-
-</html>
+</div>
 </li>
 </ol>
 </div>
@@ -9793,8 +8962,10 @@ contrasted with iterative methods.</p>
 computing \(n!\) for integers \(n \geq  0\).</p>
 </div>
 <div class="paragraph">
-<p>Recall that \(5!=5\ \times\ 4\ \times\ 3\ \times\ 2\ \times\ 1\ =\ 5\ \times\ 4!\).
-In general, we may define \(n!\) recursively or inductively as</p>
+<p>Recall that \(5!=5\ \times\ 4\ \times\ 3\ \times\ 2\ \times\ 1\ =\ 5\ \times\ 4!\).</p>
+</div>
+<div class="paragraph">
+<p>In general, we may define \(n!\) recursively or inductively as</p>
 </div>
 <div class="paragraph">
 <p>\(0!=1\)</p>
@@ -9803,170 +8974,56 @@ In general, we may define \(n!\) recursively or inductively as</p>
 <p>\(n!\ =\ n\ \cdot\ (n-1)!\ \)</p>
 </div>
 <div class="paragraph">
-<p>A recursive implementation of the factorial procedure in
-pseudocode would be, to be contrasted with an iterative implementation.</p>
+<p>An implementation of the factorial procedure is given below.</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
-<div class="title">Recursive implementation of the factorial function, \(n!\).</div>
-<html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-
-<style>
-  .click .title { color: blue; }
-  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
-  .openblock { margin-top: 1em; margin-bottom: 1em; }
-  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
-</style>
-
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-<script>
-
-
-
-var ready2;
-
-ready2 = function() {
-
-    $(document).ready(function(){
-
-        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
-        $('.openblock.click').find('.content').hide()
-
-
-        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
-        $('.listingblock.click').find('.content').hide()
-
-    });
-
-}
-
-
-
-
-$(document).ready(ready2);
-$(document).on('page:load', ready2);
-
-
-</script>
-
-</head>
-
-
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Procedure
-RFactorial: </b>computes <i>n!</i>, for <i>n</i>, a positive integer,
-recursively</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Input: </b>A
-nonnegative integer, <i>n</i>.</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Output: </b><i>n!
-= 1*2*3…(n-1)*(n)</i></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>_____________________________________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-style='font-family:"Century Schoolbook",serif'>Procedure </span></b><span
-style='font-family:"Century Schoolbook",serif'>R</span><span style='font-family:
-"Century",serif'>Fa</span><span style='font-family:"Century",serif'>ctorial</span>(<span
-style='letter-spacing:-1.75pt'> <i>n</i></span> )</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-style='font-family:"Century Schoolbook",serif'>begin</span></b></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century",serif'>if</span></b><span
-style='font-family:"Century",serif'> n==0 <b>then do</b></span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:1.0in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>return
-</span></b><span style='font-family:"Century",serif'>1</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century",serif'>else
-do</span></b></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:1.0in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>return
-</span></b><span style='font-family:"Century",serif'>n*Rfactorial(n-1)</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>____________________________________________________________________</b></p>
-
-<p class=MsoNormal>&nbsp;</p>
-
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. Factorial \(n!\) in Pseudocode</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Recursive</th>
+<th class="tableblock halign-left valign-top">Iterative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode"><strong>procedure</strong> factorial(<em>n</em>)
+<strong>begin</strong>
+	<strong>if</strong> <em>n</em> <strong>equals</strong> 0 <strong>then</strong>
+		<strong>return</strong> 1
+	<strong>else</strong>
+		<strong>return</strong>  n * factorial(n-1)
+	<strong>end if</strong>
+<strong>end</strong></code></pre>
 </div>
-
-</body>
-
-</html>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode"><strong>procedure</strong> factorial(<em>n</em>)
+<strong>begin</strong>
+	<em>z</em> = 1
+	<strong>for</strong> <em>i</em> = 1 <strong>to</strong> <em>n</em> <strong>do</strong>
+		<em>z</em> = <em>z</em> * <em>i</em>
+	<strong>return</strong> <em>z</em>
+<strong>end</strong></code></pre>
 </div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="paragraph">
-<p>A recursive implementation of the factorial function in Python is given below</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 14 - Recursive Implementation of Factorial Function, \(n!\), in Python</div>
+<div class="title">Example 10 - Recursive Implementation of Factorial Function, \(n!\), in Python</div>
 <div class="content">
 
 </div>
@@ -9974,7 +9031,7 @@ style='font-family:"Century Schoolbook",serif'>end</span></b></p>
 <div class="paragraph">
 <p>The Python code below implements the factorial function \(n!\) recursively.</p>
 </div>
-<iframe width="100%" frameborder="5" height="350" src="https://pythontutor.com/iframe-embed.html#code=def%20rfactorial%28n%29%3A%0A%20%20%20%20z%3D1%0A%20%20%20%20if%20n%3E1%3A%0A%20%20%20%20%20%20%20%20z%3Dn*rfactorial%28n-1%29%0A%20%20%20%20return%20z%0A%23%20Driver%20code%20to%20test%20above%0AAnswer%3Drfactorial%285%29%0Aprint%28%22n! %20is%3A%22,%20Answer%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=450&codeDivHeight=350"> </iframe>
+<iframe width="100%" frameborder="5" height="375" src="https://pythontutor.com/iframe-embed.html#code=def%20rfactorial%28n%29%3A%0A%20%20%20%20z%3D1%0A%20%20%20%20if%20n%3E1%3A%0A%20%20%20%20%20%20%20%20z%3Dn*rfactorial%28n-1%29%0A%20%20%20%20return%20z%0A%23%20Driver%20code%20to%20test%20above%0AAnswer%3Drfactorial%285%29%0Aprint%28%22n! %20is%3A%22,%20Answer%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=450&codeDivHeight=375"> </iframe>
 
 <div style="text-align: right;">
 <a style="" target="_blank" href="http://www.pythontutor.com/visualize.html#code=def%20rfactorial%28n%29%3A%0A%20%20%20%20z%3D1%0A%20%20%20%20if%20n%3E1%3A%0A%20%20%20%20%20%20%20%20z%3Dn*rfactorial%28n-1%29%0A%20%20%20%20return%20z%0A%23%20Driver%20code%20to%20test%20above%0AAnswer%3Drfactorial%285%29%0Aprint%28%22n! %20is%3A%22,%20Answer%29%0A&mode=edit&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0">Edit in PythonTutor</a>
@@ -10002,158 +9059,46 @@ Hence we can recursively define exponentiation as</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
-<div class="title">Recursive Implementation of the Power Function, \(b^n\).</div>
-<html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-
-<style>
-  .click .title { color: blue; }
-  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
-  .openblock { margin-top: 1em; margin-bottom: 1em; }
-  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
-</style>
-
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-<script>
-
-
-
-var ready2;
-
-ready2 = function() {
-
-    $(document).ready(function(){
-
-        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
-        $('.openblock.click').find('.content').hide()
-
-
-        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
-        $('.listingblock.click').find('.content').hide()
-
-    });
-
-}
-
-
-
-
-$(document).ready(ready2);
-$(document).on('page:load', ready2);
-
-
-</script>
-
-</head>
-
-
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Procedure
-Rexponentiation: </b>recursively computes the </p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>exponent <i>b</i><sup>n</sup></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Input: </b>A
-nonnegative integer<i>, n and a positive base </i></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Output: </b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-style='font-family:"Century Schoolbook",serif'>procedure<span style='letter-spacing:
--1.4pt'> </span></span></b><span style='font-family:"Century Schoolbook",serif;
-letter-spacing:-1.4pt'>R</span><span style='font-family:"Century",serif'>e</span><span
-style='font-family:"Century",serif'>xponentiation</span>(<span
-style='letter-spacing:-1.75pt'>n</span><i><span style='font-size:10.0pt;
-line-height:107%;font-family:"Century Schoolbook",serif'>, b)</span></i></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-style='font-family:"Century Schoolbook",serif'>begin</span></b></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century",serif'>if</span></b><span
-style='font-family:"Century",serif'> n==0 <b>then do</b></span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:1.0in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>return
-</span></b><span style='font-family:"Century",serif'>1</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century",serif'>else
-do</span></b></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:1.0in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>return
-</span></b><span style='font-family:"Century",serif'>b*Rexponentiation(n-1)</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
-
-<p class=MsoNormal>&nbsp;</p>
-
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. Power Function \(b^n\) in Pseudocode</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Recursive</th>
+<th class="tableblock halign-left valign-top">Iterative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode"><strong>procedure</strong> exponentiation(<em>b</em>, <em>n</em>)
+<strong>begin</strong>
+	<strong>if</strong> <em>n</em> <strong>equals</strong> 0 <strong>then</strong>
+		<strong>return</strong> 1
+	<strong>else</strong>
+		<strong>return</strong>  b * exponentiation(n-1)
+	<strong>end if</strong>
+<strong>end</strong></code></pre>
 </div>
-
-</body>
-
-</html>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode"><strong>procedure</strong> exponentiation(<em>b</em>, <em>n</em>)
+<strong>begin</strong>
+	<em>z</em> = 1
+	<strong>for</strong> <em>i</em> = 1 <strong>to</strong> <em>n</em> <strong>do</strong>
+		<em>z</em> = <em>z</em> * <em>b</em>
+	<strong>return</strong> <em>z</em>
+<strong>end</strong></code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -10185,165 +9130,18 @@ can be defined recursively,</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
+<div class="listingblock">
 <div class="title">Recursive implementation of arithmetic sequences with first term \(a_1=a\), and common difference \(d\).</div>
-<html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-
-<style>
-  .click .title { color: blue; }
-  .click {margin-top: 0.5em; margin-bottom: 0.5em;}
-  .openblock { margin-top: 1em; margin-bottom: 1em; }
-  .openblock>.box>.content { margin-top:1em;margin-bottom: 1em;margin-left:3em;margin-right:4em; }
-</style>
-
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-<script>
-
-
-
-var ready2;
-
-ready2 = function() {
-
-    $(document).ready(function(){
-
-        $('.openblock.click').click( function()  { $(this).find('.content').slideToggle('200'); } )
-        $('.openblock.click').find('.content').hide()
-
-
-        $('.listingblock.click').click( function()  { $(this).find('.content').slideToggle('200') }  )
-        $('.listingblock.click').find('.content').hide()
-
-    });
-
-}
-
-
-
-
-$(document).ready(ready2);
-$(document).on('page:load', ready2);
-
-
-</script>
-
-</head>
-
-
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Procedure
-Rarithmetic: </b>recursively computes the <i>n</i><sup>th</sup> term </p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>of the
-arithmetic sequence with first term, <i>a</i> and </p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>common difference,
-<i>d</i>. </p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Input: </b>A
-positive integer, <i>n</i> and the first term, <i>a</i>, and </p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>common
-difference, <i>d</i>, of an arithmetic sequence </p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>Output: </b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-style='font-family:"Century Schoolbook",serif'>procedure<span style='letter-spacing:
--1.4pt'> </span></span></b><span style='font-family:"Century Schoolbook",serif;
-letter-spacing:-1.4pt'>R</span><span style='font-family:"Century",serif'>arithmetic</span>(<i><span
-style='letter-spacing:-1.75pt'>n</span></i><i><span style='font-size:10.0pt;
-line-height:107%;font-family:"Century Schoolbook",serif'>, a, d)</span></i></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-style='font-family:"Century Schoolbook",serif'>begin</span></b></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century",serif'>if</span></b><span
-style='font-family:"Century",serif'> n==1 <b>then do</b></span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:1.0in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>return
-</span></b><i><span style='font-family:"Century",serif'>a</span></i></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century",serif'>else
-do</span></b></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:1.0in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>return
-</span></b><span style='font-family:"Century",serif'>d + Rarithmetic(n – 1, a,
-d)</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
-style='font-family:"Century Schoolbook",serif'>end</span></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b>______________________________________________</b></p>
-
-<p class=MsoNormal>&nbsp;</p>
-
+<div class="content">
+<pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode"><strong>procedure</strong> arithmetic(<em>n</em>, <em>a</em>, <em>d</em>)
+<strong>begin</strong>
+	<strong>if</strong> <em>n</em> equals 1 <strong>then</strong>
+		<strong>return</strong> <em>a</em>
+	<strong>else</strong>
+		<strong>return</strong> <em>d</em> + arithmetic(<em>n</em> – 1, <em>a</em>, <em>d</em>)
+<strong>end</strong></code></pre>
 </div>
-
-</body>
-
-</html>
+</div>
 </div>
 </div>
 </div>
@@ -10368,7 +9166,7 @@ Fibonacci number.</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="openblock">
-<div class="title">Example 15 - Recursive Implementation of Fibonacci in Python</div>
+<div class="title">Example 11 - Recursive Implementation of Fibonacci in Python</div>
 <div class="content">
 
 </div>
@@ -12004,76 +10802,146 @@ the inverse of the exponential and the equivalence of the logarithm \(a =\log_b 
 <div class="sectionbody">
 <div class="listingblock small">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="python"># the '#' character makes a COMMENT separating Python from English
-x = 3 # create the VARIABLE with NAME x and STORE INT VALUE 3
-Sebastien_Score = 9001 # variable names can be long, but no spaces!
-y = 1.0 * 3 # y stores EXPRESSION's RETURN FLOAT value 3.0
-z = "Hi There!" # z stores a STRING value
-w = False # w stores a BOOLEAN value
-v = [3, 30, "Hello World"] # v stores a LIST of values
-print(z) # print function displays output ("Hi There!")
+<pre class="pygments highlight"><code data-lang="python"><table class="pyhltable"><tr><td class="linenos"><div class="linenodiv"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</div></td><td class="code"><span></span><span class="tok-c1"># the &#39;#&#39; character makes a COMMENT separating Python from English</span>
+<span class="tok-n">x</span> <span class="tok-o">=</span> <span class="tok-mi">3</span> <span class="tok-c1"># create the VARIABLE with NAME x and STORE INT VALUE 3</span>
+<span class="tok-n">Sebastien_Score</span> <span class="tok-o">=</span> <span class="tok-mi">9001</span> <span class="tok-c1"># variable names can be long, but no spaces!</span>
+<span class="tok-n">y</span> <span class="tok-o">=</span> <span class="tok-mf">1.0</span> <span class="tok-o">*</span> <span class="tok-mi">3</span> <span class="tok-c1"># y stores EXPRESSION&#39;s RETURN FLOAT value 3.0</span>
+<span class="tok-n">z</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;Hi There!&quot;</span> <span class="tok-c1"># z stores a STRING value</span>
+<span class="tok-n">w</span> <span class="tok-o">=</span> <span class="tok-bp">False</span> <span class="tok-c1"># w stores a BOOLEAN value</span>
+<span class="tok-n">v</span> <span class="tok-o">=</span> <span class="tok-p">[</span><span class="tok-mi">3</span><span class="tok-p">,</span> <span class="tok-mi">30</span><span class="tok-p">,</span> <span class="tok-s2">&quot;Hello World&quot;</span><span class="tok-p">]</span> <span class="tok-c1"># v stores a LIST of values</span>
+<span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-n">z</span><span class="tok-p">)</span> <span class="tok-c1"># print function displays output (&quot;Hi There!&quot;)</span>
 
-# Maths
-a = 3
-b = 3.0 # b stores 3.0 (float values are decimal approximations)
-c = 7 // 2 # c stores 3 (int division always gives ints)
-d = 7 % 2 # d stores 1 (Mod or Remainder of the division)
-a = 5 # change the value of a to 5
-a += 1 # INCREMENT the value of a by 1 (to 6)
+<span class="tok-c1"># Maths</span>
+<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-mi">3</span>
+<span class="tok-n">b</span> <span class="tok-o">=</span> <span class="tok-mf">3.0</span> <span class="tok-c1"># b stores 3.0 (float values are decimal approximations)</span>
+<span class="tok-n">c</span> <span class="tok-o">=</span> <span class="tok-mi">7</span> <span class="tok-o">//</span> <span class="tok-mi">2</span> <span class="tok-c1"># c stores 3 (int division always gives ints)</span>
+<span class="tok-n">d</span> <span class="tok-o">=</span> <span class="tok-mi">7</span> <span class="tok-o">%</span> <span class="tok-mi">2</span> <span class="tok-c1"># d stores 1 (Mod or Remainder of the division)</span>
+<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-mi">5</span> <span class="tok-c1"># change the value of a to 5</span>
+<span class="tok-n">a</span> <span class="tok-o">+=</span> <span class="tok-mi">1</span> <span class="tok-c1"># INCREMENT the value of a by 1 (to 6)</span>
 
-# Boolean Operators
-a = (3 &gt; 2) # a stores True because 3 is greater than 2
-a = (2 &gt;= 2) # a stores True because 2 is greater than or equal to 2
-a = (3 &lt; 2) # a stores False because 3 is not less than 2
-a = (2 &lt;= 2) # a stores True because 2 is less than or equal to 2
-a = (3 != 2) # a stores True because 3 is not equal to 2
-a = (3 == 3) # a stores True because 3 is equal to 3
-a = (True and False) # a stores False, AND returns True only when both sides are True
-a = (True or False) # a stores True, OR returns True if at least 1 side is True
-a = (not False) # a stores True, NOT returns opposite
+<span class="tok-c1"># Boolean Operators</span>
+<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-mi">3</span> <span class="tok-o">&gt;</span> <span class="tok-mi">2</span><span class="tok-p">)</span> <span class="tok-c1"># a stores True because 3 is greater than 2</span>
+<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-mi">2</span> <span class="tok-o">&gt;=</span> <span class="tok-mi">2</span><span class="tok-p">)</span> <span class="tok-c1"># a stores True because 2 is greater than or equal to 2</span>
+<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-mi">3</span> <span class="tok-o">&lt;</span> <span class="tok-mi">2</span><span class="tok-p">)</span> <span class="tok-c1"># a stores False because 3 is not less than 2</span>
+<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-mi">2</span> <span class="tok-o">&lt;=</span> <span class="tok-mi">2</span><span class="tok-p">)</span> <span class="tok-c1"># a stores True because 2 is less than or equal to 2</span>
+<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-mi">3</span> <span class="tok-o">!=</span> <span class="tok-mi">2</span><span class="tok-p">)</span> <span class="tok-c1"># a stores True because 3 is not equal to 2</span>
+<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-mi">3</span> <span class="tok-o">==</span> <span class="tok-mi">3</span><span class="tok-p">)</span> <span class="tok-c1"># a stores True because 3 is equal to 3</span>
+<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-bp">True</span> <span class="tok-ow">and</span> <span class="tok-bp">False</span><span class="tok-p">)</span> <span class="tok-c1"># a stores False, AND returns True only when both sides are True</span>
+<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-bp">True</span> <span class="tok-ow">or</span> <span class="tok-bp">False</span><span class="tok-p">)</span> <span class="tok-c1"># a stores True, OR returns True if at least 1 side is True</span>
+<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-ow">not</span> <span class="tok-bp">False</span><span class="tok-p">)</span> <span class="tok-c1"># a stores True, NOT returns opposite</span>
 
-# BLOCKS are sections of any code chunked together with INDENTATION
-# BLOCKS start with a ':' and continue with each INDENTED line
-x = 7
-if x &gt; 8: # if CONDITION is True, then execute block, otherwise skip block.
-    print("Hello") # since x stores 7, this will skip
-    print("I Am Sam.") # since x stores 7, this will skip
-elif x &gt; 2: # elif condition is True AND previous if was False, execute block
-    print("Hi") # since x stores 7, this will execute
-    print("I am Sally.") # since x stores 7, this will execute
-else: # if all previous conditions are False, executer block.
-    print("Yo") # since x stores 7, this will skip
-    print("I'm Bob.") # since x stores 7, this will skip
+<span class="tok-c1"># BLOCKS are sections of any code chunked together with INDENTATION</span>
+<span class="tok-c1"># BLOCKS start with a &#39;:&#39; and continue with each INDENTED line</span>
+<span class="tok-n">x</span> <span class="tok-o">=</span> <span class="tok-mi">7</span>
+<span class="tok-k">if</span> <span class="tok-n">x</span> <span class="tok-o">&gt;</span> <span class="tok-mi">8</span><span class="tok-p">:</span> <span class="tok-c1"># if CONDITION is True, then execute block, otherwise skip block.</span>
+    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-s2">&quot;Hello&quot;</span><span class="tok-p">)</span> <span class="tok-c1"># since x stores 7, this will skip</span>
+    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-s2">&quot;I Am Sam.&quot;</span><span class="tok-p">)</span> <span class="tok-c1"># since x stores 7, this will skip</span>
+<span class="tok-k">elif</span> <span class="tok-n">x</span> <span class="tok-o">&gt;</span> <span class="tok-mi">2</span><span class="tok-p">:</span> <span class="tok-c1"># elif condition is True AND previous if was False, execute block</span>
+    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-s2">&quot;Hi&quot;</span><span class="tok-p">)</span> <span class="tok-c1"># since x stores 7, this will execute</span>
+    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-s2">&quot;I am Sally.&quot;</span><span class="tok-p">)</span> <span class="tok-c1"># since x stores 7, this will execute</span>
+<span class="tok-k">else</span><span class="tok-p">:</span> <span class="tok-c1"># if all previous conditions are False, executer block.</span>
+    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-s2">&quot;Yo&quot;</span><span class="tok-p">)</span> <span class="tok-c1"># since x stores 7, this will skip</span>
+    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-s2">&quot;I&#39;m Bob.&quot;</span><span class="tok-p">)</span> <span class="tok-c1"># since x stores 7, this will skip</span>
 
-while x &gt; 3: # repeat a block until condition becomes False
-    print("Apples")
-    x += -1
+<span class="tok-k">while</span> <span class="tok-n">x</span> <span class="tok-o">&gt;</span> <span class="tok-mi">3</span><span class="tok-p">:</span> <span class="tok-c1"># repeat a block until condition becomes False</span>
+    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-s2">&quot;Apples&quot;</span><span class="tok-p">)</span>
+    <span class="tok-n">x</span> <span class="tok-o">+=</span> <span class="tok-o">-</span><span class="tok-mi">1</span>
 
-# Lists store multiple values
-a = [10, 30, 20, 90] # create a new list
-x = len(a) # x stores 4 (the length)
-b = a[0] # INDEX into the list, 0 is first value, b stores 10
-c = a[3] # c stores 90
-d = a[-1] # -1 is last value, d stores 90
-e = a[1:3] # slice a from index 1 up to index 3, e stores [30, 20]
-a[1] = 50 # modify the second element in the list, a is now [10, 50, 20, 90]
-f = a + [5, 15] # f stores [10, 50, 20, 90, 5, 15], CONCATENATION not addition
-g = range(0, 4) # range function returns list 0 up to 4, g stores [0, 1, 2, 3]
+<span class="tok-c1"># Lists store multiple values</span>
+<span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-p">[</span><span class="tok-mi">10</span><span class="tok-p">,</span> <span class="tok-mi">30</span><span class="tok-p">,</span> <span class="tok-mi">20</span><span class="tok-p">,</span> <span class="tok-mi">90</span><span class="tok-p">]</span> <span class="tok-c1"># create a new list</span>
+<span class="tok-n">x</span> <span class="tok-o">=</span> <span class="tok-nb">len</span><span class="tok-p">(</span><span class="tok-n">a</span><span class="tok-p">)</span> <span class="tok-c1"># x stores 4 (the length)</span>
+<span class="tok-n">b</span> <span class="tok-o">=</span> <span class="tok-n">a</span><span class="tok-p">[</span><span class="tok-mi">0</span><span class="tok-p">]</span> <span class="tok-c1"># INDEX into the list, 0 is first value, b stores 10</span>
+<span class="tok-n">c</span> <span class="tok-o">=</span> <span class="tok-n">a</span><span class="tok-p">[</span><span class="tok-mi">3</span><span class="tok-p">]</span> <span class="tok-c1"># c stores 90</span>
+<span class="tok-n">d</span> <span class="tok-o">=</span> <span class="tok-n">a</span><span class="tok-p">[</span><span class="tok-o">-</span><span class="tok-mi">1</span><span class="tok-p">]</span> <span class="tok-c1"># -1 is last value, d stores 90</span>
+<span class="tok-n">e</span> <span class="tok-o">=</span> <span class="tok-n">a</span><span class="tok-p">[</span><span class="tok-mi">1</span><span class="tok-p">:</span><span class="tok-mi">3</span><span class="tok-p">]</span> <span class="tok-c1"># slice a from index 1 up to index 3, e stores [30, 20]</span>
+<span class="tok-n">a</span><span class="tok-p">[</span><span class="tok-mi">1</span><span class="tok-p">]</span> <span class="tok-o">=</span> <span class="tok-mi">50</span> <span class="tok-c1"># modify the second element in the list, a is now [10, 50, 20, 90]</span>
+<span class="tok-n">f</span> <span class="tok-o">=</span> <span class="tok-n">a</span> <span class="tok-o">+</span> <span class="tok-p">[</span><span class="tok-mi">5</span><span class="tok-p">,</span> <span class="tok-mi">15</span><span class="tok-p">]</span> <span class="tok-c1"># f stores [10, 50, 20, 90, 5, 15], CONCATENATION not addition</span>
+<span class="tok-n">g</span> <span class="tok-o">=</span> <span class="tok-nb">range</span><span class="tok-p">(</span><span class="tok-mi">0</span><span class="tok-p">,</span> <span class="tok-mi">4</span><span class="tok-p">)</span> <span class="tok-c1"># range function returns list 0 up to 4, g stores [0, 1, 2, 3]</span>
 
-# For Loops
-for c in "Elephant!": # repeat block with c storing each character 1 at a time
-    print(c) # prints one letter per line
+<span class="tok-c1"># For Loops</span>
+<span class="tok-k">for</span> <span class="tok-n">c</span> <span class="tok-ow">in</span> <span class="tok-s2">&quot;Elephant!&quot;</span><span class="tok-p">:</span> <span class="tok-c1"># repeat block with c storing each character 1 at a time</span>
+    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-n">c</span><span class="tok-p">)</span> <span class="tok-c1"># prints one letter per line</span>
 
-for x in [10, 30, 20]:
-    print(x) # prints one number per line
+<span class="tok-k">for</span> <span class="tok-n">x</span> <span class="tok-ow">in</span> <span class="tok-p">[</span><span class="tok-mi">10</span><span class="tok-p">,</span> <span class="tok-mi">30</span><span class="tok-p">,</span> <span class="tok-mi">20</span><span class="tok-p">]:</span>
+    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-n">x</span><span class="tok-p">)</span> <span class="tok-c1"># prints one number per line</span>
 
-# Custom Functions
-def myfunc(a, b): # DEFINES a new function that takes 2 INPUT PARAMETER values
-    c = 2 * a + b # executes only when function is called
-    return c # RETURNS a value back to the calling code
+<span class="tok-c1"># Custom Functions</span>
+<span class="tok-k">def</span> <span class="tok-nf">myfunc</span><span class="tok-p">(</span><span class="tok-n">a</span><span class="tok-p">,</span> <span class="tok-n">b</span><span class="tok-p">):</span> <span class="tok-c1"># DEFINES a new function that takes 2 INPUT PARAMETER values</span>
+    <span class="tok-n">c</span> <span class="tok-o">=</span> <span class="tok-mi">2</span> <span class="tok-o">*</span> <span class="tok-n">a</span> <span class="tok-o">+</span> <span class="tok-n">b</span> <span class="tok-c1"># executes only when function is called</span>
+    <span class="tok-k">return</span> <span class="tok-n">c</span> <span class="tok-c1"># RETURNS a value back to the calling code</span>
 
-x = myfunc(10, 5) # Calls the myfunc() function, x stores return value 25
-y = myfunc(1, 3)  # Calls the myfunc() function, x stores return value 5</code></pre>
+<span class="tok-n">x</span> <span class="tok-o">=</span> <span class="tok-n">myfunc</span><span class="tok-p">(</span><span class="tok-mi">10</span><span class="tok-p">,</span> <span class="tok-mi">5</span><span class="tok-p">)</span> <span class="tok-c1"># Calls the myfunc() function, x stores return value 25</span>
+<span class="tok-n">y</span> <span class="tok-o">=</span> <span class="tok-n">myfunc</span><span class="tok-p">(</span><span class="tok-mi">1</span><span class="tok-p">,</span> <span class="tok-mi">3</span><span class="tok-p">)</span>  <span class="tok-c1"># Calls the myfunc() function, x stores return value 5</span>
+</td></tr></table></code></pre>
 </div>
 </div>
 <div class="openblock float-group">
