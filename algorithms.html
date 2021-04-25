@@ -4,14 +4,14 @@
   <meta charset="utf-8"/>
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="Asciidoctor 1.5.6" name="generator"/>
+  <meta content="Asciidoctor 1.5.8" name="generator"/>
   <meta content="Mohamed Jamaloodeen, Kathy Pinzon, Daniel Pragel, Joshua Roberts, Sebastien Siva" name="author"/>
   <title>
    Discrete Math
   </title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700" rel="stylesheet"/>
   <link href="./asciidoctor.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   <style>
    .click .title { color: blue; }
   .click {margin-top: 0.5em; margin-bottom: 0.5em;}
@@ -252,7 +252,7 @@ $(document).on('page:load', ready2);
       </a>
       <ul class="sectlevel2">
        <li>
-        <a href="growth_functions.html#_introducing_em_big_o_em">
+        <a href="growth_functions.html#_introducing_big_o">
          6.1. Introducing
          <em>
           Big O
@@ -260,7 +260,7 @@ $(document).on('page:load', ready2);
         </a>
        </li>
        <li>
-        <a href="growth_functions.html#_properties_of_em_big_o_em_notation">
+        <a href="growth_functions.html#_properties_of_big_o_notation">
          6.2. Properties of
          <em>
           Big O
@@ -328,7 +328,7 @@ $(document).on('page:load', ready2);
       </a>
       <ul class="sectlevel2">
        <li>
-        <a href="counting.html#_the_product_rule_em_and_em">
+        <a href="counting.html#_the_product_rule_and">
          8.1. The Product Rule (
          <em>
           and
@@ -337,7 +337,7 @@ $(document).on('page:load', ready2);
         </a>
        </li>
        <li>
-        <a href="counting.html#_the_sum_rule_em_xor_em">
+        <a href="counting.html#_the_sum_rule_xor">
          8.2. The Sum Rule (
          <em>
           xor
@@ -346,7 +346,7 @@ $(document).on('page:load', ready2);
         </a>
        </li>
        <li>
-        <a href="counting.html#_the_subtraction_rule_em_or_em">
+        <a href="counting.html#_the_subtraction_rule_or">
          8.3. The Subtraction Rule (
          <em>
           or
@@ -650,7 +650,7 @@ The key features of an algorithm include:
         </li>
        </ul>
       </div>
-      <table class="tableblock frame-all grid-all spread">
+      <table class="tableblock frame-all grid-all stretch">
        <caption class="title">
         Table 3. Pseudocode Example
        </caption>
@@ -671,7 +671,7 @@ The key features of an algorithm include:
        <tbody>
         <tr>
          <td class="tableblock halign-left valign-top">
-          <div>
+          <div class="content">
            <div class="listingblock">
             <div class="content">
              <pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode"><strong>procedure</strong> search(<em>{a<sub>1</sub>, a<sub>2</sub>, …​, a<sub>n</sub>}, x</em>) <i class="conum" data-value="1"></i><b>(1)</b>
@@ -785,7 +785,7 @@ The key features of an algorithm include:
           </div>
          </td>
          <td class="tableblock halign-left valign-top">
-          <div>
+          <div class="content">
            <div class="listingblock">
             <div class="content">
              <pre class="highlight"><code class="language-python" data-lang="python">def search(a, x): <i class="conum" data-value="1"></i><b>(1)</b>
@@ -1256,10 +1256,6 @@ order.
           Solution
          </div>
          <p>
-         </p>
-        </div>
-        <div class="paragraph">
-         <p>
           First Pass
          </p>
         </div>
@@ -1442,10 +1438,6 @@ Algorithm.
           Example 8 - Tracing the Insertion Sort Algorithm
          </div>
          <p>
-         </p>
-        </div>
-        <div class="paragraph">
-         <p>
           As an example we consider explicitly the steps of the Insertion Sort Algorithm to sort \(6, 2, 5, 3, 4, 1, \) in increasing
 order.
 The key, or boundary, between the sorted and unsorted portions is denoted by the vertical bar or pipe character.
@@ -1600,7 +1592,7 @@ Recall big \(O\) notation is used to quantify the worst case an algorithm perfor
        </p>
       </div>
       <div class="sect3">
-       <h4 id="_the_linear_search_algorithm_is_o_n">
+       <h4 id="_the_linear_search_algorithm_is_on">
         7.7.1. The Linear Search Algorithm is \(O(n)\).
        </h4>
        <div class="paragraph">
@@ -1622,7 +1614,7 @@ runs in \(O(n)\) time in the worst case.
        </div>
       </div>
       <div class="sect3">
-       <h4 id="_the_bubble_sort_and_insertion_sort_algorithms_are_o_n_2">
+       <h4 id="_the_bubble_sort_and_insertion_sort_algorithms_are_on2">
         7.7.2. The Bubble Sort and Insertion Sort Algorithms are \(O(n^2)\).
        </h4>
        <div class="paragraph">
@@ -1698,7 +1690,7 @@ both the elements in positions 1 and 2 are both in their correct positions.
        </div>
       </div>
       <div class="sect3">
-       <h4 id="_the_binary_search_algorithm_is_o_log_n">
+       <h4 id="_the_binary_search_algorithm_is_ologn">
         7.7.3. The Binary  Search Algorithm is \(O(\log{n})\).
        </h4>
        <div class="paragraph">
@@ -1903,7 +1895,7 @@ For example,  the set \(a_1=10,\ a_2=10,\ a_3=7,\ a_4=6,\ a_5=2,\ a_6=0\) has me
           Consider the following lists of integers.
          </p>
          <div class="olist upperalpha">
-          <ol class="upperalpha" type="A">
+          <ol class="upperalpha">
            <li>
             <p>
              \(\{4,8,3,10,7,2,6,9,5,1\}\)
@@ -1951,7 +1943,7 @@ For example,  the set \(a_1=10,\ a_2=10,\ a_3=7,\ a_4=6,\ a_5=2,\ a_6=0\) has me
           For the following lists,
          </p>
          <div class="olist upperalpha">
-          <ol class="upperalpha" type="A">
+          <ol class="upperalpha">
            <li>
             <p>
              \(\{6,31,46,49,49,55,56,59,65,82\}\)
@@ -1996,7 +1988,7 @@ For example,  the set \(a_1=10,\ a_2=10,\ a_3=7,\ a_4=6,\ a_5=2,\ a_6=0\) has me
   TeX: { extensions: ["mhchem.js"] }
 });
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-MML-AM_HTMLorMML">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML">
   </script>
  </body>
 </html>

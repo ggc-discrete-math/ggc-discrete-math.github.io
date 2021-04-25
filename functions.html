@@ -4,14 +4,14 @@
   <meta charset="utf-8"/>
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="Asciidoctor 1.5.6" name="generator"/>
+  <meta content="Asciidoctor 1.5.8" name="generator"/>
   <meta content="Mohamed Jamaloodeen, Kathy Pinzon, Daniel Pragel, Joshua Roberts, Sebastien Siva" name="author"/>
   <title>
    Discrete Math
   </title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700" rel="stylesheet"/>
   <link href="./asciidoctor.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   <style>
    .click .title { color: blue; }
   .click {margin-top: 0.5em; margin-bottom: 0.5em;}
@@ -252,7 +252,7 @@ $(document).on('page:load', ready2);
       </a>
       <ul class="sectlevel2">
        <li>
-        <a href="growth_functions.html#_introducing_em_big_o_em">
+        <a href="growth_functions.html#_introducing_big_o">
          6.1. Introducing
          <em>
           Big O
@@ -260,7 +260,7 @@ $(document).on('page:load', ready2);
         </a>
        </li>
        <li>
-        <a href="growth_functions.html#_properties_of_em_big_o_em_notation">
+        <a href="growth_functions.html#_properties_of_big_o_notation">
          6.2. Properties of
          <em>
           Big O
@@ -328,7 +328,7 @@ $(document).on('page:load', ready2);
       </a>
       <ul class="sectlevel2">
        <li>
-        <a href="counting.html#_the_product_rule_em_and_em">
+        <a href="counting.html#_the_product_rule_and">
          8.1. The Product Rule (
          <em>
           and
@@ -337,7 +337,7 @@ $(document).on('page:load', ready2);
         </a>
        </li>
        <li>
-        <a href="counting.html#_the_sum_rule_em_xor_em">
+        <a href="counting.html#_the_sum_rule_xor">
          8.2. The Sum Rule (
          <em>
           xor
@@ -346,7 +346,7 @@ $(document).on('page:load', ready2);
         </a>
        </li>
        <li>
-        <a href="counting.html#_the_subtraction_rule_em_or_em">
+        <a href="counting.html#_the_subtraction_rule_or">
          8.3. The Subtraction Rule (
          <em>
           or
@@ -730,10 +730,6 @@ A function is not surjective if
           Example 1 - injective but not surjective.
          </div>
          <p>
-         </p>
-        </div>
-        <div class="paragraph">
-         <p>
           Explain why the real-valued exponential function \(f(x)=2^x\) is injective, but not surjective,
 from \(f: \mathbb{R} \rightarrow \mathbb{R}\).
          </p>
@@ -742,10 +738,6 @@ from \(f: \mathbb{R} \rightarrow \mathbb{R}\).
          <div class="title">
           Solution
          </div>
-         <p>
-         </p>
-        </div>
-        <div class="paragraph">
          <p>
           For injectivity, notice that the exponential function \(f(x)=2^x\) is strictly
 increasing, as can be seen from its graph.
@@ -770,10 +762,6 @@ surjective, from \(\mathbb{R} \rightarrow \mathbb{R}\).
          <div class="title">
           Example 2- neither injective nor surjective
          </div>
-         <p>
-         </p>
-        </div>
-        <div class="paragraph">
          <p>
           Explain why the real-valued exponential function \(f(x)=x^2\) is neither injective
 nor surjective, from \(f: \mathbb{R} \rightarrow \mathbb{R}\).
@@ -814,10 +802,6 @@ injective. A horizontal line at \(y=4\), meets the graph at both \(x=2\), and \(
           Example 3 - A bijective function
          </div>
          <p>
-         </p>
-        </div>
-        <div class="paragraph">
-         <p>
           Explain why the function \(f(x)=x^3\), from \(f:R\rightarrow R\), is bijective.
          </p>
         </div>
@@ -825,10 +809,6 @@ injective. A horizontal line at \(y=4\), meets the graph at both \(x=2\), and \(
          <div class="title">
           Solution
          </div>
-         <p>
-         </p>
-        </div>
-        <div class="paragraph">
          <p>
           We need to show that the function is both injective and surjective.
 Notice from the graph of \(f(x)=x^3\) that the domain and codomain are
@@ -856,10 +836,6 @@ This means that if \(a^3=b^3\), then necessarily \(a=b\). In fact if \(a^3=b^3=c
           Example 4 - Verifying a function is bijective
          </div>
          <p>
-         </p>
-        </div>
-        <div class="paragraph">
-         <p>
           Verify that the function \(f\left(x\right)=3x+5\), from \(f:R\rightarrow R\), is bijective.
          </p>
         </div>
@@ -867,10 +843,6 @@ This means that if \(a^3=b^3\), then necessarily \(a=b\). In fact if \(a^3=b^3=c
          <div class="title">
           Solution
          </div>
-         <p>
-         </p>
-        </div>
-        <div class="paragraph">
          <p>
           For injectivity, suppose \(f\left(m\right)=f(n)\). We want to show \(m=n\).
          </p>
@@ -1104,10 +1076,6 @@ functions are shown below.
            Example 5
           </div>
           <p>
-          </p>
-         </div>
-         <div class="paragraph">
-          <p>
            Explain why the floor function, \( f(x)=\lfloor x \rfloor \), from the real line to the set of all integers,
 is surjective but not injective.
           </p>
@@ -1116,10 +1084,6 @@ is surjective but not injective.
           <div class="title">
            Solution
           </div>
-          <p>
-          </p>
-         </div>
-         <div class="paragraph">
           <p>
            For surjectivity, notice that the range, and co-domain is, \(\mathbb{Z}\), the set of
 all real numbers. Also for
@@ -1236,14 +1200,10 @@ and   \(h(4) =\min\) \(\left(\sqrt4,\ 4^2\right)=\min(2,16)=2\).
        </div>
        <div class="sidebarblock">
         <div class="content">
-         <div class="paragraph">
+         <div class="openblock float-group">
           <div class="title">
            Graph of \(h(x) =min(\sqrt x,\ x^2)\) over the interval \([0,2 \)]
           </div>
-          <p>
-          </p>
-         </div>
-         <div class="openblock float-group">
           <div class="content">
            <div class="imageblock left text-left">
             <div class="content">
@@ -1305,10 +1265,6 @@ algebraic operations of addition, subtraction, multiplication, and division.
           Example 6
          </div>
          <p>
-         </p>
-        </div>
-        <div class="paragraph">
-         <p>
           Consider \(f\left(x\right)=x^2+1\) and \(g\left(x\right)=\sqrt x\) defined on \(f,\ g:R\rightarrow R\).Form
 \(\left(f+g\right)\), \(\left(f-g\right)\), \(\left(f\cdot\ g\right)\),  and \(\left(\frac{f}{g}\right)\), and determine their
 respective domains.
@@ -1318,10 +1274,6 @@ respective domains.
          <div class="title">
           Solution
          </div>
-         <p>
-         </p>
-        </div>
-        <div class="paragraph">
          <p>
           The common domain is \(\ x\ \geq0\), since the square root is real valued only for \(\ x\ \geq0\).
          </p>
@@ -1385,10 +1337,6 @@ provided \(x\ \in\ A\) and \(g\left(x\right)\in B\).
           Example 7
          </div>
          <p>
-         </p>
-        </div>
-        <div class="paragraph">
-         <p>
           Consider \(f\left(x\right)=\frac{1}{x}\) and \(g\left(x\right)=2x-3\),
 defined on \(f,g:R\rightarrow R\). Notice that \(g\left(x\right)\)
 is defined for all real \(x\) and \(f\left(x\right)\) is defined for all real \(x\ \neq0\). Form the compositions,
@@ -1400,10 +1348,6 @@ is defined for all real \(x\) and \(f\left(x\right)\) is defined for all real \(
          <div class="title">
           Solution
          </div>
-         <p>
-         </p>
-        </div>
-        <div class="paragraph">
          <p>
           \(h\left(x\right)=\left(f \circ g\right)\left(x\right)=f\left(g\left(x\right)\right)=f\left(2x-3\right)=\frac{1}{2x-3}\).
 Here \(x\) needs to be in the domain of \(g\left(x\right)\),  or all real \(x\),
@@ -1426,10 +1370,6 @@ needs to be in the domain of \(g\left(x\right)\), or \(f\left(x\right)\) can be 
          <div class="title">
           Example 8 - composing inverse functions
          </div>
-         <p>
-         </p>
-        </div>
-        <div class="paragraph">
          <p>
           Consider \(f\left(x\right)=x^3+1\) and  \$g(x) =root(3)(x-1)\$
 defined on on \(f,g:R\rightarrow R\).
@@ -1580,10 +1520,6 @@ is a relation that is not a function because of the mappings
           Example 9 - finding an inverse
          </div>
          <p>
-         </p>
-        </div>
-        <div class="paragraph">
-         <p>
           Find the inverse \(g\left(x\right)\) of  the bijective function
 \(f\left(x\right)=3x+5\) for \(f,\ g:R\rightarrow R\) .  Verify the inverse and show \(\left(f \circ g\right)\left(x\right)=x=\left(g \circ f\right)\left(x\right)\).
          </p>
@@ -1597,10 +1533,6 @@ is a relation that is not a function because of the mappings
          <div class="title">
           Solution
          </div>
-         <p>
-         </p>
-        </div>
-        <div class="paragraph">
          <p>
           If \(f:x\rightarrow y\) corresponds to \((x,y)\), then the inverse  \(g:y\rightarrow x\)
 corresponds to \((y,x)\). This means that the inverse of the relation
@@ -2021,7 +1953,7 @@ increasing
   TeX: { extensions: ["mhchem.js"] }
 });
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-MML-AM_HTMLorMML">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML">
   </script>
  </body>
 </html>
