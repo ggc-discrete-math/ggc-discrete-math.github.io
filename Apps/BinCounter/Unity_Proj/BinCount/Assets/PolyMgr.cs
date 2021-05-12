@@ -8,11 +8,11 @@ public class PolyMgr : MonoBehaviour
 {
     public float spacing;
     public int target;
-    TMP_Text totalText;
+    TMP_InputField totalInput;
     // Start is called before the first frame update
     void Start()
     {
-        totalText = GameObject.Find("TotalText").GetComponent<TMP_Text>();
+        totalInput = GameObject.Find("TotalInput").GetComponent<TMP_InputField>();
 
         //Arrange Polys
         float spaces = (transform.childCount - 1) * spacing;
@@ -24,13 +24,11 @@ public class PolyMgr : MonoBehaviour
                 transform.position.y, transform.position.z);
             x += (1 + spacing);
         }
-
     }
 
     // Update is called once per frame
     void Update()
-    {
-        totalText.text = "Total: " + target;
+    {        
         if (busySpinning())
             return;
 
@@ -79,14 +77,29 @@ public class PolyMgr : MonoBehaviour
         }
     }
 
+    public void setTarget()
+    {
+        try
+        {
+            target = Mathf.Clamp(int.Parse(totalInput.text), 0, 255);
+        }
+        catch
+        {
+            target = 0;
+        }
+        totalInput.text = "" + target;
+    }
+    
     public void increase()
     {
         target = Mathf.Min(255, target+1);
+        totalInput.text = "" + target;
     }
 
     public void decrease()
     {
         target = Mathf.Max(0, target - 1);
+        totalInput.text = "" + target;
     }
 
     int getTotal()
