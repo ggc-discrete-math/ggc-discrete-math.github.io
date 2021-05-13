@@ -8,11 +8,15 @@ public class PolyMgr : MonoBehaviour
 {
     public float spacing;
     public int target;
+    int maxBase = 36;
     TMP_InputField totalInput;
+    TMP_InputField baseInput;
+
     // Start is called before the first frame update
     void Start()
     {
         totalInput = GameObject.Find("TotalInput").GetComponent<TMP_InputField>();
+        baseInput = GameObject.Find("BaseInput").GetComponent<TMP_InputField>();
 
         //Arrange Polys
         float spaces = (transform.childCount - 1) * spacing;
@@ -81,7 +85,8 @@ public class PolyMgr : MonoBehaviour
     {
         try
         {
-            target = Mathf.Clamp(int.Parse(totalInput.text), 0, 255);
+            target = Mathf.Clamp(int.Parse(totalInput.text), 0,
+                (int) Mathf.Pow(PolyRotate.numSides, 8) - 1);
         }
         catch
         {
@@ -89,7 +94,24 @@ public class PolyMgr : MonoBehaviour
         }
         totalInput.text = "" + target;
     }
-    
+
+    public void setBase()
+    {
+        try
+        {
+            PolyRotate.numSides = Mathf.Clamp(int.Parse(baseInput.text), 2, maxBase);
+        }
+        catch
+        {
+            PolyRotate.numSides = 2;
+        }
+        baseInput.text = "" + PolyRotate.numSides;
+        foreach (PolyRotate p in transform.GetComponentsInChildren<PolyRotate>())
+            p.reset();
+
+        setTarget();
+    }
+
     public void increase()
     {
         target = Mathf.Min(255, target+1);
@@ -108,7 +130,7 @@ public class PolyMgr : MonoBehaviour
         int n = 0;
         foreach (PolyRotate p in transform.GetComponentsInChildren<PolyRotate>())
         {
-            total += (p.getValue() * (int)Mathf.Pow(p.numSides, n));
+            total += (p.getValue() * (int)Mathf.Pow(PolyRotate.numSides, n));
             n++;
         }
 

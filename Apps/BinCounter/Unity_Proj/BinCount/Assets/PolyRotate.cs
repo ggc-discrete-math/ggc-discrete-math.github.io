@@ -1,21 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PolyRotate : MonoBehaviour
 {
-    public int numSides;
+    public static int numSides = 2;
     public float speed;
 
-    int currentSide;
+    int currentValue;
+    TMP_Text[] texts;
+    int currentTextIndex;
+
     float targetRot;
     float currentRot;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        texts = transform.GetComponentsInChildren<TMP_Text>();
+    }
+
+    public void reset()
+    {
+        currentValue = 0;
+        targetRot += 180;
+        setNextText();
     }
 
     // Update is called once per frame
@@ -48,23 +58,36 @@ public class PolyRotate : MonoBehaviour
 
     public void increase()
     {
-        currentSide = (currentSide + 1) % numSides;
-        targetRot = (targetRot + (360 / numSides));
+        if (spinning())
+            return;
+        currentValue = (currentValue + 1) % numSides;
+        targetRot += 180;
+        setNextText();
     }
 
     public void decrease()
     {
-        currentSide = (numSides + currentSide - 1) % numSides;
-        targetRot = (targetRot - (360 / numSides));
+        if (spinning())
+            return;
+        currentValue = (numSides + currentValue - 1) % numSides;
+        targetRot += -180;
+        setNextText();
+    }
+
+    void setNextText()
+    {
+        currentTextIndex = (currentTextIndex + 1) % 2;
+        if (currentValue < 10)
+            texts[currentTextIndex].text = currentValue.ToString();
+        else
+        {
+            texts[currentTextIndex].text =
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[currentValue - 10].ToString();
+        }
     }
 
     public int getValue()
     {
-        return currentSide;
-    }
-
-    private void OnMouseDown()
-    {
-        //increase();
+        return currentValue;
     }
 }
