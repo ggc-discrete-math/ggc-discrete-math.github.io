@@ -8,7 +8,7 @@ public class PolyMgr : MonoBehaviour
 {
     public float spacing;
     public int target;
-    int maxBase = 36;
+    public static int maxBase = 36;
     TMP_InputField totalInput;
     TMP_InputField baseInput;
 

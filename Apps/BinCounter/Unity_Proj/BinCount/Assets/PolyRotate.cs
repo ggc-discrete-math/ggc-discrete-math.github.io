@@ -6,7 +6,7 @@ using UnityEngine;
 public class PolyRotate : MonoBehaviour
 {
     public static int numSides = 2;
-    public float speed;
+    float speed;
 
     int currentValue;
     TMP_Text[] texts;
@@ -19,10 +19,12 @@ public class PolyRotate : MonoBehaviour
     void Start()
     {
         texts = transform.GetComponentsInChildren<TMP_Text>();
+        reset();
     }
 
     public void reset()
     {
+        speed = Mathf.Lerp(360, 4 * 360, numSides / 16);
         currentValue = 0;
         targetRot += 180;
         setNextText();
