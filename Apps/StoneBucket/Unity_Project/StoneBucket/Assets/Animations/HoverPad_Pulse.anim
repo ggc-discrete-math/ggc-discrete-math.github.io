@@ -1,0 +1,356 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: HoverPad_Pulse
+  serializedVersion: 3
+  m_AnimationType: 1
+  m_Compressed: 0
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .5
+        inSlope: .00276429299
+        outSlope: .00276429299
+        tangentMode: 0
+      - time: 3.5333333
+        value: 1
+        inSlope: -.00136066973
+        outSlope: -.00136066973
+        tangentMode: 10
+      - time: 7
+        value: .5
+        inSlope: .00107593043
+        outSlope: .00107593043
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: '[1]._Color.r'
+    path: 
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .5
+        inSlope: .00297370926
+        outSlope: .00297370926
+        tangentMode: 0
+      - time: 3.5333333
+        value: 1
+        inSlope: -.00136066973
+        outSlope: -.00136066973
+        tangentMode: 10
+      - time: 7
+        value: .5
+        inSlope: -.00346411904
+        outSlope: -.00346411904
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: '[1]._Color.g'
+    path: 
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .5
+        inSlope: -.000791667961
+        outSlope: -.000791667961
+        tangentMode: 0
+      - time: 3.5333333
+        value: 1
+        inSlope: -.00136066973
+        outSlope: -.00136066973
+        tangentMode: 10
+      - time: 7
+        value: .5
+        inSlope: -.00266459608
+        outSlope: -.00266459608
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: '[1]._Color.b'
+    path: 
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: .0333333351
+        value: 0
+        inSlope: .0542320982
+        outSlope: .0542320982
+        tangentMode: 0
+      - time: 3.5333333
+        value: 8
+        inSlope: -.0109889507
+        outSlope: -.0109889507
+        tangentMode: 10
+      - time: 7
+        value: 0
+        inSlope: -.04037733
+        outSlope: -.04037733
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: '[1]._SpecColor.a'
+    path: 
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .200000003
+        inSlope: .0232424028
+        outSlope: .0232424028
+        tangentMode: 0
+      - time: 3.13333344
+        value: 2.70000005
+        inSlope: .0756602883
+        outSlope: .0756602883
+        tangentMode: 10
+      - time: 7
+        value: .200000003
+        inSlope: .0338709019
+        outSlope: .0338709019
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Intensity
+    path: hoverLight (point)
+    classID: 108
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 2.2166667
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Enabled
+    path: hoverLight (point)
+    classID: 108
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: .316666663
+        value: 0
+        inSlope: .0537479818
+        outSlope: .0537479818
+        tangentMode: 0
+      - time: 3.51666689
+        value: 3.42222309
+        inSlope: -.0232488513
+        outSlope: -.0232488513
+        tangentMode: 10
+      - time: 6.58333349
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Intensity
+    path: hoverPadLight (point)
+    classID: 108
+    script: {fileID: 0}
+  m_SampleRate: 60
+  m_WrapMode: 2
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_MuscleClipInfo:
+    m_StartTime: 0
+    m_StopTime: 1
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+    m_KeepAdditionalBonesAnimation: 1
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .5
+        inSlope: .00276429299
+        outSlope: .00276429299
+        tangentMode: 0
+      - time: 3.5333333
+        value: 1
+        inSlope: -.00136066973
+        outSlope: -.00136066973
+        tangentMode: 10
+      - time: 7
+        value: .5
+        inSlope: .00107593043
+        outSlope: .00107593043
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: '[1]._Color.r'
+    path: 
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .5
+        inSlope: .00297370926
+        outSlope: .00297370926
+        tangentMode: 0
+      - time: 3.5333333
+        value: 1
+        inSlope: -.00136066973
+        outSlope: -.00136066973
+        tangentMode: 10
+      - time: 7
+        value: .5
+        inSlope: -.00346411904
+        outSlope: -.00346411904
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: '[1]._Color.g'
+    path: 
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .5
+        inSlope: -.000791667961
+        outSlope: -.000791667961
+        tangentMode: 0
+      - time: 3.5333333
+        value: 1
+        inSlope: -.00136066973
+        outSlope: -.00136066973
+        tangentMode: 10
+      - time: 7
+        value: .5
+        inSlope: -.00266459608
+        outSlope: -.00266459608
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: '[1]._Color.b'
+    path: 
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: .0333333351
+        value: 0
+        inSlope: .0542320982
+        outSlope: .0542320982
+        tangentMode: 0
+      - time: 3.5333333
+        value: 8
+        inSlope: -.0109889507
+        outSlope: -.0109889507
+        tangentMode: 10
+      - time: 7
+        value: 0
+        inSlope: -.04037733
+        outSlope: -.04037733
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: '[1]._SpecColor.a'
+    path: 
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .200000003
+        inSlope: .0232424028
+        outSlope: .0232424028
+        tangentMode: 0
+      - time: 3.13333344
+        value: 2.70000005
+        inSlope: .0756602883
+        outSlope: .0756602883
+        tangentMode: 10
+      - time: 7
+        value: .200000003
+        inSlope: .0338709019
+        outSlope: .0338709019
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Intensity
+    path: hoverLight (point)
+    classID: 108
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 2.2166667
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Enabled
+    path: hoverLight (point)
+    classID: 108
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: .316666663
+        value: 0
+        inSlope: .0537479818
+        outSlope: .0537479818
+        tangentMode: 0
+      - time: 3.51666689
+        value: 3.42222309
+        inSlope: -.0232488513
+        outSlope: -.0232488513
+        tangentMode: 10
+      - time: 6.58333349
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Intensity
+    path: hoverPadLight (point)
+    classID: 108
+    script: {fileID: 0}
+  m_EulerEditorCurves: []
+  m_Events: []
