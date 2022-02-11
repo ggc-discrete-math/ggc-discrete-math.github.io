@@ -7,7 +7,8 @@ public class CardController : MonoBehaviour
 {
     public Text num, reveal;
     bool isHidden;
-    int value;
+    public int value;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,16 +20,16 @@ public class CardController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isHidden)
+        if(isHidden && !GameMan.gameOver)
             num.text = "?";
         else
             num.text = "" + value;
 
-        reveal.GetComponentInParent<Button>().interactable = (
-            GameMan.numRevealed < GameMan.maxRevealed || !isHidden);
+        reveal.GetComponentInParent<Button>().interactable = (!GameMan.gameOver && (
+            GameMan.numRevealed < GameMan.maxRevealed || !isHidden));
 
         transform.Find("Swap").GetComponent<Button>().interactable =
-            (GameMan.swapA != transform);
+            (!GameMan.gameOver &&  GameMan.swapA != transform);
     }
 
     public void revealToggle()
@@ -63,7 +64,12 @@ public class CardController : MonoBehaviour
             GameMan.swapA.SetSiblingIndex(b);
             transform.SetSiblingIndex(a);
             GameMan.swapA = null;
+
+
+            GameMan.checkWin(transform.parent);
         }
+
+
     }
 
 
