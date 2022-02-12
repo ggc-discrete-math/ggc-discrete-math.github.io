@@ -9,12 +9,12 @@ public class GameMan : MonoBehaviour
     public static List<int> numList;
     public static int numRevealed;
     public const int maxRevealed = 2;
-
-    static GameObject winner;
-
     public static Transform swapA;
-
     public static bool gameOver;
+
+    static int numSwaps;
+    static GameObject winner;
+    static float startTime;
 
     void Awake()
     {
@@ -32,6 +32,8 @@ public class GameMan : MonoBehaviour
         gameOver = false;
         numRevealed = 0;
         swapA = null;
+        numSwaps = 0;
+        startTime = Time.time;
     }
 
     private void Start()
@@ -48,6 +50,7 @@ public class GameMan : MonoBehaviour
     public static void checkWin(Transform cardParent)
     {
         //TEST END GAME
+        numSwaps++;
         bool sorted = true;
         CardController[] cards = cardParent.GetComponentsInChildren<CardController>();
         string temp = "";
@@ -62,6 +65,8 @@ public class GameMan : MonoBehaviour
         if (GameMan.gameOver)
         {
             winner.SetActive(true);
+            winner.GetComponent<Text>().text = "Sorted in " + numSwaps +
+                " swaps and " + ((int) (Time.time - startTime)) + " seconds!";
         }
     }
 
