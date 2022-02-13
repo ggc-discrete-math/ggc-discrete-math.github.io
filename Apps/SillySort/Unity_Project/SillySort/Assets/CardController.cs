@@ -38,6 +38,7 @@ public class CardController : MonoBehaviour
         {
             if (GameMan.numRevealed < GameMan.maxRevealed)
             {
+                GameMan.totalNumShows++;
                 GameMan.numRevealed++;
                 isHidden = false;
                 reveal.text = "HIDE";

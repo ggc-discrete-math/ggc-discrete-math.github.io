@@ -12,6 +12,8 @@ public class GameMan : MonoBehaviour
     public static Transform swapA;
     public static bool gameOver;
 
+
+    public static int totalNumShows;
     static int numSwaps;
     static GameObject winner;
     static float startTime;
@@ -33,6 +35,7 @@ public class GameMan : MonoBehaviour
         numRevealed = 0;
         swapA = null;
         numSwaps = 0;
+        totalNumShows = 0;
         startTime = Time.time;
     }
 
@@ -65,8 +68,10 @@ public class GameMan : MonoBehaviour
         if (GameMan.gameOver)
         {
             winner.SetActive(true);
-            winner.GetComponent<Text>().text = "Sorted in " + numSwaps +
-                " swaps and " + ((int) (Time.time - startTime)) + " seconds!";
+            winner.GetComponent<Text>().text = "Sorted in " +
+                ((int)(Time.time - startTime)) + " seconds!" +
+                " Swaps: " + numSwaps +
+                " Shows: " + totalNumShows;
         }
     }
 
