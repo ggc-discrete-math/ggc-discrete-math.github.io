@@ -9,12 +9,16 @@ public class CardController : MonoBehaviour
     bool isHidden;
     public int value;
 
+    GameObject cancelSwapGO;
+
     // Start is called before the first frame update
     void Start()
     {
         isHidden = true;
         int i = transform.GetSiblingIndex();
         value = GameMan.numList[i];
+        cancelSwapGO = transform.Find("CancelSwap").gameObject;
+        cancelSwapGO.SetActive(false);
     }
 
     // Update is called once per frame
@@ -57,6 +61,7 @@ public class CardController : MonoBehaviour
         if (GameMan.swapA == null)
         {
             GameMan.swapA = transform;
+            cancelSwapGO.SetActive(true);
         }
         else
         {
@@ -64,14 +69,21 @@ public class CardController : MonoBehaviour
             int b = transform.GetSiblingIndex();
             GameMan.swapA.SetSiblingIndex(b);
             transform.SetSiblingIndex(a);
+
+            GameMan.swapA.GetComponent<CardController>().cancelSwapGO.SetActive(false);
             GameMan.swapA = null;
 
-
             GameMan.checkWin(transform.parent);
+            cancelSwapGO.SetActive(false);
+
         }
-
-
     }
 
-
+    public void cancelSwap()
+    {
+        if (GameMan.swapA != transform)
+            throw new System.Exception("Can not cancel this swap");
+        GameMan.swapA = null;
+        cancelSwapGO.SetActive(false);
+    }
 }

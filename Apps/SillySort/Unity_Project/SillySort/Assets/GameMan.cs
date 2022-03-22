@@ -63,7 +63,7 @@ public class GameMan : MonoBehaviour
             if (cards[i].value > cards[i + 1].value)
                 sorted = false;
         }
-        print(temp + " " + cards[cards.Length - 1].value);
+        //print(temp + " " + cards[cards.Length - 1].value);
         GameMan.gameOver = sorted;
         if (GameMan.gameOver)
         {
