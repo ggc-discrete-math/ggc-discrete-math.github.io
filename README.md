@@ -17,7 +17,7 @@
 To report any errors, or if you have questions or comments, please use the form at [this link](https://forms.office.com/Pages/ResponsePage.aspx?id=21KVzwpmkUqb1mXCMA-cscUcLDJuuLtGtmN7hxi3Vs9URFcyMDhSWTBZWkxIVzlZRjJVVzVXUThZVS4u).
 
 **Funding**  
-The writing of the book was funded by Affordable Learning Georgia Textbook Transformation Grants Round 14. The supplementary materials were funded by Affordable Learning Georgia Continuous Improvement Grant Round 19.
+The writing of the book was funded by an Affordable Learning Georgia Textbook Transformation Grant. The supplementary materials were funded by an Affordable Learning Georgia Continuous Improvement Grant.
 
 **License:**  
 ![Creative Commons License](https://github.com/ggc-discrete-math/ggc-discrete-math.github.io/blob/main/images/CC.png)  
