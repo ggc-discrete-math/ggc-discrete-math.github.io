@@ -610,7 +610,7 @@ $A \setminus (C \setminus B)$
 .. $\left\{x \in \mathbb{Z} : |x-5|=3\right\}$
 .. $\left\{3n+4 : n \in \mathbb{N}\right\}$
 .. $\left\{3n+4 : n \in \mathbb{Z}\right\}$
-.. $\left\{i^n : n \in\mathbb{N}\right\}$, where $i$ is such that $i^2=1$ (the imaginary unit).
+.. $\left\{i^n : n \in\mathbb{N}\right\}$, where $i$ is such that $i^2=-1$ (the imaginary unit).
 
 . Consider the  sets $A=\{1, 3, 5, 7, 9, 11, 13, 15, 17\}$, $B=\{2, 5, 7, 11\}$, and $C=\{1, 2, 3\}$,
 .. Determine the cardinalities of following sets,
