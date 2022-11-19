@@ -312,7 +312,7 @@ $C(n,r)$ such bit strings.
 
 == Exercises
 
-.There are 67 math majors and 124 ITEC majors at a college.
+. There are 67 math majors and 124 ITEC majors at a college.
 	.. In how many ways can two representatives be picked so that one is a math major and one is an ITEC major?
 	.. In how many ways can one representative be picked who is either a math major or an ITEC major?
 
