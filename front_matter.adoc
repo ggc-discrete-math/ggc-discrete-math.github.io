@@ -1,0 +1,45 @@
+= About this text
+
+This text is the result mathematics and information technology professors at Georgia Gwinnett College working under an https://www.affordablelearninggeorgia.org/[Affordable Learning Georgia] (ALG) grant.
+ALG is a University Systems of Georgia sponsored organization that promotes free and low-cost educational resources. This textbook is licensed under Creative Commons Attribution License v4.0 Attribution-NonCommercial https://creativecommons.org/licenses/by-nc/4.0/[](CC BY-NC)].
+
+== Additional Resources
+
+Additional instructional materials, including guided notes, applets, and links to pre-built homework assignments using https://edfinity.com/[Edfinity] are available in the book's https://github.com/ggc-discrete-math/ggc-discrete-math.github.io#readme[GitHub readme page].
+
+Please report any error, suggestions, or comments using the form at https://forms.office.com/Pages/ResponsePage.aspx?id=21KVzwpmkUqb1mXCMA-cscUcLDJuuLtGtmN7hxi3Vs9URFcyMDhSWTBZWkxIVzlZRjJVVzVXUThZVS4u[this link].
+
+== Course Objectives
+
+At Georgia Gwinnett College, students who have successfully completed the Discrete Mathematics course will,
+
+. Reason mathematically and use mathematical language appropriately to demonstrate an understanding of comprehending and constructing mathematical arguments.
+. Perform combinatorial analysis to solve counting problems and analyze algorithms.
+. Demonstrate an understanding of discrete structures including sets, permutations, relations, graphs, and trees.
+. Demonstrate algorithmic thinking using mathematical creativity and critical thinking by specifying algorithms, verifying that algorithms work, and analyzing the time required to perform specific algorithms.
+. Use appropriate technology in the evaluation, analysis, and synthesis of information in problem-solving situations.
+
+These course goals help structure the content of this class, which is
+aimed at students of
+information technology, computer science, and applied mathematics.  The focus is on applying
+discrete math techniques from the two broad component areas of discrete
+math, namely
+combinatorics or enumerative techniques, and graph theory.
+
+To that end, algorithmic thinking figures
+prominently in this course.
+Designing algorithms, particularly algorithms
+applied to networks, involves the use of graph theory methods. Implementing algorithms
+requires a careful understanding of logical structures, and usually a top down implementation
+approach, beginning with a specifications description,  and then proceeding
+to a pseudocode implementation and finally a language dependent coding
+implementation. Moreover, analyzing the complexity of algorithms requires a knowledge of functions,
+the growth of functions, and counting techniques from combinatorial analysis.  Similarly, mathematical induction and recursive
+definitions are used in a cohesive way to understand algorithms and the options in implementing these
+recursively versus iteratively.
+
+The approach we take is one with an integrative incorporation of programming and
+algorithms into the course. The aim is to help improve students success
+with their broad programming curricula in courses like Intermediate and Advanced Programming.
+
+
