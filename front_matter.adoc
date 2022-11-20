@@ -1,13 +1,13 @@
 = About this text
 
-This text is the result mathematics and information technology professors at Georgia Gwinnett College working under an https://www.affordablelearninggeorgia.org/[Affordable Learning Georgia] (ALG) grant.
-ALG is a University Systems of Georgia sponsored organization that promotes free and low-cost educational resources. This textbook is licensed under Creative Commons Attribution License v4.0 Attribution-NonCommercial https://creativecommons.org/licenses/by-nc/4.0/[](CC BY-NC)].
+This text is the result of work by mathematics and information technology professors at Georgia Gwinnett College working under an https://www.affordablelearninggeorgia.org/[Affordable Learning Georgia] (ALG) textbook transformation grant.
+ALG is a University System of Georgia sponsored organization that promotes free and low-cost educational resources. This textbook is licensed under Creative Commons Attribution License v4.0 Attribution-NonCommercial https://creativecommons.org/licenses/by-nc/4.0/[](CC BY-NC)].
 
 == Additional Resources
 
 Additional instructional materials, including guided notes, applets, and links to pre-built homework assignments using https://edfinity.com/[Edfinity] are available in the book's https://github.com/ggc-discrete-math/ggc-discrete-math.github.io#readme[GitHub readme page].
 
-Please report any error, suggestions, or comments using the form at https://forms.office.com/Pages/ResponsePage.aspx?id=21KVzwpmkUqb1mXCMA-cscUcLDJuuLtGtmN7hxi3Vs9URFcyMDhSWTBZWkxIVzlZRjJVVzVXUThZVS4u[this link].
+Please report any errors, suggestions, or comments using the form at https://forms.office.com/Pages/ResponsePage.aspx?id=21KVzwpmkUqb1mXCMA-cscUcLDJuuLtGtmN7hxi3Vs9URFcyMDhSWTBZWkxIVzlZRjJVVzVXUThZVS4u[this link].
 
 == Course Objectives
 
