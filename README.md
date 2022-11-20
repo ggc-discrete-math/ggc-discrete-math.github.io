@@ -4,6 +4,7 @@
 - [Full textbook (all on one page)](https://ggc-discrete-math.github.io/book.html)
 - [Guided notes on select chapters](https://github.com/ggc-discrete-math/ggc-discrete-math.github.io/tree/main/guided-notes)
 - [Pre-Built Edfinity Homework Assignments](https://edfinity.com/products/6029c68aa18e9800377eaace)
+- [Python Syntax Sheet](https://github.com/ggc-discrete-math/ggc-discrete-math.github.io/blob/main/guided-notes/PythonSyntaxExamples.pdf)
 - [Lecture Videos YouTube playlist](https://www.youtube.com/playlist?list=PL8rEwockjR-q9Vc95u1loJrHK7QKfcnZw)
 - [Example Videos YouTube playlist](https://youtube.com/playlist?list=PLAwz5xi38-_GjL8PHWujb2pzM8Ti4wteT)
 - [Desmos Activities](https://teacher.desmos.com/collection/6017090953e3c90bd91f54e8)
