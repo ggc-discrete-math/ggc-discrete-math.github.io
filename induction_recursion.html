@@ -1474,6 +1474,58 @@ the \(n^{th}\) Fibonacci number.
         </div>
        </div>
       </div>
+      <div class="sect3">
+       <h4 id="_the_merge_sort_algorithm">
+        11.3.5. The Merge Sort Algorithm
+       </h4>
+       <div class="paragraph">
+        <p>
+         Merge Sort is a recursive sorting algorithm. The general idea is to divide a list of length \(n\) into \(n\) sublists of length \(1\), where a list of length one is considered already sorted. Subsequently, the algorithm repeatedly merges the sublists to make sorted lists until only a single list of lenght \(n\) is remaining. This will be the a sorted list consisted of the elements of the original list.
+        </p>
+       </div>
+       <div class="paragraph">
+        <p>
+         The picture below illustrates this with a list of length seven.
+        </p>
+       </div>
+       <div class="openblock float-group">
+        <div class="content">
+         <div class="imageblock text-center left text-center">
+          <div class="content">
+           <img alt="GGC" height="600" src="images/mergesort.png" width="600"/>
+          </div>
+          <div class="title">
+           Figure 12. Illustration of Merge Sort courtesy of Wikipedia
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="sidebarblock">
+        <div class="content">
+         <div class="openblock">
+          <div class="title">
+           Example 12 - The Merge Sort Algorithm in Python
+          </div>
+          <div class="content">
+          </div>
+         </div>
+         <iframe frameborder="5" height="1100" src="https://pythontutor.com/iframe-embed.html#code=def%20mergeSort%28A%29%3A%0A%20%20%20%20if%20len%28A%29%20%3E%201%3A%0A%20%20%20%20%20%20%20%20%23finds%20the%20middle%20of%20list%20A%0A%20%20%20%20%20%20%20%20mid%20%3D%20len%28A%29%20//%202%20%0A%20%20%20%20%20%20%20%20%23left%20sublist%20going%20from%20the%20beginning%20to%20the%20middle%0A%20%20%20%20%20%20%20%20L%20%3D%20A%5B%3Amid%5D%20%0A%20%20%20%20%20%20%20%20%23right%20sublist%20going%20from%20the%20middle%20to%20the%20end%0A%20%20%20%20%20%20%20%20R%20%3D%20A%5Bmid%3A%5D%20%0A%20%20%20%20%20%20%20%20%23sorts%20the%20left%20half-list%0A%20%20%20%20%20%20%20%20mergeSort%28L%29%20%0A%20%20%20%20%20%20%20%20%23sorts%20the%20right%20half-list%0A%20%20%20%20%20%20%20%20mergeSort%28R%29%20%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20i%20%3D%20j%20%3D%20k%20%3D%200%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%23following%20code%20merges%20L%20and%20R%20back%20into%20A%0A%20%20%20%20%20%20%20%20while%20i%20%3C%20len%28L%29%20and%20j%20%3C%20len%28R%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20L%5Bi%5D%20%3C%20R%5Bj%5D%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20A%5Bk%5D%20%3D%20L%5Bi%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20i%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20A%5Bk%5D%20%3D%20R%5Bj%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20j%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20k%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%23follwing%20code%20checks%20if%20any%20elements%20are%20left%20out%0A%20%20%20%20%20%20%20%20while%20i%20%3C%20len%28L%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20A%5Bk%5D%20%3D%20L%5Bi%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20i%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20k%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20while%20j%20%3C%20len%28R%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20A%5Bk%5D%20%3D%20R%5Bj%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20j%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20k%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20return%20A%0A%20%20%20%20%20%20%20%20%0Alist%20%3D%20%5B12,%2011,%2013,%205,%206,%207%5D%0Aprint%28%22The%20sorted%20is%22,%20mergeSort%28list%29%29&amp;&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0&amp;codeDivWidth=450&amp;codeDivHeight=1100" width="100%">
+         </iframe>
+         <div style="text-align: right;">
+          <a href="http://www.pythontutor.com/visualize.html#code=def%20mergeSort%28A%29%3A%0A%20%20%20%20if%20len%28A%29%20%3E%201%3A%0A%20%20%20%20%20%20%20%20%23finds%20the%20middle%20of%20list%20A%0A%20%20%20%20%20%20%20%20mid%20%3D%20len%28A%29%20//%202%20%0A%20%20%20%20%20%20%20%20%23left%20sublist%20going%20from%20the%20beginning%20to%20the%20middle%0A%20%20%20%20%20%20%20%20L%20%3D%20A%5B%3Amid%5D%20%0A%20%20%20%20%20%20%20%20%23right%20sublist%20going%20from%20the%20middle%20to%20the%20end%0A%20%20%20%20%20%20%20%20R%20%3D%20A%5Bmid%3A%5D%20%0A%20%20%20%20%20%20%20%20%23sorts%20the%20left%20half-list%0A%20%20%20%20%20%20%20%20mergeSort%28L%29%20%0A%20%20%20%20%20%20%20%20%23sorts%20the%20right%20half-list%0A%20%20%20%20%20%20%20%20mergeSort%28R%29%20%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20i%20%3D%20j%20%3D%20k%20%3D%200%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%23following%20code%20merges%20L%20and%20R%20back%20into%20A%0A%20%20%20%20%20%20%20%20while%20i%20%3C%20len%28L%29%20and%20j%20%3C%20len%28R%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20L%5Bi%5D%20%3C%20R%5Bj%5D%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20A%5Bk%5D%20%3D%20L%5Bi%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20i%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20A%5Bk%5D%20%3D%20R%5Bj%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20j%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20k%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%23follwing%20code%20checks%20if%20any%20elements%20are%20left%20out%0A%20%20%20%20%20%20%20%20while%20i%20%3C%20len%28L%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20A%5Bk%5D%20%3D%20L%5Bi%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20i%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20k%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20while%20j%20%3C%20len%28R%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20A%5Bk%5D%20%3D%20R%5Bj%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20j%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20k%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20return%20A%0A%20%20%20%20%20%20%20%20%0Alist%20%3D%20%5B12,%2011,%2013,%205,%206,%207%5D%0Aprint%28%22The%20sorted%20is%22,%20mergeSort%28list%29%29&amp;&amp;mode=edit&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" style="" target="_blank">
+           Edit in PythonTutor
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="paragraph">
+        <p>
+         Notice that Merge Sort has complexity \(n \log{n}\). The first part of Merge Sort, similar to Binary Search which has is \(O(\log{n})\), the list is repeatedly
+divided into two halves. The second part of Merge Sort merges \(n\) elements which occurs with complexity \(n\). Since the algorithm performs the first
+AND the second parts, we multiply to obtain that the complexity is \(O(n \log{n})\).
+        </p>
+       </div>
+      </div>
      </div>
      <div class="sect2">
       <h3 id="_mathematical_induction">
@@ -2067,7 +2119,7 @@ Assume,
           <img alt="induction3" src="images/induction3.png"/>
          </div>
          <div class="title">
-          Figure 12. Graphs of \(n!\), and \(3^n\), showing \(n! &gt; 3^n\), for \(n&gt;6\).
+          Figure 13. Graphs of \(n!\), and \(3^n\), showing \(n! &gt; 3^n\), for \(n&gt;6\).
          </div>
         </div>
        </div>
