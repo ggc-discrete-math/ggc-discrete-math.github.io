@@ -431,7 +431,7 @@ include::python_tutor.adoc[]
 
 === The Merge Sort Algorithm
 
-Merge Sort is a recursive sorting algorithm. The general idea is to divide a list of length $n$ into $n$ sublists of length $1$, where a list of length one is considered already sorted. Subsequently, the algorithm repeatedly merges the sublists to make sorted lists until only a single list of lenght $n$ is remaining. This will be the a sorted list consisted of the elements of the original list.
+Merge Sort is a recursive sorting algorithm. The general idea is to divide a list of length $n$ into $n$ sublists of length $1$, where a list of length one is considered already sorted. Subsequently, the algorithm repeatedly merges the sublists to make sorted lists until only a single list of length $n$ is remaining. This will be the a sorted list consisting of the elements of the original list.
 
 The picture below illustrates this with a list of length seven.
 [.float-group]
@@ -452,8 +452,8 @@ image::images/mergesort.png[GGC,600,600, align="center"]
 include::python_tutor.adoc[]
 ****
 
-Notice that Merge Sort has complexity $n \log{n}$. The first part of Merge Sort, similar to Binary Search which has is $O(\log{n})$, the list is repeatedly
-divided into two halves. The second part of Merge Sort merges $n$ elements which occurs with complexity $n$. Since the algorithm performs the first
+Notice that Merge Sort has complexity $n \log{n}$. The first part of Merge Sort, similar to Binary Search which is $O(\log{n})$, the list is repeatedly
+divides into two halves. The second part of Merge Sort merges $n$ elements which occurs with complexity $n$. Since the algorithm performs the first
 AND the second parts, we multiply to obtain that the complexity is $O(n \log{n})$.
 
 
