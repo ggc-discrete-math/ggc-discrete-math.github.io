@@ -47,7 +47,7 @@ include::graph_theory.adoc[]
 
 include::appendix_one.adoc[]
 
-//include::appendix_two.adoc[]
+include::appendix_two.adoc[]
 
 :leveloffset: -1
 
