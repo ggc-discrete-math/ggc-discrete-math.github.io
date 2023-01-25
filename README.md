@@ -1,7 +1,7 @@
 
 # Instructional Materials
 - [Textbook (by chapter)](https://ggc-discrete-math.github.io/)
-- [Full textbook (all on one page)](https://ggc-discrete-math.github.io/book.html)
+<!-- - [Full textbook (all on one page)](https://ggc-discrete-math.github.io/book.html) -->
 - [Guided notes on select chapters](https://github.com/ggc-discrete-math/ggc-discrete-math.github.io/tree/main/guided-notes)
 - [Pre-Built Edfinity Homework Assignments](https://edfinity.com/products/6029c68aa18e9800377eaace)
 - [Python Syntax Sheet](https://github.com/ggc-discrete-math/ggc-discrete-math.github.io/blob/main/guided-notes/PythonSyntaxExamples.pdf)
